@@ -1,15 +1,15 @@
-const CACHE_NAME = 'bb-cache-v6';
+const CACHE_NAME = 'bb-cache-v7';
 
 self.addEventListener('install', (e) => {
   self.skipWaiting(); // Force the waiting service worker to become the active service worker
 });
 
 self.addEventListener('activate', (e) => {
-  // Completely wipe all old caches when v4 activates
+  // Only wipe OLD caches, keep the current v7 cache active
   e.waitUntil(
     caches.keys().then((keys) => {
       return Promise.all(
-        keys.map((key) => caches.delete(key))
+        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
       );
     })
   );
@@ -17,8 +17,12 @@ self.addEventListener('activate', (e) => {
 });
 
 // NETWORK FIRST STRATEGY
-// Always try to get the live page from GitHub. If offline, fallback to cache.
 self.addEventListener('fetch', (e) => {
+  // CRITICAL FIX: Do not intercept POST requests (forms) or browser extension traffic
+  if (e.request.method !== 'GET' || !e.request.url.startsWith('http')) {
+    return;
+  }
+
   e.respondWith(
     fetch(e.request)
       .then((networkResponse) => {
