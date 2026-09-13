@@ -161,6 +161,36 @@
           });
         }
       });
+
+      // --- iOS PWA Install Prompt Logic ---
+      const iosBanner = document.getElementById('ios-install-banner');
+      const iosCloseBtn = document.getElementById('ios-close-btn');
+
+      // 1. Detect if the user is on an iOS device (iPhone/iPad)
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      
+      // 2. Detect if the app is already installed (standalone mode)
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+      
+      // 3. Check if the user previously dismissed the banner
+      const bannerDismissed = localStorage.getItem('ios_banner_dismissed');
+
+      // If it's an iPhone, it's not installed, and they haven't dismissed it yet...
+      if (isIOS && !isStandalone && !bannerDismissed) {
+        // Wait 2 seconds before showing the banner for a smoother experience
+        setTimeout(() => {
+          iosBanner.classList.remove('hidden');
+        }, 2000);
+      }
+
+      // Handle closing the banner
+      if (iosCloseBtn) {
+        iosCloseBtn.addEventListener('click', () => {
+          iosBanner.classList.add('hidden');
+          // Save a flag in the browser memory so we don't bother them again
+          localStorage.setItem('ios_banner_dismissed', 'true');
+        });
+      }
     </script>
   </body>
 </html>
