@@ -10,9 +10,6 @@
     <meta name="author" content="Beloved Berachah CIC" />
     <meta name="google-site-verification" content="YOUR_NEW_VERIFICATION_TAG" />
 
-    <!-- Preconnect to Google Tag Manager -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-
     <!-- PWA & Icons -->
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="assets/images/BB.png" />
@@ -139,7 +136,7 @@
     </header>
 
     <!-- Legal Content -->
-    <main class="container mx-auto px-4 py-16 max-w-3xl grow">
+    <main role="main" class="container mx-auto px-4 py-16 max-w-3xl grow">
       <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-100 text-slate-700 leading-relaxed space-y-8 font-light">
         
         <section>
@@ -177,12 +174,12 @@
           <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">Managing Your Preferences</h2>
           <p class="mb-4">You have the right to withdraw your consent or change your cookie preferences at any time. You can do this easily by clicking the button below, or by selecting "Manage Cookies" in the footer of any page on this website.</p>
           <button onclick="openCookieModal()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-2 px-6 rounded transition shadow-sm">Manage My Cookie Preferences</button>
-          <p class="mt-4 text-sm">Alternatively, most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set, visit <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer" class="text-amber-600 hover:underline">www.aboutcookies.org</a>.</p>
+          <p class="mt-4 text-sm">Alternatively, most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set, visit <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer" class="text-amber-700 hover:text-amber-800 hover:underline">www.aboutcookies.org</a>.</p>
         </section>
 
         <section>
           <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">Contact Us</h2>
-          <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us at <a href="mailto:beloved@berachah.org.uk" class="text-amber-600 hover:underline font-medium">beloved@berachah.org.uk</a>.</p>
+          <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us at <a href="mailto:beloved@berachah.org.uk" class="text-amber-700 hover:text-amber-800 hover:underline font-medium">beloved@berachah.org.uk</a>.</p>
         </section>
 
       </div>
@@ -193,13 +190,13 @@
       <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-3 gap-8 text-center md:text-left">
         <div class="md:col-span-1">
           <h3 class="text-white text-2xl font-serif mb-4 tracking-tight">Beloved Berachah CIC</h3>
-          <p class="text-sm leading-relaxed mb-4 text-slate-400">
+          <p class="text-sm leading-relaxed mb-4 text-slate-300">
             Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
           </p>
         </div>
         <div>
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Legal & Registration</h3>
-          <ul class="space-y-2 text-sm text-slate-400">
+          <ul class="space-y-2 text-sm text-slate-300">
             <li>Company Number: 16685295</li>
             <li>Registered in England and Wales.</li>
             <li>Registered Office: [Insert Address]</li>
@@ -209,14 +206,14 @@
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links & Contact</h3>
           <ul class="space-y-3 text-sm">
             <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
-            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
-            <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="cookies.html" class="hover:text-white transition">Cookie Policy</a></li>
-            <li><button onclick="openCookieModal()" class="hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
+            <li><a href="contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
+            <li><a href="privacy.html" class="text-slate-300 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="cookies.html" class="text-slate-300 hover:text-white transition">Cookie Policy</a></li>
+            <li><button onclick="openCookieModal()" class="text-slate-300 hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
           </ul>
         </div>
       </div>
-      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-500 text-center">
+      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-400 text-center">
         <p>&copy; 2026 Beloved Berachah CIC. All rights reserved.</p>
       </div>
     </footer>
