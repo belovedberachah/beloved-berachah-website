@@ -12,9 +12,6 @@
     />
     <meta name="author" content="Beloved Berachah CIC" />
 
-    <!-- Preconnect to Google Tag Manager -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-
     <!-- PWA & Icons -->
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="assets/images/BB.png" />
@@ -244,8 +241,8 @@
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="grow py-24 bg-white">
+    <!-- Main Content with ARIA role for Accessibility -->
+    <main role="main" class="grow py-24 bg-white">
       <div class="container mx-auto px-4 max-w-6xl">
         <!-- Our Vision & Objectives Section -->
         <section class="mb-24">
@@ -416,10 +413,11 @@
                 class="absolute inset-0 bg-amber-600/10 mix-blend-multiply z-10 transition duration-500 group-hover:bg-transparent"
               ></div>
               <img
-                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=auto&format=auto"
                 alt="Women in a supportive community"
                 class="w-full h-full object-cover absolute inset-0 transform transition duration-700 group-hover:scale-105"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -433,7 +431,7 @@
           <div
             class="bg-amber-50/50 rounded-3xl p-8 md:p-12 lg:p-16 border border-amber-100 flex flex-col md:flex-row gap-8 lg:gap-12 items-center md:items-start"
           >
-            <!-- Brenda Portrait (Forced to remain a perfect circle) -->
+            <!-- Brenda Portrait -->
             <div
               class="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 shrink-0 aspect-square rounded-full overflow-hidden border-8 border-white shadow-sm flex items-center justify-center"
             >
@@ -442,6 +440,7 @@
                 alt="Brenda Fraser"
                 class="w-full h-full object-cover scale-105"
                 loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -673,7 +672,7 @@
           <h3 class="text-white text-2xl font-serif mb-4 tracking-tight">
             Beloved Berachah CIC
           </h3>
-          <p class="text-sm leading-relaxed mb-4 text-slate-400">
+          <p class="text-sm leading-relaxed mb-4 text-slate-300">
             Supporting women affected by trauma, addiction, domestic abuse, and
             mental health challenges.
           </p>
@@ -684,7 +683,7 @@
           >
             Legal & Registration
           </h3>
-          <ul class="space-y-2 text-sm text-slate-400">
+          <ul class="space-y-2 text-sm text-slate-300">
             <li>Company Number: 16685295</li>
             <li>Registered in England and Wales.</li>
             <li>Registered Office: [Insert Address]</li>
@@ -705,24 +704,24 @@
               >
             </li>
             <li>
-              <a href="contact.html" class="hover:text-white transition"
+              <a href="contact.html" class="text-slate-300 hover:text-white transition"
                 >Contact Us</a
               >
             </li>
             <li>
-              <a href="privacy.html" class="hover:text-white transition"
+              <a href="privacy.html" class="text-slate-300 hover:text-white transition"
                 >Privacy Policy</a
               >
             </li>
             <li>
-              <a href="cookies.html" class="hover:text-white transition"
+              <a href="cookies.html" class="text-slate-300 hover:text-white transition"
                 >Cookie Policy</a
               >
             </li>
             <li>
               <button
                 onclick="openCookieModal()"
-                class="hover:text-white transition underline cursor-pointer"
+                class="text-slate-300 hover:text-white transition underline cursor-pointer"
               >
                 Manage Cookies
               </button>
@@ -731,7 +730,7 @@
         </div>
       </div>
       <div
-        class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-500 text-center"
+        class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-300 text-center"
       >
         <p>&copy; 2026 Beloved Berachah CIC. All rights reserved.</p>
       </div>
