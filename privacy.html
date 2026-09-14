@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Optimization -->
     <title>Privacy Policy | Beloved Berachah CIC</title>
-    <meta name="description" content="Privacy policy and UK GDPR compliance information for Beloved Berachah CIC." />
+    <meta name="description" content="Privacy policy and UK GDPR compliance information for Beloved Berachah CIC. Learn how we protect your personal and sensitive data." />
+    <meta name="author" content="Beloved Berachah CIC" />
+    <meta name="google-site-verification" content="YOUR_NEW_VERIFICATION_TAG" />
     
     <link rel="icon" type="image/png" href="assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
 
-    <!-- Typography (Playfair Display & Inter) - ASYNCHRONOUS LOAD -->
+    <!-- Typography (Playfair Display & Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
@@ -18,6 +22,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
     </noscript>
 
+    <!-- Local Tailwind CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     
     <!-- PWA Setup -->
@@ -56,19 +61,13 @@
       </div>
     </div>
 
-    <!-- iOS Install Prompt (Hidden by Default) -->
+    <!-- iOS Install Prompt -->
     <div id="ios-install-banner" class="hidden fixed bottom-6 inset-x-0 z-50 px-4 transition-opacity duration-500">
       <div class="bg-slate-900 text-white p-4 rounded-2xl shadow-2xl border border-slate-700 max-w-sm w-full mx-auto relative pb-5">
-        
-        <!-- Downward pointing arrow -->
         <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-12 border-r-12 border-t-12 border-transparent border-t-slate-900 drop-shadow-md"></div>
-        
-        <!-- Close Button -->
         <button id="ios-close-btn" aria-label="Close install prompt" class="absolute top-3 right-3 text-slate-400 hover:text-white transition">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
-        
-        <!-- Content with flexible instructions -->
         <div class="flex items-start gap-4 pr-6">
           <img src="assets/images/BB.png" alt="Beloved Berachah Icon" class="w-14 h-14 rounded-xl bg-white p-1.5 object-contain shadow-sm shrink-0">
           <div class="pt-0.5">
@@ -78,7 +77,6 @@
             </p>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -89,6 +87,8 @@
           <img src="assets/images/BB.png" alt="Beloved Berachah Logo" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
           <span class="font-serif text-slate-900 text-2xl md:text-3xl tracking-tight mt-1">Beloved <span class="text-amber-700">Berachah</span></span>
         </a>
+
+        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8 font-medium items-center">
           <a href="index.html" class="hover:text-amber-700 transition">Home</a>
           <a href="about.html" class="hover:text-amber-700 transition">About Us</a>
@@ -99,10 +99,14 @@
           <a href="contact.html" class="hover:text-amber-700 transition">Contact</a>
           <a href="donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold hover:bg-amber-700 transition shadow-sm">Support Us</a>
         </div>
+
+        <!-- Mobile Hamburger Button -->
         <button type="button" aria-label="Open mobile menu" class="md:hidden text-slate-800 focus:outline-none hover:text-amber-700 transition">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
       </div>
+
+      <!-- Mobile Dropdown Menu -->
       <div id="mobile-menu" class="hidden md:hidden container mx-auto max-w-6xl border-t border-slate-100 mt-4 pt-4 pb-2 space-y-2 px-2">
         <a href="index.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Home</a>
         <a href="about.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">About Us</a>
@@ -116,26 +120,87 @@
     </nav>
 
     <!-- Header -->
-    <header class="bg-slate-900 py-16 border-b-4 border-amber-500 text-center">
-      <h1 class="text-4xl md:text-5xl font-serif text-white tracking-tight">Privacy Policy</h1>
+    <header class="bg-slate-900 py-16 border-b-4 border-amber-500 text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-serif text-white tracking-tight mb-4">Privacy Policy</h1>
+      <p class="text-amber-400 font-light">Last Updated: September 2026</p>
     </header>
 
     <!-- Main Content -->
     <main role="main" class="grow py-20 bg-white">
-      <div class="container mx-auto px-4 max-w-3xl prose prose-slate prose-lg font-light">
-        <div class="bg-amber-50 border border-amber-100 p-6 rounded-xl mb-10 text-sm text-amber-800">
-          <strong>Prototype Note:</strong> This is a placeholder layout. A formal UK GDPR-compliant privacy policy will replace this text before launch.
+      <div class="container mx-auto px-4 max-w-4xl prose prose-slate prose-lg font-light leading-relaxed text-slate-700">
+        
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-100 space-y-8">
+          
+          <section>
+            <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">1. Introduction</h2>
+            <p>Beloved Berachah CIC ("we," "our," or "us") is committed to protecting your privacy and ensuring that your personal data is handled responsibly, securely, and in compliance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+            <p>Because of the sensitive nature of our work—supporting women affected by trauma, addiction, domestic abuse, and mental health challenges—we take data protection exceptionally seriously. This policy explains how we collect, use, and protect your information when you visit our website or interact with our services.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">2. The Data We Collect</h2>
+            <p>We only collect information that is strictly necessary to provide our services and fulfil our community objectives. This may include:</p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>Identity and Contact Data:</strong> Name, email address, telephone number, and organisation name (e.g., when you fill out a contact or booking form).</li>
+              <li><strong>Technical Data:</strong> IP address, browser type, and operating system, collected automatically via cookies (see our <a href="cookies.html" class="text-amber-700 hover:text-amber-800 underline">Cookie Policy</a>).</li>
+              <li><strong>Special Category Data:</strong> In the course of seeking support, you may voluntarily disclose sensitive personal information regarding your physical or mental health, personal history, or circumstances. We treat this data with the highest level of confidentiality and only process it with your explicit consent or where necessary for safeguarding purposes.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">3. How We Use Your Data</h2>
+            <p>We will only use your personal data when the law allows us to. We commonly use your data in the following circumstances:</p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>To respond to your inquiries:</strong> Managing bookings for talks, workshops, or providing relevant support information (<em>Lawful basis: Legitimate Interests / Consent</em>).</li>
+              <li><strong>To safeguard our community:</strong> If we believe you or someone else is at risk of serious harm, we may process and share relevant information with emergency services or statutory bodies (<em>Lawful basis: Vital Interests / Legal Obligation</em>).</li>
+              <li><strong>To improve our services:</strong> Analysing anonymised data to understand website traffic and improve our outreach (<em>Lawful basis: Legitimate Interests</em>).</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">4. Data Sharing and Third Parties</h2>
+            <p>We will <strong>never</strong> sell, rent, or trade your personal data to third parties. We may only share your data with:</p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Trusted service providers who assist us in operating our website or conducting our business (e.g., website hosting, secure email providers), all of whom are bound by strict confidentiality agreements.</li>
+              <li>Statutory bodies, law enforcement, or emergency services, but <strong>only</strong> if we are legally required to do so, or if it is strictly necessary to protect your vital interests (e.g., a safeguarding emergency).</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">5. Data Security</h2>
+            <p>We have implemented appropriate technical and organisational security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorised way, altered, or disclosed. Access to personal data is strictly limited to those employees, trustees, and volunteers who have a direct operational need to know, and they are subject to a strict duty of confidentiality.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">6. Data Retention</h2>
+            <p>We will only retain your personal data for as long as necessary to fulfil the purposes we collected it for, including for the purposes of satisfying any legal, accounting, safeguarding, or reporting requirements. Once data is no longer required, it will be securely deleted or anonymised.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">7. Your Legal Rights</h2>
+            <p>Under the UK GDPR, you have several rights regarding your personal data, including:</p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>Request access</strong> to your personal data (a "data subject access request").</li>
+              <li><strong>Request correction</strong> of incomplete or inaccurate data we hold about you.</li>
+              <li><strong>Request erasure</strong> of your personal data when there is no good reason for us continuing to process it.</li>
+              <li><strong>Withdraw consent</strong> at any time where we are relying on consent to process your personal data.</li>
+            </ul>
+            <p>If you wish to exercise any of these rights, please <a href="contact.html" class="text-amber-700 hover:text-amber-800 underline">contact us</a>.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">8. Complaints</h2>
+            <p>If you have any concerns about our use of your personal information, you can make a complaint to us directly at <a href="mailto:beloved@berachah.org.uk" class="text-amber-700 hover:text-amber-800 underline font-medium">beloved@berachah.org.uk</a>.</p>
+            <p>You also have the right to complain to the Information Commissioner’s Office (ICO), the UK supervisory authority for data protection issues. You can contact the ICO at:</p>
+            <p class="mt-2 pl-4 border-l-2 border-slate-200">
+              Information Commissioner’s Office<br>
+              Wycliffe House, Water Lane<br>
+              Wilmslow, Cheshire, SK9 5AF<br>
+              Helpline number: 0303 123 1113<br>
+              Website: <a href="https://www.ico.org.uk" target="_blank" rel="noopener noreferrer" class="text-amber-700 hover:text-amber-800 underline">www.ico.org.uk</a>
+            </p>
+          </section>
         </div>
-        <h2 class="font-serif text-slate-900">How We Protect Your Data</h2>
-        <p>Beloved Berachah CIC takes your privacy seriously. Due to the sensitive nature of our work, we adhere strictly to UK GDPR guidelines to ensure any personal or sensitive information you share with us is kept strictly confidential and highly secure.</p>
-        <h3 class="font-serif text-slate-900">Information We Collect</h3>
-        <p>We only collect information that is absolutely necessary to provide you with support or fulfill our community objectives, including:</p>
-        <ul>
-          <li>Contact details (when you voluntarily email us or subscribe to our newsletter).</li>
-          <li>Anonymised attendance data for grant reporting purposes.</li>
-        </ul>
-        <h3 class="font-serif text-slate-900">Your Rights</h3>
-        <p>You have the right to request access to your data, ask for it to be deleted, or withdraw consent at any time. For all privacy inquiries, please <a href="contact.html" class="text-amber-700 hover:text-amber-800 underline font-medium">contact us</a>.</p>
       </div>
     </main>
 
@@ -161,8 +226,10 @@
           <ul class="space-y-3 text-sm">
             <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
             <li><a href="contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
+            <li><a href="terms.html" class="text-slate-300 hover:text-white transition">Terms & Conditions</a></li>
             <li><a href="privacy.html" class="text-slate-300 hover:text-white transition">Privacy Policy</a></li>
             <li><a href="cookies.html" class="text-slate-300 hover:text-white transition">Cookie Policy</a></li>
+            <li><a href="safeguarding.html" class="text-slate-300 hover:text-white transition">Safeguarding</a></li>
             <li><button onclick="openCookieModal()" class="text-slate-300 hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
           </ul>
         </div>
@@ -240,7 +307,6 @@
       function applyConsent(consent) { if (consent.analytics && !window.gaLoaded) { window.gaLoaded = true; const script = document.createElement('script'); script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; script.async = true; document.head.appendChild(script); window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX'); } }
       window.addEventListener('DOMContentLoaded', checkCookieConsent);
 
-      // --- iOS PWA Install Prompt Logic ---
       const iosBanner = document.getElementById('ios-install-banner');
       const iosCloseBtn = document.getElementById('ios-close-btn');
 

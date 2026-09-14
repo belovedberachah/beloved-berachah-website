@@ -9,9 +9,6 @@
     <meta name="description" content="Access helpful guides, recommended reading, and signposting to emergency support services for women facing trauma, domestic abuse, and addiction." />
     <meta name="author" content="Beloved Berachah CIC" />
 
-    <!-- Preconnect to Google Tag Manager -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-
     <!-- PWA & Icons -->
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="assets/images/BB.png" />
@@ -383,13 +380,13 @@
       <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-3 gap-8 text-center md:text-left">
         <div class="md:col-span-1">
           <h3 class="text-white text-2xl font-serif mb-4 tracking-tight">Beloved Berachah CIC</h3>
-          <p class="text-sm leading-relaxed mb-4 text-slate-400">
+          <p class="text-sm leading-relaxed mb-4 text-slate-300">
             Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
           </p>
         </div>
         <div>
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Legal & Registration</h3>
-          <ul class="space-y-2 text-sm text-slate-400">
+          <ul class="space-y-2 text-sm text-slate-300">
             <li>Company Number: 16685295</li>
             <li>Registered in England and Wales.</li>
             <li>Registered Office: [Insert Address]</li>
@@ -399,14 +396,16 @@
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links & Contact</h3>
           <ul class="space-y-3 text-sm">
             <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
-            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
-            <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="cookies.html" class="hover:text-white transition">Cookie Policy</a></li>
-            <li><button onclick="openCookieModal()" class="hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
+            <li><a href="contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
+            <li><a href="terms.html" class="text-slate-300 hover:text-white transition">Terms & Conditions</a></li>
+            <li><a href="privacy.html" class="text-slate-300 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="cookies.html" class="text-slate-300 hover:text-white transition">Cookie Policy</a></li>
+            <li><a href="safeguarding.html" class="text-slate-300 hover:text-white transition">Safeguarding</a></li>
+            <li><button onclick="openCookieModal()" class="text-slate-300 hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
           </ul>
         </div>
       </div>
-      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-500 text-center">
+      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-400 text-center">
         <p>&copy; 2026 Beloved Berachah CIC. All rights reserved.</p>
       </div>
     </footer>
@@ -479,32 +478,22 @@
       function applyConsent(consent) { if (consent.analytics && !window.gaLoaded) { window.gaLoaded = true; const script = document.createElement('script'); script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; script.async = true; document.head.appendChild(script); window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX'); } }
       window.addEventListener('DOMContentLoaded', checkCookieConsent);
 
-      // --- iOS PWA Install Prompt Logic ---
       const iosBanner = document.getElementById('ios-install-banner');
       const iosCloseBtn = document.getElementById('ios-close-btn');
 
-      // 1. Detect if the user is on an iOS device (iPhone/iPad)
       const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      
-      // 2. Detect if the app is already installed (standalone mode)
       const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-      
-      // 3. Check if the user previously dismissed the banner
       const bannerDismissed = localStorage.getItem('ios_banner_dismissed');
 
-      // If it's an iPhone, it's not installed, and they haven't dismissed it yet...
       if (isIOS && !isStandalone && !bannerDismissed) {
-        // Wait 2 seconds before showing the banner for a smoother experience
         setTimeout(() => {
           iosBanner.classList.remove('hidden');
         }, 2000);
       }
 
-      // Handle closing the banner
       if (iosCloseBtn) {
         iosCloseBtn.addEventListener('click', () => {
           iosBanner.classList.add('hidden');
-          // Save a flag in the browser memory so we don't bother them again
           localStorage.setItem('ios_banner_dismissed', 'true');
         });
       }

@@ -9,9 +9,6 @@
     <meta name="description" content="Support Beloved Berachah CIC in bringing hope, healing, and restoration to women affected by trauma." />
     <meta name="google-site-verification" content="YOUR_NEW_VERIFICATION_TAG" />
 
-    <!-- Preconnect to Google Tag Manager -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-
     <!-- PWA & Icons -->
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="assets/images/BB.png" />
@@ -94,7 +91,7 @@
     <nav class="bg-white text-slate-800 p-4 sticky top-0 z-40 shadow-sm border-b-4 border-amber-500">
       <div class="container mx-auto flex justify-between items-center max-w-6xl">
         <a href="index.html" class="flex items-center gap-3 group hover:opacity-80 transition">
-          <img src="assets/images/BB.png" alt="Beloved Berachah Logo" width="48" height="48" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
+          <img src="assets/images/BB.png" alt="Beloved Berachah Logo" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
           <span class="font-serif text-slate-900 text-2xl md:text-3xl tracking-tight mt-1">Beloved <span class="text-amber-700">Berachah</span></span>
         </a>
 
@@ -120,7 +117,9 @@
       <div id="mobile-menu" class="hidden md:hidden container mx-auto max-w-6xl border-t border-slate-100 mt-4 pt-4 pb-2 space-y-2 px-2">
         <a href="index.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Home</a>
         <a href="about.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">About Us</a>
+        <a href="news.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">News</a>
         <a href="services.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Services</a>
+        <a href="events.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Events</a>
         <a href="resources.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Resources</a>
         <a href="contact.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Contact</a>
         <a href="donate.html" class="block px-4 py-3 mt-4 text-center bg-amber-500 text-slate-900 font-semibold rounded-xl shadow-sm">Support Us</a>
@@ -181,30 +180,34 @@
       <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-3 gap-8 text-center md:text-left">
         <div class="md:col-span-1">
           <h3 class="text-white text-2xl font-serif mb-4 tracking-tight">Beloved Berachah CIC</h3>
-          <p class="text-sm leading-relaxed mb-4 text-slate-400">
+          <p class="text-sm leading-relaxed mb-4 text-slate-300">
             Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
           </p>
         </div>
+        
         <div>
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Legal & Registration</h3>
-          <ul class="space-y-2 text-sm text-slate-400">
+          <ul class="space-y-2 text-sm text-slate-300">
             <li>Company Number: 16685295</li>
             <li>Registered in England and Wales.</li>
             <li>Registered Office: [Insert Address]</li>
           </ul>
         </div>
+        
         <div>
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links & Contact</h3>
           <ul class="space-y-3 text-sm">
             <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
-            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
-            <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="cookies.html" class="hover:text-white transition">Cookie Policy</a></li>
-            <li><button onclick="openCookieModal()" class="hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
+            <li><a href="contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
+            <li><a href="terms.html" class="text-slate-300 hover:text-white transition">Terms & Conditions</a></li>
+            <li><a href="privacy.html" class="text-slate-300 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="cookies.html" class="text-slate-300 hover:text-white transition">Cookie Policy</a></li>
+            <li><a href="safeguarding.html" class="text-slate-300 hover:text-white transition">Safeguarding</a></li>
+            <li><button onclick="openCookieModal()" class="text-slate-300 hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
           </ul>
         </div>
       </div>
-      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-500 text-center">
+      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-400 text-center">
         <p>&copy; 2026 Beloved Berachah CIC. All rights reserved.</p>
       </div>
     </footer>
@@ -260,7 +263,9 @@
     <script>
       const btn = document.querySelector('button[aria-label="Open mobile menu"]');
       const menu = document.getElementById("mobile-menu");
-      btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
 
       let deferredPrompt;
       const installBanner = document.getElementById('pwa-install-banner');
@@ -277,7 +282,6 @@
       function applyConsent(consent) { if (consent.analytics && !window.gaLoaded) { window.gaLoaded = true; const script = document.createElement('script'); script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; script.async = true; document.head.appendChild(script); window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX'); } }
       window.addEventListener('DOMContentLoaded', checkCookieConsent);
 
-      // --- iOS PWA Install Prompt Logic ---
       const iosBanner = document.getElementById('ios-install-banner');
       const iosCloseBtn = document.getElementById('ios-close-btn');
 

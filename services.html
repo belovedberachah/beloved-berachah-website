@@ -10,9 +10,6 @@
     <meta name="author" content="Beloved Berachah CIC" />
     <meta name="google-site-verification" content="YOUR_NEW_VERIFICATION_TAG" />
 
-    <!-- Preconnect to Google Tag Manager -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-
     <!-- PWA & Icons -->
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="assets/images/BB.png" />
@@ -65,7 +62,7 @@
       </div>
     </div>
 
-    <!-- iOS Install Prompt (Hidden by Default) -->
+    <!-- iOS Install Prompt -->
     <div id="ios-install-banner" class="hidden fixed bottom-6 inset-x-0 z-50 px-4 transition-opacity duration-500">
       <div class="bg-slate-900 text-white p-4 rounded-2xl shadow-2xl border border-slate-700 max-w-sm w-full mx-auto relative pb-5">
         <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-12 border-r-12 border-t-12 border-transparent border-t-slate-900 drop-shadow-md"></div>
@@ -136,7 +133,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="grow py-20 bg-white">
+    <main role="main" class="grow py-20 bg-white">
       
       <!-- Intro & Who We Support Section -->
       <section class="container mx-auto px-4 max-w-6xl mb-24">
@@ -169,7 +166,7 @@
           <!-- Image Container -->
           <div class="rounded-3xl overflow-hidden shadow-sm relative group w-full min-h-75 md:min-h-100 lg:min-h-125 mt-8 lg:mt-0">
             <div class="absolute inset-0 bg-amber-600/10 mix-blend-multiply z-10 transition duration-500 group-hover:bg-transparent"></div>
-            <img src="https://images.unsplash.com/photo-1543269664-7eef42226a21?auto=format&fit=crop&w=800&q=80" alt="People participating in a supportive workshop" class="w-full h-full object-cover absolute inset-0 transform transition duration-700 group-hover:scale-105" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1543269664-7eef42226a21?auto=format&fit=crop&w=800&q=auto&format=auto" alt="People participating in a supportive workshop" class="w-full h-full object-cover absolute inset-0 transform transition duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
@@ -177,7 +174,7 @@
       <!-- Elegant Divider -->
       <div class="w-16 h-1 bg-amber-600 mx-auto mb-20 rounded-full"></div>
 
-      <!-- Core Services Breakdown Section (From Brochure) -->
+      <!-- Core Services Breakdown Section -->
       <section class="container mx-auto px-4 max-w-6xl mb-24">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-4xl md:text-5xl font-serif text-slate-900 mb-6 tracking-tight">Our Core <span class="text-amber-700 font-medium">Services</span></h2>
@@ -387,7 +384,7 @@
             <!-- Image Container -->
             <div class="rounded-3xl overflow-hidden shadow-2xl relative w-full min-h-75 md:min-h-100 lg:min-h-125 border border-slate-700 mt-8 lg:mt-0">
               <div class="absolute inset-0 bg-slate-900/20 z-10 mix-blend-overlay"></div>
-              <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&w=800&q=80" alt="Speaker presenting to an audience" class="w-full h-full object-cover absolute inset-0" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&w=800&q=auto&format=auto" alt="Speaker presenting to an audience" class="w-full h-full object-cover absolute inset-0" loading="lazy" decoding="async" />
             </div>
 
           </div>
@@ -422,13 +419,13 @@
       <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-3 gap-8 text-center md:text-left">
         <div class="md:col-span-1">
           <h3 class="text-white text-2xl font-serif mb-4 tracking-tight">Beloved Berachah CIC</h3>
-          <p class="text-sm leading-relaxed mb-4 text-slate-400">
+          <p class="text-sm leading-relaxed mb-4 text-slate-300">
             Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
           </p>
         </div>
         <div>
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Legal & Registration</h3>
-          <ul class="space-y-2 text-sm text-slate-400">
+          <ul class="space-y-2 text-sm text-slate-300">
             <li>Company Number: 16685295</li>
             <li>Registered in England and Wales.</li>
             <li>Registered Office: [Insert Address]</li>
@@ -438,14 +435,16 @@
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links & Contact</h3>
           <ul class="space-y-3 text-sm">
             <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
-            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
-            <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="cookies.html" class="hover:text-white transition">Cookie Policy</a></li>
-            <li><button onclick="openCookieModal()" class="hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
+            <li><a href="contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
+            <li><a href="terms.html" class="text-slate-300 hover:text-white transition">Terms & Conditions</a></li>
+            <li><a href="privacy.html" class="text-slate-300 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="cookies.html" class="text-slate-300 hover:text-white transition">Cookie Policy</a></li>
+            <li><a href="safeguarding.html" class="text-slate-300 hover:text-white transition">Safeguarding</a></li>
+            <li><button onclick="openCookieModal()" class="text-slate-300 hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
           </ul>
         </div>
       </div>
-      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-500 text-center">
+      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-400 text-center">
         <p>&copy; 2026 Beloved Berachah CIC. All rights reserved.</p>
       </div>
     </footer>
@@ -501,7 +500,9 @@
     <script>
       const btn = document.querySelector('button[aria-label="Open mobile menu"]');
       const menu = document.getElementById("mobile-menu");
-      btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
 
       let deferredPrompt;
       const installBanner = document.getElementById('pwa-install-banner');
@@ -518,7 +519,6 @@
       function applyConsent(consent) { if (consent.analytics && !window.gaLoaded) { window.gaLoaded = true; const script = document.createElement('script'); script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; script.async = true; document.head.appendChild(script); window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX'); } }
       window.addEventListener('DOMContentLoaded', checkCookieConsent);
 
-      // --- iOS PWA Install Prompt Logic ---
       const iosBanner = document.getElementById('ios-install-banner');
       const iosCloseBtn = document.getElementById('ios-close-btn');
 
