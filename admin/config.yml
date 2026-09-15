@@ -1,0 +1,59 @@
+# 1. Backend Configuration
+backend:
+  name: github
+  repo: theprice1/beloved-berachah-website
+  branch: main
+
+# 2. Media & Image Settings
+media_folder: "assets/images" # Where uploaded images are saved in the repo
+public_folder: "/assets/images" # The URL path used in the HTML/Markdown
+
+# 3. Branding
+site_url: https://theprice1.github.io/beloved-berachah-website
+logo_url: https://theprice1.github.io/beloved-berachah-website/assets/images/BB.png
+
+# 4. Content Collections (The buttons Brenda will see in the dashboard)
+collections:
+  
+  # A. Events Collection (List of individual events)
+  - name: "events"
+    label: "Events"
+    folder: "src/content/events" # Where markdown files will be saved later
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Event Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "body", widget: "markdown"}
+
+  # B. News Collection (List of news articles)
+  - name: "news"
+    label: "News"
+    folder: "src/content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Headline", name: "title", widget: "string"}
+      - {label: "Date Published", name: "date", widget: "datetime"}
+      - {label: "Author", name: "author", widget: "string", default: "Brenda Fraser"}
+      - {label: "Cover Image", name: "image", widget: "image"}
+      - {label: "Article Body", name: "body", widget: "markdown"}
+
+  # C. Static Pages (Editing specific existing pages like About, Services, etc.)
+  - name: "pages"
+    label: "Core Pages"
+    files:
+      - label: "About Us Page"
+        name: "about"
+        file: "src/content/pages/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Main Text", name: "body", widget: "markdown"}
+      - label: "Services Page"
+        name: "services"
+        file: "src/content/pages/services.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Intro Text", name: "body", widget: "markdown"}
