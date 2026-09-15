@@ -1,4 +1,12 @@
 {
+  "name": "beloved-berachah-cic",
+  "version": "1.0.0",
+  "description": "Official website and PWA for Beloved Berachah CIC",
+  "private": true,
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./css/style.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./css/style.css"
+  },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
     "tailwindcss": "^4.3.3"
