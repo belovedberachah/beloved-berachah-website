@@ -1,7 +1,7 @@
 # 1. Backend Configuration
 backend:
   name: github
-  repo: theprice1/beloved-berachah-website
+  repo: belovedberachah/beloved-berachah-website
   branch: main
 
 # 2. Media & Image Settings
@@ -9,8 +9,8 @@ media_folder: "assets/images" # Where uploaded images are saved in the repo
 public_folder: "/assets/images" # The URL path used in the HTML/Markdown
 
 # 3. Branding
-site_url: https://theprice1.github.io/beloved-berachah-website
-logo_url: https://theprice1.github.io/beloved-berachah-website/assets/images/BB.png
+site_url: https://belovedberachah.github.io/beloved-berachah-website
+logo_url: https://belovedberachah.github.io/beloved-berachah-website/assets/images/BB.png
 
 # 4. Content Collections (The buttons Brenda will see in the dashboard)
 collections:
