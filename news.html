@@ -106,20 +106,26 @@ permalink: "news.html"
       </div>
     </header>
 
-    <main role="main" class="grow py-20 bg-white">
-      <section class="container mx-auto px-4 max-w-4xl mb-16">
-        <div class="text-center">
-          <p class="text-slate-600 text-lg md:text-xl leading-relaxed font-light mb-8">This is where we share stories, updates, reflections, and information about our work supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.</p>
+    <!-- Main Content (Now with premium styling) -->
+    <main role="main" class="grow bg-slate-50">
+      
+      <!-- Intro Section (Crisp white band) -->
+      <section class="bg-white py-16 border-b border-slate-200">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+          <p class="text-slate-600 text-lg md:text-xl leading-relaxed font-light mb-8">
+            This is where we share stories, updates, reflections, and information about our work supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
+          </p>
           <div class="w-16 h-1 bg-amber-600 mx-auto rounded-full"></div>
         </div>
       </section>
 
-      <!-- DYNAMIC CMS NEWS FEED -->
-      <section class="container mx-auto px-4 max-w-6xl mb-24">
+      <!-- DYNAMIC CMS NEWS FEED (Sitting on soft grey for contrast) -->
+      <section class="container mx-auto px-4 max-w-6xl py-20">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {% for article in collections.news | reverse %}
-          <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200 flex flex-col hover:shadow-lg transition">
+          <!-- Premium Card Styling with Top Border -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col border-t-4 border-amber-500">
             {% if article.data.thumbnail %}
             <div class="h-48 overflow-hidden bg-slate-100 border-b border-slate-100">
               <img src="{{ article.data.thumbnail }}" alt="{{ article.data.title }}" class="w-full h-full object-cover" />
@@ -136,8 +142,8 @@ permalink: "news.html"
             </div>
           </div>
           {% else %}
-          <!-- Explicitly Spanning 3 Columns for PC Centering -->
-          <div class="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col justify-center items-center text-center py-24 px-4 bg-slate-50 rounded-3xl border border-slate-200 w-full min-h-75 shadow-sm">
+          <!-- Perfectly Centered Fallback (Using Grid Override) -->
+          <div style="grid-column: 1 / -1;" class="flex flex-col justify-center items-center text-center py-24 px-4 bg-white rounded-3xl border border-slate-200 w-full min-h-75 shadow-sm">
             <h3 class="text-3xl font-serif text-slate-800 mb-4">No News Yet</h3>
             <p class="text-lg text-slate-500 font-light">Articles published from your dashboard will automatically appear here!</p>
           </div>
