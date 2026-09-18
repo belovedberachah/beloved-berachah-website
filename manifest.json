@@ -1,6 +1,6 @@
 {
   "name": "Beloved Berachah CIC",
-  "short_name": "Berachah",
+  "short_name": "Beloved Berachah",
   "description": "Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.",
   "start_url": "/",
   "scope": "/",
@@ -16,7 +16,7 @@
       "purpose": "any maskable"
     },
     {
-      "src": "/beloved-berachah-website/assets/images/BB.png",
+      "src": "/assets/images/BB.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
