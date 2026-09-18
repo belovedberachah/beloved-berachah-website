@@ -2,15 +2,15 @@
   "name": "Beloved Berachah CIC",
   "short_name": "Berachah",
   "description": "Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.",
-  "start_url": "/beloved-berachah-website/index.html",
-  "scope": "/beloved-berachah-website/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#FAFAF9",
   "theme_color": "#FBBF24",
   "icons": [
     {
-      "src": "/beloved-berachah-website/assets/images/BB.png",
+      "src": "/assets/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"

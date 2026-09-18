@@ -11,7 +11,7 @@
     <meta name="google-site-verification" content="YOUR_NEW_VERIFICATION_TAG" />
 
     <!-- PWA & Icons -->
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="assets/images/BB.png" />
     <link rel="icon" type="image/png" href="assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
@@ -20,7 +20,7 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js').catch(err => console.log('Service Worker failed: ', err));
+          navigator.serviceWorker.register('/sw.js').catch(err => console.log('Service Worker failed: ', err));
         });
       }
     </script>
