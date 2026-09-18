@@ -1,59 +1,39 @@
-# 1. Backend Configuration
 backend:
-  name: github
-  repo: belovedberachah/beloved-berachah-website
+  name: git-gateway
   branch: main
 
-# 2. Media & Image Settings
-media_folder: "assets/images" # Where uploaded images are saved in the repo
-public_folder: "/assets/images" # The URL path used in the HTML/Markdown
+# This tells the CMS where to save images Brenda uploads
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
-# 3. Branding
-site_url: https://belovedberachah.github.io/beloved-berachah-website
-logo_url: https://belovedberachah.github.io/beloved-berachah-website/assets/images/BB.png
-
-# 4. Content Collections (The buttons Brenda will see in the dashboard)
 collections:
-  
-  # A. Events Collection (List of individual events)
-  - name: "events"
-    label: "Events"
-    folder: "src/content/events" # Where markdown files will be saved later
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Event Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Location", name: "location", widget: "string"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Description", name: "body", widget: "markdown"}
-
-  # B. News Collection (List of news articles)
-  - name: "news"
-    label: "News"
-    folder: "src/content/news"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Headline", name: "title", widget: "string"}
-      - {label: "Date Published", name: "date", widget: "datetime"}
-      - {label: "Author", name: "author", widget: "string", default: "Brenda Fraser"}
-      - {label: "Cover Image", name: "image", widget: "image"}
-      - {label: "Article Body", name: "body", widget: "markdown"}
-
-  # C. Static Pages (Editing specific existing pages like About, Services, etc.)
+  # 1. PAGE EDITORS (For static pages like Home, About, Services)
   - name: "pages"
-    label: "Core Pages"
+    label: "Website Pages"
     files:
+      - label: "Homepage"
+        name: "home"
+        file: "content/pages/home.md"
+        fields:
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "string"}
+          - {label: "Main Intro Text", name: "intro_text", widget: "text"}
+          
       - label: "About Us Page"
         name: "about"
-        file: "src/content/pages/about.md"
+        file: "content/pages/about.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Main Text", name: "body", widget: "markdown"}
-      - label: "Services Page"
-        name: "services"
-        file: "src/content/pages/services.md"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Intro Text", name: "body", widget: "markdown"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+  # 2. DYNAMIC CONTENT (For creating multiple News posts or Events)
+  - name: "news"
+    label: "News & Updates"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Article Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Article Body", name: "body", widget: "markdown"}
