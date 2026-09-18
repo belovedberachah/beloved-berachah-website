@@ -1,6 +1,6 @@
 [build]
-  # The command to compile your Tailwind CSS
   command = "npm run build"
+  publish = "_site"
 
-  # Tell Netlify that your HTML files are right here in the root folder, not in _site
-  publish = "."
+[build.environment]
+  NODE_VERSION = "18"

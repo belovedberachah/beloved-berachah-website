@@ -2,31 +2,10 @@ backend:
   name: git-gateway
   branch: main
 
-# This tells the CMS where to save images Brenda uploads
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
 collections:
-  # 1. PAGE EDITORS (For static pages like Home, About, Services)
-  - name: "pages"
-    label: "Website Pages"
-    files:
-      - label: "Homepage"
-        name: "home"
-        file: "content/pages/home.md"
-        fields:
-          - {label: "Hero Title", name: "hero_title", widget: "string"}
-          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "string"}
-          - {label: "Main Intro Text", name: "intro_text", widget: "text"}
-          
-      - label: "About Us Page"
-        name: "about"
-        file: "content/pages/about.md"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body Content", name: "body", widget: "markdown"}
-
-  # 2. DYNAMIC CONTENT (For creating multiple News posts or Events)
   - name: "news"
     label: "News & Updates"
     folder: "content/news"
@@ -36,4 +15,19 @@ collections:
       - {label: "Article Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Article Summary", name: "summary", widget: "text"}
       - {label: "Article Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "news"}
+
+  - name: "events"
+    label: "Upcoming Events"
+    folder: "content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - {label: "Event Name", name: "title", widget: "string"}
+      - {label: "Event Date", name: "event_date", widget: "datetime"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Event Description", name: "body", widget: "markdown"}
+      - {label: "Booking Link", name: "booking_link", widget: "string", required: false}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "events"}
