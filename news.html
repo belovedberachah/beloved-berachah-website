@@ -6,30 +6,20 @@ permalink: "news.html"
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Optimization -->
     <title>Blog & News | Beloved Berachah CIC</title>
     <meta name="description" content="Welcome to the Beloved Berachah Blog and News Hub. Discover stories, updates, reflections, and information about our work supporting women." />
     <meta name="author" content="Beloved Berachah CIC" />
 
-    <!-- PWA & Icons -->
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="assets/images/BB.png" />
     <link rel="icon" type="image/png" href="assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
 
-    <!-- Local Tailwind CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
     <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #fafaf9;
-        color: #334155;
-      }
-      .font-serif {
-        font-family: "Playfair Display", serif;
-      }
+      body { font-family: "Inter", sans-serif; background-color: #fafaf9; color: #334155; }
+      .font-serif { font-family: "Playfair Display", serif; }
       .cms-content p { margin-bottom: 1rem; }
       .cms-content a { color: #d97706; text-decoration: underline; }
     </style>
@@ -44,8 +34,6 @@ permalink: "news.html"
           <img src="assets/images/BB.png" alt="Beloved Berachah Logo" width="48" height="48" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
           <span class="font-serif text-slate-900 text-2xl md:text-3xl tracking-tight mt-1">Beloved <span class="text-amber-700">Berachah</span></span>
         </a>
-
-        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8 font-medium items-center">
           <a href="index.html" class="hover:text-amber-700 transition">Home</a>
           <a href="about.html" class="hover:text-amber-700 transition">About Us</a>
@@ -56,6 +44,19 @@ permalink: "news.html"
           <a href="contact.html" class="hover:text-amber-700 transition">Contact</a>
           <a href="donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold hover:bg-amber-700 transition shadow-sm">Support Us</a>
         </div>
+        <button type="button" aria-label="Open mobile menu" class="md:hidden text-slate-800 focus:outline-none hover:text-amber-700 transition">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden container mx-auto max-w-6xl border-t border-slate-100 mt-4 pt-4 pb-2 space-y-2 px-2">
+        <a href="index.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Home</a>
+        <a href="about.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">About Us</a>
+        <a href="news.html" class="block px-4 py-3 text-amber-700 bg-amber-50 rounded-xl font-medium">News</a>
+        <a href="services.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Services</a>
+        <a href="events.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Events</a>
+        <a href="resources.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Resources</a>
+        <a href="contact.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Contact</a>
+        <a href="donate.html" class="block px-4 py-3 mt-4 text-center bg-amber-500 text-slate-900 font-semibold rounded-xl shadow-sm">Support Us</a>
       </div>
     </nav>
 
@@ -74,8 +75,6 @@ permalink: "news.html"
 
     <!-- Main Content -->
     <main role="main" class="grow py-20 bg-white">
-      
-      <!-- Intro Section -->
       <section class="container mx-auto px-4 max-w-4xl mb-16">
         <div class="text-center">
           <p class="text-slate-600 text-lg md:text-xl leading-relaxed font-light mb-8">
@@ -91,44 +90,72 @@ permalink: "news.html"
           
           {% for article in collections.news | reverse %}
           <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-200 flex flex-col hover:shadow-lg transition">
-            
             {% if article.data.thumbnail %}
             <div class="h-48 overflow-hidden bg-slate-100 border-b border-slate-100">
               <img src="{{ article.data.thumbnail }}" alt="{{ article.data.title }}" class="w-full h-full object-cover" />
             </div>
             {% endif %}
-            
             <div class="p-8 flex flex-col grow">
               <h3 class="text-2xl font-serif text-slate-900 mb-4 leading-tight">{{ article.data.title }}</h3>
-              
               {% if article.data.summary %}
               <p class="text-slate-600 text-sm font-medium mb-6 italic border-l-4 border-amber-200 pl-4">{{ article.data.summary }}</p>
               {% endif %}
-              
               <div class="mt-auto cms-content text-slate-600 text-sm font-light border-t border-slate-100 pt-6">
                 {{ article.templateContent }}
               </div>
             </div>
           </div>
           {% else %}
-          <!-- Fallback when no posts exist yet -->
-          <div class="col-span-full text-center py-16 bg-slate-50 rounded-3xl border border-slate-200">
-            <h3 class="text-2xl font-serif text-slate-800 mb-2">No News Yet</h3>
-            <p class="text-lg text-slate-500 font-light max-w-md mx-auto">Articles published from your dashboard will automatically appear here!</p>
+          <!-- Perfectly Centered Fallback -->
+          <div class="col-span-full flex flex-col justify-center items-center text-center py-20 px-4 bg-slate-50 rounded-3xl border border-slate-200 w-full min-h-75">
+            <h3 class="text-2xl md:text-3xl font-serif text-slate-800 mb-4">No News Yet</h3>
+            <p class="text-lg text-slate-500 font-light max-w-md">Articles published from your dashboard will automatically appear here!</p>
           </div>
           {% endfor %}
           
         </div>
       </section>
-
     </main>
 
     <!-- Footer Section -->
     <footer class="bg-slate-900 text-slate-300 py-12 mt-auto border-t border-slate-800">
-      <div class="container mx-auto px-4 max-w-6xl text-center">
+      <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-3 gap-8 text-center md:text-left">
+        <div class="md:col-span-1">
+          <h3 class="text-white text-2xl font-serif mb-4 tracking-tight">Beloved Berachah CIC</h3>
+          <p class="text-sm leading-relaxed mb-4 text-slate-300">
+            Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Legal & Registration</h3>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>Company Number: 16685295</li>
+            <li>Registered in England and Wales.</li>
+            <li>Registered Office: [Insert Address]</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links & Contact</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
+            <li><a href="contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
+            <li><a href="terms.html" class="text-slate-300 hover:text-white transition">Terms & Conditions</a></li>
+            <li><a href="privacy.html" class="text-slate-300 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="cookies.html" class="text-slate-300 hover:text-white transition">Cookie Policy</a></li>
+            <li><a href="safeguarding.html" class="text-slate-300 hover:text-white transition">Safeguarding</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-400 text-center">
         <p>&copy; 2026 Beloved Berachah CIC. All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- Mobile Menu JS -->
+    <script>
+      const btn = document.querySelector('button[aria-label="Open mobile menu"]');
+      const menu = document.getElementById("mobile-menu");
+      if (btn && menu) { btn.addEventListener("click", () => menu.classList.toggle("hidden")); }
+    </script>
   </body>
 </html>
