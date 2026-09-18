@@ -1,4 +1,7 @@
- <!doctype html>
+---
+permalink: "events.html"
+---
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +9,10 @@
 
     <!-- SEO Optimization -->
     <title>Events & Workshops | Beloved Berachah CIC</title>
-    <meta name="description" content="Discover upcoming talks, workshops, training sessions, and community awareness events hosted by Beloved Berachah CIC and Brenda Fraser." />
+    <meta
+      name="description"
+      content="Discover upcoming talks, workshops, training sessions, and community awareness events hosted by Beloved Berachah CIC and Brenda Fraser."
+    />
     <meta name="author" content="Beloved Berachah CIC" />
 
     <!-- PWA & Icons -->
@@ -27,40 +33,79 @@
       .font-serif {
         font-family: "Playfair Display", serif;
       }
-      .cms-event-content p { margin-bottom: 1rem; }
-      .cms-event-content a { color: #fcd34d; text-decoration: underline; }
+      .cms-event-content p {
+        margin-bottom: 1rem;
+      }
+      .cms-event-content a {
+        color: #fcd34d;
+        text-decoration: underline;
+      }
     </style>
   </head>
 
   <body class="flex flex-col min-h-screen">
-    
     <!-- Navigation Bar -->
-    <nav class="bg-white text-slate-800 p-4 sticky top-0 z-40 shadow-sm border-b-4 border-amber-500">
-      <div class="container mx-auto flex justify-between items-center max-w-6xl">
-        <a href="index.html" class="flex items-center gap-3 group hover:opacity-80 transition">
-          <img src="assets/images/BB.png" alt="Beloved Berachah Logo" width="48" height="48" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
-          <span class="font-serif text-slate-900 text-2xl md:text-3xl tracking-tight mt-1">Beloved <span class="text-amber-700">Berachah</span></span>
+    <nav
+      class="bg-white text-slate-800 p-4 sticky top-0 z-40 shadow-sm border-b-4 border-amber-500"
+    >
+      <div
+        class="container mx-auto flex justify-between items-center max-w-6xl"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-3 group hover:opacity-80 transition"
+        >
+          <img
+            src="assets/images/BB.png"
+            alt="Beloved Berachah Logo"
+            width="48"
+            height="48"
+            class="h-12 w-12 md:h-14 md:w-14 object-contain"
+          />
+          <span
+            class="font-serif text-slate-900 text-2xl md:text-3xl tracking-tight mt-1"
+            >Beloved <span class="text-amber-700">Berachah</span></span
+          >
         </a>
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8 font-medium items-center">
           <a href="index.html" class="hover:text-amber-700 transition">Home</a>
-          <a href="about.html" class="hover:text-amber-700 transition">About Us</a>
+          <a href="about.html" class="hover:text-amber-700 transition"
+            >About Us</a
+          >
           <a href="news.html" class="hover:text-amber-700 transition">News</a>
-          <a href="services.html" class="hover:text-amber-700 transition">Services</a>
+          <a href="services.html" class="hover:text-amber-700 transition"
+            >Services</a
+          >
           <a href="events.html" class="text-amber-700 transition">Events</a>
-          <a href="resources.html" class="hover:text-amber-700 transition">Resources</a>
-          <a href="contact.html" class="hover:text-amber-700 transition">Contact</a>
-          <a href="donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold hover:bg-amber-700 transition shadow-sm">Support Us</a>
+          <a href="resources.html" class="hover:text-amber-700 transition"
+            >Resources</a
+          >
+          <a href="contact.html" class="hover:text-amber-700 transition"
+            >Contact</a
+          >
+          <a
+            href="donate.html"
+            class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold hover:bg-amber-700 transition shadow-sm"
+            >Support Us</a
+          >
         </div>
       </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="bg-slate-900 py-20 md:py-24 border-b-4 border-amber-500 text-center px-4">
+    <header
+      class="bg-slate-900 py-20 md:py-24 border-b-4 border-amber-500 text-center px-4"
+    >
       <div class="container mx-auto max-w-4xl">
-        <span class="text-amber-500 font-semibold tracking-wider uppercase text-sm mb-4 block">Gatherings & Workshops</span>
-        <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 tracking-tight drop-shadow-sm">
+        <span
+          class="text-amber-500 font-semibold tracking-wider uppercase text-sm mb-4 block"
+          >Gatherings & Workshops</span
+        >
+        <h1
+          class="text-5xl md:text-7xl font-serif text-white mb-6 tracking-tight drop-shadow-sm"
+        >
           Upcoming <span class="text-amber-400 font-medium">Events</span>
         </h1>
         <p class="text-lg md:text-xl text-slate-300 font-light tracking-wide">
@@ -72,58 +117,85 @@
     <!-- Main Content -->
     <main role="main" class="grow py-20 bg-white">
       <div class="container mx-auto px-4 max-w-6xl">
-        
         <!-- Intro Text -->
         <div class="text-center max-w-3xl mx-auto mb-16">
           <p class="text-slate-600 text-lg leading-relaxed font-light">
-            We regularly host talks, workshops, and community events designed to educate, encourage, and inspire. Check below for our scheduled sessions or get in touch to book a bespoke workshop for your organisation.
+            We regularly host talks, workshops, and community events designed to
+            educate, encourage, and inspire. Check below for our scheduled
+            sessions or get in touch to book a bespoke workshop for your
+            organisation.
           </p>
         </div>
 
         <!-- DYNAMIC CMS EVENTS GRID -->
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20">
-          
           {% for event in collections.events | reverse %}
-          <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-10 border border-slate-800 flex flex-col h-full shadow-lg relative overflow-hidden">
-            <span class="bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-6">Upcoming Event</span>
-            <h3 class="font-serif text-3xl mb-4 text-white">{{ event.data.title }}</h3>
-            
-            <div class="cms-event-content text-sm font-light mb-8 text-slate-300 leading-relaxed">
-              {{ event.templateContent  }}
+          <div
+            class="bg-slate-900 text-white rounded-3xl p-8 md:p-10 border border-slate-800 flex flex-col h-full shadow-lg relative overflow-hidden"
+          >
+            <span
+              class="bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-6"
+              >Upcoming Event</span
+            >
+            <h3 class="font-serif text-3xl mb-4 text-white">
+              {{ event.data.title }}
+            </h3>
+
+            <div
+              class="cms-event-content text-sm font-light mb-8 text-slate-300 leading-relaxed"
+            >
+              {{ event.templateContent }}
             </div>
-            
-            <div class="mt-auto space-y-3 text-sm border-t border-slate-800 pt-6 text-slate-300">
+
+            <div
+              class="mt-auto space-y-3 text-sm border-t border-slate-800 pt-6 text-slate-300"
+            >
               {% if event.data.event_date %}
-              <p class="flex items-center gap-3">📅 {{ event.data.event_date }}</p>
-              {% endif %}
-              {% if event.data.location %}
-              <p class="flex items-center gap-3">📍 {{ event.data.location }}</p>
+              <p class="flex items-center gap-3">
+                📅 {{ event.data.event_date }}
+              </p>
+              {% endif %} {% if event.data.location %}
+              <p class="flex items-center gap-3">
+                📍 {{ event.data.location }}
+              </p>
               {% endif %}
             </div>
-            
+
             {% if event.data.booking_link %}
-            <a href="{{ event.data.booking_link }}" target="_blank" rel="noopener noreferrer" class="mt-8 block text-center bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 px-6 rounded-lg transition shadow-sm">Book Event</a>
+            <a
+              href="{{ event.data.booking_link }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-8 block text-center bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 px-6 rounded-lg transition shadow-sm"
+              >Book Event</a
+            >
             {% endif %}
           </div>
           {% else %}
           <!-- Fallback when no events exist yet -->
-          <div class="col-span-full text-center py-16 bg-slate-50 rounded-3xl border border-slate-200">
-            <h3 class="text-2xl font-serif text-slate-800 mb-2">No Scheduled Events</h3>
-            <p class="text-lg text-slate-500 font-light max-w-md mx-auto">Events published from your dashboard will automatically appear here!</p>
+          <div
+            class="col-span-full text-center py-16 bg-slate-50 rounded-3xl border border-slate-200"
+          >
+            <h3 class="text-2xl font-serif text-slate-800 mb-2">
+              No Scheduled Events
+            </h3>
+            <p class="text-lg text-slate-500 font-light max-w-md mx-auto">
+              Events published from your dashboard will automatically appear
+              here!
+            </p>
           </div>
           {% endfor %}
-          
         </div>
-
       </div>
     </main>
 
     <!-- Footer Section -->
-    <footer class="bg-slate-900 text-slate-300 py-12 mt-auto border-t border-slate-800">
+    <footer
+      class="bg-slate-900 text-slate-300 py-12 mt-auto border-t border-slate-800"
+    >
       <div class="container mx-auto px-4 max-w-6xl text-center">
         <p>&copy; 2026 Beloved Berachah CIC. All rights reserved.</p>
       </div>
     </footer>
-
   </body>
 </html>
