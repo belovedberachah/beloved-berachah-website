@@ -31,7 +31,7 @@ permalink: "events.html"
     </style>
   </head>
 
-  <body class="flex flex-col min-h-screen">
+  <body class="flex flex-col min-h-screen selection:bg-amber-200 selection:text-amber-900">
     
     <!-- PWA Install Banner -->
     <div id="pwa-install-banner" class="hidden fixed top-20 inset-x-4 md:left-auto md:right-4 md:w-96 z-50 transition-all duration-500 transform translate-y-0">
@@ -80,7 +80,7 @@ permalink: "events.html"
           <a href="events.html" class="text-amber-700 transition">Events</a>
           <a href="resources.html" class="hover:text-amber-700 transition">Resources</a>
           <a href="contact.html" class="hover:text-amber-700 transition">Contact</a>
-          <a href="donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold hover:bg-amber-700 transition shadow-sm">Support Us</a>
+          <a href="donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Support Us</a>
         </div>
         <button type="button" aria-label="Open mobile menu" class="md:hidden text-slate-800 focus:outline-none hover:text-amber-700 transition">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -94,49 +94,52 @@ permalink: "events.html"
         <a href="events.html" class="block px-4 py-3 text-amber-700 bg-amber-50 rounded-xl font-medium">Events</a>
         <a href="resources.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Resources</a>
         <a href="contact.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Contact</a>
-        <a href="donate.html" class="block px-4 py-3 mt-4 text-center bg-amber-500 text-slate-900 font-semibold rounded-xl shadow-sm">Support Us</a>
+        <a href="donate.html" class="block px-4 py-3 mt-4 text-center bg-amber-500 text-slate-900 font-bold rounded-xl shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Support Us</a>
       </div>
     </nav>
 
-    <header class="bg-slate-900 py-20 md:py-24 border-b-4 border-amber-500 text-center px-4">
+    <header class="bg-slate-900 pt-20 pb-32 md:pt-24 md:pb-40 text-center px-4 relative">
       <div class="container mx-auto max-w-4xl">
         <span class="text-amber-500 font-semibold tracking-wider uppercase text-sm mb-4 block">Gatherings & Workshops</span>
-        <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 tracking-tight drop-shadow-sm">Upcoming <span class="text-amber-400 font-medium">Events</span></h1>
+        <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 tracking-tight drop-shadow-sm">Upcoming <span class="bg-linear-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent font-medium drop-shadow-md">Events</span></h1>
         <p class="text-lg md:text-xl text-slate-300 font-light tracking-wide">Join us for talks, training sessions, and community gatherings.</p>
       </div>
     </header>
 
-    <main role="main" class="grow py-20 bg-white">
-      <div class="container mx-auto px-4 max-w-6xl">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <p class="text-slate-600 text-lg leading-relaxed font-light">We regularly host talks, workshops, and community events designed to educate, encourage, and inspire. Check below for our scheduled sessions or get in touch to book a bespoke workshop for your organisation.</p>
+    <main role="main" class="grow bg-slate-50">
+      <section class="container mx-auto px-4 max-w-4xl -mt-20 md:-mt-28 relative z-20 mb-16">
+        <div class="bg-white rounded-3xl shadow-xl border-t-4 border-amber-500 p-8 md:p-12 text-center">
+          <p class="text-slate-600 text-lg md:text-xl leading-relaxed font-light">We regularly host talks, workshops, and community events designed to educate, encourage, and inspire. Check below for our scheduled sessions or get in touch to book a bespoke workshop for your organisation.</p>
         </div>
+      </section>
 
-        <!-- DYNAMIC CMS EVENTS GRID -->
-        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20">
+      <!-- DYNAMIC CMS EVENTS GRID -->
+      <section class="container mx-auto px-4 max-w-6xl pb-24">
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           
           {% for event in collections.events | reverse %}
-          <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-10 border border-slate-800 flex flex-col h-full shadow-lg relative overflow-hidden">
-            <span class="bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-6">Upcoming Event</span>
+          <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-10 border border-slate-800 flex flex-col h-full shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-slate-700">
+            <span class="bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-6 shadow-sm">Upcoming Event</span>
             <h3 class="font-serif text-3xl mb-4 text-white">{{ event.data.title }}</h3>
             <div class="cms-event-content text-sm font-light mb-8 text-slate-300 leading-relaxed">{{ event.templateContent }}</div>
             <div class="mt-auto space-y-3 text-sm border-t border-slate-800 pt-6 text-slate-300">
               {% if event.data.event_date %}<p class="flex items-center gap-3">📅 {{ event.data.event_date }}</p>{% endif %}
               {% if event.data.location %}<p class="flex items-center gap-3">📍 {{ event.data.location }}</p>{% endif %}
             </div>
-            {% if event.data.booking_link %}<a href="{{ event.data.booking_link }}" target="_blank" rel="noopener noreferrer" class="mt-8 block text-center bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 px-6 rounded-lg transition shadow-sm">Book Event</a>{% endif %}
+            {% if event.data.booking_link %}
+            <a href="{{ event.data.booking_link }}" target="_blank" rel="noopener noreferrer" class="mt-8 block text-center bg-amber-500 text-slate-900 font-bold py-3 px-6 rounded-lg shadow-md hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Book Event</a>
+            {% endif %}
           </div>
-
           {% else %}
-          <!-- Guaranteed Full-Width Span (Bypassing Tailwind Cache) -->
-          <div style="grid-column: 1 / -1;" class="flex flex-col justify-center items-center text-center py-24 px-4 bg-slate-50 rounded-3xl border border-slate-200 w-full min-h-75 shadow-sm">
+          <!-- Perfectly Centered Fallback -->
+          <div style="grid-column: 1 / -1;" class="flex flex-col justify-center items-center text-center py-24 px-4 bg-white rounded-3xl border border-slate-200 w-full min-h-75 shadow-sm">
             <h3 class="text-3xl font-serif text-slate-800 mb-4">No Scheduled Events</h3>
             <p class="text-lg text-slate-500 font-light">Events published from your dashboard will automatically appear here!</p>
           </div>
           {% endfor %}
           
         </div>
-      </div>
+      </section>
     </main>
 
     <!-- Footer Section -->
