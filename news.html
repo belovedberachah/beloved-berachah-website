@@ -255,9 +255,8 @@ permalink: "news.html"
           <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col border-t-4 border-amber-500">
 
             {% if article.data.thumbnail %}
-
-            <div class="h-48 overflow-hidden bg-slate-100 border-b border-slate-100">
-
+            <!-- Perfect-Cut Image Locking (16:9 Ratio) -->
+            <div class="w-full aspect-video overflow-hidden bg-slate-100 border-b border-slate-100 shrink-0">
               <img src="{{ article.data.thumbnail }}" alt="{{ article.data.title }}" class="w-full h-full object-cover" />
 
             </div>
