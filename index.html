@@ -50,7 +50,9 @@
 
     <!-- PWA & Icons -->
     <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="assets/images/BB.png" />
+    <!-- Updated iOS Splash Icon -->
+    <link rel="apple-touch-icon" href="assets/images/bb-splash.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/png" href="assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
 
@@ -88,6 +90,37 @@
   </head>
 
   <body class="flex flex-col min-h-screen">
+
+    <!-- ========================================= -->
+    <!-- PREMIUM WEB SPLASH SCREEN OVERLAY         -->
+    <!-- ========================================= -->
+    <style>
+      @keyframes cinematic-zoom {
+        0% { transform: scale(0.9); opacity: 0; }
+        100% { transform: scale(1.05); opacity: 1; }
+      }
+      .animate-zoom {
+        animation: cinematic-zoom 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      }
+    </style>
+
+    <div id="splash-screen" class="fixed inset-0 z-[9999] bg-amber-50 flex flex-col items-center justify-center transition-opacity duration-1000">
+      <img src="assets/images/bb-splash.png" alt="Beloved Berachah Icon" class="w-auto h-48 md:h-64 object-contain animate-zoom drop-shadow-md">
+    </div>
+
+    <!-- Splash Screen Logic -->
+    <script>
+      window.addEventListener('load', function() {
+        const splash = document.getElementById('splash-screen');
+        setTimeout(() => {
+          splash.style.opacity = '0';
+          setTimeout(() => {
+            splash.style.display = 'none';
+          }, 1000); 
+        }, 1500); 
+      });
+    </script>
+    <!-- ========================================= -->
     
     <!-- PWA Install Prompt (Hidden by Default) -->
     <div id="pwa-install-banner" class="hidden fixed top-20 inset-x-4 md:left-auto md:right-4 md:w-96 z-50 transition-all duration-500 transform translate-y-0">
@@ -237,8 +270,8 @@
                   </footer>
                 </blockquote>
 
-                <!-- Quote 2: Song Lyrics -->
-                <blockquote class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100 mb-6">
+                <!-- Quote 2: Song Lyrics (Updated with mobile gap fix) -->
+                <blockquote class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100 mb-10 lg:mb-0">
                   <p class="text-xl font-serif text-slate-800 italic leading-relaxed mb-6">
                     "It's okay to fall,<br>
                     It's okay to rest,<br>
