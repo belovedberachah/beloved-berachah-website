@@ -7,14 +7,46 @@ permalink: "terms.html"
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Optimization -->
+    <!-- ========================================= -->
+    <!-- FIRST-CLASS SEO OPTIMIZATION              -->
+    <!-- ========================================= -->
     <title>Terms and Conditions | Beloved Berachah CIC</title>
-    <meta name="description" content="Terms and Conditions of use for the Beloved Berachah CIC website." />
+    <meta name="description" content="Terms and conditions for using the Beloved Berachah CIC website. Please read these terms carefully before using our site." />
     <meta name="author" content="Beloved Berachah CIC" />
-    <meta name="google-site-verification" content="YOUR_NEW_VERIFICATION_TAG" />
+    <link rel="canonical" href="https://belovedberachah.netlify.app/terms.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://belovedberachah.netlify.app/terms.html" />
+    <meta property="og:title" content="Terms and Conditions | Beloved Berachah CIC" />
+    <meta property="og:description" content="Terms and conditions for using the Beloved Berachah CIC website. Please read these terms carefully before using our site." />
+    <meta property="og:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
+    <meta property="og:site_name" content="Beloved Berachah CIC" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Terms and Conditions | Beloved Berachah CIC" />
+    <meta name="twitter:description" content="Terms and conditions for using the Beloved Berachah CIC website." />
+    <meta name="twitter:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
+    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+    
+    <!-- Schema.org Structured Data (Directly feeds Google organization details) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Beloved Berachah CIC",
+      "url": "https://belovedberachah.netlify.app/",
+      "logo": "https://belovedberachah.netlify.app/assets/images/BB.png",
+      "description": "Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.",
+      "founder": {
+        "@type": "Person",
+        "name": "Brenda Fraser"
+      }
+    }
+    </script>
+    <!-- ========================================= -->
 
     <!-- PWA & Icons -->
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="assets/images/BB.png" />
     <link rel="icon" type="image/png" href="assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
@@ -23,7 +55,7 @@ permalink: "terms.html"
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js').catch(err => console.log('Service Worker failed: ', err));
+          navigator.serviceWorker.register('/sw.js').catch(err => console.log('Service Worker failed: ', err));
         });
       }
     </script>
@@ -246,26 +278,36 @@ permalink: "terms.html"
         <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 text-slate-900 relative">
           <h3 class="text-xl font-serif mb-2">Cookie Preferences</h3>
           <p class="text-sm text-slate-600 mb-6">Manage how we use cookies on your device.</p>
+          
           <div class="space-y-4 mb-8">
             <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-              <div><p class="font-semibold text-sm">Essential Cookies</p></div>
+              <div>
+                <p class="font-semibold text-sm">Essential Cookies</p>
+              </div>
               <span class="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">Always ON</span>
             </div>
+            
             <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-              <div class="pr-4"><p class="font-semibold text-sm">Analytics Cookies</p></div>
+              <div class="pr-4">
+                <p class="font-semibold text-sm">Analytics Cookies</p>
+              </div>
               <label class="relative inline-flex items-center cursor-pointer shrink-0">
                 <input type="checkbox" id="toggle-analytics" aria-label="Enable Analytics Cookies" class="sr-only peer">
                 <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
               </label>
             </div>
+            
             <div class="flex justify-between items-center">
-              <div class="pr-4"><p class="font-semibold text-sm">Marketing Cookies</p></div>
+              <div class="pr-4">
+                <p class="font-semibold text-sm">Marketing Cookies</p>
+              </div>
               <label class="relative inline-flex items-center cursor-pointer shrink-0">
                 <input type="checkbox" id="toggle-marketing" aria-label="Enable Marketing Cookies" class="sr-only peer">
                 <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
               </label>
             </div>
           </div>
+          
           <div class="flex gap-3">
             <button onclick="saveCookiePreferences()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 rounded transition">Save Preferences</button>
             <button onclick="closeCookieModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 rounded transition">Cancel</button>
@@ -278,21 +320,96 @@ permalink: "terms.html"
     <script>
       const btn = document.querySelector('button[aria-label="Open mobile menu"]');
       const menu = document.getElementById("mobile-menu");
-      btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
 
       let deferredPrompt;
       const installBanner = document.getElementById('pwa-install-banner');
-      window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; installBanner.classList.remove('hidden'); });
-      document.getElementById('pwa-install-btn').addEventListener('click', async () => { installBanner.classList.add('hidden'); if (deferredPrompt) { deferredPrompt.prompt(); const { outcome } = await deferredPrompt.userChoice; deferredPrompt = null; }});
-      document.getElementById('pwa-close-btn').addEventListener('click', () => installBanner.classList.add('hidden'));
+      
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault(); 
+        deferredPrompt = e;
+        installBanner.classList.remove('hidden'); 
+      });
 
-      function checkCookieConsent() { const consent = JSON.parse(localStorage.getItem('bb_cookie_consent')); if (!consent) { document.getElementById('cookie-banner').classList.remove('hidden'); } else { applyConsent(consent); } }
-      function acceptAllCookies() { const consent = { analytics: true, marketing: true }; localStorage.setItem('bb_cookie_consent', JSON.stringify(consent)); document.getElementById('cookie-banner').classList.add('hidden'); applyConsent(consent); }
-      function rejectCookies() { const consent = { analytics: false, marketing: false }; localStorage.setItem('bb_cookie_consent', JSON.stringify(consent)); document.getElementById('cookie-banner').classList.add('hidden'); applyConsent(consent); }
-      function openCookieModal() { document.getElementById('cookie-banner').classList.add('hidden'); document.getElementById('cookie-modal').classList.remove('hidden'); const consent = JSON.parse(localStorage.getItem('bb_cookie_consent')) || { analytics: false, marketing: false }; document.getElementById('toggle-analytics').checked = consent.analytics; document.getElementById('toggle-marketing').checked = consent.marketing; }
-      function closeCookieModal() { document.getElementById('cookie-modal').classList.add('hidden'); if (!localStorage.getItem('bb_cookie_consent')) { document.getElementById('cookie-banner').classList.remove('hidden'); } }
-      function saveCookiePreferences() { const consent = { analytics: document.getElementById('toggle-analytics').checked, marketing: document.getElementById('toggle-marketing').checked }; localStorage.setItem('bb_cookie_consent', JSON.stringify(consent)); document.getElementById('cookie-modal').classList.add('hidden'); applyConsent(consent); }
-      function applyConsent(consent) { if (consent.analytics && !window.gaLoaded) { window.gaLoaded = true; const script = document.createElement('script'); script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; script.async = true; document.head.appendChild(script); window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX'); } }
+      document.getElementById('pwa-install-btn').addEventListener('click', async () => {
+        installBanner.classList.add('hidden');
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          const { outcome } = await deferredPrompt.userChoice;
+          deferredPrompt = null;
+        }
+      });
+
+      document.getElementById('pwa-close-btn').addEventListener('click', () => {
+        installBanner.classList.add('hidden');
+      });
+
+      function checkCookieConsent() {
+        const consent = JSON.parse(localStorage.getItem('bb_cookie_consent'));
+        if (!consent) {
+          document.getElementById('cookie-banner').classList.remove('hidden');
+        } else {
+          applyConsent(consent);
+        }
+      }
+
+      function acceptAllCookies() {
+        const consent = { analytics: true, marketing: true };
+        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
+        document.getElementById('cookie-banner').classList.add('hidden');
+        applyConsent(consent);
+      }
+
+      function rejectCookies() {
+        const consent = { analytics: false, marketing: false };
+        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
+        document.getElementById('cookie-banner').classList.add('hidden');
+        applyConsent(consent);
+      }
+
+      function openCookieModal() {
+        document.getElementById('cookie-banner').classList.add('hidden');
+        document.getElementById('cookie-modal').classList.remove('hidden');
+        
+        const consent = JSON.parse(localStorage.getItem('bb_cookie_consent')) || { analytics: false, marketing: false };
+        document.getElementById('toggle-analytics').checked = consent.analytics;
+        document.getElementById('toggle-marketing').checked = consent.marketing;
+      }
+
+      function closeCookieModal() {
+        document.getElementById('cookie-modal').classList.add('hidden');
+        if (!localStorage.getItem('bb_cookie_consent')) {
+          document.getElementById('cookie-banner').classList.remove('hidden');
+        }
+      }
+
+      function saveCookiePreferences() {
+        const consent = {
+          analytics: document.getElementById('toggle-analytics').checked,
+          marketing: document.getElementById('toggle-marketing').checked
+        };
+        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
+        document.getElementById('cookie-modal').classList.add('hidden');
+        applyConsent(consent);
+      }
+
+      function applyConsent(consent) {
+        if (consent.analytics && !window.gaLoaded) {
+          window.gaLoaded = true;
+          const script = document.createElement('script');
+          script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+          script.async = true;
+          document.head.appendChild(script);
+          
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      }
+
       window.addEventListener('DOMContentLoaded', checkCookieConsent);
 
       const iosBanner = document.getElementById('ios-install-banner');

@@ -7,10 +7,27 @@ permalink: "resources.html"
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Optimization -->
+    <!-- ========================================= -->
+    <!-- FIRST-CLASS SEO OPTIMIZATION              -->
+    <!-- ========================================= -->
     <title>Resources & Support | Beloved Berachah CIC</title>
-    <meta name="description" content="Access helpful guides, recommended reading, and signposting to emergency support services for women facing trauma, domestic abuse, and addiction." />
+    <meta name="description" content="Helpful resources, links, and support materials for women navigating trauma, addiction, domestic abuse, and mental health challenges." />
     <meta name="author" content="Beloved Berachah CIC" />
+    <link rel="canonical" href="https://belovedberachah.netlify.app/resources.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://belovedberachah.netlify.app/resources.html" />
+    <meta property="og:title" content="Resources & Support | Beloved Berachah CIC" />
+    <meta property="og:description" content="Helpful resources, links, and support materials for women navigating trauma, addiction, domestic abuse, and mental health challenges." />
+    <meta property="og:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
+    <meta property="og:site_name" content="Beloved Berachah CIC" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Resources & Support | Beloved Berachah CIC" />
+    <meta name="twitter:description" content="Helpful resources, links, and support materials for women navigating trauma, addiction, domestic abuse, and mental health challenges." />
+    <meta name="twitter:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
+    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+    <!-- ========================================= -->
 
     <!-- PWA & Icons -->
     <link rel="manifest" href="manifest.json" />
@@ -22,7 +39,7 @@ permalink: "resources.html"
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js').catch(err => console.log('Service Worker failed: ', err));
+          navigator.serviceWorker.register('/sw.js').catch(err => console.log('Service Worker failed: ', err));
         });
       }
     </script>

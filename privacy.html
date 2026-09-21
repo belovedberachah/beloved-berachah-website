@@ -7,11 +7,49 @@ permalink: "privacy.html"
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- SEO Optimization -->
+    <!-- ========================================= -->
+    <!-- FIRST-CLASS SEO OPTIMIZATION              -->
+    <!-- ========================================= -->
+    
+    <!-- Core Search Engine Tags -->
     <title>Privacy Policy | Beloved Berachah CIC</title>
     <meta name="description" content="Privacy policy and UK GDPR compliance information for Beloved Berachah CIC. Learn how we protect your personal and sensitive data." />
     <meta name="author" content="Beloved Berachah CIC" />
-    <meta name="google-site-verification" content="YOUR_NEW_VERIFICATION_TAG" />
+    <link rel="canonical" href="https://belovedberachah.netlify.app/privacy.html" />
+
+    <!-- Open Graph / Social Media Preview Cards (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://belovedberachah.netlify.app/privacy.html" />
+    <meta property="og:title" content="Privacy Policy | Beloved Berachah CIC" />
+    <meta property="og:description" content="Privacy policy and UK GDPR compliance information for Beloved Berachah CIC. Learn how we protect your personal and sensitive data." />
+    <meta property="og:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
+    <meta property="og:site_name" content="Beloved Berachah CIC" />
+
+    <!-- Twitter / X Preview Cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Privacy Policy | Beloved Berachah CIC" />
+    <meta name="twitter:description" content="Privacy policy and UK GDPR compliance information for Beloved Berachah CIC. Learn how we protect your personal and sensitive data." />
+    <meta name="twitter:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+
+    <!-- Schema.org Structured Data (Directly feeds Google organization details) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Beloved Berachah CIC",
+      "url": "https://belovedberachah.netlify.app/",
+      "logo": "https://belovedberachah.netlify.app/assets/images/BB.png",
+      "description": "Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.",
+      "founder": {
+        "@type": "Person",
+        "name": "Brenda Fraser"
+      }
+    }
+    </script>
+    <!-- ========================================= -->
     
     <link rel="icon" type="image/png" href="assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
@@ -29,12 +67,12 @@ permalink: "privacy.html"
     <link rel="stylesheet" href="./css/style.css" />
     
     <!-- PWA Setup -->
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="assets/images/BB.png" />
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js').catch(err => console.log('Service Worker failed: ', err));
+          navigator.serviceWorker.register('/sw.js').catch(err => console.log('Service Worker failed: ', err));
         });
       }
     </script>

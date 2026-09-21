@@ -7,14 +7,28 @@ permalink: "about.html"
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Optimization -->
+    <!-- ========================================= -->
+    <!-- FIRST-CLASS SEO OPTIMIZATION              -->
+    <!-- ========================================= -->
     <title>About Us | Beloved Berachah CIC</title>
-    <meta
-      name="description"
-      content="Learn about our vision, objectives, and meet the founder of Beloved Berachah CIC."
-    />
+    <meta name="description" content="Learn about Beloved Berachah CIC's mission, vision, and the story of our founder Brenda Fraser. We support women affected by trauma and abuse." />
     <meta name="author" content="Beloved Berachah CIC" />
+    <link rel="canonical" href="https://belovedberachah.netlify.app/about.html" />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://belovedberachah.netlify.app/about.html" />
+    <meta property="og:title" content="About Us | Beloved Berachah CIC" />
+    <meta property="og:description" content="Learn about Beloved Berachah CIC's mission, vision, and the story of our founder Brenda Fraser." />
+    <meta property="og:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
+    <meta property="og:site_name" content="Beloved Berachah CIC" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="About Us | Beloved Berachah CIC" />
+    <meta name="twitter:description" content="Learn about Beloved Berachah CIC's mission, vision, and the story of our founder Brenda Fraser." />
+    <meta name="twitter:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
+    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+    <!-- ========================================= -->
+     
     <!-- PWA & Icons -->
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="assets/images/BB.png" />
@@ -26,7 +40,7 @@ permalink: "about.html"
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("./sw.js")
+            .register("/sw.js")
             .catch((err) => console.log("Service Worker failed: ", err));
         });
       }
