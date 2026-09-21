@@ -208,22 +208,26 @@
 
       <!-- The Story Behind Our Name Section -->
       <section class="pb-20 px-4">
-        <div class="container mx-auto max-w-5xl">
-          <div class="bg-amber-50 rounded-3xl p-8 md:p-16 border border-amber-100 relative overflow-hidden shadow-sm">
+        <div class="container mx-auto max-w-6xl">
+          <div class="bg-amber-50 rounded-3xl p-8 md:p-12 lg:p-16 border border-amber-100 relative overflow-hidden shadow-sm">
             
             <!-- Decorative Background Accents -->
             <div class="absolute -right-20 -top-20 w-64 h-64 bg-amber-200/40 rounded-full blur-3xl"></div>
             <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-amber-200/40 rounded-full blur-3xl"></div>
 
-            <div class="relative z-10 text-center max-w-3xl mx-auto">
-              <h2 class="text-3xl md:text-4xl font-serif text-slate-900 mb-6 tracking-tight">The Story Behind Our Name</h2>
-              <div class="w-12 h-1 bg-amber-600 mx-auto mb-8 rounded-full"></div>
+            <!-- 50/50 Grid Layout -->
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              
+              <!-- Left Side: Text Content -->
+              <div class="text-left">
+                <h2 class="text-3xl md:text-4xl font-serif text-slate-900 mb-6 tracking-tight">The Story Behind Our Name</h2>
+                <!-- Note: mx-auto was removed so the line aligns to the left -->
+                <div class="w-12 h-1 bg-amber-600 mb-8 rounded-full"></div>
 
-              <p class="text-slate-700 text-lg leading-relaxed font-light mb-12">
-                Our name, <strong>Beloved Berachah</strong> (Berachah is a Hebrew word meaning <em>blessing</em> or <em>blessings</em>), reflects our belief that every woman is precious, deeply valued, and created to live a life free from shame, fear, and emotional and spiritual bondage. We are committed to creating safe spaces where women can find encouragement, practical support, and opportunities to rebuild their lives, rediscover their identity, and embrace hope for the future.
-              </p>
+                <p class="text-slate-700 text-lg leading-relaxed font-light mb-10">
+                  Our name, <strong>Beloved Berachah</strong> (Berachah is a Hebrew word meaning <em>blessing</em> or <em>blessings</em>), reflects our belief that every woman is precious, deeply valued, and created to live a life free from shame, fear, and emotional and spiritual bondage. We are committed to creating safe spaces where women can find encouragement, practical support, and opportunities to rebuild their lives, rediscover their identity, and embrace hope for the future.
+                </p>
 
-              <div class="max-w-2xl mx-auto text-left">
                 <!-- Quote 2: Berachah -->
                 <blockquote class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100">
                   <p class="text-xl font-serif text-slate-800 italic leading-relaxed mb-6">
@@ -234,6 +238,18 @@
                   </footer>
                 </blockquote>
               </div>
+
+              <!-- Right Side: Portrait Video -->
+              <div class="w-full max-w-sm mx-auto lg:ml-auto lg:mr-0">
+                <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-amber-500 bg-black relative group transform hover:scale-[1.02] transition-transform duration-300">
+                  <!-- IMPORTANT: Change 'home-video.mp4' to your actual video file name -->
+                  <video controls playsinline preload="metadata" class="w-full aspect-9/16 object-contain bg-black">
+                    <source src="assets/videos/ffs-music.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
