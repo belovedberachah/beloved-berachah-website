@@ -125,9 +125,9 @@
       <!-- MASSIVE Ambient Studio Glow Behind Logo -->
       <div class="absolute w-[120vw] h-[80vh] bg-amber-400/20 rounded-[100%] blur-[80px] animate-pulse" style="animation-duration: 3s;"></div>
       
-      <!-- The Logo: Now scaled by HEIGHT (75% of the screen) to stretch vertically -->
+      <!-- The Logo: Forced to 85% of screen height using raw inline CSS to bypass any Tailwind limits -->
       <!-- Added a much stronger, tinted 3D drop shadow -->
-      <img src="assets/images/bb-splash.png" alt="Beloved Berachah Icon" class="relative z-10 h-[75svh] w-auto max-w-[90vw] object-contain animate-premium-reveal drop-shadow-[0_30px_40px_rgba(217,119,6,0.3)]">
+      <img src="assets/images/bb-splash.png" alt="Beloved Berachah Icon" class="relative z-10 object-contain animate-premium-reveal drop-shadow-[0_30px_40px_rgba(217,119,6,0.3)] style="height: 85vh; width: auto; max-width: none;">
       
     </div>
 
