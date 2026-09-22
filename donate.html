@@ -7,11 +7,11 @@
     <title>Support Us | Beloved Berachah CIC</title>
     <meta name="description" content="Partner with Beloved Berachah CIC. Your generous donations empower women affected by trauma and addiction to heal, recover, and thrive." />
     
-    <!-- PWA & Icons (Relative Paths matching index.html) -->
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="apple-touch-icon" href="./assets/images/bb-icon-512.png" />
+    <!-- PWA & Icons (Absolute Paths for Netlify) -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/assets/images/bb-icon-512.png" />
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="icon" type="image/png" href="./assets/images/BB.png" />
+    <link rel="icon" type="image/png" href="/assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
 
     <!-- Typography -->
@@ -19,8 +19,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
 
-    <!-- Local Tailwind CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Absolute Tailwind CSS Path -->
+    <link rel="stylesheet" href="/css/style.css" />
 
     <style>
       body { font-family: "Inter", sans-serif; background-color: #fafaf9; color: #334155; }
@@ -40,21 +40,21 @@
     <!-- Navigation Bar -->
     <nav class="bg-white text-slate-800 p-4 sticky top-0 z-40 shadow-sm border-b-4 border-amber-500">
       <div class="container mx-auto flex justify-between items-center max-w-6xl">
-        <a href="./index.html" class="flex items-center gap-3 group hover:opacity-80 transition">
-          <img src="./assets/images/BB.png" alt="Beloved Berachah Logo" width="48" height="48" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
+        <a href="/index.html" class="flex items-center gap-3 group hover:opacity-80 transition">
+          <img src="/assets/images/BB.png" alt="Beloved Berachah Logo" width="48" height="48" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
           <span class="font-serif text-slate-900 text-2xl md:text-3xl tracking-tight mt-1">Beloved <span class="text-amber-700">Berachah</span></span>
         </a>
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8 font-medium items-center">
-          <a href="./index.html" class="hover:text-amber-700 transition">Home</a>
-          <a href="./about.html" class="hover:text-amber-700 transition">About Us</a>
-          <a href="./news.html" class="hover:text-amber-700 transition">News</a>
-          <a href="./services.html" class="hover:text-amber-700 transition">Services</a>
-          <a href="./events.html" class="hover:text-amber-700 transition">Events</a>
-          <a href="./resources.html" class="hover:text-amber-700 transition">Resources</a>
-          <a href="./contact.html" class="hover:text-amber-700 transition">Contact</a>
-          <a href="./donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg transition-all">Support Us</a>
+          <a href="/index.html" class="hover:text-amber-700 transition">Home</a>
+          <a href="/about.html" class="hover:text-amber-700 transition">About Us</a>
+          <a href="/news.html" class="hover:text-amber-700 transition">News</a>
+          <a href="/services.html" class="hover:text-amber-700 transition">Services</a>
+          <a href="/events.html" class="hover:text-amber-700 transition">Events</a>
+          <a href="/resources.html" class="hover:text-amber-700 transition">Resources</a>
+          <a href="/contact.html" class="hover:text-amber-700 transition">Contact</a>
+          <a href="/donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg transition-all">Support Us</a>
         </div>
       </div>
     </nav>
@@ -64,9 +64,8 @@
       
       <!-- Premium Hero Header -->
       <header class="relative bg-slate-900 overflow-hidden border-b-4 border-amber-500">
-        <!-- FIXED IMAGE EXTENSION: .jpg -->
         <div class="absolute inset-0 z-0 opacity-30">
-          <img src="./assets/images/hero.jpg" alt="Women supporting each other" class="w-full h-full object-cover" />
+          <img src="/assets/images/hero.jpg" alt="Women supporting each other" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-linear-to-b from-slate-900/50 to-slate-900"></div>
         </div>
 
@@ -98,9 +97,9 @@
               </p>
             </div>
 
-            <!-- Visual Break: Local Image FIXED EXTENSION .jpg -->
+            <!-- Visual Break: Absolute Path -->
             <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative bg-slate-200 min-h-64 flex items-center justify-center group">
-              <img src="./assets/images/support.jpg" alt="Hands holding together in support" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+              <img src="/assets/images/support.jpg" alt="Hands holding together in support" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
             </div>
 
             <!-- How the money is used -->
@@ -225,7 +224,7 @@
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links & Contact</h3>
           <ul class="space-y-3 text-sm">
             <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
-            <li><a href="./contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
+            <li><a href="/contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
           </ul>
         </div>
       </div>
