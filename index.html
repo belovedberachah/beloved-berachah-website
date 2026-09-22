@@ -97,12 +97,12 @@
     <style>
       /* 1. Cinematic Entrance: Soft upward lift, focus, and scale */
       @keyframes premium-reveal {
-        0% { transform: scale(0.85) translateY(15px); opacity: 0; filter: blur(10px); }
+        0% { transform: scale(0.9) translateY(20px); opacity: 0; filter: blur(12px); }
         100% { transform: scale(1) translateY(0); opacity: 1; filter: blur(0); }
       }
       
       .animate-premium-reveal {
-        animation: premium-reveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation: premium-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
 
       /* 2. Container Transition Rules */
@@ -119,14 +119,15 @@
       }
     </style>
 
-    <!-- Uses a subtle gradient for depth instead of a flat color -->
-    <div id="splash-screen" class="fixed inset-0 z-9999 bg-linear-to-b from-white to-amber-50 flex flex-col items-center justify-center overflow-hidden">
+    <!-- Uses a slightly deeper amber gradient at the bottom for richness -->
+    <div id="splash-screen" class="fixed inset-0 z-9999 bg-linear-to-b from-white to-amber-100 flex flex-col items-center justify-center overflow-hidden">
       
-      <!-- Ambient Glow Behind Logo -->
-      <div class="absolute w-64 h-64 bg-amber-300/20 rounded-full blur-3xl animate-pulse"></div>
+      <!-- MASSIVE Ambient Studio Glow Behind Logo -->
+      <div class="absolute w-[120vw] h-[80vh] bg-amber-400/20 rounded-[100%] blur-[80px] animate-pulse" style="animation-duration: 3s;"></div>
       
-      <!-- The Logo with Custom Tinted Shadow -->
-      <img src="assets/images/bb-splash.png" alt="Beloved Berachah Icon" class="relative z-10 w-3/4 max-w-70 object-contain animate-premium-reveal drop-shadow-[0_20px_30px_rgba(217,119,6,0.15)]">
+      <!-- The Logo: Now scaled by HEIGHT (75% of the screen) to stretch vertically -->
+      <!-- Added a much stronger, tinted 3D drop shadow -->
+      <img src="assets/images/bb-splash.png" alt="Beloved Berachah Icon" class="relative z-10 h-[75svh] w-auto max-w-[90vw] object-contain animate-premium-reveal drop-shadow-[0_30px_40px_rgba(217,119,6,0.3)]">
       
     </div>
 
