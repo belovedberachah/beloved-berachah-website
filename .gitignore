@@ -3,4 +3,7 @@
 .DS_Store
 
 # Tailwind CLI (if applicable later)
+node_modules/_site/
+
+_site/
 node_modules/
