@@ -92,32 +92,56 @@
   <body class="flex flex-col min-h-screen">
 
     <!-- ========================================= -->
-    <!-- PREMIUM WEB SPLASH SCREEN OVERLAY         -->
+    <!-- ULTRA-PREMIUM WEB SPLASH SCREEN           -->
     <!-- ========================================= -->
     <style>
-      @keyframes cinematic-zoom {
-        0% { transform: scale(0.9); opacity: 0; }
-        100% { transform: scale(1.05); opacity: 1; }
+      /* 1. Cinematic Entrance: Soft upward lift, focus, and scale */
+      @keyframes premium-reveal {
+        0% { transform: scale(0.85) translateY(15px); opacity: 0; filter: blur(10px); }
+        100% { transform: scale(1) translateY(0); opacity: 1; filter: blur(0); }
       }
-      .animate-zoom {
-        animation: cinematic-zoom 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      
+      .animate-premium-reveal {
+        animation: premium-reveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      /* 2. Container Transition Rules */
+      #splash-screen {
+        transition: opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1), 
+                    transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+
+      /* 3. The Exit: Zooms slightly toward the user as it fades out */
+      .splash-exit {
+        opacity: 0 !important;
+        transform: scale(1.15) !important;
+        pointer-events: none;
       }
     </style>
 
-    <div id="splash-screen" class="fixed inset-0 z-[9999] bg-amber-50 flex flex-col items-center justify-center transition-opacity duration-1000">
-      <img src="assets/images/bb-splash.png" alt="Beloved Berachah Icon" class="w-auto h-48 md:h-64 object-contain animate-zoom drop-shadow-md">
+    <!-- Uses a subtle gradient for depth instead of a flat color -->
+    <div id="splash-screen" class="fixed inset-0 z-9999 bg-linear-to-b from-white to-amber-50 flex flex-col items-center justify-center overflow-hidden">
+      
+      <!-- Ambient Glow Behind Logo -->
+      <div class="absolute w-64 h-64 bg-amber-300/20 rounded-full blur-3xl animate-pulse"></div>
+      
+      <!-- The Logo with Custom Tinted Shadow -->
+      <img src="assets/images/bb-splash.png" alt="Beloved Berachah Icon" class="relative z-10 w-3/4 max-w-70 object-contain animate-premium-reveal drop-shadow-[0_20px_30px_rgba(217,119,6,0.15)]">
+      
     </div>
 
     <!-- Splash Screen Logic -->
     <script>
       window.addEventListener('load', function() {
         const splash = document.getElementById('splash-screen');
+        // Let the entrance animation breathe for 1.2s, then trigger the dive
         setTimeout(() => {
-          splash.style.opacity = '0';
+          splash.classList.add('splash-exit');
+          // Wait for the exit transition to finish before hiding from DOM
           setTimeout(() => {
             splash.style.display = 'none';
-          }, 1000); 
-        }, 1500); 
+          }, 800); 
+        }, 1200); 
       });
     </script>
     <!-- ========================================= -->
