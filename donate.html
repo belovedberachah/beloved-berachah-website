@@ -24,21 +24,12 @@ permalink: donate.html
     <meta property="og:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
     <meta property="og:site_name" content="Beloved Berachah CIC" />
 
-    <!-- PWA & Icons -->
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="apple-touch-icon" href="./assets/images/bb-icon-512.png" />
+    <!-- PWA & Icons (Absolute Paths) -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/assets/images/bb-icon-512.png" />
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="icon" type="image/png" href="./assets/images/BB.png" />
+    <link rel="icon" type="image/png" href="/assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
-
-    <!-- PWA Setup -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(err => console.log('Service Worker failed: ', err));
-        });
-      }
-    </script>
 
     <!-- Typography (Playfair Display & Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,8 +40,8 @@ permalink: donate.html
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
     </noscript>
 
-    <!-- Local Tailwind CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Local Tailwind CSS (Absolute Path with Cache Buster) -->
+    <link rel="stylesheet" href="/css/style.css?v=donate" />
 
     <style>
       body {
@@ -64,8 +55,8 @@ permalink: donate.html
       
       /* Premium styling for the donation amount buttons */
       .donation-radio:checked + label {
-        background-color: #f59e0b; /* amber-500 */
-        color: #0f172a; /* slate-900 */
+        background-color: #f59e0b; 
+        color: #0f172a; 
         border-color: #f59e0b;
         transform: translateY(-2px);
         box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
@@ -85,7 +76,7 @@ permalink: donate.html
     <div id="pwa-install-banner" class="hidden fixed top-20 inset-x-4 md:left-auto md:right-4 md:w-96 z-50 transition-all duration-500 transform translate-y-0">
       <div class="bg-slate-900 text-white p-4 rounded-xl shadow-2xl border border-slate-700 flex justify-between items-center">
         <div class="flex items-center gap-3">
-          <img src="assets/images/BB.png" alt="Beloved Berachah Icon" class="w-10 h-10 rounded-md bg-white p-1 object-contain">
+          <img src="/assets/images/BB.png" alt="Beloved Berachah Icon" class="w-10 h-10 rounded-md bg-white p-1 object-contain">
           <div>
             <p class="font-semibold text-sm">Install Beloved Berachah</p>
             <p class="text-xs text-slate-300">Add to home screen</p>
@@ -101,21 +92,21 @@ permalink: donate.html
     <!-- Navigation Bar -->
     <nav class="bg-white text-slate-800 p-4 sticky top-0 z-40 shadow-sm border-b-4 border-amber-500">
       <div class="container mx-auto flex justify-between items-center max-w-6xl">
-        <a href="index.html" class="flex items-center gap-3 group hover:opacity-80 transition">
-          <img src="assets/images/BB.png" alt="Beloved Berachah Logo" width="48" height="48" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
+        <a href="/index.html" class="flex items-center gap-3 group hover:opacity-80 transition">
+          <img src="/assets/images/BB.png" alt="Beloved Berachah Logo" width="48" height="48" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
           <span class="font-serif text-slate-900 text-2xl md:text-3xl tracking-tight mt-1">Beloved <span class="text-amber-700">Berachah</span></span>
         </a>
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8 font-medium items-center">
-          <a href="index.html" class="hover:text-amber-700 transition">Home</a>
-          <a href="about.html" class="hover:text-amber-700 transition">About Us</a>
-          <a href="news.html" class="hover:text-amber-700 transition">News</a>
-          <a href="services.html" class="hover:text-amber-700 transition">Services</a>
-          <a href="events.html" class="hover:text-amber-700 transition">Events</a>
-          <a href="resources.html" class="hover:text-amber-700 transition">Resources</a>
-          <a href="contact.html" class="hover:text-amber-700 transition">Contact</a>
-          <a href="donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg transition-all">Support Us</a>
+          <a href="/index.html" class="hover:text-amber-700 transition">Home</a>
+          <a href="/about.html" class="hover:text-amber-700 transition">About Us</a>
+          <a href="/news.html" class="hover:text-amber-700 transition">News</a>
+          <a href="/services.html" class="hover:text-amber-700 transition">Services</a>
+          <a href="/events.html" class="hover:text-amber-700 transition">Events</a>
+          <a href="/resources.html" class="hover:text-amber-700 transition">Resources</a>
+          <a href="/contact.html" class="hover:text-amber-700 transition">Contact</a>
+          <a href="/donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg transition-all">Support Us</a>
         </div>
 
         <!-- Mobile Hamburger Button -->
@@ -126,14 +117,14 @@ permalink: donate.html
 
       <!-- Mobile Dropdown Menu -->
       <div id="mobile-menu" class="hidden md:hidden container mx-auto max-w-6xl border-t border-slate-100 mt-4 pt-4 pb-2 space-y-2 px-2">
-        <a href="index.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Home</a>
-        <a href="about.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">About Us</a>
-        <a href="news.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">News</a>
-        <a href="services.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Services</a>
-        <a href="events.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Events</a>
-        <a href="resources.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Resources</a>
-        <a href="contact.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Contact</a>
-        <a href="donate.html" class="block px-4 py-3 mt-4 text-center bg-amber-500 text-slate-900 font-bold rounded-xl shadow-sm">Support Us</a>
+        <a href="/index.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Home</a>
+        <a href="/about.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">About Us</a>
+        <a href="/news.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">News</a>
+        <a href="/services.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Services</a>
+        <a href="/events.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Events</a>
+        <a href="/resources.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Resources</a>
+        <a href="/contact.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Contact</a>
+        <a href="/donate.html" class="block px-4 py-3 mt-4 text-center bg-amber-500 text-slate-900 font-bold rounded-xl shadow-sm">Support Us</a>
       </div>
     </nav>
 
@@ -316,7 +307,7 @@ permalink: donate.html
               </div>
               <h3 class="text-2xl font-serif text-slate-900 mb-4">Corporate Sponsorships</h3>
               <p class="text-slate-600 font-light text-base mb-8 grow">If your business would like to partner with us, sponsor an event, or arrange a corporate donation, we would love to hear from you.</p>
-              <a href="contact.html" class="block text-center bg-white text-slate-900 border-2 border-slate-200 font-bold py-4 px-6 rounded-xl hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300">Get in Touch</a>
+              <a href="/contact.html" class="block text-center bg-white text-slate-900 border-2 border-slate-200 font-bold py-4 px-6 rounded-xl hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300">Get in Touch</a>
             </div>
           </div>
         </div>
@@ -347,11 +338,11 @@ permalink: donate.html
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links & Contact</h3>
           <ul class="space-y-3 text-sm">
             <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
-            <li><a href="contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
-            <li><a href="terms.html" class="text-slate-300 hover:text-white transition">Terms & Conditions</a></li>
-            <li><a href="privacy.html" class="text-slate-300 hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="cookies.html" class="text-slate-300 hover:text-white transition">Cookie Policy</a></li>
-            <li><a href="safeguarding.html" class="text-slate-300 hover:text-white transition">Safeguarding</a></li>
+            <li><a href="/contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
+            <li><a href="/terms.html" class="text-slate-300 hover:text-white transition">Terms & Conditions</a></li>
+            <li><a href="/privacy.html" class="text-slate-300 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="/cookies.html" class="text-slate-300 hover:text-white transition">Cookie Policy</a></li>
+            <li><a href="/safeguarding.html" class="text-slate-300 hover:text-white transition">Safeguarding</a></li>
             <li><button onclick="openCookieModal()" class="text-slate-300 hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
           </ul>
         </div>
@@ -365,7 +356,7 @@ permalink: donate.html
     <div id="cookie-banner" class="hidden fixed bottom-0 left-0 w-full z-60 bg-slate-900 text-white p-6 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t-4 border-amber-500">
       <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
         <p class="text-sm text-slate-300 max-w-3xl">
-          We use cookies to improve your experience, analyse website traffic, and support marketing activity. You can accept, reject, or manage your preferences at any time. Please see our <a href="privacy.html" class="text-amber-500 hover:text-amber-400 underline">Privacy Policy</a> for further information.
+          We use cookies to improve your experience, analyse website traffic, and support marketing activity. You can accept, reject, or manage your preferences at any time. Please see our <a href="/privacy.html" class="text-amber-500 hover:text-amber-400 underline">Privacy Policy</a> for further information.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
           <button onclick="acceptAllCookies()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-2 px-6 rounded transition text-sm">Accept All</button>
