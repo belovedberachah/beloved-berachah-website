@@ -1,130 +1,61 @@
----
-permalink: "donate.html"
----
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ========================================= -->
-    <!-- FIRST-CLASS SEO OPTIMIZATION              -->
-    <!-- ========================================= -->
     
     <title>Support Us | Beloved Berachah CIC</title>
     <meta name="description" content="Partner with Beloved Berachah CIC. Your generous donations empower women affected by trauma and addiction to heal, recover, and thrive." />
-    <meta name="author" content="Beloved Berachah CIC" />
-    <link rel="canonical" href="https://belovedberachah.netlify.app/donate.html" />
-
-    <!-- Open Graph / Social Media Preview Cards -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://belovedberachah.netlify.app/donate.html" />
-    <meta property="og:title" content="Support Us | Beloved Berachah CIC" />
-    <meta property="og:description" content="Your generosity provides safe spaces, training, and trauma-informed support for women who need it most." />
-    <meta property="og:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
-    <meta property="og:site_name" content="Beloved Berachah CIC" />
-
-    <!-- PWA & Icons (Absolute Paths) -->
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="/assets/images/bb-icon-512.png" />
+    
+    <!-- PWA & Icons (Relative Paths matching index.html) -->
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./assets/images/bb-icon-512.png" />
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="icon" type="image/png" href="/assets/images/BB.png" />
+    <link rel="icon" type="image/png" href="./assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
 
-    <!-- Typography (Playfair Display & Inter) -->
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" media="print" onload="this.media='all'" />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
 
-    <!-- Local Tailwind CSS (Absolute Path with Cache Buster) -->
+    <!-- Local Tailwind CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
     <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #fafaf9;
-        color: #334155;
-      }
-      .font-serif {
-        font-family: "Playfair Display", serif;
-      }
+      body { font-family: "Inter", sans-serif; background-color: #fafaf9; color: #334155; }
+      .font-serif { font-family: "Playfair Display", serif; }
       
-      /* Premium styling for the donation amount buttons */
       .donation-radio:checked + label {
-        background-color: #f59e0b; 
-        color: #0f172a; 
-        border-color: #f59e0b;
-        transform: translateY(-2px);
-        box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+        background-color: #f59e0b; color: #0f172a; border-color: #f59e0b;
+        transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
       }
-      .donation-label {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .donation-label:hover {
-        border-color: #fbbf24;
-      }
+      .donation-label { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+      .donation-label:hover { border-color: #fbbf24; }
     </style>
   </head>
 
   <body class="flex flex-col min-h-screen">
     
-    <!-- PWA Install Prompt -->
-    <div id="pwa-install-banner" class="hidden fixed top-20 inset-x-4 md:left-auto md:right-4 md:w-96 z-50 transition-all duration-500 transform translate-y-0">
-      <div class="bg-slate-900 text-white p-4 rounded-xl shadow-2xl border border-slate-700 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <img src="/assets/images/BB.png" alt="Beloved Berachah Icon" class="w-10 h-10 rounded-md bg-white p-1 object-contain">
-          <div>
-            <p class="font-semibold text-sm">Install Beloved Berachah</p>
-            <p class="text-xs text-slate-300">Add to home screen</p>
-          </div>
-        </div>
-        <div class="flex gap-2">
-          <button id="pwa-close-btn" class="text-slate-400 hover:text-white text-sm px-2">Cancel</button>
-          <button id="pwa-install-btn" class="bg-amber-500 hover:bg-amber-600 text-slate-900 text-sm font-bold py-1 px-3 rounded transition">Install</button>
-        </div>
-      </div>
-    </div>
-
     <!-- Navigation Bar -->
     <nav class="bg-white text-slate-800 p-4 sticky top-0 z-40 shadow-sm border-b-4 border-amber-500">
       <div class="container mx-auto flex justify-between items-center max-w-6xl">
-        <a href="/index.html" class="flex items-center gap-3 group hover:opacity-80 transition">
-          <img src="/assets/images/BB.png" alt="Beloved Berachah Logo" width="48" height="48" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
+        <a href="./index.html" class="flex items-center gap-3 group hover:opacity-80 transition">
+          <img src="./assets/images/BB.png" alt="Beloved Berachah Logo" width="48" height="48" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
           <span class="font-serif text-slate-900 text-2xl md:text-3xl tracking-tight mt-1">Beloved <span class="text-amber-700">Berachah</span></span>
         </a>
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8 font-medium items-center">
-          <a href="/index.html" class="hover:text-amber-700 transition">Home</a>
-          <a href="/about.html" class="hover:text-amber-700 transition">About Us</a>
-          <a href="/news.html" class="hover:text-amber-700 transition">News</a>
-          <a href="/services.html" class="hover:text-amber-700 transition">Services</a>
-          <a href="/events.html" class="hover:text-amber-700 transition">Events</a>
-          <a href="/resources.html" class="hover:text-amber-700 transition">Resources</a>
-          <a href="/contact.html" class="hover:text-amber-700 transition">Contact</a>
-          <a href="/donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg transition-all">Support Us</a>
+          <a href="./index.html" class="hover:text-amber-700 transition">Home</a>
+          <a href="./about.html" class="hover:text-amber-700 transition">About Us</a>
+          <a href="./news.html" class="hover:text-amber-700 transition">News</a>
+          <a href="./services.html" class="hover:text-amber-700 transition">Services</a>
+          <a href="./events.html" class="hover:text-amber-700 transition">Events</a>
+          <a href="./resources.html" class="hover:text-amber-700 transition">Resources</a>
+          <a href="./contact.html" class="hover:text-amber-700 transition">Contact</a>
+          <a href="./donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg transition-all">Support Us</a>
         </div>
-
-        <!-- Mobile Hamburger Button -->
-        <button type="button" aria-label="Open mobile menu" class="md:hidden text-slate-800 focus:outline-none hover:text-amber-700 transition">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </button>
-      </div>
-
-      <!-- Mobile Dropdown Menu -->
-      <div id="mobile-menu" class="hidden md:hidden container mx-auto max-w-6xl border-t border-slate-100 mt-4 pt-4 pb-2 space-y-2 px-2">
-        <a href="/index.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Home</a>
-        <a href="/about.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">About Us</a>
-        <a href="/news.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">News</a>
-        <a href="/services.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Services</a>
-        <a href="/events.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Events</a>
-        <a href="/resources.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Resources</a>
-        <a href="/contact.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Contact</a>
-        <a href="/donate.html" class="block px-4 py-3 mt-4 text-center bg-amber-500 text-slate-900 font-bold rounded-xl shadow-sm">Support Us</a>
       </div>
     </nav>
 
@@ -133,8 +64,9 @@ permalink: "donate.html"
       
       <!-- Premium Hero Header -->
       <header class="relative bg-slate-900 overflow-hidden border-b-4 border-amber-500">
+        <!-- FIXED IMAGE EXTENSION: .jpg -->
         <div class="absolute inset-0 z-0 opacity-30">
-          <img src="https://images.unsplash.com/photo-1593113565694-c6a617d12f38?auto=format&fit=crop&w=1200&q=80" alt="Women supporting each other" class="w-full h-full object-cover" fetchpriority="high" />
+          <img src="./assets/images/hero.jpg" alt="Women supporting each other" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-linear-to-b from-slate-900/50 to-slate-900"></div>
         </div>
 
@@ -149,7 +81,7 @@ permalink: "donate.html"
         </div>
       </header>
 
-      <!-- Interactive Donation Interface & Impact Script -->
+      <!-- Interactive Donation Interface -->
       <section class="py-20 md:py-28 px-4 container mx-auto max-w-6xl">
         <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
@@ -166,10 +98,9 @@ permalink: "donate.html"
               </p>
             </div>
 
-            <!-- Visual Break: Premium Image -->
-            <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative group">
-              <div class="absolute inset-0 bg-amber-500/10 group-hover:bg-transparent transition duration-500 z-10 pointer-events-none"></div>
-              <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?auto=format&fit=crop&w=800&q=80" alt="Hands holding together in support" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+            <!-- Visual Break: Local Image FIXED EXTENSION .jpg -->
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative bg-slate-200 min-h-64 flex items-center justify-center group">
+              <img src="./assets/images/support.jpg" alt="Hands holding together in support" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
             </div>
 
             <!-- How the money is used -->
@@ -178,7 +109,7 @@ permalink: "donate.html"
               <ul class="space-y-8">
                 <li class="flex items-start gap-5">
                   <div class="bg-amber-50 border border-amber-100 text-amber-600 p-4 rounded-2xl shrink-0 mt-1 shadow-sm">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253"></path></svg>
                   </div>
                   <div>
                     <strong class="block text-slate-900 text-xl font-serif mb-2">Education & Awareness</strong>
@@ -194,25 +125,13 @@ permalink: "donate.html"
                     <span class="text-slate-600 font-light text-base leading-relaxed">Providing safe venues, refreshments, and materials for our awareness and recovery events.</span>
                   </div>
                 </li>
-                <li class="flex items-start gap-5">
-                  <div class="bg-amber-50 border border-amber-100 text-amber-600 p-4 rounded-2xl shrink-0 mt-1 shadow-sm">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                  </div>
-                  <div>
-                    <strong class="block text-slate-900 text-xl font-serif mb-2">Mentoring & Empowerment</strong>
-                    <span class="text-slate-600 font-light text-base leading-relaxed">Allowing us to expand our capacity to encourage and mentor women stepping into their new beginnings.</span>
-                  </div>
-                </li>
               </ul>
             </div>
           </div>
 
           <!-- RIGHT COLUMN: The Donation Interface -->
           <div class="lg:col-span-5 relative">
-            <!-- Decorative background blob -->
-            <div class="absolute -right-10 -top-10 w-64 h-64 bg-amber-300/30 rounded-full blur-[80px] pointer-events-none z-0"></div>
-            
-            <div class="bg-white rounded-4xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100/50 p-8 md:p-10 relative z-10">
+            <div class="bg-white rounded-4xl shadow-2xl border border-slate-100/50 p-8 md:p-10 relative z-10">
               <h3 class="text-3xl font-serif text-slate-900 mb-2 text-center">Choose Your Gift</h3>
               <p class="text-slate-500 text-sm text-center mb-8 font-light">Secure processing via Stripe or PayPal</p>
               
@@ -250,35 +169,21 @@ permalink: "donate.html"
                 </div>
               </div>
 
-              <!-- Custom Amount -->
-              <div class="relative mb-8">
-                <span class="absolute left-5 top-1/2 transform -translate-y-1/2 text-slate-400 font-bold text-lg">£</span>
-                <input type="number" placeholder="Other amount" class="w-full pl-12 pr-5 py-4 border-2 border-slate-200 rounded-2xl focus:border-amber-500 focus:ring-0 outline-none text-slate-900 font-bold transition text-lg" />
-              </div>
-
-              <!-- Payment Gateways -->
-              <div class="space-y-4">
-                <button type="button" class="w-full flex items-center justify-center gap-3 bg-slate-900 text-white font-bold py-4 px-6 rounded-2xl shadow-md hover:bg-slate-800 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 transition-all duration-300">
+              <div class="space-y-4 mt-8">
+                <button type="button" class="w-full flex items-center justify-center gap-3 bg-slate-900 text-white font-bold py-4 px-6 rounded-2xl shadow-md hover:bg-slate-800 transition-all duration-300">
                   <svg class="w-6 h-6" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.78 25.13c-5.26 0-7.85-2.02-7.85-5.65 0-3.8 3.32-5.46 8.52-5.46 1.62 0 3.23.2 4.67.62v-3.7a14.28 14.28 0 0 0-4.9-.77c-7.38 0-12.75 3.33-12.75 10.16 0 6.64 4.8 9.53 11.66 9.53 2.1 0 4.2-.3 6.04-.96v-4.14a16.63 16.63 0 0 1-5.39.87z" fill="currentColor"/><path d="M33.02 10.74v21.57c0 1.25-.43 1.83-1.63 1.83h-3.32v-23.4h4.95zM30.55 3.84c-1.62 0-2.88 1.25-2.88 2.89s1.26 2.88 2.88 2.88 2.88-1.24 2.88-2.88-1.25-2.89-2.88-2.89z" fill="currentColor"/></svg>
                   Donate via Stripe
                 </button>
-
-                <button type="button" class="w-full flex items-center justify-center gap-3 bg-[#FFC439] text-[#003087] font-bold py-4 px-6 rounded-2xl shadow-sm border border-[#e5b033] hover:bg-[#ffb91a] hover:-translate-y-1 hover:shadow-md active:translate-y-0 transition-all duration-300">
+                <button type="button" class="w-full flex items-center justify-center gap-3 bg-[#FFC439] text-[#003087] font-bold py-4 px-6 rounded-2xl shadow-sm border border-[#e5b033] hover:bg-[#ffb91a] transition-all duration-300">
                   <svg class="w-6 h-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.23 9.4c-.66-3.13-3.2-4.73-7.5-4.73h-7.6a1.13 1.13 0 0 0-1.12.98L6.46 27.24a.67.67 0 0 0 .66.76h4.5c.6 0 1.1-.44 1.19-1.04l1.24-7.85a1.14 1.14 0 0 1 1.13-1h3.32c4 0 7-1.61 7.82-6.4.38-2.22.2-4.13-.09-5.33zM21 16.82c-.52 3.23-3 3.23-5.63 3.23h-2.1l1.58-10h4.28c1.68 0 2.85.34 3.22 1.34.29.83.18 2.22-1.35 5.43z" fill="currentColor"/></svg>
                   Donate with PayPal
                 </button>
               </div>
-              
-              <div class="mt-8 flex items-center justify-center gap-2 text-xs text-slate-400 font-medium">
-                <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                Secure & encrypted transaction
-              </div>
             </div>
           </div>
-
         </div>
       </section>
-
+      
       <!-- Alternative Ways to Give Section -->
       <section class="py-24 bg-white border-t border-slate-100 px-4">
         <div class="container mx-auto max-w-5xl text-center">
@@ -286,11 +191,7 @@ permalink: "donate.html"
           <div class="w-12 h-1 bg-amber-600 mx-auto mb-12 rounded-full"></div>
           
           <div class="grid md:grid-cols-2 gap-8 text-left">
-            <!-- Bank Transfer -->
             <div class="bg-slate-50 p-10 rounded-4xl shadow-sm border border-slate-100 flex flex-col group hover:shadow-md transition duration-300">
-              <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center text-amber-600 mb-6 shadow-sm border border-slate-100 group-hover:scale-110 transition-transform duration-300">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
-              </div>
               <h3 class="text-2xl font-serif text-slate-900 mb-4">Direct Bank Transfer</h3>
               <p class="text-slate-600 font-light text-base mb-8">Set up a standing order or make a one-off transfer directly from your bank account to ours.</p>
               <div class="bg-white p-5 rounded-2xl border border-slate-200 text-sm font-medium text-slate-800 mt-auto shadow-inner">
@@ -299,20 +200,9 @@ permalink: "donate.html"
                 <p class="flex justify-between"><span>Account No:</span> <span class="font-bold text-slate-900">XXXXXXXX</span></p>
               </div>
             </div>
-
-            <!-- Corporate / Cheque -->
-            <div class="bg-slate-50 p-10 rounded-4xl shadow-sm border border-slate-100 flex flex-col group hover:shadow-md transition duration-300">
-              <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center text-amber-600 mb-6 shadow-sm border border-slate-100 group-hover:scale-110 transition-transform duration-300">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-              </div>
-              <h3 class="text-2xl font-serif text-slate-900 mb-4">Corporate Sponsorships</h3>
-              <p class="text-slate-600 font-light text-base mb-8 grow">If your business would like to partner with us, sponsor an event, or arrange a corporate donation, we would love to hear from you.</p>
-              <a href="/contact.html" class="block text-center bg-white text-slate-900 border-2 border-slate-200 font-bold py-4 px-6 rounded-xl hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300">Get in Touch</a>
-            </div>
           </div>
         </div>
       </section>
-
     </main>
 
     <!-- Footer Section -->
@@ -324,26 +214,18 @@ permalink: "donate.html"
             Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
           </p>
         </div>
-        
         <div>
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Legal & Registration</h3>
           <ul class="space-y-2 text-sm text-slate-300">
             <li>Company Number: 16685295</li>
             <li>Registered in England and Wales.</li>
-            <li>Registered Office: [Insert Address]</li>
           </ul>
         </div>
-        
         <div>
           <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links & Contact</h3>
           <ul class="space-y-3 text-sm">
             <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
-            <li><a href="/contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
-            <li><a href="/terms.html" class="text-slate-300 hover:text-white transition">Terms & Conditions</a></li>
-            <li><a href="/privacy.html" class="text-slate-300 hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="/cookies.html" class="text-slate-300 hover:text-white transition">Cookie Policy</a></li>
-            <li><a href="/safeguarding.html" class="text-slate-300 hover:text-white transition">Safeguarding</a></li>
-            <li><button onclick="openCookieModal()" class="text-slate-300 hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
+            <li><a href="./contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -351,174 +233,5 @@ permalink: "donate.html"
         <p>&copy; 2026 Beloved Berachah CIC. All rights reserved.</p>
       </div>
     </footer>
-
-    <!-- Cookie Consent Banner & Modal -->
-    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 w-full z-60 bg-slate-900 text-white p-6 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t-4 border-amber-500">
-      <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
-        <p class="text-sm text-slate-300 max-w-3xl">
-          We use cookies to improve your experience, analyse website traffic, and support marketing activity. You can accept, reject, or manage your preferences at any time. Please see our <a href="/privacy.html" class="text-amber-500 hover:text-amber-400 underline">Privacy Policy</a> for further information.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
-          <button onclick="acceptAllCookies()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-2 px-6 rounded transition text-sm">Accept All</button>
-          <button onclick="rejectCookies()" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-6 rounded transition text-sm">Reject</button>
-          <button onclick="openCookieModal()" class="bg-transparent border border-slate-500 hover:border-white text-white font-semibold py-2 px-6 rounded transition text-sm">Manage</button>
-        </div>
-      </div>
-    </div>
-
-    <div id="cookie-modal" class="hidden fixed inset-0 z-70 bg-black bg-opacity-75">
-      <div class="flex items-center justify-center min-h-screen p-4">
-        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 text-slate-900 relative">
-          <h3 class="text-xl font-serif mb-2">Cookie Preferences</h3>
-          <p class="text-sm text-slate-600 mb-6">Manage how we use cookies on your device.</p>
-          
-          <div class="space-y-4 mb-8">
-            <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-              <div>
-                <p class="font-semibold text-sm">Essential Cookies</p>
-                <p class="text-xs text-slate-500">Required for core website functionality.</p>
-              </div>
-              <span class="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">Always ON</span>
-            </div>
-            
-            <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-              <div class="pr-4">
-                <p class="font-semibold text-sm">Analytics Cookies</p>
-                <p class="text-xs text-slate-500">Helps us understand how visitors interact with our website.</p>
-              </div>
-              <label class="relative inline-flex items-center cursor-pointer shrink-0">
-                <input type="checkbox" id="toggle-analytics" aria-label="Enable Analytics Cookies" class="sr-only peer">
-                <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
-              </label>
-            </div>
-            
-            <div class="flex justify-between items-center">
-              <div class="pr-4">
-                <p class="font-semibold text-sm">Marketing Cookies</p>
-                <p class="text-xs text-slate-500">Allows third-party embeds like videos or social media feeds.</p>
-              </div>
-              <label class="relative inline-flex items-center cursor-pointer shrink-0">
-                <input type="checkbox" id="toggle-marketing" aria-label="Enable Marketing Cookies" class="sr-only peer">
-                <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
-              </label>
-            </div>
-          </div>
-          
-          <div class="flex gap-3">
-            <button onclick="saveCookiePreferences()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 rounded transition">Save Preferences</button>
-            <button onclick="closeCookieModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 rounded transition">Cancel</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      const btn = document.querySelector('button[aria-label="Open mobile menu"]');
-      const menu = document.getElementById("mobile-menu");
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-
-      // PWA Install Prompt Logic
-      let deferredPrompt;
-      const installBanner = document.getElementById('pwa-install-banner');
-      
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault(); 
-        deferredPrompt = e;
-        installBanner.classList.remove('hidden'); 
-      });
-
-      document.getElementById('pwa-install-btn').addEventListener('click', async () => {
-        installBanner.classList.add('hidden');
-        if (deferredPrompt) {
-          deferredPrompt.prompt();
-          const { outcome } = await deferredPrompt.userChoice;
-          deferredPrompt = null;
-        }
-      });
-
-      document.getElementById('pwa-close-btn').addEventListener('click', () => {
-        installBanner.classList.add('hidden');
-      });
-
-      // Simple visual toggle for One-Time / Monthly styling
-      const freqBtns = document.querySelectorAll('.flex.bg-slate-100 button');
-      freqBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          freqBtns.forEach(b => {
-            b.className = 'flex-1 text-slate-500 hover:text-slate-900 font-bold py-3 rounded-lg text-sm transition';
-          });
-          this.className = 'flex-1 bg-white shadow-sm text-slate-900 font-bold py-3 rounded-lg text-sm transition';
-        });
-      });
-
-      // Cookie Logic
-      function checkCookieConsent() {
-        const consent = JSON.parse(localStorage.getItem('bb_cookie_consent'));
-        if (!consent) {
-          document.getElementById('cookie-banner').classList.remove('hidden');
-        } else {
-          applyConsent(consent);
-        }
-      }
-
-      function acceptAllCookies() {
-        const consent = { analytics: true, marketing: true };
-        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
-        document.getElementById('cookie-banner').classList.add('hidden');
-        applyConsent(consent);
-      }
-
-      function rejectCookies() {
-        const consent = { analytics: false, marketing: false };
-        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
-        document.getElementById('cookie-banner').classList.add('hidden');
-        applyConsent(consent);
-      }
-
-      function openCookieModal() {
-        document.getElementById('cookie-banner').classList.add('hidden');
-        document.getElementById('cookie-modal').classList.remove('hidden');
-        
-        const consent = JSON.parse(localStorage.getItem('bb_cookie_consent')) || { analytics: false, marketing: false };
-        document.getElementById('toggle-analytics').checked = consent.analytics;
-        document.getElementById('toggle-marketing').checked = consent.marketing;
-      }
-
-      function closeCookieModal() {
-        document.getElementById('cookie-modal').classList.add('hidden');
-        if (!localStorage.getItem('bb_cookie_consent')) {
-          document.getElementById('cookie-banner').classList.remove('hidden');
-        }
-      }
-
-      function saveCookiePreferences() {
-        const consent = {
-          analytics: document.getElementById('toggle-analytics').checked,
-          marketing: document.getElementById('toggle-marketing').checked
-        };
-        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
-        document.getElementById('cookie-modal').classList.add('hidden');
-        applyConsent(consent);
-      }
-
-      function applyConsent(consent) {
-        if (consent.analytics && !window.gaLoaded) {
-          window.gaLoaded = true;
-          const script = document.createElement('script');
-          script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
-          script.async = true;
-          document.head.appendChild(script);
-          
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');
-        }
-      }
-
-      window.addEventListener('DOMContentLoaded', checkCookieConsent);
-    </script>
   </body>
 </html>
