@@ -31,6 +31,15 @@ permalink: donate.html
     <link rel="icon" type="image/png" href="./assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
 
+    <!-- PWA Setup -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(err => console.log('Service Worker failed: ', err));
+        });
+      }
+    </script>
+
     <!-- Typography (Playfair Display & Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,7 +49,7 @@ permalink: donate.html
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
     </noscript>
 
-    <!-- Local Tailwind CSS - RESTORED TO RELATIVE PATH -->
+    <!-- Local Tailwind CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
     <style>
@@ -72,6 +81,23 @@ permalink: donate.html
 
   <body class="flex flex-col min-h-screen">
     
+    <!-- PWA Install Prompt -->
+    <div id="pwa-install-banner" class="hidden fixed top-20 inset-x-4 md:left-auto md:right-4 md:w-96 z-50 transition-all duration-500 transform translate-y-0">
+      <div class="bg-slate-900 text-white p-4 rounded-xl shadow-2xl border border-slate-700 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/BB.png" alt="Beloved Berachah Icon" class="w-10 h-10 rounded-md bg-white p-1 object-contain">
+          <div>
+            <p class="font-semibold text-sm">Install Beloved Berachah</p>
+            <p class="text-xs text-slate-300">Add to home screen</p>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button id="pwa-close-btn" class="text-slate-400 hover:text-white text-sm px-2">Cancel</button>
+          <button id="pwa-install-btn" class="bg-amber-500 hover:bg-amber-600 text-slate-900 text-sm font-bold py-1 px-3 rounded transition">Install</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Navigation Bar -->
     <nav class="bg-white text-slate-800 p-4 sticky top-0 z-40 shadow-sm border-b-4 border-amber-500">
       <div class="container mx-auto flex justify-between items-center max-w-6xl">
@@ -116,9 +142,9 @@ permalink: donate.html
       
       <!-- Premium Hero Header -->
       <header class="relative bg-slate-900 overflow-hidden border-b-4 border-amber-500">
-        <!-- Replaced Unsplash URL with a solid slate/amber gradient fallback for maximum reliability -->
-        <div class="absolute inset-0 z-0 bg-linear-to-tr from-slate-900 via-slate-800 to-amber-900/40">
-          <!-- Optional: Add a local image here in the future: <img src="assets/images/donate-hero.jpg" class="w-full h-full object-cover opacity-30" /> -->
+        <div class="absolute inset-0 z-0 opacity-30">
+          <img src="https://images.unsplash.com/photo-1593113565694-c6a617d12f38?auto=format&fit=crop&w=1200&q=80" alt="Women supporting each other" class="w-full h-full object-cover" fetchpriority="high" />
+          <div class="absolute inset-0 bg-linear-to-b from-slate-900/50 to-slate-900"></div>
         </div>
 
         <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
@@ -147,6 +173,12 @@ permalink: donate.html
               <p class="text-slate-700 text-lg leading-relaxed font-light">
                 When you choose to support us, you are directly funding educational talks, mentoring programmes, and community events that break the chains of isolation, shame, and trauma.
               </p>
+            </div>
+
+            <!-- Visual Break: Premium Image -->
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative group">
+              <div class="absolute inset-0 bg-amber-500/10 group-hover:bg-transparent transition duration-500 z-10 pointer-events-none"></div>
+              <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?auto=format&fit=crop&w=800&q=80" alt="Hands holding together in support" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
             </div>
 
             <!-- How the money is used -->
@@ -396,6 +428,29 @@ permalink: donate.html
         menu.classList.toggle("hidden");
       });
 
+      // PWA Install Prompt Logic
+      let deferredPrompt;
+      const installBanner = document.getElementById('pwa-install-banner');
+      
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault(); 
+        deferredPrompt = e;
+        installBanner.classList.remove('hidden'); 
+      });
+
+      document.getElementById('pwa-install-btn').addEventListener('click', async () => {
+        installBanner.classList.add('hidden');
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          const { outcome } = await deferredPrompt.userChoice;
+          deferredPrompt = null;
+        }
+      });
+
+      document.getElementById('pwa-close-btn').addEventListener('click', () => {
+        installBanner.classList.add('hidden');
+      });
+
       // Simple visual toggle for One-Time / Monthly styling
       const freqBtns = document.querySelectorAll('.flex.bg-slate-100 button');
       freqBtns.forEach(btn => {
@@ -407,13 +462,72 @@ permalink: donate.html
         });
       });
 
+      // Cookie Logic
+      function checkCookieConsent() {
+        const consent = JSON.parse(localStorage.getItem('bb_cookie_consent'));
+        if (!consent) {
+          document.getElementById('cookie-banner').classList.remove('hidden');
+        } else {
+          applyConsent(consent);
+        }
+      }
+
+      function acceptAllCookies() {
+        const consent = { analytics: true, marketing: true };
+        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
+        document.getElementById('cookie-banner').classList.add('hidden');
+        applyConsent(consent);
+      }
+
+      function rejectCookies() {
+        const consent = { analytics: false, marketing: false };
+        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
+        document.getElementById('cookie-banner').classList.add('hidden');
+        applyConsent(consent);
+      }
+
       function openCookieModal() {
         document.getElementById('cookie-banner').classList.add('hidden');
         document.getElementById('cookie-modal').classList.remove('hidden');
+        
+        const consent = JSON.parse(localStorage.getItem('bb_cookie_consent')) || { analytics: false, marketing: false };
+        document.getElementById('toggle-analytics').checked = consent.analytics;
+        document.getElementById('toggle-marketing').checked = consent.marketing;
       }
+
       function closeCookieModal() {
         document.getElementById('cookie-modal').classList.add('hidden');
+        if (!localStorage.getItem('bb_cookie_consent')) {
+          document.getElementById('cookie-banner').classList.remove('hidden');
+        }
       }
+
+      function saveCookiePreferences() {
+        const consent = {
+          analytics: document.getElementById('toggle-analytics').checked,
+          marketing: document.getElementById('toggle-marketing').checked
+        };
+        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
+        document.getElementById('cookie-modal').classList.add('hidden');
+        applyConsent(consent);
+      }
+
+      function applyConsent(consent) {
+        if (consent.analytics && !window.gaLoaded) {
+          window.gaLoaded = true;
+          const script = document.createElement('script');
+          script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+          script.async = true;
+          document.head.appendChild(script);
+          
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      }
+
+      window.addEventListener('DOMContentLoaded', checkCookieConsent);
     </script>
   </body>
 </html>
