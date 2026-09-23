@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offline & Emergency Contacts | Beloved Berachah CIC</title>
+    
+    <style>
+      /* Inline CSS for guaranteed offline rendering, mimicking your Tailwind theme */
+      :root {
+        --slate-50: #fafaf9;
+        --slate-100: #f1f5f9;
+        --slate-200: #e2e8f0;
+        --slate-500: #64748b;
+        --slate-600: #475569;
+        --slate-700: #334155;
+        --slate-900: #0f172a;
+        --amber-500: #f59e0b;
+        --amber-600: #d97706;
+        --red-500: #ef4444;
+        --red-50: #fef2f2;
+      }
+      
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background-color: var(--slate-50);
+        color: var(--slate-700);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .font-serif {
+        font-family: 'Playfair Display', Georgia, serif;
+      }
+
+      /* Top Navigation Bar */
+      .nav-header {
+        background-color: #ffffff;
+        border-bottom: 4px solid var(--amber-500);
+        padding: 1.25rem 1rem;
+        text-align: center;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      }
+      
+      .nav-header h1 {
+        color: var(--slate-900);
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+      }
+
+      .nav-header span {
+        color: var(--amber-600);
+      }
+
+      /* Main Content Container */
+      .container {
+        max-width: 42rem;
+        margin: 0 auto;
+        padding: 2.5rem 1.25rem;
+        flex-grow: 1;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .offline-badge {
+        display: inline-block;
+        background-color: var(--slate-200);
+        color: var(--slate-700);
+        padding: 0.35rem 1rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 1.5rem;
+      }
+
+      .intro-title {
+        color: var(--slate-900);
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .intro-text {
+        font-size: 1.125rem;
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+        font-weight: 300;
+        color: var(--slate-600);
+      }
+
+      /* Card Styling */
+      .card {
+        background-color: #ffffff;
+        border: 1px solid var(--slate-200);
+        border-radius: 1.25rem;
+        padding: 1.75rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      }
+
+      .card.emergency {
+        border: 2px solid var(--red-500);
+        background-color: var(--red-50);
+      }
+
+      .card h2 {
+        color: var(--slate-900);
+        font-size: 1.35rem;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      .card.emergency h2 {
+        color: var(--red-500);
+      }
+
+      .card p {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--slate-600);
+      }
+
+      /* Buttons */
+      .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: var(--amber-500);
+        color: var(--slate-900);
+        font-weight: 700;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+
+      .button.emergency-btn {
+        background-color: var(--red-500);
+        color: #ffffff;
+      }
+
+      .button.outline {
+        background-color: transparent;
+        border: 2px solid var(--slate-200);
+        color: var(--slate-700);
+        margin-bottom: 0.75rem;
+      }
+
+      .safety-tip {
+        background-color: var(--slate-100);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        font-size: 0.85rem;
+        color: var(--slate-600);
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 2rem 1.5rem;
+        color: var(--slate-500);
+        font-size: 0.875rem;
+        border-top: 1px solid var(--slate-200);
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- Header -->
+    <header class="nav-header">
+      <h1 class="font-serif">Beloved <span>Berachah</span></h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <div class="offline-badge">No Internet Connection</div>
+      
+      <h2 class="intro-title font-serif">You are not alone.</h2>
+      <p class="intro-text">
+        Your device has lost its internet connection, but vital support is always available. Below is offline contact information you can use immediately.
+      </p>
+
+      <!-- Safety Tip -->
+      <div class="safety-tip">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span><strong>Safety Note:</strong> If you are worried about someone seeing your screen, double-tap your home button and swipe up to quickly close this app.</span>
+      </div>
+
+      <!-- Immediate Danger -->
+      <div class="card emergency">
+        <h2 class="font-serif">Immediate Danger</h2>
+        <p>If you or someone else is in immediate physical danger, do not wait. Emergency services can be reached even with low signal.</p>
+        <a href="tel:999" class="button emergency-btn">Call 999</a>
+      </div>
+
+      <!-- Beloved Berachah Direct Contact -->
+      <div class="card">
+        <h2 class="font-serif">Contact Beloved Berachah</h2>
+        <p>You can prepare an email or SMS now. It will securely remain in your device's outbox and send automatically once your internet or signal returns.</p>
+        <!-- Update this placeholder number with the CIC's actual number if they have one -->
+        <a href="tel:07795907776" class="button outline">Call: 07795 907 776</a>
+        <a href="mailto:beloved@berachah.org.uk" class="button outline">Email: beloved@berachah.org.uk</a>
+      </div>
+
+      <!-- 24/7 UK National Domestic Abuse Helpline -->
+      <div class="card">
+        <h2 class="font-serif">National Domestic Abuse Helpline</h2>
+        <p>Free, confidential support, 24 hours a day. Run by Refuge. The number will not show up on your household phone bill.</p>
+        <a href="tel:08082000247" class="button">Call 0808 2000 247</a>
+      </div>
+
+      <!-- 24/7 Crisis Text Line -->
+      <div class="card">
+        <h2 class="font-serif">Shout Crisis Text Line</h2>
+        <p>A free, confidential, and anonymous text support service available 24/7 for anyone struggling to cope.</p>
+        <a href="sms:85258" class="button">Text 'SHOUT' to 85258</a>
+      </div>
+
+      <!-- Samaritans -->
+      <div class="card">
+        <h2 class="font-serif">Samaritans</h2>
+        <p>Whatever you are going through, a Samaritan will face it with you. Available 24 hours a day, 365 days a year.</p>
+        <a href="tel:116123" class="button">Call 116 123</a>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Beloved Berachah CIC &copy; 2026<br>Please reconnect to Wi-Fi or Cellular Data to browse our full website.</p>
+    </footer>
+
+  </body>
+</html>
