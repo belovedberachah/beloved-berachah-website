@@ -117,13 +117,6 @@
         transform: scale(1.15) !important;
         pointer-events: none;
       }
-
-      /* 4. THE PWA FIX: Completely hide this HTML splash screen if launched as an app */
-      @media (display-mode: standalone) {
-        #splash-screen {
-          display: none !important;
-        }
-      }
     </style>
 
     <!-- Uses a slightly deeper amber gradient at the bottom for richness -->
@@ -140,18 +133,20 @@
     <!-- Splash Screen Logic -->
     <script>
       window.addEventListener('load', function() {
-        
-        // PWA DETECTOR: If launched from home screen, skip the HTML animation completely
-        if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
-          const splash = document.getElementById('splash-screen');
-          if (splash) splash.style.display = 'none';
-          return; // Stop the script here
-        }
-
         const splash = document.getElementById('splash-screen');
         if (!splash) return;
 
-        // Let the entrance animation breathe for 1.2s, then trigger the dive
+        // Check if the user is using the installed PWA
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+
+        // If it's the installed PWA and the FIRST time loading in this session, skip the animation
+        if (isStandalone && !sessionStorage.getItem('pwaLaunchComplete')) {
+          splash.style.display = 'none';
+          sessionStorage.setItem('pwaLaunchComplete', 'true');
+          return; // Stop here, let the OS native splash screen shine
+        }
+
+        // Otherwise (PC browser, mobile browser, or returning to Home), play the cinematic animation
         setTimeout(() => {
           splash.classList.add('splash-exit');
           // Wait for the exit transition to finish before hiding from DOM
