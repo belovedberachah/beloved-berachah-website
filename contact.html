@@ -283,23 +283,34 @@ permalink: "contact.html"
       </div>
     </nav>
 
-    <!-- Inner Page Header -->
-    <header class="bg-slate-900 py-20 md:py-24 border-b-4 border-amber-500">
-      <div class="container mx-auto px-4 max-w-4xl text-center">
-        <span
-          class="text-amber-500 font-semibold tracking-wider uppercase text-sm mb-4 block"
-          >Contact & Bookings</span
-        >
-        <h1
-          class="text-5xl md:text-7xl font-serif text-white mb-6 tracking-tight drop-shadow-sm"
-        >
-          Get in <span class="font-medium" style="background: linear-gradient(to right, #fbbf24, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Touch</span>
-        </h1>
-        <p class="text-lg md:text-xl text-slate-300 font-light tracking-wide">
-          We would love to hear from you.
-        </p>
-      </div>
-    </header>
+    <!-- Premium Hero Header (With Image) -->
+      <header class="relative bg-slate-900 overflow-hidden border-b-4 border-amber-500">
+        <!-- Background Image & Dark Overlay -->
+        <div class="absolute inset-0 z-0 opacity-30">
+          <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-linear-to-b from-slate-900/50 to-slate-900"></div>
+        </div>
+
+        <!-- Page Text Content -->
+        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
+          
+          <!-- Small top tag -->
+          <span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm">
+            Contact & Bookings
+          </span>
+          
+          <!-- Main Heading -->
+          <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-md">
+            Get in <span class="text-amber-400 font-medium italic">Touch</span>
+          </h1>
+          
+          <!-- Short Description -->
+          <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-light max-w-2xl mx-auto drop-shadow-sm">
+            We would love to hear from you.
+          </p>
+
+        </div>
+      </header>
 
     <!-- Main Content with ARIA role -->
     <main role="main" class="grow py-20 bg-white">
