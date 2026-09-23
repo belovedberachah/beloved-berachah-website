@@ -153,32 +153,25 @@ permalink: "cookies.html"
     </nav>
 
     <!-- Premium Hero Header -->
-      <header class="relative bg-slate-900 overflow-hidden border-b-4 border-amber-500">
+      <header class="relative overflow-hidden border-b-4 border-amber-500">
         
-        <!-- Background Image & Dark Overlay Container -->
-        <div class="absolute inset-0 z-0 pointer-events-none">
-          <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="w-full h-full object-cover opacity-40" />
-          <div class="absolute inset-0 bg-slate-900/60"></div>
-        </div>
+        <!-- Layer 1: Background Image -->
+        <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="absolute inset-0 w-full h-full object-cover" />
+        
+        <!-- Layer 2: Semi-Transparent Slate Overlay (Inline for instant load) -->
+        <div class="absolute inset-0" style="background-color: rgba(15, 23, 42, 0.75);"></div>
 
-        <!-- Page Text Content (Strictly contained with z-index) -->
+        <!-- Layer 3: Page Text Content -->
         <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
-          
-          <!-- Small top tag -->
-          <span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm">
+          <span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm" style="background-color: rgba(245, 158, 11, 0.2);">
             Legal Information
           </span>
-          
-          <!-- Main Heading -->
           <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-md">
             Cookie <span class="text-amber-400 font-medium italic">Policy</span>
           </h1>
-          
-          <!-- Short Description -->
           <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-light max-w-2xl mx-auto drop-shadow-sm">
             Last Updated: September 2026
           </p>
-
         </div>
       </header>
 
