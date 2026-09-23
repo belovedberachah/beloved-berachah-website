@@ -117,6 +117,13 @@
         transform: scale(1.15) !important;
         pointer-events: none;
       }
+
+      /* 4. THE PWA FIX: Completely hide this HTML splash screen if launched as an app */
+      @media (display-mode: standalone) {
+        #splash-screen {
+          display: none !important;
+        }
+      }
     </style>
 
     <!-- Uses a slightly deeper amber gradient at the bottom for richness -->
@@ -133,7 +140,17 @@
     <!-- Splash Screen Logic -->
     <script>
       window.addEventListener('load', function() {
+        
+        // PWA DETECTOR: If launched from home screen, skip the HTML animation completely
+        if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+          const splash = document.getElementById('splash-screen');
+          if (splash) splash.style.display = 'none';
+          return; // Stop the script here
+        }
+
         const splash = document.getElementById('splash-screen');
+        if (!splash) return;
+
         // Let the entrance animation breathe for 1.2s, then trigger the dive
         setTimeout(() => {
           splash.classList.add('splash-exit');
