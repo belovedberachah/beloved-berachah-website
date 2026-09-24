@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bb-cache-v12'; // Bumped to v12
+const CACHE_NAME = 'bb-cache-v14'; 
 const OFFLINE_URL = '/offline.html';
 
 const PRECACHE_ASSETS = [
@@ -16,7 +16,7 @@ const PRECACHE_ASSETS = [
   '/cookies.html',
   '/safeguarding.html',
   '/offline.html',
-  '/css/style.css', // This will now correctly match requests for style.css?v=2
+  '/css/style.css',
   '/assets/images/BB.png',
   '/assets/images/bb-icon-512.png',
   '/manifest.json'
@@ -43,14 +43,14 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
+  // Ignore non-GET requests (like form submissions)
   if (e.request.method !== 'GET' || !e.request.url.startsWith('http')) return;
 
   const url = new URL(e.request.url);
 
-  // STRATEGY 1: Cache-first for images/css
+  // STRATEGY 1: Cache-First for static assets (Images, CSS)
   if (url.pathname.match(/\.(png|jpg|jpeg|svg|css|woff2)$/)) {
     e.respondWith(
-      // CRITICAL FIX: { ignoreSearch: true } forces it to ignore the "?v=2"
       caches.match(e.request, { ignoreSearch: true }).then((cachedResponse) => {
         return cachedResponse || fetch(e.request).then((networkResponse) => {
           return caches.open(CACHE_NAME).then((cache) => {
@@ -63,37 +63,42 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // STRATEGY 2: Network-first for pages with offline fallback
+  // STRATEGY 2: Network-First for HTML, with chained offline fallback
   e.respondWith(
     fetch(e.request)
       .then((networkResponse) => {
+        // If internet works, save a fresh copy and return it
         return caches.open(CACHE_NAME).then((cache) => {
           cache.put(e.request, networkResponse.clone());
           return networkResponse;
         });
       })
-      .catch(async () => {
-        const cache = await caches.open(CACHE_NAME);
-        
-        // Match HTML pages, ignoring any stray query strings
-        let cachedResponse = await cache.match(e.request, { ignoreSearch: true });
-        
-        if (!cachedResponse && !url.pathname.endsWith('.html') && url.pathname !== '/') {
-           cachedResponse = await cache.match(url.pathname + '.html', { ignoreSearch: true });
-        }
+      .catch(() => {
+        // If internet fails, gracefully check the cache without async/await
+        return caches.open(CACHE_NAME).then((cache) => {
+          return cache.match(e.request, { ignoreSearch: true }).then((cachedResponse) => {
+            
+            // 1. Return exact match if found
+            if (cachedResponse) return cachedResponse;
 
-        if (!cachedResponse && url.pathname.endsWith('/')) {
-            const strippedPath = url.pathname.slice(0, -1);
-            cachedResponse = await cache.match(strippedPath + '.html', { ignoreSearch: true });
-        }
-        
-        if (cachedResponse) {
-          return cachedResponse;
-        }
+            // 2. Netlify Pretty URL check (append .html)
+            if (!url.pathname.endsWith('.html') && url.pathname !== '/') {
+              return cache.match(url.pathname + '.html', { ignoreSearch: true }).then((prettyResponse) => {
+                if (prettyResponse) return prettyResponse;
+                
+                // Ultimate Fallback if pretty URL fails
+                if (e.request.mode === 'navigate' || (e.request.headers.get('accept') && e.request.headers.get('accept').includes('text/html'))) {
+                  return cache.match(OFFLINE_URL, { ignoreSearch: true });
+                }
+              });
+            }
 
-        if (e.request.mode === 'navigate' || (e.request.headers.get('accept') && e.request.headers.get('accept').includes('text/html'))) {
-          return cache.match(OFFLINE_URL, { ignoreSearch: true });
-        }
+            // 3. Ultimate Fallback for everything else
+            if (e.request.mode === 'navigate' || (e.request.headers.get('accept') && e.request.headers.get('accept').includes('text/html'))) {
+              return cache.match(OFFLINE_URL, { ignoreSearch: true });
+            }
+          });
+        });
       })
   );
 });
