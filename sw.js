@@ -1,4 +1,5 @@
-const CACHE_NAME = 'bb-cache-v8'; // Bumped to v8 to force update
+const CACHE_NAME = 'bb-cache-v9'; // Bumped to v9 to force the new update!
+const OFFLINE_URL = './offline.html';
 
 // 1. Core assets to cache immediately when the PWA is installed
 const PRECACHE_ASSETS = [
@@ -15,8 +16,10 @@ const PRECACHE_ASSETS = [
   './privacy.html',
   './cookies.html',
   './safeguarding.html',
+  './offline.html', // Added offline fallback page
   './css/style.css',
   './assets/images/BB.png',
+  './assets/images/bb-icon-512.png', // Added the new shortcut/iOS icon
   './manifest.json'
 ];
 
@@ -32,7 +35,7 @@ self.addEventListener('install', (e) => {
 });
 
 self.addEventListener('activate', (e) => {
-  // Only wipe OLD caches, keep the current v8 cache active
+  // Only wipe OLD caches, keep the current v9 cache active
   e.waitUntil(
     caches.keys().then((keys) => {
       return Promise.all(
@@ -71,7 +74,7 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // STRATEGY 2: Network-First for HTML (Content Freshness)
+  // STRATEGY 2: Network-First for HTML (Content Freshness) + Offline Fallback
   // Always try to get the newest text/content from the web. If offline, use cache.
   e.respondWith(
     fetch(e.request)
@@ -82,8 +85,19 @@ self.addEventListener('fetch', (e) => {
         });
       })
       .catch(() => {
-        // Network failed (offline), return the pre-cached HTML page
-        return caches.match(e.request);
+        // Network failed (offline). Let's see if we have this specific page saved.
+        return caches.match(e.request).then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse; // We have it! Serve the cached page.
+          }
+          
+          // THE ULTIMATE FALLBACK:
+          // If the page is NOT in the cache, and the user is trying to navigate to a webpage,
+          // serve the dedicated offline emergency page instead of the browser dinosaur.
+          if (e.request.mode === 'navigate' || (e.request.headers.get('accept') && e.request.headers.get('accept').includes('text/html'))) {
+            return caches.match(OFFLINE_URL);
+          }
+        });
       })
   );
 });

@@ -21,5 +21,21 @@
       "type": "image/png",
       "purpose": "any"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "Latest News",
+      "short_name": "News",
+      "description": "Read the latest updates",
+      "url": "/news.html",
+      "icons": [{ "src": "/assets/images/bb-icon-512.png", "sizes": "512x512" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch for support",
+      "url": "/contact.html",
+      "icons": [{ "src": "/assets/images/bb-icon-512.png", "sizes": "512x512" }]
+    }
   ]
 }

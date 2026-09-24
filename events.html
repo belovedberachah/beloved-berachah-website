@@ -51,11 +51,19 @@ permalink: "events.html"
     </script>
     <!-- ========================================= -->
 
-    <!-- PWA Setup -->
+    <!-- PWA & Icons -->
     <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="assets/images/BB.png" />
+    <!-- Updated iOS Splash Icon -->
+    <link rel="apple-touch-icon" href="assets/images/bb-icon-512.png" />
+    
+    <!-- Apple/iOS Specific PWA Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Berachah">
+    
     <link rel="icon" type="image/png" href="assets/images/BB.png" />
     <meta name="theme-color" content="#FBBF24" />
+    
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
