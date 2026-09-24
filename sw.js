@@ -1,7 +1,6 @@
-const CACHE_NAME = 'bb-cache-v10'; // Bumped to v10!
+const CACHE_NAME = 'bb-cache-v11';
 const OFFLINE_URL = '/offline.html';
 
-// 1. Core assets (Use absolute paths starting with '/')
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
@@ -48,12 +47,11 @@ self.addEventListener('fetch', (e) => {
 
   const url = new URL(e.request.url);
 
-  // STRATEGY 1: Cache-first for images and styles
+  // Cache-first for images/css
   if (url.pathname.match(/\.(png|jpg|jpeg|svg|css|woff2)$/)) {
     e.respondWith(
       caches.match(e.request).then((cachedResponse) => {
-        if (cachedResponse) return cachedResponse;
-        return fetch(e.request).then((networkResponse) => {
+        return cachedResponse || fetch(e.request).then((networkResponse) => {
           return caches.open(CACHE_NAME).then((cache) => {
             cache.put(e.request, networkResponse.clone());
             return networkResponse;
@@ -64,7 +62,7 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // STRATEGY 2: Network-first for pages with Netlify Pretty URL fix
+  // Network-first for pages with offline fallback
   e.respondWith(
     fetch(e.request)
       .then((networkResponse) => {
@@ -76,19 +74,26 @@ self.addEventListener('fetch', (e) => {
       .catch(async () => {
         const cache = await caches.open(CACHE_NAME);
         
-        // 1. Try to find the exact URL in the cache
+        // 1. Try exact match
         let cachedResponse = await cache.match(e.request);
         
-        // 2. Netlify Fix: If "/about" fails, manually try appending ".html" to check the cache
-        if (!cachedResponse && !url.pathname.endsWith('.html')) {
-          cachedResponse = await cache.match(url.pathname + '.html');
+        // 2. Try Netlify pretty URL match (e.g., /about -> /about.html)
+        if (!cachedResponse && !url.pathname.endsWith('.html') && url.pathname !== '/') {
+           // We explicitly add .html to the end of the pathname
+           cachedResponse = await cache.match(url.pathname + '.html');
+        }
+
+        // 3. Try stripping the trailing slash if it exists (e.g., /about/ -> /about.html)
+        if (!cachedResponse && url.pathname.endsWith('/')) {
+            const strippedPath = url.pathname.slice(0, -1);
+            cachedResponse = await cache.match(strippedPath + '.html');
         }
         
         if (cachedResponse) {
           return cachedResponse;
         }
 
-        // 3. The Ultimate Fallback: Serve offline.html
+        // 4. Return offline page if it's a navigation request
         if (e.request.mode === 'navigate' || (e.request.headers.get('accept') && e.request.headers.get('accept').includes('text/html'))) {
           return cache.match(OFFLINE_URL);
         }
