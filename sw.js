@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bb-cache-v15';
+const CACHE_NAME = 'bb-cache-v16'; 
 const OFFLINE_URL = '/offline.html';
 
 const PRECACHE_ASSETS = [
@@ -41,49 +41,55 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-  // Ignore non-GET requests (like form submissions)
   if (e.request.method !== 'GET') return;
 
-  e.respondWith((async () => {
-    const cache = await caches.open(CACHE_NAME);
+  const url = new URL(e.request.url);
 
-    try {
-      // 1. Always try to get the file from the internet first
-      const networkResponse = await fetch(e.request);
-      cache.put(e.request, networkResponse.clone());
-      return networkResponse;
-    } catch (error) {
-      // 2. THE INTERNET IS DOWN - start checking the cache
-      
-      // Check for the exact file requested
-      let cachedResponse = await cache.match(e.request, { ignoreSearch: true });
-      if (cachedResponse) return cachedResponse;
+  // 1. ASSETS: Cache-First for images and CSS (Instant loading)
+  if (url.pathname.match(/\.(png|jpg|jpeg|svg|css|woff2)$/)) {
+    e.respondWith(
+      caches.match(e.request, { ignoreSearch: true }).then((cachedResponse) => {
+        return cachedResponse || fetch(e.request);
+      })
+    );
+    return;
+  }
 
-      // Check Netlify pretty URL (add .html to the end)
-      const url = new URL(e.request.url);
-      if (!url.pathname.endsWith('.html')) {
-        cachedResponse = await cache.match(url.pathname + '.html', { ignoreSearch: true });
-        if (cachedResponse) return cachedResponse;
-      }
+  // 2. HTML PAGES: Network-First with Brute-Force Offline Fallback
+  e.respondWith(
+    fetch(e.request)
+      .then((networkResponse) => {
+         // Internet is working! Save a fresh copy and return it.
+         return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(e.request, networkResponse.clone());
+            return networkResponse;
+         });
+      })
+      .catch(() => {
+         // THE INTERNET IS DOWN.
+         return caches.open(CACHE_NAME).then((cache) => {
+            
+            // Check 1: Do we have the exact URL saved?
+            return cache.match(e.request, { ignoreSearch: true }).then((cached) => {
+               if (cached) return cached;
+               
+               // Check 2: Do we have the .html version saved? (Netlify Pretty URLs)
+               return cache.match(url.pathname + '.html', { ignoreSearch: true }).then((pretty) => {
+                  if (pretty) return pretty;
 
-      // 3. ULTIMATE FALLBACK: Serve offline.html for any failed web page navigation
-      if (e.request.mode === 'navigate' || (e.request.headers.get('accept') && e.request.headers.get('accept').includes('text/html'))) {
-        const offlineResponse = await cache.match(OFFLINE_URL, { ignoreSearch: true });
-        
-        if (offlineResponse) {
-          // We found offline.html! Serve it.
-          return offlineResponse;
-        } else {
-          // If offline.html is mysteriously missing from the cache, dynamically generate a page so it NEVER crashes!
-          return new Response(
-            '<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Offline | Beloved Berachah</title></head><body style="padding:40px 20px; font-family:sans-serif; background-color:#fafaf9; color:#334155; text-align:center;"><h2>You are offline.</h2><p>Please reconnect to the internet to view this page.</p></body></html>',
-            { headers: { 'Content-Type': 'text/html' } }
-          );
-        }
-      }
-
-      // If it's just a missing image file, let it fail quietly
-      return Response.error();
-    }
-  })());
+                  // Check 3: We don't have it. Serve the Emergency Offline Page!
+                  return cache.match(OFFLINE_URL).then((offline) => {
+                     if (offline) return offline;
+                     
+                     // The indestructible failsafe (in case offline.html itself is missing)
+                     return new Response(
+                       '<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Offline</title></head><body style="padding:40px 20px; font-family:sans-serif; text-align:center;"><h2>You are offline.</h2><p>Please reconnect to the internet.</p></body></html>',
+                       { headers: { 'Content-Type': 'text/html' } }
+                     );
+                  });
+               });
+            });
+         });
+      })
+  );
 });
