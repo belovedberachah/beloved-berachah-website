@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bb-cache-v16'; 
+const CACHE_NAME = 'bb-cache-v17'; 
 const OFFLINE_URL = '/offline.html';
 
 const PRECACHE_ASSETS = [
@@ -25,7 +25,21 @@ const PRECACHE_ASSETS = [
 self.addEventListener('install', (e) => {
   self.skipWaiting();
   e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(PRECACHE_ASSETS))
+    caches.open(CACHE_NAME).then((cache) => {
+      // CRITICAL FIX: Cache files individually. 
+      // If a file like 'donate.html' doesn't exist yet, it skips it instead of crashing the whole app.
+      return Promise.all(
+        PRECACHE_ASSETS.map(url => {
+          return fetch(url).then(response => {
+            if (response.ok) {
+              return cache.put(url, response);
+            }
+          }).catch(error => {
+            console.log('Skipping caching for missing file:', url);
+          });
+        })
+      );
+    })
   );
 });
 
@@ -45,51 +59,37 @@ self.addEventListener('fetch', (e) => {
 
   const url = new URL(e.request.url);
 
-  // 1. ASSETS: Cache-First for images and CSS (Instant loading)
+  // 1. ASSETS: Cache-First for instant loading
   if (url.pathname.match(/\.(png|jpg|jpeg|svg|css|woff2)$/)) {
     e.respondWith(
-      caches.match(e.request, { ignoreSearch: true }).then((cachedResponse) => {
-        return cachedResponse || fetch(e.request);
-      })
+      caches.match(e.request, { ignoreSearch: true }).then((cached) => cached || fetch(e.request))
     );
     return;
   }
 
-  // 2. HTML PAGES: Network-First with Brute-Force Offline Fallback
-  e.respondWith(
-    fetch(e.request)
-      .then((networkResponse) => {
-         // Internet is working! Save a fresh copy and return it.
-         return caches.open(CACHE_NAME).then((cache) => {
-            cache.put(e.request, networkResponse.clone());
-            return networkResponse;
-         });
-      })
-      .catch(() => {
-         // THE INTERNET IS DOWN.
-         return caches.open(CACHE_NAME).then((cache) => {
-            
-            // Check 1: Do we have the exact URL saved?
-            return cache.match(e.request, { ignoreSearch: true }).then((cached) => {
-               if (cached) return cached;
-               
-               // Check 2: Do we have the .html version saved? (Netlify Pretty URLs)
-               return cache.match(url.pathname + '.html', { ignoreSearch: true }).then((pretty) => {
-                  if (pretty) return pretty;
-
-                  // Check 3: We don't have it. Serve the Emergency Offline Page!
-                  return cache.match(OFFLINE_URL).then((offline) => {
-                     if (offline) return offline;
-                     
-                     // The indestructible failsafe (in case offline.html itself is missing)
-                     return new Response(
-                       '<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Offline</title></head><body style="padding:40px 20px; font-family:sans-serif; text-align:center;"><h2>You are offline.</h2><p>Please reconnect to the internet.</p></body></html>',
-                       { headers: { 'Content-Type': 'text/html' } }
-                     );
-                  });
-               });
-            });
-         });
-      })
-  );
+  // 2. HTML PAGES: Network-First with dedicated Offline Navigation routing
+  if (e.request.mode === 'navigate' || (e.request.headers.get('accept') && e.request.headers.get('accept').includes('text/html'))) {
+    e.respondWith(
+      fetch(e.request)
+        .then((networkResponse) => {
+           const cacheCopy = networkResponse.clone();
+           caches.open(CACHE_NAME).then((cache) => cache.put(e.request, cacheCopy));
+           return networkResponse;
+        })
+        .catch(() => {
+           // The internet is disconnected.
+           return caches.match(e.request, { ignoreSearch: true }).then((cached) => {
+              if (cached) return cached;
+              
+              // Netlify Pretty URL check
+              return caches.match(url.pathname + '.html', { ignoreSearch: true }).then((pretty) => {
+                 if (pretty) return pretty;
+                 
+                 // Finally, serve the emergency offline page
+                 return caches.match(OFFLINE_URL, { ignoreSearch: true });
+              });
+           });
+        })
+    );
+  }
 });
