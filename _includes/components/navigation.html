@@ -7,13 +7,13 @@
 
     <!-- Desktop Menu -->
     <div class="hidden md:flex space-x-8 font-semibold items-center">
-      <a href="/index.html" class="pop-amber transition">Home</a>
-      <a href="/about.html" class="hover-pop-amber transition">About Us</a>
-      <a href="/news.html" class="hover-pop-amber transition">News</a>
-      <a href="/services.html" class="hover-pop-amber transition">Services</a>
-      <a href="/events.html" class="hover-pop-amber transition">Events</a>
-      <a href="/resources.html" class="hover-pop-amber transition">Resources</a>
-      <a href="/contact.html" class="hover-pop-amber transition">Contact</a>
+      <a href="/index.html" class="transition {% if page.url == '/' or page.url == '/index.html' %}pop-amber{% else %}hover-pop-amber{% endif %}">Home</a>
+      <a href="/about.html" class="transition {% if '/about' in page.url %}pop-amber{% else %}hover-pop-amber{% endif %}">About Us</a>
+      <a href="/news.html" class="transition {% if '/news' in page.url %}pop-amber{% else %}hover-pop-amber{% endif %}">News</a>
+      <a href="/services.html" class="transition {% if '/services' in page.url %}pop-amber{% else %}hover-pop-amber{% endif %}">Services</a>
+      <a href="/events.html" class="transition {% if '/events' in page.url %}pop-amber{% else %}hover-pop-amber{% endif %}">Events</a>
+      <a href="/resources.html" class="transition {% if '/resources' in page.url %}pop-amber{% else %}hover-pop-amber{% endif %}">Resources</a>
+      <a href="/contact.html" class="transition {% if '/contact' in page.url %}pop-amber{% else %}hover-pop-amber{% endif %}">Contact</a>
       <a href="/donate.html" class="btn-vivid-amber px-5 py-2 rounded-md font-bold shadow-sm hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Support Us</a>
     </div>
 
@@ -25,13 +25,13 @@
 
   <!-- Mobile Dropdown Menu -->
   <div id="mobile-menu" class="hidden md:hidden container mx-auto max-w-6xl border-t border-black/10 mt-4 pt-4 pb-2 space-y-2 px-2">
-    <a href="/index.html" class="block px-4 py-3 rounded-xl pop-amber" style="background-color: rgba(255, 183, 3, 0.15);">Home</a>
-    <a href="/about.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">About Us</a>
-    <a href="/news.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">News</a>
-    <a href="/services.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">Services</a>
-    <a href="/events.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">Events</a>
-    <a href="/resources.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">Resources</a>
-    <a href="/contact.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">Contact</a>
+    <a href="/index.html" class="block px-4 py-3 rounded-xl font-bold transition {% if page.url == '/' or page.url == '/index.html' %}pop-amber{% else %}hover-pop-amber-bg{% endif %}" {% if page.url == '/' or page.url == '/index.html' %}style="background-color: rgba(255, 183, 3, 0.15);"{% endif %}>Home</a>
+    <a href="/about.html" class="block px-4 py-3 rounded-xl font-bold transition {% if '/about' in page.url %}pop-amber{% else %}hover-pop-amber-bg{% endif %}" {% if '/about' in page.url %}style="background-color: rgba(255, 183, 3, 0.15);"{% endif %}>About Us</a>
+    <a href="/news.html" class="block px-4 py-3 rounded-xl font-bold transition {% if '/news' in page.url %}pop-amber{% else %}hover-pop-amber-bg{% endif %}" {% if '/news' in page.url %}style="background-color: rgba(255, 183, 3, 0.15);"{% endif %}>News</a>
+    <a href="/services.html" class="block px-4 py-3 rounded-xl font-bold transition {% if '/services' in page.url %}pop-amber{% else %}hover-pop-amber-bg{% endif %}" {% if '/services' in page.url %}style="background-color: rgba(255, 183, 3, 0.15);"{% endif %}>Services</a>
+    <a href="/events.html" class="block px-4 py-3 rounded-xl font-bold transition {% if '/events' in page.url %}pop-amber{% else %}hover-pop-amber-bg{% endif %}" {% if '/events' in page.url %}style="background-color: rgba(255, 183, 3, 0.15);"{% endif %}>Events</a>
+    <a href="/resources.html" class="block px-4 py-3 rounded-xl font-bold transition {% if '/resources' in page.url %}pop-amber{% else %}hover-pop-amber-bg{% endif %}" {% if '/resources' in page.url %}style="background-color: rgba(255, 183, 3, 0.15);"{% endif %}>Resources</a>
+    <a href="/contact.html" class="block px-4 py-3 rounded-xl font-bold transition {% if '/contact' in page.url %}pop-amber{% else %}hover-pop-amber-bg{% endif %}" {% if '/contact' in page.url %}style="background-color: rgba(255, 183, 3, 0.15);"{% endif %}>Contact</a>
     <a href="/donate.html" class="block px-4 py-3 mt-4 text-center btn-vivid-amber font-bold rounded-xl shadow-sm hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Support Us</a>
   </div>
 </nav>
