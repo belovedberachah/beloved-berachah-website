@@ -1,3 +1,4 @@
+{% if page.url == '/' %}
 <!-- ========================================= -->
 <!-- ULTRA-PREMIUM WEB SPLASH SCREEN           -->
 <!-- ========================================= -->
@@ -11,10 +12,11 @@
   .splash-exit { opacity: 0 !important; transform: scale(1.15) !important; pointer-events: none; }
 </style>
 
-<div id="splash-screen" class="fixed inset-0 z-9999 bg-linear-to-b from-white to-amber-100 flex flex-col items-center justify-center overflow-hidden">
-  <div class="absolute w-[120vw] h-[80vh] bg-amber-400/20 rounded-[100%] blur-[80px] animate-pulse" style="animation-duration: 3s;"></div>
-  <img src="/assets/images/bb-icon-512.png" alt="Beloved Berachah Icon" class="relative z-10 w-3/5 max-w-xs object-contain animate-premium-reveal drop-shadow-[0_30px_40px_rgba(217,119,6,0.3)]">
+<div id="splash-screen" class="fixed inset-0 z-9999 flex flex-col items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #7B539B 0%, #B8A280 100%);">
+  <div class="absolute w-[120vw] h-[80vh] rounded-[100%] blur-[80px] animate-pulse" style="background-color: rgba(255, 183, 3, 0.25); animation-duration: 3s;"></div>
+  <img src="/assets/images/bb-icon-512.png" alt="Beloved Berachah Icon" class="relative z-10 w-3/5 max-w-xs object-contain animate-premium-reveal drop-shadow-2xl">
 </div>
+{% endif %}
 
 <!-- PWA Install Prompt (Hidden by Default - Home Page Only) -->
 <div id="pwa-install-banner" class="hidden fixed top-20 inset-x-4 md:left-auto md:right-4 md:w-96 z-50 transition-all duration-500 transform translate-y-0">
@@ -53,6 +55,24 @@
 </div>
 
 <script>
+  // ==========================================
+  // SPLASH SCREEN DISMISSAL LOGIC
+  // ==========================================
+  window.addEventListener('load', () => {
+    const splashScreen = document.getElementById('splash-screen');
+    if (splashScreen) {
+      setTimeout(() => {
+        splashScreen.classList.add('splash-exit'); // Triggers the CSS fade/zoom out
+        setTimeout(() => {
+          splashScreen.style.display = 'none'; // Removes it from the DOM flow
+        }, 800); // Matches the CSS transition time
+      }, 600); // How long the splash screen stays fully visible
+    }
+  });
+
+  // ==========================================
+  // PWA INSTALL LOGIC
+  // ==========================================
   let deferredPrompt;
   const installBanner = document.getElementById('pwa-install-banner');
   const iosBanner = document.getElementById('ios-install-banner');
