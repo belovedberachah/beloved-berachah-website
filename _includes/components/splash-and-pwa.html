@@ -1,0 +1,99 @@
+<!-- ========================================= -->
+<!-- ULTRA-PREMIUM WEB SPLASH SCREEN           -->
+<!-- ========================================= -->
+<style>
+  @keyframes premium-reveal {
+    0% { transform: scale(0.9) translateY(20px); opacity: 0; filter: blur(12px); }
+    100% { transform: scale(1) translateY(0); opacity: 1; filter: blur(0); }
+  }
+  .animate-premium-reveal { animation: premium-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+  #splash-screen { transition: opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1), transform 0.8s cubic-bezier(0.65, 0, 0.35, 1); }
+  .splash-exit { opacity: 0 !important; transform: scale(1.15) !important; pointer-events: none; }
+</style>
+
+<div id="splash-screen" class="fixed inset-0 z-9999 bg-linear-to-b from-white to-amber-100 flex flex-col items-center justify-center overflow-hidden">
+  <div class="absolute w-[120vw] h-[80vh] bg-amber-400/20 rounded-[100%] blur-[80px] animate-pulse" style="animation-duration: 3s;"></div>
+  <img src="/assets/images/bb-icon-512.png" alt="Beloved Berachah Icon" class="relative z-10 w-3/5 max-w-xs object-contain animate-premium-reveal drop-shadow-[0_30px_40px_rgba(217,119,6,0.3)]">
+</div>
+
+<!-- PWA Install Prompts -->
+<div id="pwa-install-banner" class="hidden fixed top-20 inset-x-4 md:left-auto md:right-4 md:w-96 z-50 transition-all duration-500 transform translate-y-0">
+  <div class="bg-slate-900 text-white p-4 rounded-xl shadow-2xl border border-slate-700 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="/assets/images/BB.png" alt="Icon" class="w-10 h-10 rounded-md bg-white p-1 object-contain">
+      <div>
+        <p class="font-semibold text-sm">Install Beloved Berachah</p>
+        <p class="text-xs text-slate-300">Add to home screen</p>
+      </div>
+    </div>
+    <div class="flex gap-2">
+      <button id="pwa-close-btn" class="text-slate-400 hover:text-white text-sm px-2">Cancel</button>
+      <button id="pwa-install-btn" class="bg-amber-500 hover:bg-amber-600 text-slate-900 text-sm font-bold py-1 px-3 rounded transition">Install</button>
+    </div>
+  </div>
+</div>
+
+<div id="ios-install-banner" class="hidden fixed bottom-6 inset-x-0 z-50 px-4 transition-opacity duration-500">
+  <div class="bg-slate-900 text-white p-4 rounded-2xl shadow-2xl border border-slate-700 max-w-sm w-full mx-auto relative pb-5">
+    <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-12 border-r-12 border-t-12 border-transparent border-t-slate-900 drop-shadow-md"></div>
+    <button id="ios-close-btn" aria-label="Close" class="absolute top-3 right-3 text-slate-400 hover:text-white transition">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <div class="flex items-start gap-4 pr-6">
+      <img src="/assets/images/BB.png" alt="Icon" class="w-14 h-14 rounded-xl bg-white p-1.5 object-contain shadow-sm shrink-0">
+      <div class="pt-0.5">
+        <p class="font-serif font-medium text-lg text-white leading-tight mb-1">Install the App</p>
+        <p class="text-xs text-slate-300 leading-relaxed font-light">
+          Tap the <strong>three dots</strong> below, select <strong>"Share"</strong>, then tap <strong>"Add to Home Screen"</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW failed', err)));
+  }
+
+  // Splash Screen Logic
+  window.addEventListener('load', function() {
+    const splash = document.getElementById('splash-screen');
+    if (!splash) return;
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+    
+    if (isStandalone && !sessionStorage.getItem('pwaLaunchComplete')) {
+      splash.style.display = 'none';
+      sessionStorage.setItem('pwaLaunchComplete', 'true');
+      return;
+    }
+    setTimeout(() => {
+      splash.classList.add('splash-exit');
+      setTimeout(() => splash.style.display = 'none', 800); 
+    }, 1200); 
+  });
+
+  // PWA Prompt Logic
+  let deferredPrompt;
+  const installBanner = document.getElementById('pwa-install-banner');
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault(); deferredPrompt = e; installBanner.classList.remove('hidden'); 
+  });
+  document.getElementById('pwa-install-btn')?.addEventListener('click', async () => {
+    installBanner.classList.add('hidden');
+    if (deferredPrompt) { deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt = null; }
+  });
+  document.getElementById('pwa-close-btn')?.addEventListener('click', () => installBanner.classList.add('hidden'));
+
+  // iOS Prompt Logic
+  const iosBanner = document.getElementById('ios-install-banner');
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  if (isIOS && !isStandalone && !localStorage.getItem('ios_banner_dismissed')) {
+    setTimeout(() => iosBanner.classList.remove('hidden'), 2000);
+  }
+  document.getElementById('ios-close-btn')?.addEventListener('click', () => {
+    iosBanner.classList.add('hidden'); localStorage.setItem('ios_banner_dismissed', 'true');
+  });
+</script>

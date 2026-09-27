@@ -1,462 +1,92 @@
 ---
-permalink: "cookies.html"
+layout: layouts/base.njk
+title: "Cookie Policy | Beloved Berachah CIC"
+description: "Information about how Beloved Berachah CIC uses cookies to improve your experience and how you can manage your preferences."
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ========================================= -->
-    <!-- FIRST-CLASS SEO OPTIMIZATION              -->
-    <!-- ========================================= -->
-    <title>Contact Us | Beloved Berachah CIC</title>
-    <meta name="description" content="Get in touch with Beloved Berachah CIC. We are here to support women, arrange talks, and partner with communities." />
-    <meta name="author" content="Beloved Berachah CIC" />
-    <link rel="canonical" href="https://belovedberachah.netlify.app/contact.html" />
+<!-- Premium Hero Header -->
+<header class="relative overflow-hidden border-b-4 border-amber-500">
+  <!-- Layer 1: Background Image -->
+  <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="absolute inset-0 w-full h-full object-cover" />
+  
+  <!-- Layer 2: Semi-Transparent Slate Overlay -->
+  <div class="absolute inset-0" style="background-color: rgba(15, 23, 42, 0.75);"></div>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://belovedberachah.netlify.app/contact.html" />
-    <meta property="og:title" content="Contact Us | Beloved Berachah CIC" />
-    <meta property="og:description" content="Get in touch with Beloved Berachah CIC. We are here to support women, arrange talks, and partner with communities." />
-    <meta property="og:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
-    <meta property="og:site_name" content="Beloved Berachah CIC" />
+  <!-- Layer 3: Page Text Content -->
+  <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
+    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm text-black" style="background-color: rgba(255, 183, 3, 0.8);">
+      Legal Information
+    </span>
+    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-md">
+      Cookie <span class="font-medium italic" style="color: #FFB703;">Policy</span>
+    </h1>
+    <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-sm">
+      Last Updated: September 2026
+    </p>
+  </div>
+</header>
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Contact Us | Beloved Berachah CIC" />
-    <meta name="twitter:description" content="Get in touch with Beloved Berachah CIC. We are here to support women, arrange talks, and partner with communities." />
-    <meta name="twitter:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
-    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
-    <!-- ========================================= -->
-
-    <!-- PWA & Icons -->
-    <link rel="manifest" href="/manifest.json" />
-    <!-- Updated iOS Splash Icon -->
-    <link rel="apple-touch-icon" href="assets/images/bb-icon-512.png" />
+<!-- Legal Content Area (Purple Background with Sand Card) -->
+<div class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
+  <main role="main" class="container mx-auto max-w-4xl grow">
     
-    <!-- Apple/iOS Specific PWA Tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Berachah">
-    
-    <link rel="icon" type="image/png" href="assets/images/BB.png" />
-    <meta name="theme-color" content="#FBBF24" />
-
-    <!-- PWA Setup -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(err => console.log('Service Worker failed: ', err));
-        });
-      }
-    </script>
-
-    <!-- Typography (Playfair Display & Inter) - ASYNCHRONOUS LOAD -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" media="print" onload="this.media='all'" />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
-    </noscript>
-
-    <!-- Local Tailwind CSS -->
-    <link rel="stylesheet" href="./css/style.css?v=2" />
-
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #fafaf9;
-        color: #334155;
-      }
-      .font-serif {
-        font-family: "Playfair Display", serif;
-      }
-    </style>
-  </head>
-
-  <body class="flex flex-col min-h-screen">
-    
-    <!-- PWA Install Prompt -->
-    <div id="pwa-install-banner" class="hidden fixed top-20 inset-x-4 md:left-auto md:right-4 md:w-96 z-50 transition-all duration-500 transform translate-y-0">
-      <div class="bg-slate-900 text-white p-4 rounded-xl shadow-2xl border border-slate-700 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <img src="assets/images/BB.png" alt="Beloved Berachah Icon" class="w-10 h-10 rounded-md bg-white p-1 object-contain">
-          <div>
-            <p class="font-semibold text-sm">Install Beloved Berachah</p>
-            <p class="text-xs text-slate-300">Add to home screen for offline support</p>
-          </div>
-        </div>
-        <div class="flex gap-2">
-          <button id="pwa-close-btn" class="text-slate-400 hover:text-white text-sm px-2">Cancel</button>
-          <button id="pwa-install-btn" class="bg-amber-500 hover:bg-amber-600 text-slate-900 text-sm font-bold py-1 px-3 rounded transition">Install</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- iOS Install Prompt (Hidden by Default) -->
-    <div id="ios-install-banner" class="hidden fixed bottom-6 inset-x-0 z-50 px-4 transition-opacity duration-500">
-      <div class="bg-slate-900 text-white p-4 rounded-2xl shadow-2xl border border-slate-700 max-w-sm w-full mx-auto relative pb-5">
-        
-        <!-- Downward pointing arrow -->
-        <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-12 border-r-12 border-t-12 border-transparent border-t-slate-900 drop-shadow-md"></div>
-        
-        <!-- Close Button -->
-        <button id="ios-close-btn" aria-label="Close install prompt" class="absolute top-3 right-3 text-slate-400 hover:text-white transition">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-        
-        <!-- Content with flexible instructions -->
-        <div class="flex items-start gap-4 pr-6">
-          <img src="assets/images/BB.png" alt="Beloved Berachah Icon" class="w-14 h-14 rounded-xl bg-white p-1.5 object-contain shadow-sm shrink-0">
-          <div class="pt-0.5">
-            <p class="font-serif font-medium text-lg text-white leading-tight mb-1">Install the App</p>
-            <p class="text-xs text-slate-300 leading-relaxed font-light">
-              Tap the <strong>three dots</strong> below, select <strong>"Share"</strong> scroll down or press <strong>"View More"</strong> first), then tap <strong>"Add to Home Screen"</strong>.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav class="bg-white text-slate-800 p-4 sticky top-0 z-40 shadow-sm border-b-4 border-amber-500">
-      <div class="container mx-auto flex justify-between items-center max-w-6xl">
-        <a href="index.html" class="flex items-center gap-3 group hover:opacity-80 transition">
-          <img src="assets/images/BB.png" alt="Beloved Berachah Logo" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
-          <span class="font-serif text-slate-900 text-2xl md:text-3xl tracking-tight mt-1">Beloved <span class="text-amber-700">Berachah</span></span>
-        </a>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-8 font-medium items-center">
-          <a href="index.html" class="hover:text-amber-700 transition">Home</a>
-          <a href="about.html" class="hover:text-amber-700 transition">About Us</a>
-          <a href="news.html" class="hover:text-amber-700 transition">News</a>
-          <a href="services.html" class="hover:text-amber-700 transition">Services</a>
-          <a href="events.html" class="hover:text-amber-700 transition">Events</a>
-          <a href="resources.html" class="hover:text-amber-700 transition">Resources</a>
-          <a href="contact.html" class="hover:text-amber-700 transition">Contact</a>
-          <a href="donate.html" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-semibold shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Support Us</a>
-        </div>
-
-        <!-- Mobile Hamburger Button -->
-        <button type="button" aria-label="Open mobile menu" class="md:hidden text-slate-800 focus:outline-none hover:text-amber-700 transition">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </button>
-      </div>
-
-      <!-- Mobile Dropdown Menu -->
-      <div id="mobile-menu" class="hidden md:hidden container mx-auto max-w-6xl border-t border-slate-100 mt-4 pt-4 pb-2 space-y-2 px-2">
-        <a href="index.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Home</a>
-        <a href="about.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">About Us</a>
-        <a href="news.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">News</a>
-        <a href="services.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Services</a>
-        <a href="events.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Events</a>
-        <a href="resources.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Resources</a>
-        <a href="contact.html" class="block px-4 py-3 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-xl font-medium">Contact</a>
-        <a href="donate.html" class="block px-4 py-3 mt-4 text-center bg-amber-500 text-slate-900 font-bold rounded-xl shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Support Us</a>
-      </div>
-    </nav>
-
-    <!-- Premium Hero Header -->
-      <header class="relative overflow-hidden border-b-4 border-amber-500">
-        
-        <!-- Layer 1: Background Image -->
-        <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="absolute inset-0 w-full h-full object-cover" />
-        
-        <!-- Layer 2: Semi-Transparent Slate Overlay (Inline for instant load) -->
-        <div class="absolute inset-0" style="background-color: rgba(15, 23, 42, 0.75);"></div>
-
-        <!-- Layer 3: Page Text Content -->
-        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
-          <span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm" style="background-color: rgba(245, 158, 11, 0.2);">
-            Legal Information
-          </span>
-          <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-md">
-            Cookie <span class="text-amber-400 font-medium italic">Policy</span>
-          </h1>
-          <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-light max-w-2xl mx-auto drop-shadow-sm">
-            Last Updated: September 2026
-          </p>
-        </div>
-      </header>
-
-    <!-- Legal Content -->
-    <main role="main" class="container mx-auto px-4 py-16 max-w-3xl grow">
-      <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-100 text-slate-700 leading-relaxed space-y-8 font-light">
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+      
+      <div class="text-black leading-relaxed space-y-10 font-medium">
         
         <section>
           <p>Beloved Berachah CIC uses cookies to improve your experience, analyse website traffic, and support our community outreach. This policy explains what cookies are, how we use them, and how you can manage your preferences.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">What Are Cookies?</h2>
+          <h2 class="text-3xl font-serif text-black mb-4 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">What Are Cookies?</h2>
           <p>Cookies are small text files that are placed on your computer or mobile device when you browse websites. They are widely used to make websites work more efficiently, provide a better user experience, and supply analytical information to the website owners.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">How We Use Cookies</h2>
-          <p class="mb-4">We classify our cookies into three categories in accordance with UK data protection regulations:</p>
+          <h2 class="text-3xl font-serif text-black mb-6 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">How We Use Cookies</h2>
+          <p class="mb-6">We classify our cookies into three categories in accordance with UK data protection regulations:</p>
           
           <div class="space-y-6">
-            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-              <h3 class="text-lg font-semibold text-slate-900 mb-2">1. Essential Cookies</h3>
-              <p class="text-sm">These cookies are strictly necessary to enable core functionality of the website, such as remembering your privacy preferences and securing the site. The website cannot function properly without these cookies, and they cannot be switched off in our systems.</p>
+            
+            <!-- Essential Cookies (White Nested Card) -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-black/10">
+              <h3 class="text-xl font-bold mb-3" style="color: #FFB703;">1. Essential Cookies</h3>
+              <p class="text-black">These cookies are strictly necessary to enable core functionality of the website, such as remembering your privacy preferences and securing the site. The website cannot function properly without these cookies, and they cannot be switched off in our systems.</p>
             </div>
             
-            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-              <h3 class="text-lg font-semibold text-slate-900 mb-2">2. Analytics Cookies</h3>
-              <p class="text-sm">These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. We use tools like Google Analytics to understand which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous.</p>
+            <!-- Analytics Cookies (White Nested Card) -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-black/10">
+              <h3 class="text-xl font-bold mb-3" style="color: #FFB703;">2. Analytics Cookies</h3>
+              <p class="text-black">These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. We use tools like Google Analytics to understand which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous.</p>
             </div>
 
-            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-              <h3 class="text-lg font-semibold text-slate-900 mb-2">3. Marketing & Third-Party Cookies</h3>
-              <p class="text-sm">These cookies are set by third-party services that we embed on our website, such as YouTube videos or social media feeds. They may be used by those companies to build a profile of your interests and show you relevant content on other sites. If you do not allow these cookies, you will not be able to view embedded third-party media on our site.</p>
+            <!-- Marketing Cookies (White Nested Card) -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-black/10">
+              <h3 class="text-xl font-bold mb-3" style="color: #FFB703;">3. Marketing & Third-Party Cookies</h3>
+              <p class="text-black">These cookies are set by third-party services that we embed on our website, such as YouTube videos or social media feeds. They may be used by those companies to build a profile of your interests and show you relevant content on other sites. If you do not allow these cookies, you will not be able to view embedded third-party media on our site.</p>
             </div>
+            
           </div>
         </section>
 
         <section>
-          <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">Managing Your Preferences</h2>
-          <p class="mb-4">You have the right to withdraw your consent or change your cookie preferences at any time. You can do this easily by clicking the button below, or by selecting "Manage Cookies" in the footer of any page on this website.</p>
-          <button onclick="openCookieModal()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-2 px-6 rounded transition shadow-sm">Manage My Cookie Preferences</button>
-          <p class="mt-4 text-sm">Alternatively, most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set, visit <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer" class="text-amber-700 hover:text-amber-800 hover:underline">www.aboutcookies.org</a>.</p>
+          <h2 class="text-3xl font-serif text-black mb-4 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Managing Your Preferences</h2>
+          <p class="mb-8">You have the right to withdraw your consent or change your cookie preferences at any time. You can do this easily by clicking the button below, or by selecting "Manage Cookies" in the footer of any page on this website.</p>
+          
+          <button onclick="openCookieModal()" class="btn-vivid-amber font-bold py-3 px-8 rounded-lg transition-transform duration-300 shadow-md hover:-translate-y-1 text-lg inline-block">
+            Manage My Cookie Preferences
+          </button>
+          
+          <p class="mt-8 text-sm">Alternatively, most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set, visit <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer" class="font-bold underline hover:opacity-80" style="color: #FFB703;">www.aboutcookies.org</a>.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-serif text-slate-900 mb-4 font-medium border-l-4 border-amber-500 pl-4">Contact Us</h2>
-          <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us at <a href="mailto:beloved@berachah.org.uk" class="text-amber-700 hover:text-amber-800 hover:underline font-medium">beloved@berachah.org.uk</a>.</p>
+          <h2 class="text-3xl font-serif text-black mb-4 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Contact Us</h2>
+          <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us at <a href="mailto:beloved@berachah.org.uk" class="font-bold underline hover:opacity-80" style="color: #FFB703;">beloved@berachah.org.uk</a>.</p>
         </section>
 
       </div>
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="bg-slate-900 text-slate-300 py-12 mt-auto border-t border-slate-800">
-      <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-3 gap-8 text-center md:text-left">
-        <div class="md:col-span-1">
-          <h3 class="text-white text-2xl font-serif mb-4 tracking-tight">Beloved Berachah CIC</h3>
-          <p class="text-sm leading-relaxed mb-4 text-slate-300">
-            Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
-          </p>
-        </div>
-        
-        <div>
-          <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Legal & Registration</h3>
-          <ul class="space-y-2 text-sm text-slate-300">
-            <li>Company Number: 16685295</li>
-            <li>Registered in England and Wales.</li>
-            <li>Registered Office: [Insert Address]</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links & Contact</h3>
-          <ul class="space-y-3 text-sm">
-            <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
-            <li><a href="contact.html" class="text-slate-300 hover:text-white transition">Contact Us</a></li>
-            <li><a href="terms.html" class="text-slate-300 hover:text-white transition">Terms & Conditions</a></li>
-            <li><a href="privacy.html" class="text-slate-300 hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="cookies.html" class="text-slate-300 hover:text-white transition">Cookie Policy</a></li>
-            <li><a href="safeguarding.html" class="text-slate-300 hover:text-white transition">Safeguarding</a></li>
-            <li><button onclick="openCookieModal()" class="text-slate-300 hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
-          </ul>
-        </div>
-      </div>
-      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-slate-400 text-center">
-        <p>&copy; 2026 Beloved Berachah CIC. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <!-- Cookie Consent Banner & Modal -->
-    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 w-full z-60 bg-slate-900 text-white p-6 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t-4 border-amber-500">
-      <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
-        <p class="text-sm text-slate-300 max-w-3xl">
-          We use cookies to improve your experience, analyse website traffic, and support marketing activity. You can accept, reject, or manage your preferences at any time. Please see our <a href="privacy.html" class="text-amber-500 hover:text-amber-400 underline">Privacy Policy</a> for further information.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
-          <button onclick="acceptAllCookies()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-2 px-6 rounded transition text-sm">Accept All</button>
-          <button onclick="rejectCookies()" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-6 rounded transition text-sm">Reject</button>
-          <button onclick="openCookieModal()" class="bg-transparent border border-slate-500 hover:border-white text-white font-semibold py-2 px-6 rounded transition text-sm">Manage</button>
-        </div>
-      </div>
     </div>
-
-    <div id="cookie-modal" class="hidden fixed inset-0 z-70 bg-black bg-opacity-75">
-      <div class="flex items-center justify-center min-h-screen p-4">
-        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 text-slate-900 relative">
-          <h3 class="text-xl font-serif mb-2">Cookie Preferences</h3>
-          <p class="text-sm text-slate-600 mb-6">Manage how we use cookies on your device.</p>
-          
-          <div class="space-y-4 mb-8">
-            <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-              <div>
-                <p class="font-semibold text-sm">Essential Cookies</p>
-                <p class="text-xs text-slate-500">Required for core website functionality.</p>
-              </div>
-              <span class="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">Always ON</span>
-            </div>
-            
-            <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-              <div class="pr-4">
-                <p class="font-semibold text-sm">Analytics Cookies</p>
-                <p class="text-xs text-slate-500">Helps us understand how visitors interact with our website.</p>
-              </div>
-              <label class="relative inline-flex items-center cursor-pointer shrink-0">
-                <input type="checkbox" id="toggle-analytics" aria-label="Enable Analytics Cookies" class="sr-only peer">
-                <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
-              </label>
-            </div>
-            
-            <div class="flex justify-between items-center">
-              <div class="pr-4">
-                <p class="font-semibold text-sm">Marketing Cookies</p>
-                <p class="text-xs text-slate-500">Allows third-party embeds like videos or social media feeds.</p>
-              </div>
-              <label class="relative inline-flex items-center cursor-pointer shrink-0">
-                <input type="checkbox" id="toggle-marketing" aria-label="Enable Marketing Cookies" class="sr-only peer">
-                <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
-              </label>
-            </div>
-          </div>
-          
-          <div class="flex gap-3">
-            <button onclick="saveCookiePreferences()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 rounded transition">Save Preferences</button>
-            <button onclick="closeCookieModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 rounded transition">Cancel</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Application Javascript Logic -->
-    <script>
-      // Mobile Menu Logic
-      const btn = document.querySelector('button[aria-label="Open mobile menu"]');
-      const menu = document.getElementById("mobile-menu");
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-
-      // PWA Installation Prompt Logic
-      let deferredPrompt;
-      const installBanner = document.getElementById('pwa-install-banner');
-      
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault(); 
-        deferredPrompt = e;
-        installBanner.classList.remove('hidden'); 
-      });
-
-      document.getElementById('pwa-install-btn').addEventListener('click', async () => {
-        installBanner.classList.add('hidden');
-        if (deferredPrompt) {
-          deferredPrompt.prompt();
-          const { outcome } = await deferredPrompt.userChoice;
-          deferredPrompt = null;
-        }
-      });
-
-      document.getElementById('pwa-close-btn').addEventListener('click', () => {
-        installBanner.classList.add('hidden');
-      });
-
-      // Cookie Consent Logic
-      function checkCookieConsent() {
-        const consent = JSON.parse(localStorage.getItem('bb_cookie_consent'));
-        if (!consent) {
-          document.getElementById('cookie-banner').classList.remove('hidden');
-        } else {
-          applyConsent(consent);
-        }
-      }
-
-      function acceptAllCookies() {
-        const consent = { analytics: true, marketing: true };
-        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
-        document.getElementById('cookie-banner').classList.add('hidden');
-        applyConsent(consent);
-      }
-
-      function rejectCookies() {
-        const consent = { analytics: false, marketing: false };
-        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
-        document.getElementById('cookie-banner').classList.add('hidden');
-        applyConsent(consent);
-      }
-
-      function openCookieModal() {
-        document.getElementById('cookie-banner').classList.add('hidden');
-        document.getElementById('cookie-modal').classList.remove('hidden');
-        
-        const consent = JSON.parse(localStorage.getItem('bb_cookie_consent')) || { analytics: false, marketing: false };
-        document.getElementById('toggle-analytics').checked = consent.analytics;
-        document.getElementById('toggle-marketing').checked = consent.marketing;
-      }
-
-      function closeCookieModal() {
-        document.getElementById('cookie-modal').classList.add('hidden');
-        if (!localStorage.getItem('bb_cookie_consent')) {
-          document.getElementById('cookie-banner').classList.remove('hidden');
-        }
-      }
-
-      function saveCookiePreferences() {
-        const consent = {
-          analytics: document.getElementById('toggle-analytics').checked,
-          marketing: document.getElementById('toggle-marketing').checked
-        };
-        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
-        document.getElementById('cookie-modal').classList.add('hidden');
-        applyConsent(consent);
-      }
-
-      function applyConsent(consent) {
-        if (consent.analytics && !window.gaLoaded) {
-          window.gaLoaded = true;
-          const script = document.createElement('script');
-          script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
-          script.async = true;
-          document.head.appendChild(script);
-          
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');
-        }
-      }
-
-      window.addEventListener('DOMContentLoaded', checkCookieConsent);
-
-      // --- iOS PWA Install Prompt Logic ---
-      const iosBanner = document.getElementById('ios-install-banner');
-      const iosCloseBtn = document.getElementById('ios-close-btn');
-
-      // 1. Detect if the user is on an iOS device (iPhone/iPad)
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      
-      // 2. Detect if the app is already installed (standalone mode)
-      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-      
-      // 3. Check if the user previously dismissed the banner
-      const bannerDismissed = localStorage.getItem('ios_banner_dismissed');
-
-      // If it's an iPhone, it's not installed, and they haven't dismissed it yet...
-      if (isIOS && !isStandalone && !bannerDismissed) {
-        // Wait 2 seconds before showing the banner for a smoother experience
-        setTimeout(() => {
-          iosBanner.classList.remove('hidden');
-        }, 2000);
-      }
-
-      // Handle closing the banner
-      if (iosCloseBtn) {
-        iosCloseBtn.addEventListener('click', () => {
-          iosBanner.classList.add('hidden');
-          // Save a flag in the browser memory so we don't bother them again
-          localStorage.setItem('ios_banner_dismissed', 'true');
-        });
-      }
-    </script>
-  </body>
-</html>
+  </main>
+</div>

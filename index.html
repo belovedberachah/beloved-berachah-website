@@ -1,820 +1,229 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+---
+layout: layouts/base.njk
+title: "Beloved Berachah CIC | Women's Support, Healing & Recovery"
+description: "Beloved Berachah CIC empowers women affected by trauma, addiction, domestic abuse, and mental health challenges to heal, recover, and thrive. You are not alone."
+---
 
-    <!-- ========================================= -->
-    <!-- FIRST-CLASS SEO OPTIMIZATION              -->
-    <!-- ========================================= -->
-    
-    <!-- Core Search Engine Tags -->
-    <title>Beloved Berachah CIC | Women's Support, Healing & Recovery</title>
-    <meta name="description" content="Beloved Berachah CIC empowers women affected by trauma, addiction, domestic abuse, and mental health challenges to heal, recover, and thrive. You are not alone." />
-    <meta name="author" content="Beloved Berachah CIC" />
-    <link rel="canonical" href="https://belovedberachah.netlify.app/" />
-
-    <!-- Open Graph / Social Media Preview Cards (Facebook, LinkedIn, WhatsApp) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://belovedberachah.netlify.app/" />
-    <meta property="og:title" content="Beloved Berachah CIC | Women's Support & Recovery" />
-    <meta property="og:description" content="Empowering women affected by trauma, addiction, domestic abuse, and mental health challenges to heal, recover, and thrive." />
-    <meta property="og:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
-    <meta property="og:site_name" content="Beloved Berachah CIC" />
-
-    <!-- Twitter / X Preview Cards -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Beloved Berachah CIC | Support & Recovery" />
-    <meta name="twitter:description" content="Empowering women affected by trauma and addiction to heal, recover, and thrive." />
-    <meta name="twitter:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
-
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
-
-    <!-- Schema.org Structured Data (Directly feeds Google organization details) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NGO",
-      "name": "Beloved Berachah CIC",
-      "url": "https://belovedberachah.netlify.app/",
-      "logo": "https://belovedberachah.netlify.app/assets/images/BB.png",
-      "description": "Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.",
-      "founder": {
-        "@type": "Person",
-        "name": "Brenda Fraser"
-      }
-    }
-    </script>
-    <!-- ========================================= -->
-
-    <!-- PWA & Icons -->
-    <link rel="manifest" href="/manifest.json" />
-    <!-- Updated iOS Splash Icon -->
-    <link rel="apple-touch-icon" href="assets/images/bb-icon-512.png" />
-    
-    <!-- Apple/iOS Specific PWA Tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Berachah">
-    
-    <link rel="icon" type="image/png" href="assets/images/BB.png" />
-    <meta name="theme-color" content="#FBBF24" />
-
-    <!-- PWA Setup -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(err => console.log('Service Worker failed: ', err));
-        });
-      }
-    </script>
-
-    <!-- Typography (Playfair Display & Inter) - Optimized with swap -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" media="print" onload="this.media='all'" />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
-    </noscript>
-
-    <!-- Local Tailwind CSS -->
-    <link rel="stylesheet" href="./css/style.css?v=2" />
-
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #fafaf9;
-        color: #334155;
-      }
-      .font-serif {
-        font-family: "Playfair Display", serif;
-      }
-    </style>
-  </head>
-
-  <body class="flex flex-col min-h-screen">
-
-    <!-- ========================================= -->
-    <!-- ULTRA-PREMIUM WEB SPLASH SCREEN           -->
-    <!-- ========================================= -->
-    <style>
-      /* 1. Cinematic Entrance: Soft upward lift, focus, and scale */
-      @keyframes premium-reveal {
-        0% { transform: scale(0.9) translateY(20px); opacity: 0; filter: blur(12px); }
-        100% { transform: scale(1) translateY(0); opacity: 1; filter: blur(0); }
-      }
-      
-      .animate-premium-reveal {
-        animation: premium-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      }
-
-      /* 2. Container Transition Rules */
-      #splash-screen {
-        transition: opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1), 
-                    transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
-      }
-
-      /* 3. The Exit: Zooms slightly toward the user as it fades out */
-      .splash-exit {
-        opacity: 0 !important;
-        transform: scale(1.15) !important;
-        pointer-events: none;
-      }
-    </style>
-
-    <!-- Uses a slightly deeper amber gradient at the bottom for richness -->
-    <div id="splash-screen" class="fixed inset-0 z-9999 bg-linear-to-b from-white to-amber-100 flex flex-col items-center justify-center overflow-hidden">
-      
-      <!-- MASSIVE Ambient Studio Glow Behind Logo -->
-      <div class="absolute w-[120vw] h-[80vh] bg-amber-400/20 rounded-[100%] blur-[80px] animate-pulse" style="animation-duration: 3s;"></div>
-      
-      <!-- The Logo: Now using the perfectly square canvas to seamlessly match the OS handoff -->
-      <img src="assets/images/bb-icon-512.png" alt="Beloved Berachah Icon" class="relative z-10 w-3/5 max-w-xs object-contain animate-premium-reveal drop-shadow-[0_30px_40px_rgba(217,119,6,0.3)]">
-      
+<!-- Hero Section -->
+<header class="relative overflow-hidden flex flex-col justify-center border-b border-black/10">
+  <div class="absolute inset-0 z-0" style="opacity: 0.70;">
+    <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=auto&format=auto" alt="Peaceful nature background" class="w-full h-full object-cover" fetchpriority="high" />
+  </div>
+  <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-6xl flex flex-col items-center text-center">
+    <span class="px-4 py-1 text-sm font-bold rounded-full mb-6 inline-block shadow-sm text-black" style="background-color: rgba(255, 183, 3, 0.2); border: 1px solid #FFB703;">
+      Community Interest Company
+    </span>
+    <h1 class="text-5xl md:text-7xl font-serif text-black mb-6 leading-tight tracking-tight max-w-4xl font-bold">
+      Welcome to <br class="hidden md:block" />
+      <span class="pop-amber">Beloved Berachah</span>
+    </h1>
+    <p class="text-lg md:text-xl text-black max-w-2xl mb-10 leading-relaxed font-semibold">
+      Supporting Women to Heal, Recover, and Thrive.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/about.html" class="btn-vivid-amber px-8 py-3 rounded-lg font-bold shadow-md hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200 text-lg">Our Vision</a>
+      <a href="/contact.html" class="btn-vivid-amber px-8 py-3 rounded-lg font-bold shadow-md hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200 text-lg">Get Support</a>
     </div>
+  </div>
+</header>
 
-    <!-- Splash Screen Logic -->
-    <script>
-      window.addEventListener('load', function() {
-        const splash = document.getElementById('splash-screen');
-        if (!splash) return;
-
-        // Check if the user is using the installed PWA
-        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-
-        // If it's the installed PWA and the FIRST time loading in this session, skip the animation
-        if (isStandalone && !sessionStorage.getItem('pwaLaunchComplete')) {
-          splash.style.display = 'none';
-          sessionStorage.setItem('pwaLaunchComplete', 'true');
-          return; // Stop here, let the OS native splash screen shine
-        }
-
-        // Otherwise (PC browser, mobile browser, or returning to Home), play the cinematic animation
-        setTimeout(() => {
-          splash.classList.add('splash-exit');
-          // Wait for the exit transition to finish before hiding from DOM
-          setTimeout(() => {
-            splash.style.display = 'none';
-          }, 800); 
-        }, 1200); 
-      });
-    </script>
-    <!-- ========================================= -->
-    
-    <!-- PWA Install Prompt (Hidden by Default) -->
-    <div id="pwa-install-banner" class="hidden fixed top-20 inset-x-4 md:left-auto md:right-4 md:w-96 z-50 transition-all duration-500 transform translate-y-0">
-      <div class="bg-slate-900 text-white p-4 rounded-xl shadow-2xl border border-slate-700 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <img src="assets/images/BB.png" alt="Beloved Berachah Icon" class="w-10 h-10 rounded-md bg-white p-1 object-contain">
-          <div>
-            <p class="font-semibold text-sm">Install Beloved Berachah</p>
-            <p class="text-xs text-slate-300">Add to home screen</p>
-          </div>
-        </div>
-        <div class="flex gap-2">
-          <button id="pwa-close-btn" class="text-slate-400 hover:text-white text-sm px-2">Cancel</button>
-          <button id="pwa-install-btn" class="bg-amber-500 hover:bg-amber-600 text-slate-900 text-sm font-bold py-1 px-3 rounded transition">Install</button>
-        </div>
+<!-- Mission Text Section -->
+<section class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
+  <div class="container mx-auto max-w-4xl">
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+      <div class="text-center space-y-6 text-lg font-medium leading-relaxed text-black">
+        <p>Beloved Berachah CIC is dedicated to supporting women affected by trauma, addiction, domestic abuse, and mental health challenges. Our mission is to bring hope, healing, and restoration to women who feel overlooked, unheard, isolated, misunderstood, or trapped by their circumstances.</p>
+        <p>Through lived experience, education, advocacy, and compassionate support, we empower women to rebuild their lives, rediscover their worth, and move forward with renewed hope and purpose.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- iOS Install Prompt (Hidden by Default) -->
-    <div id="ios-install-banner" class="hidden fixed bottom-6 inset-x-0 z-50 px-4 transition-opacity duration-500">
-      <div class="bg-slate-900 text-white p-4 rounded-2xl shadow-2xl border border-slate-700 max-w-sm w-full mx-auto relative pb-5">
-        
-        <!-- Downward pointing arrow -->
-        <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-12 border-r-12 border-t-12 border-transparent border-t-slate-900 drop-shadow-md"></div>
-        
-        <!-- Close Button -->
-        <button id="ios-close-btn" aria-label="Close install prompt" class="absolute top-3 right-3 text-slate-400 hover:text-white transition">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-        
-        <!-- Content with flexible instructions -->
-        <div class="flex items-start gap-4 pr-6">
-          <img src="assets/images/BB.png" alt="Beloved Berachah Icon" class="w-14 h-14 rounded-xl bg-white p-1.5 object-contain shadow-sm shrink-0">
-          <div class="pt-0.5">
-            <p class="font-serif font-medium text-lg text-white leading-tight mb-1">Install the App</p>
-            <p class="text-xs text-slate-300 leading-relaxed font-light">
-              Tap the <strong>three dots</strong> below, select <strong>"Share"</strong> scroll down or press <strong>"View More"</strong> first), then tap <strong>"Add to Home Screen"</strong>.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    
-    <!-- Professional Navigation Styling -->
-    <style>
-      /* The "Pop" Technique: Tight micro-shadow creates depth and contrast against the Sand background */
-      .pop-amber { 
-        color: #FFB703 !important; 
-        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); 
-        font-weight: 800 !important; 
-      }
-      
-      /* Hover transitions from True Black to Popping Amber */
-      .hover-pop-amber { 
-        color: #000000 !important; /* Forces inactive text to true black */
-        transition: all 0.2s ease-in-out; 
-      }
-      .hover-pop-amber:hover { 
-        color: #FFB703 !important; 
-        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-      }
-      
-      /* Mobile Menu High-Contrast Hover */
-      .hover-pop-amber-bg { color: #000000 !important; }
-      .hover-pop-amber-bg:hover { 
-        color: #FFB703 !important; 
-        background-color: #000000 !important; /* Black background on hover makes Amber incredibly vibrant */
-      }
-
-      /* Support Us Button */
-      .btn-vivid-amber { background-color: #FFB703 !important; color: #000000 !important; }
-      .btn-vivid-amber:hover { background-color: #E6A500 !important; }
-    </style>
-
-    <!-- Navigation Bar -->
-    <nav class="text-black p-4 sticky top-0 z-40 shadow-sm border-b-4" style="background-color: #B8A280; border-bottom-color: #FFB703;">
-      <div class="container mx-auto flex justify-between items-center max-w-6xl">
-        <a href="index.html" class="flex items-center gap-3 group hover:opacity-80 transition">
-          <img src="assets/images/BB.png" alt="Beloved Berachah Logo" width="48" height="48" class="h-12 w-12 md:h-14 md:w-14 object-contain" />
-          <span class="font-serif text-black text-2xl md:text-3xl tracking-tight mt-1 font-bold">Beloved <span class="pop-amber">Berachah</span></span>
-        </a>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-8 font-semibold items-center">
-          <a href="index.html" class="pop-amber transition">Home</a>
-          <a href="about.html" class="hover-pop-amber transition">About Us</a>
-          <a href="news.html" class="hover-pop-amber transition">News</a>
-          <a href="services.html" class="hover-pop-amber transition">Services</a>
-          <a href="events.html" class="hover-pop-amber transition">Events</a>
-          <a href="resources.html" class="hover-pop-amber transition">Resources</a>
-          <a href="contact.html" class="hover-pop-amber transition">Contact</a>
-          <a href="donate.html" class="btn-vivid-amber px-5 py-2 rounded-md font-bold shadow-sm hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Support Us</a>
-        </div>
-
-        <!-- Mobile Hamburger Button -->
-        <button type="button" aria-label="Open mobile menu" class="md:hidden text-black focus:outline-none hover-pop-amber transition">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </button>
-      </div>
-
-      <!-- Mobile Dropdown Menu -->
-      <div id="mobile-menu" class="hidden md:hidden container mx-auto max-w-6xl border-t border-black/10 mt-4 pt-4 pb-2 space-y-2 px-2">
-        <a href="index.html" class="block px-4 py-3 rounded-xl pop-amber" style="background-color: rgba(255, 183, 3, 0.15);">Home</a>
-        <a href="about.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">About Us</a>
-        <a href="news.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">News</a>
-        <a href="services.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">Services</a>
-        <a href="events.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">Events</a>
-        <a href="resources.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">Resources</a>
-        <a href="contact.html" class="block px-4 py-3 hover-pop-amber-bg rounded-xl font-bold transition">Contact</a>
-        <a href="donate.html" class="block px-4 py-3 mt-4 text-center btn-vivid-amber font-bold rounded-xl shadow-sm hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Support Us</a>
-      </div>
-    </nav>
-
-    <!-- Main Content Wrapper to fix Lighthouse Accessibility Warning -->
-    <main role="main" class="grow">
-      
-      <!-- Hero Section -->
-      <header class="relative overflow-hidden flex flex-col justify-center border-b border-black/10">
-        <!-- Background Image -->
-        <div class="absolute inset-0 z-0" style="opacity: 0.70;">
-          <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=auto&format=auto" alt="Peaceful nature background" class="w-full h-full object-cover" fetchpriority="high" />
-        </div>
-
-        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-6xl flex flex-col items-center text-center">
-          
-          <!-- Badge -->
-          <span class="px-4 py-1 text-sm font-bold rounded-full mb-6 inline-block shadow-sm text-black" style="background-color: rgba(255, 183, 3, 0.2); border: 1px solid #FFB703;">
-            Community Interest Company
-          </span>
-
-          <!-- Main Heading -->
-          <h1 class="text-5xl md:text-7xl font-serif text-black mb-6 leading-tight tracking-tight max-w-4xl font-bold">
-            Welcome to <br class="hidden md:block" />
-            <span class="pop-amber">Beloved Berachah</span>
-          </h1>
-
-          <!-- Subheading -->
-          <p class="text-lg md:text-xl text-black max-w-2xl mb-10 leading-relaxed font-semibold">
-            Supporting Women to Heal, Recover, and Thrive.
+<!-- The Story Behind Our Name Section -->
+<section class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
+  <div class="container mx-auto max-w-6xl">
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div class="text-left">
+          <h2 class="text-3xl md:text-4xl font-serif text-black mb-6 tracking-tight font-bold">
+            The Story Behind <span style="color: #FFB703;">Our Name</span>
+          </h2>
+          <div class="w-12 h-1 mb-8 rounded-full" style="background-color: #FFB703;"></div>
+          <p class="text-black text-lg leading-relaxed font-medium mb-10">
+            Our name, <strong class="font-bold">Beloved Berachah</strong> (Berachah is a Hebrew word meaning <em>blessing</em> or <em>blessings</em>), reflects our belief that every woman is precious, deeply valued, and created to live a life free from shame, fear, and emotional and spiritual bondage.
           </p>
-
-          <!-- Call to Action Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="about.html" class="btn-vivid-amber px-8 py-3 rounded-lg font-bold shadow-md hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200 text-lg">
-              Our Vision
-            </a>
-            <a href="contact.html" class="btn-vivid-amber px-8 py-3 rounded-lg font-bold shadow-md hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200 text-lg">
-              Get Support
-            </a>
-          </div>
-
+          <blockquote class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border-l-4 mb-6" style="border-left-color: #FFB703;">
+            <p class="text-xl font-serif text-black italic leading-relaxed mb-6">"On the fourth day they assembled in the Valley of Berachah, where they blessed the Lord..."</p>
+            <footer class="text-xs font-bold uppercase tracking-widest flex items-center" style="color: #997300;">
+              <span class="w-4 h-px mr-2" style="background-color: #FFB703;"></span> 2 Chronicles 20:26
+            </footer>
+          </blockquote>
+          <blockquote class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border-l-4 mb-10 lg:mb-0" style="border-left-color: #FFB703;">
+            <p class="text-xl font-serif text-black italic leading-relaxed mb-6">"It's okay to fall,<br>It's okay to rest,<br>It's okay to say, 'Lord, I did my best.'"</p>
+            <footer class="text-xs font-bold uppercase tracking-widest flex items-center" style="color: #997300;">
+              <span class="w-4 h-px mr-2" style="background-color: #FFB703;"></span> Xania Monet
+            </footer>
+          </blockquote>
         </div>
-      </header>
-
-      <!-- Mission Text Section -->
-    <section class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
-      <div class="container mx-auto max-w-4xl">
-        <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
-          <div class="text-center space-y-6 text-lg font-medium leading-relaxed text-black">
-            <p>Beloved Berachah CIC is dedicated to supporting women affected by trauma, addiction, domestic abuse, and mental health challenges. Our mission is to bring hope, healing, and restoration to women who feel overlooked, unheard, isolated, misunderstood, or trapped by their circumstances.</p>
-            <p>Through lived experience, education, advocacy, and compassionate support, we empower women to rebuild their lives, rediscover their worth, and move forward with renewed hope and purpose.</p>
+        <div class="w-full max-w-sm mx-auto lg:ml-auto lg:mr-0">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 bg-black relative transform hover:-translate-y-1 transition-transform duration-300" style="border-color: #7B539B;">
+            <video controls playsinline preload="metadata" class="w-full aspect-9/16 object-contain bg-black">
+              <source src="/assets/videos/home-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-      <!-- The Story Behind Our Name Section -->
-      <section class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
-        <div class="container mx-auto max-w-6xl">
-          <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
-            
-            <!-- 50/50 Grid Layout -->
-            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-              
-              <!-- Left Side: Text Content -->
-              <div class="text-left">
-                <h2 class="text-3xl md:text-4xl font-serif text-black mb-6 tracking-tight font-bold">
-                  The Story Behind <span style="color: #FFB703;">Our Name</span>
-                </h2>
-                <div class="w-12 h-1 mb-8 rounded-full" style="background-color: #FFB703;"></div>
-
-                <p class="text-black text-lg leading-relaxed font-medium mb-10">
-                  Our name, <strong class="font-bold">Beloved Berachah</strong> (Berachah is a Hebrew word meaning <em>blessing</em> or <em>blessings</em>), reflects our belief that every woman is precious, deeply valued, and created to live a life free from shame, fear, and emotional and spiritual bondage. We are committed to creating safe spaces where women can find encouragement, practical support, and opportunities to rebuild their lives, rediscover their identity, and embrace hope for the future.
-                </p>
-
-                <!-- Quote 1: Berachah Verse (Clean white nested card) -->
-                <blockquote class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border-l-4 mb-6" style="border-left-color: #FFB703;">
-                  <p class="text-xl font-serif text-black italic leading-relaxed mb-6">
-                    "On the fourth day they assembled in the Valley of Berachah, where they blessed the Lord..."
-                  </p>
-                  <footer class="text-xs font-bold uppercase tracking-widest flex items-center" style="color: #997300;">
-                    <span class="w-4 h-px mr-2" style="background-color: #FFB703;"></span> 2 Chronicles 20:26
-                  </footer>
-                </blockquote>
-
-                <!-- Quote 2: Song Lyrics (Clean white nested card) -->
-                <blockquote class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border-l-4 mb-10 lg:mb-0" style="border-left-color: #FFB703;">
-                  <p class="text-xl font-serif text-black italic leading-relaxed mb-6">
-                    "It's okay to fall,<br>
-                    It's okay to rest,<br>
-                    It's okay to say, 'Lord, I did my best.'"
-                  </p>
-                  <footer class="text-xs font-bold uppercase tracking-widest flex items-center" style="color: #997300;">
-                    <span class="w-4 h-px mr-2" style="background-color: #FFB703;"></span> Xania Monet
-                  </footer>
-                </blockquote>
-              </div>
-
-              <!-- Right Side: Clean, Legal Hosted Video -->
-              <div class="w-full max-w-sm mx-auto lg:ml-auto lg:mr-0">
-                <div class="rounded-3xl overflow-hidden shadow-2xl border-4 bg-black relative transform hover:-translate-y-1 transition-transform duration-300" style="border-color: #7B539B;">
-                  <video controls playsinline preload="metadata" class="w-full aspect-9/16 object-contain bg-black">
-                    <source src="assets/videos/home-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-
-            </div>
-          </div>
+<!-- What We Do Section -->
+<section class="py-20 md:py-28 px-4" style="background-color: #7B539B;">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="text-center mb-16 max-w-3xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">
+        What We <span style="color: #FFB703;">Do</span>
+      </h2>
+      <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
+      <p class="text-black/90 text-lg leading-relaxed font-medium">
+        Beloved Berachah CIC provides a range of faith-informed and educational services designed to promote healing, recovery, resilience, and hope.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+      
+      <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
+        <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=auto" alt="Workshop presentation" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
         </div>
-      </section>
-
-      <!-- What We Do Section -->
-      <section class="py-20 md:py-28 px-4" style="background-color: #7B539B;">
-        <div class="container mx-auto px-4 max-w-7xl">
-          
-          <!-- Section Header -->
-          <div class="text-center mb-16 max-w-3xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">
-              What We <span style="color: #FFB703;">Do</span>
-            </h2>
-            <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
-            <p class="text-black/90 text-lg leading-relaxed font-medium">
-              Beloved Berachah CIC provides a range of faith-informed and educational services designed to promote healing, recovery, resilience, and hope.
-            </p>
-          </div>
-
-          <!-- 6-Card Grid (All Sand background with pure black text) -->
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            
-            <!-- Card 1 -->
-            <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
-              <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=auto" alt="Workshop presentation" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
-              </div>
-              <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Educational Talks</h3>
-              <p class="text-black leading-relaxed font-medium text-sm grow">
-                Educational talks, keynote presentations, and interactive workshops covering trauma, addiction, recovery, mental health, emotional wellbeing, domestic abuse, identity, shame, and personal restoration.
-              </p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
-              <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
-                <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=400&q=auto" alt="People learning together" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
-              </div>
-              <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Training Courses</h3>
-              <p class="text-black leading-relaxed font-medium text-sm grow">
-                In-person and online training courses tailored to increase understanding, build confidence, reduce stigma, and equip participants to respond compassionately to individuals affected by trauma.
-              </p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
-              <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
-                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=400&q=auto" alt="Community event" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
-              </div>
-              <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Awareness Events</h3>
-              <p class="text-black leading-relaxed font-medium text-sm grow">
-                Awareness-raising events, conferences, seminars, and community outreach programmes that encourage informed conversations around trauma, addiction, domestic abuse, mental health, and recovery.
-              </p>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
-              <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=auto" alt="Two women talking" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
-              </div>
-              <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Mentoring & Empowerment</h3>
-              <p class="text-black leading-relaxed font-medium text-sm grow">
-                Encouragement, mentoring, and empowerment through lived experience, personal testimony, and practical insights that inspire hope and lasting change.
-              </p>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
-              <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=auto" alt="Diverse women in a circle" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
-              </div>
-              <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Community Initiatives</h3>
-              <p class="text-black leading-relaxed font-medium text-sm grow">
-                Community-based initiatives that foster connection, reduce isolation, and support women on their journey towards long-term healing, recovery, and restoration.
-              </p>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
-              <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
-                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=400&q=auto" alt="Supportive direction" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
-              </div>
-              <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Signposting</h3>
-              <p class="text-black leading-relaxed font-medium text-sm grow">
-                Signposting to appropriate statutory, voluntary, faith-based, and specialist support services and resources.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Our Impact Section -->
-      <section class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
-        <div class="container mx-auto max-w-5xl">
-          <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
-            <div class="text-center">
-              
-              <!-- Heading with Amber "Impact" -->
-              <h2 class="text-3xl md:text-4xl font-serif text-black mb-6 font-bold">
-                Our <span style="color: #FFB703;">Impact</span>
-              </h2>
-              <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
-
-              <p class="mb-10 font-medium text-lg text-black max-w-3xl mx-auto leading-relaxed">
-                We believe that recovery is possible, hope can be restored, and lives can be transformed. By sharing knowledge, raising awareness, and fostering supportive communities, we help women:
-              </p>
-              
-              <!-- Grid of Impact Points (Nested White Cards) -->
-              <div class="grid md:grid-cols-2 gap-4 text-left max-w-4xl mx-auto">
-                
-                <div class="flex items-start gap-3 bg-white p-5 rounded-xl border border-black/10 shadow-sm">
-                  <svg class="w-6 h-6 shrink-0 mt-0.5" style="color: #FFB703;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                  <p class="text-black font-medium text-sm leading-relaxed">Break free from cycles of addiction and unhealthy behaviours.</p>
-                </div>
-
-                <div class="flex items-start gap-3 bg-white p-5 rounded-xl border border-black/10 shadow-sm">
-                  <svg class="w-6 h-6 shrink-0 mt-0.5" style="color: #FFB703;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                  <p class="text-black font-medium text-sm leading-relaxed">Understand the impact of trauma and adverse life experiences.</p>
-                </div>
-
-                <div class="flex items-start gap-3 bg-white p-5 rounded-xl border border-black/10 shadow-sm">
-                  <svg class="w-6 h-6 shrink-0 mt-0.5" style="color: #FFB703;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                  <p class="text-black font-medium text-sm leading-relaxed">Develop healthier coping strategies and build confidence, resilience, and self-worth.</p>
-                </div>
-
-                <div class="flex items-start gap-3 bg-white p-5 rounded-xl border border-black/10 shadow-sm">
-                  <svg class="w-6 h-6 shrink-0 mt-0.5" style="color: #FFB703;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                  <p class="text-black font-medium text-sm leading-relaxed">Access appropriate support and growth opportunities.</p>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Events Section -->
-      <section class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
-        <div class="container mx-auto max-w-4xl">
-          <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden text-center" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
-            
-            <!-- Section Title -->
-            <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 font-bold">Events</h2>
-            
-            <!-- Decorative Divider -->
-            <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
-            
-            <!-- Content -->
-            <div class="space-y-6 text-black font-medium text-lg md:text-xl leading-relaxed mb-12">
-              <p>
-                Invite Brenda Fraser to speak at your church, charity, school, college, community group, conference, local authority, or organisation within the public or private sector. Every talk, workshop, and training session can be tailored to meet the needs of your audience.
-              </p>
-              <p>
-                Discover our forthcoming talks, workshops, training sessions, community drop-ins, and awareness events.
-              </p>
-            </div>
-            
-            <!-- Call to Action Button -->
-            <a href="events.html" class="btn-vivid-amber font-bold py-4 px-10 rounded-2xl shadow-md hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:scale-95 transition-all duration-300 inline-block text-lg">
-              View All Events
-            </a>
-
-          </div>
-        </div>
-      </section>
-
-     <!-- You Are Not Alone (CTAs) Section -->
-      <section class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
-        <div class="container mx-auto max-w-6xl">
-          <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
-            
-            <div class="text-center max-w-3xl mx-auto mb-16">
-              <h2 class="text-3xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">
-                You Are <span style="color: #FFB703;">Not Alone</span>
-              </h2>
-              <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
-              <p class="text-black text-lg leading-relaxed font-medium mb-6">
-                Whether you are seeking support, looking for a speaker or trainer, exploring trauma-informed approaches, or wanting to partner with us, Beloved Berachah CIC is here to help.
-              </p>
-              <p class="text-black text-lg leading-relaxed font-medium">
-                We believe that healing, hope, and restoration are possible. Together, we can raise awareness, reduce stigma, and create pathways to recovery, resilience, and lasting positive change.
-              </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-              <!-- Book a Talk -->
-              <div class="bg-white p-8 rounded-2xl shadow-sm border border-black/10 flex flex-col h-full hover:shadow-md transition">
-                <h3 class="text-2xl font-serif font-bold mb-4" style="color: #FFB703;">Book a Talk or Workshop</h3>
-                <p class="text-black font-medium text-sm mb-8 grow">
-                  Invite Brenda Fraser to speak at your church, charity, school, college, community group, conference, local authority, or organisation within the public or private sector. Every talk, workshop, and training session can be tailored to meet the needs of your audience.
-                </p>
-                <a href="contact.html" class="inline-block text-center btn-vivid-amber font-bold py-3 px-6 rounded-lg shadow-sm hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Enquire Now</a>
-              </div>
-              
-              <!-- Learn More -->
-              <div class="bg-white p-8 rounded-2xl shadow-sm border border-black/10 flex flex-col h-full hover:shadow-md transition">
-                <h3 class="text-2xl font-serif font-bold mb-4" style="color: #FFB703;">Learn More</h3>
-                <p class="text-black font-medium text-sm mb-8 grow">
-                  Explore our story, mission, vision, and the work of Beloved Berachah CIC, and discover how we are supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
-                </p>
-                <a href="about.html" class="inline-block text-center btn-vivid-amber font-bold py-3 px-6 rounded-lg shadow-sm hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">About Us</a>
-              </div>
-
-              <!-- Contact Us -->
-              <div class="bg-white p-8 rounded-2xl shadow-sm border border-black/10 flex flex-col h-full hover:shadow-md transition">
-                <h3 class="text-2xl font-serif font-bold mb-4" style="color: #FFB703;">Contact Us</h3>
-                <p class="text-black font-medium text-sm mb-8 grow">
-                  Get in touch to learn more about our work, discuss partnership opportunities, enquire about talks or training, or find out how we can support your organisation or community.
-                </p>
-                <a href="contact.html" class="inline-block text-center btn-vivid-amber font-bold py-3 px-6 rounded-lg shadow-sm hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Get in Touch</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section> 
-
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="text-white py-12 mt-auto border-t border-white/20" style="background-color: #7B539B;">
-      <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-3 gap-8 text-center md:text-left">
-        <div class="md:col-span-1">
-          <h3 class="text-white text-2xl font-serif mb-4 tracking-tight">Beloved Berachah CIC</h3>
-          <p class="text-sm leading-relaxed mb-4 text-white">
-            Supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
-          </p>
-        </div>
-        
-        <div>
-          <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Legal & Registration</h3>
-          <ul class="space-y-2 text-sm text-white">
-            <li>Company Number: 16685295</li>
-            <li>Registered in England and Wales.</li>
-            <li>Registered Office: [Insert Address]</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links & Contact</h3>
-          <ul class="space-y-3 text-sm">
-            <li><a href="mailto:beloved@berachah.org.uk" class="text-amber-400 hover:text-amber-300 transition font-medium">beloved@berachah.org.uk</a></li>
-            <li><a href="contact.html" class="text-white hover:text-white transition">Contact Us</a></li>
-            <li><a href="terms.html" class="text-white hover:text-white transition">Terms & Conditions</a></li>
-            <li><a href="privacy.html" class="text-white hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="cookies.html" class="text-white hover:text-white transition">Cookie Policy</a></li>
-            <li><a href="safeguarding.html" class="text-white hover:text-white transition">Safeguarding</a></li>
-            <li><button onclick="openCookieModal()" class="text-white hover:text-white transition underline cursor-pointer">Manage Cookies</button></li>
-          </ul>
-        </div>
+        <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Educational Talks</h3>
+        <p class="text-black leading-relaxed font-medium text-sm grow">Educational talks, keynote presentations, and interactive workshops covering trauma, addiction, recovery, and personal restoration.</p>
       </div>
-      <div class="container mx-auto px-4 max-w-6xl mt-12 pt-8 border-t border-slate-800 text-sm text-white text-center">
-        <p>&copy; 2026 Beloved Berachah CIC. All rights reserved.</p>
-      </div>
-    </footer>
 
-    <!-- Cookie Consent Banner & Modal -->
-    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 w-full z-60 bg-purple text-white p-6 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t-4 border-amber-500">
-      <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
-        <p class="text-sm text-slate-300 max-w-3xl">
-          We use cookies to improve your experience, analyse website traffic, and support marketing activity. You can accept, reject, or manage your preferences at any time. Please see our <a href="privacy.html" class="text-amber-500 hover:text-amber-400 underline">Privacy Policy</a> for further information.
+      <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
+        <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
+          <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=400&q=auto" alt="People learning together" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+        </div>
+        <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Training Courses</h3>
+        <p class="text-black leading-relaxed font-medium text-sm grow">In-person and online training courses tailored to increase understanding, build confidence, and equip participants to respond compassionately.</p>
+      </div>
+
+      <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
+        <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=400&q=auto" alt="Community event" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+        </div>
+        <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Awareness Events</h3>
+        <p class="text-black leading-relaxed font-medium text-sm grow">Awareness-raising events, conferences, and community outreach programmes that encourage informed conversations around recovery.</p>
+      </div>
+
+      <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
+        <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=auto" alt="Two women talking" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+        </div>
+        <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Mentoring & Empowerment</h3>
+        <p class="text-black leading-relaxed font-medium text-sm grow">Encouragement, mentoring, and empowerment through lived experience, personal testimony, and practical insights that inspire hope.</p>
+      </div>
+
+      <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
+        <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=auto" alt="Diverse women in a circle" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+        </div>
+        <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Community Initiatives</h3>
+        <p class="text-black leading-relaxed font-medium text-sm grow">Community-based initiatives that foster connection, reduce isolation, and support women on their journey towards restoration.</p>
+      </div>
+
+      <div class="group cursor-pointer p-6 rounded-2xl shadow-xl border border-white/20 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300" style="background-color: #B8A280;">
+        <div class="overflow-hidden rounded-xl mb-6 shrink-0 bg-black/10">
+          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=400&q=auto" alt="Supportive direction" loading="lazy" decoding="async" class="w-full h-48 object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+        </div>
+        <h3 class="text-xl font-serif font-bold text-black mb-3 border-l-4 pl-4" style="border-left-color: #FFB703;">Signposting</h3>
+        <p class="text-black leading-relaxed font-medium text-sm grow">Signposting to appropriate statutory, voluntary, faith-based, and specialist support services and resources.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Our Impact Section -->
+<section class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
+  <div class="container mx-auto max-w-5xl">
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-serif text-black mb-6 font-bold">
+          Our <span style="color: #FFB703;">Impact</span>
+        </h2>
+        <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
+        <p class="mb-10 font-medium text-lg text-black max-w-3xl mx-auto leading-relaxed">
+          We believe that recovery is possible, hope can be restored, and lives can be transformed. By sharing knowledge, raising awareness, and fostering supportive communities, we help women:
         </p>
-        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
-          <button onclick="acceptAllCookies()" class="bg-amber-500 hover:bg-amber-600 text-purple font-bold py-2 px-6 rounded transition text-sm">Accept All</button>
-          <button onclick="rejectCookies()" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-6 rounded transition text-sm">Reject</button>
-          <button onclick="openCookieModal()" class="bg-transparent border border-slate-500 hover:border-white text-white font-semibold py-2 px-6 rounded transition text-sm">Manage</button>
-        </div>
-      </div>
-    </div>
-
-    <div id="cookie-modal" class="hidden fixed inset-0 z-70 bg-black bg-opacity-75">
-      <div class="flex items-center justify-center min-h-screen p-4">
-        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 text-slate-900 relative">
-          <h3 class="text-xl font-serif mb-2">Cookie Preferences</h3>
-          <p class="text-sm text-slate-600 mb-6">Manage how we use cookies on your device.</p>
-          
-          <div class="space-y-4 mb-8">
-            <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-              <div>
-                <p class="font-semibold text-sm">Essential Cookies</p>
-                <p class="text-xs text-slate-500">Required for core website functionality.</p>
-              </div>
-              <span class="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">Always ON</span>
-            </div>
-            
-            <div class="flex justify-between items-center pb-4 border-b border-slate-100">
-              <div class="pr-4">
-                <p class="font-semibold text-sm">Analytics Cookies</p>
-                <p class="text-xs text-slate-500">Helps us understand how visitors interact with our website.</p>
-              </div>
-              <label class="relative inline-flex items-center cursor-pointer shrink-0">
-                <input type="checkbox" id="toggle-analytics" aria-label="Enable Analytics Cookies" class="sr-only peer">
-                <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
-              </label>
-            </div>
-            
-            <div class="flex justify-between items-center">
-              <div class="pr-4">
-                <p class="font-semibold text-sm">Marketing Cookies</p>
-                <p class="text-xs text-slate-500">Allows third-party embeds like videos or social media feeds.</p>
-              </div>
-              <label class="relative inline-flex items-center cursor-pointer shrink-0">
-                <input type="checkbox" id="toggle-marketing" aria-label="Enable Marketing Cookies" class="sr-only peer">
-                <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
-              </label>
-            </div>
-          </div>
-          
-          <div class="flex gap-3">
-            <button onclick="saveCookiePreferences()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 rounded transition">Save Preferences</button>
-            <button onclick="closeCookieModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 rounded transition">Cancel</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Application Javascript Logic -->
-    <script>
-      const btn = document.querySelector('button[aria-label="Open mobile menu"]');
-      const menu = document.getElementById("mobile-menu");
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-
-      let deferredPrompt;
-      const installBanner = document.getElementById('pwa-install-banner');
-      
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault(); 
-        deferredPrompt = e;
-        installBanner.classList.remove('hidden'); 
-      });
-
-      document.getElementById('pwa-install-btn').addEventListener('click', async () => {
-        installBanner.classList.add('hidden');
-        if (deferredPrompt) {
-          deferredPrompt.prompt();
-          const { outcome } = await deferredPrompt.userChoice;
-          deferredPrompt = null;
-        }
-      });
-
-      document.getElementById('pwa-close-btn').addEventListener('click', () => {
-        installBanner.classList.add('hidden');
-      });
-
-      function checkCookieConsent() {
-        const consent = JSON.parse(localStorage.getItem('bb_cookie_consent'));
-        if (!consent) {
-          document.getElementById('cookie-banner').classList.remove('hidden');
-        } else {
-          applyConsent(consent);
-        }
-      }
-
-      function acceptAllCookies() {
-        const consent = { analytics: true, marketing: true };
-        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
-        document.getElementById('cookie-banner').classList.add('hidden');
-        applyConsent(consent);
-      }
-
-      function rejectCookies() {
-        const consent = { analytics: false, marketing: false };
-        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
-        document.getElementById('cookie-banner').classList.add('hidden');
-        applyConsent(consent);
-      }
-
-      function openCookieModal() {
-        document.getElementById('cookie-banner').classList.add('hidden');
-        document.getElementById('cookie-modal').classList.remove('hidden');
         
-        const consent = JSON.parse(localStorage.getItem('bb_cookie_consent')) || { analytics: false, marketing: false };
-        document.getElementById('toggle-analytics').checked = consent.analytics;
-        document.getElementById('toggle-marketing').checked = consent.marketing;
-      }
+        <div class="grid md:grid-cols-2 gap-4 text-left max-w-4xl mx-auto">
+          <div class="flex items-start gap-3 bg-white p-5 rounded-xl border border-black/10 shadow-sm">
+            <svg class="w-6 h-6 shrink-0 mt-0.5" style="color: #FFB703;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            <p class="text-black font-medium text-sm leading-relaxed">Break free from cycles of addiction and unhealthy behaviours.</p>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-5 rounded-xl border border-black/10 shadow-sm">
+            <svg class="w-6 h-6 shrink-0 mt-0.5" style="color: #FFB703;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            <p class="text-black font-medium text-sm leading-relaxed">Understand the impact of trauma and adverse life experiences.</p>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-5 rounded-xl border border-black/10 shadow-sm">
+            <svg class="w-6 h-6 shrink-0 mt-0.5" style="color: #FFB703;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            <p class="text-black font-medium text-sm leading-relaxed">Develop healthier coping strategies and build confidence, resilience, and self-worth.</p>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-5 rounded-xl border border-black/10 shadow-sm">
+            <svg class="w-6 h-6 shrink-0 mt-0.5" style="color: #FFB703;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            <p class="text-black font-medium text-sm leading-relaxed">Access appropriate support and growth opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      function closeCookieModal() {
-        document.getElementById('cookie-modal').classList.add('hidden');
-        if (!localStorage.getItem('bb_cookie_consent')) {
-          document.getElementById('cookie-banner').classList.remove('hidden');
-        }
-      }
+<!-- Events Section -->
+<section class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
+  <div class="container mx-auto max-w-4xl">
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden text-center" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+      <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 font-bold">Events</h2>
+      <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
+      <div class="space-y-6 text-black font-medium text-lg md:text-xl leading-relaxed mb-12">
+        <p>Invite Brenda Fraser to speak at your church, charity, school, college, community group, conference, local authority, or organisation within the public or private sector. Every talk, workshop, and training session can be tailored to meet the needs of your audience.</p>
+        <p>Discover our forthcoming talks, workshops, training sessions, community drop-ins, and awareness events.</p>
+      </div>
+      <a href="/events.html" class="btn-vivid-amber font-bold py-4 px-10 rounded-2xl shadow-md hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:scale-95 transition-all duration-300 inline-block text-lg">View All Events</a>
+    </div>
+  </div>
+</section>
 
-      function saveCookiePreferences() {
-        const consent = {
-          analytics: document.getElementById('toggle-analytics').checked,
-          marketing: document.getElementById('toggle-marketing').checked
-        };
-        localStorage.setItem('bb_cookie_consent', JSON.stringify(consent));
-        document.getElementById('cookie-modal').classList.add('hidden');
-        applyConsent(consent);
-      }
+<!-- You Are Not Alone (CTAs) Section -->
+<section class="py-16 md:py-24 px-4" style="background-color: #7B539B;">
+  <div class="container mx-auto max-w-6xl">
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">
+          You Are <span style="color: #FFB703;">Not Alone</span>
+        </h2>
+        <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
+        <p class="text-black text-lg leading-relaxed font-medium mb-6">Whether you are seeking support, looking for a speaker or trainer, exploring trauma-informed approaches, or wanting to partner with us, Beloved Berachah CIC is here to help.</p>
+      </div>
 
-      function applyConsent(consent) {
-        if (consent.analytics && !window.gaLoaded) {
-          window.gaLoaded = true;
-          const script = document.createElement('script');
-          script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
-          script.async = true;
-          document.head.appendChild(script);
-          
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');
-        }
-      }
-
-      window.addEventListener('DOMContentLoaded', checkCookieConsent);
-
-      const iosBanner = document.getElementById('ios-install-banner');
-      const iosCloseBtn = document.getElementById('ios-close-btn');
-
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-      const bannerDismissed = localStorage.getItem('ios_banner_dismissed');
-
-      if (isIOS && !isStandalone && !bannerDismissed) {
-        setTimeout(() => {
-          iosBanner.classList.remove('hidden');
-        }, 2000);
-      }
-
-      if (iosCloseBtn) {
-        iosCloseBtn.addEventListener('click', () => {
-          iosBanner.classList.add('hidden');
-          localStorage.setItem('ios_banner_dismissed', 'true');
-        });
-      }
-    </script>
-  </body>
-</html>
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-black/10 flex flex-col h-full hover:shadow-md transition">
+          <h3 class="text-2xl font-serif font-bold mb-4" style="color: #FFB703;">Book a Talk</h3>
+          <p class="text-black font-medium text-sm mb-8 grow">Invite Brenda Fraser to speak at your church, charity, school, college, community group, conference, local authority, or organisation.</p>
+          <a href="/contact.html" class="inline-block text-center btn-vivid-amber font-bold py-3 px-6 rounded-lg shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200">Enquire Now</a>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-black/10 flex flex-col h-full hover:shadow-md transition">
+          <h3 class="text-2xl font-serif font-bold mb-4" style="color: #FFB703;">Learn More</h3>
+          <p class="text-black font-medium text-sm mb-8 grow">Explore our story, mission, vision, and the work of Beloved Berachah CIC, and discover how we are supporting women affected by trauma.</p>
+          <a href="/about.html" class="inline-block text-center btn-vivid-amber font-bold py-3 px-6 rounded-lg shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200">About Us</a>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-black/10 flex flex-col h-full hover:shadow-md transition">
+          <h3 class="text-2xl font-serif font-bold mb-4" style="color: #FFB703;">Contact Us</h3>
+          <p class="text-black font-medium text-sm mb-8 grow">Get in touch to learn more about our work, discuss partnership opportunities, enquire about talks or training, or find out how we can support you.</p>
+          <a href="/contact.html" class="inline-block text-center btn-vivid-amber font-bold py-3 px-6 rounded-lg shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

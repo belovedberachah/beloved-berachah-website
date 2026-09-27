@@ -5,16 +5,20 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-  /* You can define specific brand colors here if you want to use classes like 'bg-brand-primary' */
-  --color-brand-primary: #FBBF24; /* amber-400 */
-  --color-brand-secondary: #B45309; /* amber-700 */
-  --color-brand-dark: #0F172A; /* slate-900 */
-  --color-brand-light: #FAFAF9; /* stone-50 */
+  /* Upgraded Beloved Berachah Brand Palette */
+  --color-brand-purple: #7B539B;
+  --color-brand-sand: #B8A280;
+  --color-brand-amber: #FFB703;
+  --color-brand-dark: #0F172A;
+  --color-brand-light: #FAFAF9;
 }
 
 /* Custom CSS required for smooth PWA rendering and base resets */
 @layer base {
   body {
+    font-family: var(--font-sans);
+    background-color: #7B539B;
+    color: #000000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -22,8 +26,17 @@
   }
 }
 
-/* Utility class for hiding scrollbars but keeping functionality (good for mobile carousels) */
+/* Custom reusable components and utilities */
 @layer utilities {
+  .btn-vivid-amber {
+    background-color: #FFB703;
+    color: #000000;
+    transition: all 0.2s ease-in-out;
+  }
+  .btn-vivid-amber:hover {
+    background-color: #fca311;
+  }
+
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */

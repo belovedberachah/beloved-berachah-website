@@ -1,96 +1,38 @@
 ---
-permalink: "success.html"
+layout: layouts/base.njk
+title: "Message Sent | Beloved Berachah CIC"
+description: "Thank you for contacting Beloved Berachah CIC. Your message has been successfully sent."
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- ========================================= -->
-    <!-- FIRST-CLASS SEO OPTIMIZATION              -->
-    <!-- ========================================= -->
-    
-    <!-- Core Search Engine Tags -->
-    <title>Message Sent | Beloved Berachah CIC</title>
-    <meta name="description" content="Thank you for contacting Beloved Berachah CIC. Your message has been successfully sent." />
-    <meta name="author" content="Beloved Berachah CIC" />
-    <link rel="canonical" href="https://belovedberachah.netlify.app/success.html" />
-    
-    <!-- Hide from Search Engines (Best practice for form success pages) -->
-    <meta name="robots" content="noindex, nofollow" />
 
-    <!-- Open Graph / Social Media Preview Cards -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://belovedberachah.netlify.app/success.html" />
-    <meta property="og:title" content="Message Sent | Beloved Berachah CIC" />
-    <meta property="og:description" content="Thank you for contacting Beloved Berachah CIC. Your message has been successfully sent." />
-    <meta property="og:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
-    <meta property="og:site_name" content="Beloved Berachah CIC" />
+{% block customHead %}
+<!-- Hide from Search Engines (Best practice for form success pages) -->
+<meta name="robots" content="noindex, nofollow" />
+{% endblock %}
 
-    <!-- Twitter / X Preview Cards -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Message Sent | Beloved Berachah CIC" />
-    <meta name="twitter:description" content="Thank you for contacting Beloved Berachah CIC. Your message has been successfully sent." />
-    <meta name="twitter:image" content="https://belovedberachah.netlify.app/assets/images/BB.png" />
-
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NGO",
-      "name": "Beloved Berachah CIC",
-      "url": "https://belovedberachah.netlify.app/",
-      "logo": "https://belovedberachah.netlify.app/assets/images/BB.png"
-    }
-    </script>
-    <!-- ========================================= -->
+<div class="py-20 md:py-32 px-4 flex flex-col items-center justify-center h-full grow" style="background-color: #7B539B;">
+  
+  <div class="rounded-3xl p-8 md:p-12 shadow-2xl max-w-lg w-full text-center relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
     
-    <!-- PWA & Icons -->
-    <link rel="manifest" href="/manifest.json" />
-    <!-- Updated iOS Splash Icon -->
-    <link rel="apple-touch-icon" href="assets/images/bb-icon-512.png" />
-    
-    <!-- Apple/iOS Specific PWA Tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Berachah">
-    
-    <link rel="icon" type="image/png" href="assets/images/BB.png" />
-    <meta name="theme-color" content="#FBBF24" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
-    
-    <link rel="stylesheet" href="./css/style.css?v=2" />
-
-    <style>
-      body { font-family: "Inter", sans-serif; background-color: #FAFAF9; color: #334155; }
-      .font-serif { font-family: "Playfair Display", serif; }
-    </style>
-  </head>
-
-  <body class="flex flex-col min-h-screen bg-slate-900 items-center justify-center text-center p-4">
-    
-    <div class="bg-white p-10 md:p-16 rounded-3xl shadow-2xl max-w-lg w-full border-t-8 border-amber-500">
-      
-      <!-- Success Icon -->
-      <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-        </svg>
-      </div>
-
-      <h1 class="text-3xl md:text-4xl font-serif text-slate-900 mb-4">Message Sent!</h1>
-      <p class="text-slate-600 font-light leading-relaxed mb-8">
-        Thank you for reaching out to Beloved Berachah CIC. We have received your enquiry and will be in touch with you shortly.
-      </p>
-
-      <a href="index.html" class="inline-block bg-amber-500 text-slate-900 font-bold py-3 px-8 rounded-lg shadow-sm hover:bg-amber-400 hover:-translate-y-1 hover:shadow-md active:translate-y-0 active:shadow-sm transition-all duration-200 w-full">
-        Return to Home
-      </a>
+    <!-- Success Icon (White nested circle for contrast) -->
+    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner border border-black/10">
+      <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+      </svg>
     </div>
 
-  </body>
-</html>
+    <h1 class="text-4xl md:text-5xl font-serif text-black mb-4 font-bold tracking-tight">
+      Message <span style="color: #FFB703;">Sent!</span>
+    </h1>
+    <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
+    
+    <p class="text-black font-medium leading-relaxed mb-10 text-lg">
+      Thank you for reaching out to Beloved Berachah CIC. We have received your enquiry and will be in touch with you shortly.
+    </p>
+
+    <a href="/index.html" class="btn-vivid-amber font-bold py-4 px-8 rounded-xl shadow-md hover:-translate-y-1 transition-transform duration-300 w-full block text-lg">
+      Return to Home
+    </a>
+    
+  </div>
+
+</div>
