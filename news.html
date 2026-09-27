@@ -68,7 +68,7 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
         
         <!-- What You'll Find Here Card -->
         <div class="bg-white p-8 md:p-10 rounded-3xl border border-black/10 shadow-xl">
-          <h3 class="text-2xl font-serif font-bold text-black mb-6 border-l-4 pl-4" style="border-left-color: #FFB703;">What You'll Find Here</h3>
+          <h3 class="text-2xl font-serif font-bold text-black mb-6 border-l-4 pl-4" style="border-left-color: #FFB703;">What You'll <span style="color: #FFB703;">Find Here</span></h3>
           <ul class="space-y-5 text-black font-medium leading-relaxed">
             <li><strong style="color: #FFB703;">📅 Event Updates:</strong> News about upcoming talks, workshops, conferences, and community events.</li>
             <li><strong style="color: #FFB703;">🌟 Community Impact Stories:</strong> Stories that highlight positive outcomes, personal growth, and transformation within the communities we serve.</li>
@@ -80,7 +80,7 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
 
         <!-- Stay Connected Card -->
         <div class="p-8 md:p-10 rounded-3xl border border-black/10 shadow-xl flex flex-col justify-center" style="background-color: rgba(255, 183, 3, 0.15);">
-          <h3 class="text-2xl font-serif font-bold text-black mb-4 border-l-4 pl-4" style="border-left-color: #FFB703;">Stay Connected</h3>
+          <h3 class="text-2xl font-serif font-bold text-black mb-4 border-l-4 pl-4" style="border-left-color: #FFB703;">Stay <span style="color: #FFB703;">Connected</span></h3>
           <p class="text-black mb-8 leading-relaxed font-medium">
             Follow us on social media and subscribe to receive updates about new blog posts, upcoming events, and resources designed to support healing, recovery, and wellbeing. Together, we can help women move from surviving to thriving.
           </p>
@@ -145,7 +145,7 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
   <section class="container mx-auto px-4 max-w-4xl">
     <div class="rounded-3xl p-10 md:p-16 shadow-xl relative overflow-hidden text-center" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
       
-      <h3 class="text-3xl md:text-4xl font-serif text-black mb-4 font-bold">Join Our Journey</h3>
+      <h3 class="text-3xl md:text-4xl font-serif text-black mb-4 font-bold">Join Our <span style="color: #FFB703;">Journey</span></h3>
       <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
       
       <p class="text-black text-lg mb-10 max-w-xl mx-auto font-medium leading-relaxed">
@@ -162,7 +162,10 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
           name="EMAIL" 
           placeholder="Enter your email address" 
           required 
-          class="grow px-6 py-4 rounded-xl bg-white text-black border border-black/10 focus:outline-none focus:border-[#FFB703] focus:ring-2 focus:ring-[#FFB703] transition font-bold placeholder:text-black/40 text-lg"
+          class="grow px-6 py-4 rounded-xl bg-white text-black border border-black/10 focus:outline-none transition font-bold placeholder:text-black/40 text-lg"
+          style="border-color: rgba(0,0,0,0.1);"
+          onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703';"
+          onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none';"
         >
         
         <!-- Hidden Anti-Bot Shield -->
