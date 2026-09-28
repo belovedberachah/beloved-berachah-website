@@ -33,10 +33,12 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
     <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
       
       <!-- Top Half: Text & Image Side-by-Side -->
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-12">
+      <!-- CLEANUP: Switched from internal grid to straightforward vertical flow.
+           We control the vertical gaps between blocks, which solves the problem shown in your image. -->
+      <div class="lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-12 lg:mb-16">
         
         <!-- Text Content -->
-        <div class="text-black font-medium leading-relaxed space-y-6">
+        <div class="text-black font-medium leading-relaxed mb-10 lg:mb-0 space-y-6">
           <h2 class="text-4xl md:text-5xl font-serif text-black mb-8 tracking-tight font-bold">
             Our <span style="color: #FFB703;">Mission</span>
           </h2>
@@ -45,16 +47,20 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
         </div>
 
         <!-- Image Container -->
+        <!-- Preserving the tight, flexible border structure we built -->
         <div class="rounded-3xl overflow-hidden shadow-2xl relative group w-full h-fit flex border-4" style="border-color: #7B539B;">
           <div class="absolute inset-0 bg-amber-600/10 mix-blend-multiply z-10 transition duration-500 group-hover:bg-transparent pointer-events-none"></div>
           <img src="/assets/images/image-2.avif" alt="Women running with eagle wings" class="w-full h-auto block transform transition duration-700 group-hover:scale-[1.02]" loading="lazy" decoding="async" />
         </div>
+      </div>
 
       <!-- Bottom Half: Full-Width Who We Support List -->
-      <div class="border-t border-black/10 pt-10">
+      <!-- ADDED: Clean top border and generous padding for proper visual flow, matching your other pages. -->
+      <div class="border-t border-black/10 pt-10 md:pt-12">
         <h2 class="text-2xl font-serif text-black mb-6 tracking-tight font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Who We Support</h2>
         <p class="text-black font-medium mb-8">Our talks, workshops, and training are suitable for a wide range of organisations and audiences, including:</p>
         
+        <!-- list grid is efficient, kept it. -->
         <ul class="grid md:grid-cols-2 gap-x-8 gap-y-4 text-black font-medium text-sm md:text-base">
           <li class="flex items-start">
             <svg class="w-5 h-5 mr-3 shrink-0 mt-0.5" style="color: #FFB703;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 
