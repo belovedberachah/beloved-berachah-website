@@ -7,7 +7,6 @@
     <!-- ========================================= -->
     <!-- FIRST-CLASS SEO OPTIMIZATION              -->
     <!-- ========================================= -->
-    <!-- Core Search Engine Tags -->
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}" />
     <meta name="author" content="Beloved Berachah CIC" />
@@ -51,7 +50,25 @@
     {% block customhead %}{% endblock %}
   </head>
 
-  <body class="flex flex-col min-h-screen bg-[#7B539B] text-slate-100 font-sans selection:bg-amber-500 selection:text-black" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.06%22/%3E%3C/svg%3E'); background-attachment: fixed;">
+  <body class="flex flex-col min-h-screen bg-[#2a1738] text-slate-100 font-sans selection:bg-amber-500 selection:text-black relative">
+
+    <!-- ========================================== -->
+    <!-- GLOBAL SPECTACULAR ETHEREAL AURORA BACKGROUND -->
+    <!-- Sits fixed behind all pages site-wide      -->
+    <!-- ========================================== -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden bg-[#2a1738] pointer-events-none">
+      <!-- Deep Purple Canvas -->
+      <div class="absolute inset-0 bg-brand-purple mix-blend-multiply"></div>
+      
+      <!-- Glowing Amber Aurora Orb (Top Right) -->
+      <div class="absolute top-[-10%] right-[-10%] w-[70vw] h-[70vw] md:w-[50vw] md:h-[50vw] rounded-full bg-brand-amber blur-[120px] opacity-40 animate-pulse" style="animation-duration: 8s;"></div>
+      
+      <!-- Glowing Lavender Aurora Orb (Bottom Left) -->
+      <div class="absolute bottom-[-10%] left-[-10%] w-[70vw] h-[70vw] md:w-[50vw] md:h-[50vw] rounded-full bg-[#d0a8e5] blur-[120px] opacity-40 animate-pulse" style="animation-duration: 12s;"></div>
+
+      <!-- Intense Film Grain Overlay -->
+      <div class="absolute inset-0 opacity-[0.15] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+    </div>
 
     <!-- Splash Screen & PWA -->
     {% include "components/splash-and-pwa.html" %}
