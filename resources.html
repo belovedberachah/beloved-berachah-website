@@ -5,33 +5,42 @@ description: "Helpful resources, links, and support materials for women navigati
 ---
 
 <!-- Premium Hero Header -->
-<header class="relative overflow-hidden border-b-4 border-amber-500">
+<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#2a1738]">
   <!-- Layer 1: Background Image -->
   <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="absolute inset-0 w-full h-full object-cover" />
   
-  <!-- Layer 2: Semi-Transparent Slate Overlay -->
-  <div class="absolute inset-0" style="background-color: rgba(15, 23, 42, 0.75);"></div>
+  <!-- Layer 2: Warm Cinematic Vignette Overlay -->
+  <div class="absolute inset-0 mix-blend-multiply" style="background: linear-gradient(to top, #2a1738, rgba(123, 83, 155, 0.5), rgba(120, 53, 15, 0.3));"></div>
+  
+  <!-- Layer 3: Soft Purple Edge Fade -->
+  <div class="absolute bottom-0 inset-x-0 h-32 opacity-90" style="background: linear-gradient(to top, #2a1738, transparent);"></div>
 
-  <!-- Layer 3: Page Text Content -->
+  <!-- Layer 4: Page Text Content -->
   <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
-    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm text-black" style="background-color: rgba(255, 183, 3, 0.8);">
+    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-md text-black backdrop-blur-sm" style="background-color: rgba(255, 183, 3, 0.9);">
       Support & Signposting
     </span>
-    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-md">
+    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
       Resources & <span class="font-medium italic" style="color: #FFB703;">Support</span>
     </h1>
-    <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-sm">
+    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
       Practical tools, educational materials, and signposting to empower and equip you.
     </p>
   </div>
 </header>
 
-<div class="py-16 md:py-24 space-y-16 md:space-y-24" style="background-color: #7B539B;">
+<!-- Main Content Area (Solid background removed so Aurora shines through) -->
+<div class="py-16 md:py-24 space-y-16 md:space-y-24 relative z-10">
 
   <!-- Section 1: Introduction & Future Resources List -->
   <section class="container mx-auto px-4 max-w-6xl">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
+      
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         
         <div>
           <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">
@@ -76,7 +85,7 @@ description: "Helpful resources, links, and support materials for women navigati
             </li>
           </ul>
           
-          <div class="mt-8 p-6 rounded-2xl shadow-sm border border-black/10" style="background-color: rgba(255, 183, 3, 0.15);">
+          <div class="mt-8 p-6 rounded-2xl shadow-sm border border-white/50 bg-white/60 backdrop-blur-md">
             <p class="font-bold text-black text-sm">
               We will add new resources as they become available, so please check back regularly for updates.
             </p>
@@ -96,63 +105,64 @@ description: "Helpful resources, links, and support materials for women navigati
   <!-- Section 2: Downloads & Guides -->
   <section class="container mx-auto px-4 max-w-7xl">
     <div class="text-center mb-16 max-w-2xl mx-auto">
-      <h2 class="text-3xl md:text-5xl font-serif text-white mb-4 tracking-tight font-bold">Free Guides & <span style="color: #FFB703;">Downloads</span></h2>
+      <!-- Glow effect for title over aurora background -->
+      <h2 class="text-3xl md:text-5xl font-serif text-white drop-shadow-md mb-4 tracking-tight font-bold">Free Guides & <span style="color: #FFB703;">Downloads</span></h2>
       <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
-      <p class="text-white/90 text-lg font-medium">
+      <p class="text-slate-100 drop-shadow-md text-lg font-medium">
         Downloadable PDFs and worksheets to help you or your organization better understand trauma-informed practices.
       </p>
     </div>
 
-    <!-- Scalable Minimalist 4-Column Grid -->
+    <!-- Scalable Minimalist 4-Column Grid (Frosted Glass Cards) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       
       <!-- Sleek Resource Card 1 -->
-      <a href="/assets/resources/understanding-trauma.pdf" target="_blank" class="group flex flex-col items-center p-8 bg-white border border-white/20 rounded-3xl shadow-xl hover:-translate-y-1 transition-all duration-300 text-center" style="background-color: #B8A280;">
-        <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm" style="color: #FFB703;">
+      <a href="/assets/resources/understanding-trauma.pdf" target="_blank" class="group flex flex-col items-center p-8 bg-white/80 backdrop-blur-md border border-white/50 rounded-3xl shadow-sm hover:bg-white/95 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
+        <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-black/10" style="color: #FFB703;">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
         </div>
         <h3 class="text-xl font-serif font-bold text-black mb-3 group-hover:opacity-80 transition-opacity">Understanding Trauma</h3>
         <p class="text-black font-medium text-sm leading-relaxed mb-6 grow">A brief overview of how trauma impacts the brain and behavior.</p>
-        <div class="flex items-center font-bold text-xs tracking-wider uppercase mt-auto" style="color: #000;">
+        <div class="flex items-center font-bold text-xs tracking-wider uppercase mt-auto" style="color: #FFB703;">
           <span>Download</span>
           <svg class="w-4 h-4 ml-1 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
         </div>
       </a>
 
       <!-- Sleek Resource Card 2 -->
-      <a href="/assets/resources/church-preparation-guide.pdf" target="_blank" class="group flex flex-col items-center p-8 bg-white border border-white/20 rounded-3xl shadow-xl hover:-translate-y-1 transition-all duration-300 text-center" style="background-color: #B8A280;">
-        <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm" style="color: #FFB703;">
+      <a href="/assets/resources/church-preparation-guide.pdf" target="_blank" class="group flex flex-col items-center p-8 bg-white/80 backdrop-blur-md border border-white/50 rounded-3xl shadow-sm hover:bg-white/95 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
+        <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-black/10" style="color: #FFB703;">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
         </div>
         <h3 class="text-xl font-serif font-bold text-black mb-3 group-hover:opacity-80 transition-opacity">Preparing Your Space</h3>
         <p class="text-black font-medium text-sm leading-relaxed mb-6 grow">A checklist for creating safe environments for vulnerable women.</p>
-        <div class="flex items-center font-bold text-xs tracking-wider uppercase mt-auto" style="color: #000;">
+        <div class="flex items-center font-bold text-xs tracking-wider uppercase mt-auto" style="color: #FFB703;">
           <span>Download</span>
           <svg class="w-4 h-4 ml-1 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
         </div>
       </a>
 
       <!-- Sleek Resource Card 3 -->
-      <a href="/assets/resources/mentoring-framework.pdf" target="_blank" class="group flex flex-col items-center p-8 bg-white border border-white/20 rounded-3xl shadow-xl hover:-translate-y-1 transition-all duration-300 text-center" style="background-color: #B8A280;">
-        <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm" style="color: #FFB703;">
+      <a href="/assets/resources/mentoring-framework.pdf" target="_blank" class="group flex flex-col items-center p-8 bg-white/80 backdrop-blur-md border border-white/50 rounded-3xl shadow-sm hover:bg-white/95 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
+        <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-black/10" style="color: #FFB703;">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
         </div>
         <h3 class="text-xl font-serif font-bold text-black mb-3 group-hover:opacity-80 transition-opacity">Mentoring Framework</h3>
         <p class="text-black font-medium text-sm leading-relaxed mb-6 grow">Guidelines and boundaries for volunteers engaging in mentoring.</p>
-        <div class="flex items-center font-bold text-xs tracking-wider uppercase mt-auto" style="color: #000;">
+        <div class="flex items-center font-bold text-xs tracking-wider uppercase mt-auto" style="color: #FFB703;">
           <span>Download</span>
           <svg class="w-4 h-4 ml-1 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
         </div>
       </a>
 
       <!-- Sleek Resource Card 4 -->
-      <a href="/assets/resources/session-worksheets.pdf" target="_blank" class="group flex flex-col items-center p-8 bg-white border border-white/20 rounded-3xl shadow-xl hover:-translate-y-1 transition-all duration-300 text-center" style="background-color: #B8A280;">
-        <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm" style="color: #FFB703;">
+      <a href="/assets/resources/session-worksheets.pdf" target="_blank" class="group flex flex-col items-center p-8 bg-white/80 backdrop-blur-md border border-white/50 rounded-3xl shadow-sm hover:bg-white/95 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
+        <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-black/10" style="color: #FFB703;">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
         </div>
         <h3 class="text-xl font-serif font-bold text-black mb-3 group-hover:opacity-80 transition-opacity">Session Worksheets</h3>
         <p class="text-black font-medium text-sm leading-relaxed mb-6 grow">Printable reflection exercises used during workshop sessions.</p>
-        <div class="flex items-center font-bold text-xs tracking-wider uppercase mt-auto" style="color: #000;">
+        <div class="flex items-center font-bold text-xs tracking-wider uppercase mt-auto" style="color: #FFB703;">
           <span>Download</span>
           <svg class="w-4 h-4 ml-1 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
         </div>
@@ -162,9 +172,13 @@ description: "Helpful resources, links, and support materials for women navigati
 
   <!-- Section 3: Testimonials -->
   <section class="container mx-auto px-4 max-w-7xl">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
       
-      <div class="text-center mb-16 max-w-3xl mx-auto">
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="relative z-10 text-center mb-16 max-w-3xl mx-auto">
         <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">Our <span style="color: #FFB703;">Testimonials</span></h2>
         <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
         <p class="text-black text-lg leading-relaxed font-medium">
@@ -172,52 +186,52 @@ description: "Helpful resources, links, and support materials for women navigati
         </p>
       </div>
 
-      <!-- Testimonials Masonry / Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Testimonials Masonry / Grid (Frosted Glass) -->
+      <div class="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- Quote 1 -->
-        <blockquote class="bg-white p-8 rounded-3xl shadow-xl border border-black/10 flex flex-col h-full hover:-translate-y-1 transition duration-300">
-          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(255, 183, 3, 0.2);">No More Bondage</span>
+        <blockquote class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-sm border border-white/50 flex flex-col h-full hover:bg-white/95 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(255, 183, 3, 0.4);">No More Bondage</span>
           <p class="text-black font-serif italic leading-relaxed text-lg mb-6 grow font-medium">
             "It was so inspiring to hear Brenda's testimony today and to witness how she is using her experiences to help others. God has done, and continues to do, an amazing work of transformation in her life, which can only draw those of us who witness it closer to Him."
           </p>
         </blockquote>
 
         <!-- Quote 2 -->
-        <blockquote class="bg-white p-8 rounded-3xl shadow-xl border border-black/10 flex flex-col h-full hover:-translate-y-1 transition duration-300">
-          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(255, 183, 3, 0.2);">No More Bondage</span>
+        <blockquote class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-sm border border-white/50 flex flex-col h-full hover:bg-white/95 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(255, 183, 3, 0.4);">No More Bondage</span>
           <p class="text-black font-serif italic leading-relaxed text-lg mb-6 grow font-medium">
             "Brenda's talk on trauma was so authentic and heartfelt. What made it especially powerful was that she spoke from lived experience, giving real insight into the journey of someone who has endured trauma, found healing, and now inspires and encourages others."
           </p>
         </blockquote>
 
         <!-- Quote 3 -->
-        <blockquote class="bg-white p-8 rounded-3xl shadow-xl border border-black/10 flex flex-col h-full hover:-translate-y-1 transition duration-300">
-          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(255, 183, 3, 0.2);">No More Bondage</span>
+        <blockquote class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-sm border border-white/50 flex flex-col h-full hover:bg-white/95 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(255, 183, 3, 0.4);">No More Bondage</span>
           <p class="text-black font-serif italic leading-relaxed text-lg mb-6 grow font-medium">
             "As a friend who has walked alongside Brenda throughout her journey, it was such a joy to witness her growth. She is truly an anointed woman of God."
           </p>
         </blockquote>
 
         <!-- Quote 4 -->
-        <blockquote class="bg-white p-8 rounded-3xl shadow-xl border border-black/10 flex flex-col h-full hover:-translate-y-1 transition duration-300 lg:col-span-3">
-          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(255, 183, 3, 0.2);">No More Bondage</span>
+        <blockquote class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-sm border border-white/50 flex flex-col h-full hover:bg-white/95 hover:-translate-y-1 hover:shadow-lg transition duration-300 lg:col-span-3">
+          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(255, 183, 3, 0.4);">No More Bondage</span>
           <p class="text-black font-serif italic leading-relaxed text-lg lg:text-xl mb-6 grow font-medium">
             "Brenda's No More Bondage talk was an incredible experience. It was a privilege to sit in the room and hear her share her story. Her testimony is a powerful witness to God's goodness, grace, and love. My heart was full, and I left feeling encouraged and free from things I hadn't realised were holding me back. I am excited to see all that Beloved Berachah has to offer and what it truly means to reveal the Father's heart."
           </p>
         </blockquote>
 
         <!-- Quote 5 -->
-        <blockquote class="bg-white p-8 rounded-3xl shadow-xl border border-black/10 flex flex-col h-full hover:-translate-y-1 transition duration-300 md:col-span-1 lg:col-span-1">
-          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(0, 0, 0, 0.05);">Freedom from Shame</span>
+        <blockquote class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-sm border border-white/50 flex flex-col h-full hover:bg-white/95 hover:-translate-y-1 hover:shadow-lg transition duration-300 md:col-span-1 lg:col-span-1">
+          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(255, 255, 255, 0.6);">Freedom from Shame</span>
           <p class="text-black font-serif italic leading-relaxed text-lg mb-6 grow font-medium">
             "Thank you for today's talk. It was delivered with great sensitivity and was both thought-provoking and inspiring. Well done. It was also encouraging to hear the men contributing to the discussion."
           </p>
         </blockquote>
 
         <!-- Quote 6 -->
-        <blockquote class="bg-white p-8 rounded-3xl shadow-xl border border-black/10 flex flex-col h-full hover:-translate-y-1 transition duration-300 md:col-span-1 lg:col-span-2">
-          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(0, 0, 0, 0.05);">Freedom from Shame</span>
+        <blockquote class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-sm border border-white/50 flex flex-col h-full hover:bg-white/95 hover:-translate-y-1 hover:shadow-lg transition duration-300 md:col-span-1 lg:col-span-2">
+          <span class="text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full self-start mb-6 inline-block shadow-sm" style="background-color: rgba(255, 255, 255, 0.6);">Freedom from Shame</span>
           <p class="text-black font-serif italic leading-relaxed text-lg mb-6 grow font-medium">
             "Brenda's talk was excellent - both inspiring and thought-provoking. I look forward to seeing all that God will do through your ministry. Keep standing strong in the Lord and in His mighty power."
           </p>
@@ -229,31 +243,41 @@ description: "Helpful resources, links, and support materials for women navigati
 
   <!-- Section 4: Emergency Signposting Section (Crucial) -->
   <section class="container mx-auto px-4 max-w-6xl">
-    <div class="text-center mb-12 max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-5xl font-serif text-white mb-4 tracking-tight font-bold">Need Immediate <span style="color: #FFB703;">Help?</span></h2>
-      <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
-      <p class="text-white/90 text-lg font-medium">
-        Beloved Berachah provides ongoing support and workshops, but we are not a crisis service. If you are in immediate danger, please call <strong class="font-bold">999</strong>. For 24/7 support, contact the organizations below.
-      </p>
-    </div>
+    <!-- Enclosed in Illuminated Sand Card to unify layout -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
+      
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="relative z-10 text-center mb-12 max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-5xl font-serif text-black mb-4 tracking-tight font-bold">Need Immediate <span style="color: #FFB703;">Help?</span></h2>
+        <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
+        <p class="text-black text-lg font-medium">
+          Beloved Berachah provides ongoing support and workshops, but we are not a crisis service. If you are in immediate danger, please call <strong class="font-bold">999</strong>. For 24/7 support, contact the organizations below.
+        </p>
+      </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-red-50 border-4 border-red-200 rounded-3xl p-8 text-center shadow-xl hover:-translate-y-1 transition duration-300">
-        <h3 class="text-xl font-serif font-bold text-red-900 mb-2">Domestic Abuse Helpline</h3>
-        <p class="text-red-800 text-sm mb-4 font-medium">Free, 24-hour national helpline run by Refuge.</p>
-        <a href="tel:08082000247" class="text-red-600 text-2xl font-bold hover:underline block">0808 2000 247</a>
-      </div>
-      
-      <div class="bg-amber-50 border-4 border-amber-200 rounded-3xl p-8 text-center shadow-xl hover:-translate-y-1 transition duration-300">
-        <h3 class="text-xl font-serif font-bold text-amber-900 mb-2">Samaritans</h3>
-        <p class="text-amber-800 text-sm mb-4 font-medium">Whatever you're going through, a Samaritan will face it with you 24/7.</p>
-        <a href="tel:116123" class="text-amber-600 text-2xl font-bold hover:underline block">116 123</a>
-      </div>
-      
-      <div class="bg-blue-50 border-4 border-blue-200 rounded-3xl p-8 text-center shadow-xl hover:-translate-y-1 transition duration-300">
-        <h3 class="text-xl font-serif font-bold text-blue-900 mb-2">Mind Mental Health</h3>
-        <p class="text-blue-800 text-sm mb-4 font-medium">Information and signposting service for mental health support.</p>
-        <a href="tel:03001233393" class="text-blue-600 text-2xl font-bold hover:underline block">0300 123 3393</a>
+      <div class="relative z-10 grid md:grid-cols-3 gap-6">
+        <!-- Frosted Glass with Red Tint -->
+        <div class="bg-red-50/90 backdrop-blur-md border border-white/50 rounded-3xl p-8 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300">
+          <h3 class="text-xl font-serif font-bold text-red-900 mb-2">Domestic Abuse Helpline</h3>
+          <p class="text-red-800 text-sm mb-4 font-medium">Free, 24-hour national helpline run by Refuge.</p>
+          <a href="tel:08082000247" class="text-red-700 text-2xl font-bold hover:underline block">0808 2000 247</a>
+        </div>
+        
+        <!-- Frosted Glass with Amber Tint -->
+        <div class="bg-amber-50/90 backdrop-blur-md border border-white/50 rounded-3xl p-8 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300">
+          <h3 class="text-xl font-serif font-bold text-amber-900 mb-2">Samaritans</h3>
+          <p class="text-amber-800 text-sm mb-4 font-medium">Whatever you're going through, a Samaritan will face it with you 24/7.</p>
+          <a href="tel:116123" class="text-amber-700 text-2xl font-bold hover:underline block">116 123</a>
+        </div>
+        
+        <!-- Frosted Glass with Blue Tint -->
+        <div class="bg-blue-50/90 backdrop-blur-md border border-white/50 rounded-3xl p-8 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300">
+          <h3 class="text-xl font-serif font-bold text-blue-900 mb-2">Mind Mental Health</h3>
+          <p class="text-blue-800 text-sm mb-4 font-medium">Information and signposting service for mental health support.</p>
+          <a href="tel:03001233393" class="text-blue-700 text-2xl font-bold hover:underline block">0300 123 3393</a>
+        </div>
       </div>
     </div>
   </section>

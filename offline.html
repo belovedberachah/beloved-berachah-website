@@ -5,32 +5,40 @@ description: "You are currently offline. Please check your internet connection."
 ---
 
 {% block customHead %}
+<!-- Hide from Search Engines (Best practice for offline fallback pages) -->
 <meta name="robots" content="noindex, nofollow" />
 {% endblock %}
 
-<div class="py-20 md:py-32 px-4 flex flex-col items-center justify-center h-full grow" style="background-color: #7B539B;">
+<!-- Main Content Area (Solid background removed so Aurora shines through) -->
+<div class="py-20 md:py-32 px-4 flex flex-col items-center justify-center h-full grow relative z-10">
   
-  <div class="rounded-3xl p-8 md:p-12 shadow-2xl max-w-lg w-full text-center relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+  <!-- Illuminated Sand Card -->
+  <div class="rounded-3xl p-8 md:p-12 shadow-2xl max-w-lg w-full text-center relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
     
-    <!-- Offline Icon -->
-    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner border border-black/10 text-black">
-      <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3l18 18"></path>
-      </svg>
+    <!-- Inner Tactile Deboss Effect -->
+    <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+    
+    <div class="relative z-10">
+      <!-- Offline Icon (Frosted Glass) -->
+      <div class="w-24 h-24 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm border border-white/50 text-black">
+        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3l18 18"></path>
+        </svg>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-serif text-black mb-4 font-bold tracking-tight">
+        You're <span style="color: #FFB703;">Offline</span>
+      </h1>
+      <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
+      
+      <p class="text-black font-medium leading-relaxed mb-10 text-lg">
+        It looks like you've lost your internet connection. Please check your network settings and try again to access full features of Beloved Berachah CIC.
+      </p>
+
+      <button onclick="window.location.reload()" class="btn-vivid-amber font-bold py-4 px-8 rounded-xl shadow-md hover:-translate-y-1 transition-transform duration-300 w-full block text-lg">
+        Try Again
+      </button>
     </div>
-
-    <h1 class="text-4xl md:text-5xl font-serif text-black mb-4 font-bold tracking-tight">
-      You're <span style="color: #FFB703;">Offline</span>
-    </h1>
-    <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
-    
-    <p class="text-black font-medium leading-relaxed mb-10 text-lg">
-      It looks like you've lost your internet connection. Please check your network settings and try again to access full features of Beloved Berachah CIC.
-    </p>
-
-    <button onclick="window.location.reload()" class="btn-vivid-amber font-bold py-4 px-8 rounded-xl shadow-md hover:-translate-y-1 transition-transform duration-300 w-full block text-lg">
-      Try Again
-    </button>
     
   </div>
 

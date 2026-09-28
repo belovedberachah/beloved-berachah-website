@@ -23,81 +23,90 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
 {% endblock %}
 
 <!-- Premium Hero Header -->
-<header class="relative overflow-hidden border-b-4 border-amber-500">
+<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#2a1738]">
   <!-- Layer 1: Background Image -->
   <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="absolute inset-0 w-full h-full object-cover" />
   
-  <!-- Layer 2: Semi-Transparent Slate Overlay -->
-  <div class="absolute inset-0" style="background-color: rgba(15, 23, 42, 0.75);"></div>
+  <!-- Layer 2: Warm Cinematic Vignette Overlay -->
+  <div class="absolute inset-0 mix-blend-multiply" style="background: linear-gradient(to top, #2a1738, rgba(123, 83, 155, 0.5), rgba(120, 53, 15, 0.3));"></div>
+  
+  <!-- Layer 3: Soft Purple Edge Fade -->
+  <div class="absolute bottom-0 inset-x-0 h-32 opacity-90" style="background: linear-gradient(to top, #2a1738, transparent);"></div>
 
-  <!-- Layer 3: Page Text Content -->
+  <!-- Layer 4: Page Text Content -->
   <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
-    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm text-black" style="background-color: rgba(255, 183, 3, 0.8);">
+    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-md text-black backdrop-blur-sm" style="background-color: rgba(255, 183, 3, 0.9);">
       Blog & News
     </span>
-    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-md">
+    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
       Latest News <br class="hidden md:block"/> and <span class="font-medium italic" style="color: #FFB703;">Updates</span>
     </h1>
-    <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-sm">
+    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
       Welcome to the Beloved Berachah Blog and News Hub.
     </p>
   </div>
 </header>
 
-<div class="py-16 md:py-24" style="background-color: #7B539B;">
+<div class="py-16 md:py-24 relative z-10">
   
   <!-- ========================================= -->
   <!-- BLOG & NEWS INTRODUCTION SECTION          -->
   <!-- ========================================= -->
   <section class="container mx-auto px-4 max-w-6xl mb-16 md:mb-24">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
       
-      <!-- Main Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">
-          Latest <span style="color: #FFB703;">Updates</span>
-        </h2>
-        <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
-        <p class="text-lg text-black max-w-3xl mx-auto leading-relaxed font-medium">
-          Welcome to the Beloved Berachah Blog and News Hub. This is where we share stories, updates, reflections, and information about our work supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
-        </p>
-      </div>
-
-      <!-- Information Cards -->
-      <div class="grid md:grid-cols-2 gap-8 mb-8">
-        
-        <!-- What You'll Find Here Card -->
-        <div class="bg-white p-8 md:p-10 rounded-3xl border border-black/10 shadow-xl">
-          <h3 class="text-2xl font-serif font-bold text-black mb-6 border-l-4 pl-4" style="border-left-color: #FFB703;">What You'll <span style="color: #FFB703;">Find Here</span></h3>
-          <ul class="space-y-5 text-black font-medium leading-relaxed">
-            <li><strong style="color: #FFB703;">📅 Event Updates:</strong> News about upcoming talks, workshops, conferences, and community events.</li>
-            <li><strong style="color: #FFB703;">🌟 Community Impact Stories:</strong> Stories that highlight positive outcomes, personal growth, and transformation within the communities we serve.</li>
-            <li><strong style="color: #FFB703;">🕊️ Reflections & Encouragement:</strong> Articles offering hope, inspiration, practical guidance, and faith-based encouragement.</li>
-            <li><strong style="color: #FFB703;">🏗️ Behind the Scenes:</strong> Updates on the development of Beloved Berachah CIC and the work taking place behind the scenes.</li>
-            <li><strong style="color: #FFB703;">🤝 Ministry & CIC Updates:</strong> News about partnerships, projects, resources, funding developments, and future plans.</li>
-          </ul>
-        </div>
-
-        <!-- Stay Connected Card -->
-        <div class="p-8 md:p-10 rounded-3xl border border-black/10 shadow-xl flex flex-col justify-center" style="background-color: rgba(255, 183, 3, 0.15);">
-          <h3 class="text-2xl font-serif font-bold text-black mb-4 border-l-4 pl-4" style="border-left-color: #FFB703;">Stay <span style="color: #FFB703;">Connected</span></h3>
-          <p class="text-black mb-8 leading-relaxed font-medium">
-            Follow us on social media and subscribe to receive updates about new blog posts, upcoming events, and resources designed to support healing, recovery, and wellbeing. Together, we can help women move from surviving to thriving.
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="relative z-10">
+        <!-- Main Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">
+            Latest <span style="color: #FFB703;">Updates</span>
+          </h2>
+          <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
+          <p class="text-lg text-black max-w-3xl mx-auto leading-relaxed font-medium">
+            Welcome to the Beloved Berachah Blog and News Hub. This is where we share stories, updates, reflections, and information about our work supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
           </p>
-          
-          <div class="flex flex-col space-y-4 mt-auto">
-             <a href="https://www.instagram.com/beloved_berachah?igsh=dmRzd2ZtOTduemll&utm_source=qr" target="_blank" rel="noopener noreferrer" class="inline-block btn-vivid-amber font-bold py-4 px-6 rounded-xl shadow-md hover:-translate-y-1 transition-all duration-200 text-center text-lg">
-               Follow on Instagram
-             </a>
-             <a href="#" class="inline-block bg-white text-black font-bold py-4 px-6 rounded-xl shadow-sm border border-black/10 hover:-translate-y-1 hover:shadow-md transition-all duration-200 text-center">
-               Follow on Facebook (Coming Soon)
-             </a>
-             <a href="#" class="inline-block bg-white text-black font-bold py-4 px-6 rounded-xl shadow-sm border border-black/10 hover:-translate-y-1 hover:shadow-md transition-all duration-200 text-center">
-               Eventbrite (Coming Soon)
-             </a>
-          </div>
         </div>
 
+        <!-- Information Cards -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          
+          <!-- What You'll Find Here Card (Frosted Glass) -->
+          <div class="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md transition duration-300">
+            <h3 class="text-2xl font-serif font-bold text-black mb-6 border-l-4 pl-4" style="border-left-color: #FFB703;">What You'll <span style="color: #FFB703;">Find Here</span></h3>
+            <ul class="space-y-5 text-black font-medium leading-relaxed">
+              <li><strong style="color: #997300;">📅 Event Updates:</strong> News about upcoming talks, workshops, conferences, and community events.</li>
+              <li><strong style="color: #997300;">🌟 Community Impact Stories:</strong> Stories that highlight positive outcomes, personal growth, and transformation within the communities we serve.</li>
+              <li><strong style="color: #997300;">🕊️ Reflections & Encouragement:</strong> Articles offering hope, inspiration, practical guidance, and faith-based encouragement.</li>
+              <li><strong style="color: #997300;">🏗️ Behind the Scenes:</strong> Updates on the development of Beloved Berachah CIC and the work taking place behind the scenes.</li>
+              <li><strong style="color: #997300;">🤝 Ministry & CIC Updates:</strong> News about partnerships, projects, resources, funding developments, and future plans.</li>
+            </ul>
+          </div>
+
+          <!-- Stay Connected Card (Frosted Glass with Amber Tint) -->
+          <div class="p-8 md:p-10 rounded-3xl border border-white/50 shadow-sm flex flex-col justify-center backdrop-blur-md hover:shadow-md transition duration-300" style="background-color: rgba(255, 183, 3, 0.2);">
+            <h3 class="text-2xl font-serif font-bold text-black mb-4 border-l-4 pl-4" style="border-left-color: #FFB703;">Stay <span style="color: #997300;">Connected</span></h3>
+            <p class="text-black mb-8 leading-relaxed font-medium">
+              Follow us on social media and subscribe to receive updates about new blog posts, upcoming events, and resources designed to support healing, recovery, and wellbeing. Together, we can help women move from surviving to thriving.
+            </p>
+            
+            <div class="flex flex-col space-y-4 mt-auto">
+               <a href="https://www.instagram.com/beloved_berachah?igsh=dmRzd2ZtOTduemll&utm_source=qr" target="_blank" rel="noopener noreferrer" class="inline-block btn-vivid-amber font-bold py-4 px-6 rounded-xl shadow-md hover:-translate-y-1 transition-all duration-200 text-center text-lg">
+                 Follow on Instagram
+               </a>
+               <a href="#" class="inline-block bg-white/80 backdrop-blur-sm text-black font-bold py-4 px-6 rounded-xl shadow-sm border border-white/50 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-200 text-center">
+                 Follow on Facebook (Coming Soon)
+               </a>
+               <a href="#" class="inline-block bg-white/80 backdrop-blur-sm text-black font-bold py-4 px-6 rounded-xl shadow-sm border border-white/50 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-200 text-center">
+                 Eventbrite (Coming Soon)
+               </a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -106,36 +115,43 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
   <!-- DYNAMIC CMS NEWS FEED                     -->
   <!-- ========================================= -->
   <main role="main" class="container mx-auto px-4 max-w-6xl mb-16 md:mb-24">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Illuminated Sand Card wrapper for the grid -->
+    <div class="rounded-3xl p-8 md:p-12 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
       
-      {% for article in collections.news | reverse %}
-      <!-- Premium Card Styling with Top Border -->
-      <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-1 transition duration-300 flex flex-col border-t-4" style="border-color: #FFB703;">
-        {% if article.data.thumbnail %}
-        <!-- Perfect-Cut Image Locking (16:9 Ratio) -->
-        <div class="w-full aspect-video overflow-hidden bg-black/5 border-b border-black/10 shrink-0">
-          <img src="{{ article.data.thumbnail }}" alt="{{ article.data.title }}" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        {% endif %}
-        <div class="p-8 md:p-10 flex flex-col grow">
-          <h3 class="text-2xl font-serif font-bold text-black mb-4 leading-tight">{{ article.data.title }}</h3>
-          {% if article.data.summary %}
-          <p class="text-black font-medium mb-6 italic border-l-4 pl-4" style="border-color: #FFB703;">{{ article.data.summary }}</p>
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        {% for article in collections.news | reverse %}
+        <!-- Premium Frosted Glass Card Styling -->
+        <div class="bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-sm hover:bg-white/95 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col border border-white/50 border-t-4" style="border-top-color: #FFB703;">
+          {% if article.data.thumbnail %}
+          <!-- Perfect-Cut Image Locking (16:9 Ratio) -->
+          <div class="w-full aspect-video overflow-hidden bg-black/5 border-b border-black/10 shrink-0">
+            <img src="{{ article.data.thumbnail }}" alt="{{ article.data.title }}" class="w-full h-full object-cover" loading="lazy" />
+          </div>
           {% endif %}
-          <div class="mt-auto cms-content text-black font-medium border-t border-black/10 pt-6">
-            {{ article.templateContent }}
+          <div class="p-8 md:p-10 flex flex-col grow">
+            <h3 class="text-2xl font-serif font-bold text-black mb-4 leading-tight">{{ article.data.title }}</h3>
+            {% if article.data.summary %}
+            <p class="text-black font-medium mb-6 italic border-l-4 pl-4" style="border-color: #FFB703;">{{ article.data.summary }}</p>
+            {% endif %}
+            <div class="mt-auto cms-content text-black font-medium border-t border-black/10 pt-6">
+              {{ article.templateContent | safe }}
+            </div>
           </div>
         </div>
+        
+        {% else %}
+        <!-- Perfectly Centered Fallback -->
+        <div style="grid-column: 1 / -1;" class="flex flex-col justify-center items-center text-center py-24 px-4 bg-white/50 backdrop-blur-sm rounded-3xl border border-white/50 w-full min-h-75 shadow-inner">
+          <h3 class="text-3xl font-serif text-black font-bold mb-4">No News Yet</h3>
+          <p class="text-lg text-black/70 font-medium">Articles published from your dashboard will automatically appear here!</p>
+        </div>
+        {% endfor %}
+        
       </div>
-      
-      {% else %}
-      <!-- Perfectly Centered Fallback (Using Grid Override) -->
-      <div style="grid-column: 1 / -1;" class="flex flex-col justify-center items-center text-center py-24 px-4 bg-white/50 rounded-3xl border border-white/40 w-full min-h-75 shadow-inner">
-        <h3 class="text-3xl font-serif text-black font-bold mb-4">No News Yet</h3>
-        <p class="text-lg text-black/70 font-medium">Articles published from your dashboard will automatically appear here!</p>
-      </div>
-      {% endfor %}
-      
     </div>
   </main>
 
@@ -143,46 +159,51 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
   <!-- NEWSLETTER SUBSCRIBE                      -->
   <!-- ========================================= -->
   <section class="container mx-auto px-4 max-w-4xl">
-    <div class="rounded-3xl p-10 md:p-16 shadow-xl relative overflow-hidden text-center" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-10 md:p-16 relative overflow-hidden text-center border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
       
-      <h3 class="text-3xl md:text-4xl font-serif text-black mb-4 font-bold">Join Our <span style="color: #FFB703;">Journey</span></h3>
-      <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
       
-      <p class="text-black text-lg mb-10 max-w-xl mx-auto font-medium leading-relaxed">
-        Subscribe to our newsletter for updates on our community impact, upcoming events, and ways you can help us build the Beloved Berachah Centre.
-      </p>
-      
-      <!-- Fully Wired Mailchimp Form -->
-      <form action="https://us3.list-manage.com/subscribe/post?u=dfcd1d98e8&id=e6ffd41e3a" method="POST" target="_blank" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+      <div class="relative z-10">
+        <h3 class="text-3xl md:text-4xl font-serif text-black mb-4 font-bold">Join Our <span style="color: #FFB703;">Journey</span></h3>
+        <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
         
-        <label for="newsletter-email" class="sr-only">Email Address</label>
-        <input 
-          type="email" 
-          id="newsletter-email"
-          name="EMAIL" 
-          placeholder="Enter your email address" 
-          required 
-          class="grow px-6 py-4 rounded-xl bg-white text-black border border-black/10 focus:outline-none transition font-bold placeholder:text-black/40 text-lg"
-          style="border-color: rgba(0,0,0,0.1);"
-          onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703';"
-          onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none';"
-        >
+        <p class="text-black text-lg mb-10 max-w-xl mx-auto font-medium leading-relaxed">
+          Subscribe to our newsletter for updates on our community impact, upcoming events, and ways you can help us build the Beloved Berachah Centre.
+        </p>
         
-        <!-- Hidden Anti-Bot Shield -->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="text" name="b_dfcd1d98e8_e6ffd41e3a" tabindex="-1" value="">
-        </div>
+        <!-- Fully Wired Mailchimp Form -->
+        <form action="https://us3.list-manage.com/subscribe/post?u=dfcd1d98e8&id=e6ffd41e3a" method="POST" target="_blank" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+          
+          <label for="newsletter-email" class="sr-only">Email Address</label>
+          <input 
+            type="email" 
+            id="newsletter-email"
+            name="EMAIL" 
+            placeholder="Enter your email address" 
+            required 
+            class="grow px-6 py-4 rounded-xl bg-white/80 backdrop-blur-sm text-black border border-white/50 shadow-inner focus:outline-none transition font-bold placeholder:text-black/60 text-lg"
+            onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';"
+            onblur="this.style.borderColor='rgba(255,255,255,0.5)'; this.style.boxShadow='inset 0 2px 4px rgba(0,0,0,0.05)'; this.style.backgroundColor='rgba(255,255,255,0.8)';"
+          >
+          
+          <!-- Hidden Anti-Bot Shield -->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_dfcd1d98e8_e6ffd41e3a" tabindex="-1" value="">
+          </div>
+          
+          <button type="submit" class="btn-vivid-amber font-bold py-4 px-10 rounded-xl transition-transform hover:-translate-y-1 shadow-md whitespace-nowrap text-lg">
+            Subscribe
+          </button>
+        </form>
         
-        <button type="submit" class="btn-vivid-amber font-bold py-4 px-10 rounded-xl transition-transform hover:-translate-y-1 shadow-md whitespace-nowrap text-lg">
-          Subscribe
-        </button>
-      </form>
-      
-      <!-- GDPR Compliance Micro-copy -->
-      <p class="text-sm text-black/70 mt-6 font-bold">
-        We respect your privacy and will never share your details. You can unsubscribe at any time. <br class="hidden sm:block"/>
-        By subscribing, you agree to our <a href="/privacy.html" class="underline hover:opacity-80" style="color: #FFB703;">Privacy Policy</a>.
-      </p>
+        <!-- GDPR Compliance Micro-copy -->
+        <p class="text-sm text-black/70 mt-6 font-bold">
+          We respect your privacy and will never share your details. You can unsubscribe at any time. <br class="hidden sm:block"/>
+          By subscribing, you agree to our <a href="/privacy.html" class="underline hover:opacity-80" style="color: #997300;">Privacy Policy</a>.
+        </p>
+      </div>
 
     </div>
   </section>

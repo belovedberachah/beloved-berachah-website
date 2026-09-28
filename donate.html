@@ -33,35 +33,42 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
 {% endblock %}
 
 <!-- Premium Hero Header -->
-<header class="relative overflow-hidden border-b-4 border-amber-500">
+<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#2a1738]">
   <!-- Layer 1: Background Image -->
   <img src="/assets/images/hero.jpg" alt="Women supporting each other" class="absolute inset-0 w-full h-full object-cover" />
   
-  <!-- Layer 2: Semi-Transparent Slate Overlay -->
-  <div class="absolute inset-0" style="background-color: rgba(15, 23, 42, 0.75);"></div>
+  <!-- Layer 2: Warm Cinematic Vignette Overlay -->
+  <div class="absolute inset-0 mix-blend-multiply" style="background: linear-gradient(to top, #2a1738, rgba(123, 83, 155, 0.5), rgba(120, 53, 15, 0.3));"></div>
+  
+  <!-- Layer 3: Soft Purple Edge Fade -->
+  <div class="absolute bottom-0 inset-x-0 h-32 opacity-90" style="background: linear-gradient(to top, #2a1738, transparent);"></div>
 
-  <!-- Layer 3: Page Text Content -->
+  <!-- Layer 4: Page Text Content -->
   <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
-    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm text-black" style="background-color: rgba(255, 183, 3, 0.8);">
+    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-md text-black backdrop-blur-sm" style="background-color: rgba(255, 183, 3, 0.9);">
       Partner With Us
     </span>
-    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-md">
+    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
       Empower a Woman's <span class="font-medium italic" style="color: #FFB703;">Journey</span>
     </h1>
-    <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-sm">
+    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
       Your generosity provides safe spaces, trauma-informed training, and vital community support for women rebuilding their lives.
     </p>
   </div>
 </header>
 
-<div class="py-16 md:py-24" style="background-color: #7B539B;">
+<div class="py-16 md:py-24 relative z-10">
   
   <!-- Interactive Donation Interface (2x2 Bento Grid Layout) -->
   <section class="px-4 container mx-auto max-w-7xl mb-16 md:mb-24">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
+      
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
       
       <!-- The 2x2 Grid Container -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch relative z-10">
         
         <!-- 1. TOP LEFT: The Impact Script -->
         <div class="flex flex-col justify-center lg:pr-8">
@@ -81,7 +88,7 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
         </div>
 
         <!-- 3. BOTTOM LEFT: How Your Gift Helps -->
-        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-black/10 h-full flex flex-col justify-center">
+        <div class="bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-sm border border-white/50 h-full flex flex-col justify-center">
           <h3 class="text-2xl font-serif font-bold mb-8 text-black">How Your Gift <span style="color: #FFB703;">Helps</span></h3>
           <ul class="space-y-8">
             <li class="flex items-start gap-5">
@@ -116,39 +123,39 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
 
         <!-- 4. BOTTOM RIGHT: The Donation Interface -->
         <div class="relative h-full">
-          <div class="bg-white rounded-3xl shadow-xl border border-black/10 p-8 md:p-12 relative z-10 h-full flex flex-col justify-center">
+          <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-sm border border-white/50 p-8 md:p-12 relative z-10 h-full flex flex-col justify-center">
             <h3 class="text-3xl font-serif text-black mb-2 text-center font-bold">Choose Your <span style="color: #FFB703;">Gift</span></h3>
             <p class="text-black/60 text-sm text-center mb-8 font-bold">Secure processing via Stripe or PayPal</p>
             
             <!-- Frequency Toggle -->
-            <div class="flex bg-black/5 p-1.5 rounded-2xl mb-8 shadow-inner" style="display: flex; width: 100%;">
+            <div class="flex bg-white/50 border border-white/30 backdrop-blur-sm p-1.5 rounded-2xl mb-8 shadow-inner" style="display: flex; width: 100%;">
               <button class="flex-1 btn-vivid-amber shadow-md font-bold py-3 rounded-xl text-sm transition-all active:scale-95" style="flex: 1;">One-Time</button>
-              <button class="flex-1 text-black/60 hover:text-black hover:bg-black/5 font-bold py-3 rounded-xl text-sm transition-all active:scale-95" style="flex: 1;">Monthly</button>
+              <button class="flex-1 text-black/60 hover:text-black hover:bg-white/50 font-bold py-3 rounded-xl text-sm transition-all active:scale-95" style="flex: 1;">Monthly</button>
             </div>
 
             <!-- Amount Grid -->
             <div class="grid grid-cols-2 gap-4 mb-6" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
               <div class="relative">
                 <input type="radio" name="donation_amount" id="amount-15" class="donation-radio sr-only" checked>
-                <label for="amount-15" class="donation-label flex flex-col items-center justify-center p-5 border-2 border-black/10 rounded-2xl cursor-pointer text-black bg-white hover:shadow-md hover:-translate-y-0.5 active:scale-[0.97] transition-all duration-200">
+                <label for="amount-15" class="donation-label flex flex-col items-center justify-center p-5 border-2 border-white/50 rounded-2xl cursor-pointer text-black bg-white/60 backdrop-blur-sm hover:bg-white hover:shadow-md hover:-translate-y-0.5 active:scale-[0.97] transition-all duration-200">
                   <span class="text-3xl font-bold mb-1">£15</span>
                 </label>
               </div>
               <div class="relative">
                 <input type="radio" name="donation_amount" id="amount-30" class="donation-radio sr-only">
-                <label for="amount-30" class="donation-label flex flex-col items-center justify-center p-5 border-2 border-black/10 rounded-2xl cursor-pointer text-black bg-white hover:shadow-md hover:-translate-y-0.5 active:scale-[0.97] transition-all duration-200">
+                <label for="amount-30" class="donation-label flex flex-col items-center justify-center p-5 border-2 border-white/50 rounded-2xl cursor-pointer text-black bg-white/60 backdrop-blur-sm hover:bg-white hover:shadow-md hover:-translate-y-0.5 active:scale-[0.97] transition-all duration-200">
                   <span class="text-3xl font-bold mb-1">£30</span>
                 </label>
               </div>
               <div class="relative">
                 <input type="radio" name="donation_amount" id="amount-50" class="donation-radio sr-only">
-                <label for="amount-50" class="donation-label flex flex-col items-center justify-center p-5 border-2 border-black/10 rounded-2xl cursor-pointer text-black bg-white hover:shadow-md hover:-translate-y-0.5 active:scale-[0.97] transition-all duration-200">
+                <label for="amount-50" class="donation-label flex flex-col items-center justify-center p-5 border-2 border-white/50 rounded-2xl cursor-pointer text-black bg-white/60 backdrop-blur-sm hover:bg-white hover:shadow-md hover:-translate-y-0.5 active:scale-[0.97] transition-all duration-200">
                   <span class="text-3xl font-bold mb-1">£50</span>
                 </label>
               </div>
               <div class="relative">
                 <input type="radio" name="donation_amount" id="amount-100" class="donation-radio sr-only">
-                <label for="amount-100" class="donation-label flex flex-col items-center justify-center p-5 border-2 border-black/10 rounded-2xl cursor-pointer text-black bg-white hover:shadow-md hover:-translate-y-0.5 active:scale-[0.97] transition-all duration-200">
+                <label for="amount-100" class="donation-label flex flex-col items-center justify-center p-5 border-2 border-white/50 rounded-2xl cursor-pointer text-black bg-white/60 backdrop-blur-sm hover:bg-white hover:shadow-md hover:-translate-y-0.5 active:scale-[0.97] transition-all duration-200">
                   <span class="text-3xl font-bold mb-1">£100</span>
                 </label>
               </div>
@@ -156,7 +163,7 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
 
             <!-- Premium Custom Amount Box -->
             <div class="relative mb-8 group cursor-text rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200">
-              <input type="number" placeholder="Other amount (£)" class="w-full text-center px-6 py-4 rounded-2xl outline-none text-black font-bold transition-all duration-300 text-lg" style="background-color: rgba(0,0,0,0.05); border: 2px solid rgba(0,0,0,0.1);" onmouseenter="this.style.borderColor='#FFB703';" onmouseleave="this.style.borderColor='rgba(0,0,0,0.1)';" onfocus="this.style.borderColor='#FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.backgroundColor='rgba(0,0,0,0.05)';" />
+              <input type="number" placeholder="Other amount (£)" class="w-full text-center px-6 py-4 rounded-2xl outline-none text-black font-bold transition-all duration-300 text-lg" style="background-color: rgba(255,255,255,0.6); backdrop-filter: blur(8px); border: 2px solid rgba(255,255,255,0.5);" onmouseenter="this.style.borderColor='#FFB703';" onmouseleave="this.style.borderColor='rgba(255,255,255,0.5)';" onfocus="this.style.borderColor='#FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(255,255,255,0.5)'; this.style.backgroundColor='rgba(255,255,255,0.6)';" />
             </div>
 
             <!-- Payment Gateways -->
@@ -172,7 +179,7 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
               </button>
             </div>
             
-            <div class="mt-8 pt-4 flex items-center justify-center gap-2 text-xs text-black/40 font-bold">
+            <div class="mt-8 pt-4 flex items-center justify-center gap-2 text-xs text-black/60 font-bold">
               <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
               Secure & encrypted transaction
             </div>
@@ -185,22 +192,26 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
   
   <!-- Alternative Ways to Give Section -->
   <section class="px-4 container mx-auto max-w-5xl">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
       
-      <div class="text-center">
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="text-center relative z-10">
         <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">Other Ways to <span style="color: #FFB703;">Give</span></h2>
         <div class="w-12 h-1 mx-auto mb-12 rounded-full" style="background-color: #FFB703;"></div>
         
         <div class="grid md:grid-cols-2 gap-8 text-left">
           
           <!-- Bank Transfer -->
-          <div class="bg-white p-10 rounded-3xl shadow-xl border border-black/10 flex flex-col group hover:-translate-y-1 transition duration-300">
-            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-black/10 group-hover:scale-110 transition-transform duration-300" style="background-color: rgba(255, 183, 3, 0.2); color: #FFB703;">
+          <div class="bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-sm border border-white/50 flex flex-col group hover:-translate-y-1 hover:bg-white/95 hover:shadow-md transition duration-300">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-white/50 group-hover:scale-110 transition-transform duration-300" style="background-color: rgba(255, 183, 3, 0.2); color: #FFB703;">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
             </div>
             <h3 class="text-2xl font-serif text-black font-bold mb-4">Direct Bank Transfer</h3>
             <p class="text-black font-medium text-base mb-8">Set up a standing order or make a one-off transfer directly from your bank account to ours.</p>
-            <div class="bg-black/5 p-5 rounded-2xl border border-black/10 text-sm font-medium text-black mt-auto shadow-inner">
+            <div class="bg-white/50 backdrop-blur-sm p-5 rounded-2xl border border-white/30 text-sm font-medium text-black mt-auto shadow-inner">
               <p class="mb-2 flex justify-between"><span>Name:</span> <span class="font-bold">Beloved Berachah CIC</span></p>
               <p class="mb-2 flex justify-between"><span>Sort Code:</span> <span class="font-bold">XX-XX-XX</span></p>
               <p class="flex justify-between"><span>Account No:</span> <span class="font-bold">XXXXXXXX</span></p>
@@ -208,8 +219,8 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
           </div>
 
           <!-- Corporate / Cheque -->
-          <div class="bg-white p-10 rounded-3xl shadow-xl border border-black/10 flex flex-col group hover:-translate-y-1 transition duration-300">
-            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-black/10 group-hover:scale-110 transition-transform duration-300" style="background-color: rgba(255, 183, 3, 0.2); color: #FFB703;">
+          <div class="bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-sm border border-white/50 flex flex-col group hover:-translate-y-1 hover:bg-white/95 hover:shadow-md transition duration-300">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-white/50 group-hover:scale-110 transition-transform duration-300" style="background-color: rgba(255, 183, 3, 0.2); color: #FFB703;">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
             </div>
             <h3 class="text-2xl font-serif text-black font-bold mb-4">Corporate Sponsorships</h3>
@@ -226,12 +237,12 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
 {% block customScripts %}
 <script>
   // Simple visual toggle for One-Time / Monthly styling
-  const freqBtns = document.querySelectorAll('.flex.bg-black\\/5 button');
+  const freqBtns = document.querySelectorAll('.flex.bg-white\\/50 button');
   freqBtns.forEach(btn => {
     btn.addEventListener('click', function() {
       // Reset both buttons
-      freqBtns[0].className = 'flex-1 text-black/60 hover:text-black hover:bg-black/5 font-bold py-3 rounded-xl text-sm transition-all active:scale-95';
-      freqBtns[1].className = 'flex-1 text-black/60 hover:text-black hover:bg-black/5 font-bold py-3 rounded-xl text-sm transition-all active:scale-95';
+      freqBtns[0].className = 'flex-1 text-black/60 hover:text-black hover:bg-white/50 font-bold py-3 rounded-xl text-sm transition-all active:scale-95';
+      freqBtns[1].className = 'flex-1 text-black/60 hover:text-black hover:bg-white/50 font-bold py-3 rounded-xl text-sm transition-all active:scale-95';
       // Apply active styling to the clicked button
       this.className = 'flex-1 btn-vivid-amber shadow-md font-bold py-3 rounded-xl text-sm transition-all active:scale-95';
     });

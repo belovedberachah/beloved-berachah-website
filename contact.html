@@ -5,93 +5,107 @@ description: "Get in touch with Beloved Berachah CIC. We are here to support wom
 ---
 
 <!-- Premium Hero Header -->
-<header class="relative overflow-hidden border-b-4 border-amber-500">
+<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#2a1738]">
   <!-- Layer 1: Background Image -->
   <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="absolute inset-0 w-full h-full object-cover" />
   
-  <!-- Layer 2: Semi-Transparent Slate Overlay -->
-  <div class="absolute inset-0" style="background-color: rgba(15, 23, 42, 0.75);"></div>
+  <!-- Layer 2: Warm Cinematic Vignette Overlay -->
+  <div class="absolute inset-0 mix-blend-multiply" style="background: linear-gradient(to top, #2a1738, rgba(123, 83, 155, 0.5), rgba(120, 53, 15, 0.3));"></div>
+  
+  <!-- Layer 3: Soft Purple Edge Fade -->
+  <div class="absolute bottom-0 inset-x-0 h-32 opacity-90" style="background: linear-gradient(to top, #2a1738, transparent);"></div>
 
-  <!-- Layer 3: Page Text Content -->
+  <!-- Layer 4: Page Text Content -->
   <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
-    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm text-black" style="background-color: rgba(255, 183, 3, 0.8);">
+    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-md text-black backdrop-blur-sm" style="background-color: rgba(255, 183, 3, 0.9);">
       Contact & Bookings
     </span>
-    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-md">
+    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
       Get in <span class="font-medium italic" style="color: #FFB703;">Touch</span>
     </h1>
-    <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-sm">
+    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
       We would love to hear from you.
     </p>
   </div>
 </header>
 
-<!-- Main Content Area (Purple Background with stacked Sand Cards) -->
-<div class="py-16 md:py-24 px-4 space-y-16 md:space-y-24" style="background-color: #7B539B;">
+<!-- Main Content Area (Solid background removed so Aurora shines through) -->
+<div class="py-16 md:py-24 px-4 space-y-16 md:space-y-24 relative z-10">
 
   <!-- Section 1: Emergency & Direct Contact -->
   <section class="container mx-auto max-w-6xl">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
       
-      <!-- Emergency Disclaimer (Red-tinted nested card) -->
-      <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-6 md:p-8 text-center max-w-3xl mx-auto mb-16 shadow-md">
-        <h2 class="text-xl md:text-2xl font-serif text-red-800 mb-3 font-bold">
-          We are not a crisis service
-        </h2>
-        <p class="text-red-900 text-sm md:text-base font-medium leading-relaxed">
-          Beloved Berachah provides ongoing support, training, and workshops. If you or someone else is in immediate danger, please call <strong class="font-bold">999</strong>. For 24/7 support regarding domestic abuse, please call the National Domestic Abuse Helpline at <a href="tel:08082000247" class="underline hover:text-red-700 font-bold">0808 2000 247</a>.
-        </p>
-      </div>
-
-      <!-- Contact Methods Grid -->
-      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        
-        <!-- General Enquiries (White Nested Card) -->
-        <div class="flex flex-col items-center text-center p-10 bg-white border border-black/10 rounded-3xl shadow-xl hover:-translate-y-1 transition duration-300">
-          <h3 class="text-2xl font-serif text-black mb-4 tracking-tight font-bold">General Enquiries</h3>
-          <p class="text-black font-medium mb-8 grow">
-            Whether you are looking to book a speaker, discuss a partnership opportunity, enquire about a workshop, or learn more about our work.
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="relative z-10">
+        <!-- Emergency Disclaimer (Red-tinted nested glass card) -->
+        <div class="bg-red-50/90 backdrop-blur-sm border-2 border-red-200/50 rounded-2xl p-6 md:p-8 text-center max-w-3xl mx-auto mb-16 shadow-inner">
+          <h2 class="text-xl md:text-2xl font-serif text-red-800 mb-3 font-bold">
+            We are not a crisis service
+          </h2>
+          <p class="text-red-900 text-sm md:text-base font-medium leading-relaxed">
+            Beloved Berachah provides ongoing support, training, and workshops. If you or someone else is in immediate danger, please call <strong class="font-bold">999</strong>. For 24/7 support regarding domestic abuse, please call the National Domestic Abuse Helpline at <a href="tel:08082000247" class="underline hover:text-red-700 font-bold">0808 2000 247</a>.
           </p>
-          <div class="space-y-4">
-            <a href="tel:07795907776" class="font-bold tracking-wide hover:opacity-80 flex items-center justify-center gap-2" style="color: #FFB703;">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-              07795 907776
-            </a>
-            <a href="mailto:beloved@berachah.org.uk" class="font-bold tracking-wide hover:opacity-80 flex items-center justify-center gap-2" style="color: #FFB703;">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-              beloved@berachah.org.uk
-            </a>
-          </div>
         </div>
 
-        <!-- Follow Us (White Nested Card) -->
-        <div class="flex flex-col items-center text-center p-10 bg-white border border-black/10 rounded-3xl shadow-xl hover:-translate-y-1 transition duration-300">
-          <h3 class="text-2xl font-serif text-black mb-4 tracking-tight font-bold">Follow Us</h3>
-          <p class="text-black font-medium mb-8 grow">
-            Stay up to date with our latest events, workshops, and resources by connecting with us on social media.
-          </p>
-          <div class="flex flex-col gap-3 w-full max-w-50">
-            <a href="https://www.instagram.com/beloved_berachah?igsh=dmRzd2ZtOTduemll&utm_source=qr" target="_blank" rel="noopener noreferrer" class="py-2 px-4 rounded-lg font-bold transition flex items-center justify-center gap-2 hover:opacity-90" style="background-color: rgba(255, 183, 3, 0.15); color: #997300;">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path></svg>
-              Instagram
-            </a>
-            <a href="#" class="bg-black/5 hover:bg-black/10 text-black py-2 px-4 rounded-lg font-bold transition flex items-center justify-center gap-2">
-              Facebook
-            </a>
-            <a href="#" class="bg-black/5 hover:bg-black/10 text-black py-2 px-4 rounded-lg font-bold transition flex items-center justify-center gap-2">
-              Eventbrite
-            </a>
+        <!-- Contact Methods Grid -->
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          
+          <!-- General Enquiries (White Nested Card) -->
+          <div class="flex flex-col items-center text-center p-10 bg-white/80 backdrop-blur-sm border border-white/50 rounded-3xl shadow-sm hover:bg-white/95 hover:-translate-y-1 transition duration-300">
+            <h3 class="text-2xl font-serif text-black mb-4 tracking-tight font-bold">General Enquiries</h3>
+            <p class="text-black font-medium mb-8 grow">
+              Whether you are looking to book a speaker, discuss a partnership opportunity, enquire about a workshop, or learn more about our work.
+            </p>
+            <div class="space-y-4">
+              <a href="tel:07795907776" class="font-bold tracking-wide hover:opacity-80 flex items-center justify-center gap-2" style="color: #997300;">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                07795 907776
+              </a>
+              <a href="mailto:beloved@berachah.org.uk" class="font-bold tracking-wide hover:opacity-80 flex items-center justify-center gap-2" style="color: #997300;">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                beloved@berachah.org.uk
+              </a>
+            </div>
           </div>
-        </div>
 
+          <!-- Follow Us (White Nested Card) -->
+          <div class="flex flex-col items-center text-center p-10 bg-white/80 backdrop-blur-sm border border-white/50 rounded-3xl shadow-sm hover:bg-white/95 hover:-translate-y-1 transition duration-300">
+            <h3 class="text-2xl font-serif text-black mb-4 tracking-tight font-bold">Follow Us</h3>
+            <p class="text-black font-medium mb-8 grow">
+              Stay up to date with our latest events, workshops, and resources by connecting with us on social media.
+            </p>
+            <div class="flex flex-col gap-3 w-full max-w-50">
+              <a href="https://www.instagram.com/beloved_berachah?igsh=dmRzd2ZtOTduemll&utm_source=qr" target="_blank" rel="noopener noreferrer" class="py-2 px-4 rounded-lg font-bold transition flex items-center justify-center gap-2 hover:opacity-90 shadow-sm" style="background-color: rgba(255, 183, 3, 0.2); color: #997300; border: 1px solid rgba(255, 183, 3, 0.3);">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path></svg>
+                Instagram
+              </a>
+              <a href="#" class="bg-black/5 hover:bg-black/10 text-black/80 hover:text-black py-2 px-4 rounded-lg font-bold transition flex items-center justify-center gap-2 border border-black/10">
+                Facebook
+              </a>
+              <a href="#" class="bg-black/5 hover:bg-black/10 text-black/80 hover:text-black py-2 px-4 rounded-lg font-bold transition flex items-center justify-center gap-2 border border-black/10">
+                Eventbrite
+              </a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Section 2: Book Brenda Fraser (Split Layout) -->
   <section class="container mx-auto max-w-6xl">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
+      
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-20">
         
         <!-- Information Side -->
         <div>
@@ -151,7 +165,7 @@ description: "Get in touch with Beloved Berachah CIC. We are here to support wom
         </div>
 
         <!-- Form Side (White Nested Card) -->
-        <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-black/10">
+        <div class="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-sm border border-white/50">
           <h3 class="text-2xl font-serif text-black mb-6 font-bold">Booking Enquiry Form</h3>
 
           <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5 text-left">
@@ -164,62 +178,62 @@ description: "Get in touch with Beloved Berachah CIC. We are here to support wom
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label for="org_name" class="block text-sm font-bold text-black mb-1">Organisation Name</label>
-                <input type="text" id="org_name" name="Organisation_Name" class="w-full px-4 py-3 bg-black/5 rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(0,0,0,0.05)';" required />
+                <input type="text" id="org_name" name="Organisation_Name" class="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(255,255,255,0.5)';" required />
               </div>
               <div>
                 <label for="contact_name" class="block text-sm font-bold text-black mb-1">Contact Name</label>
-                <input type="text" id="contact_name" name="Contact_Name" class="w-full px-4 py-3 bg-black/5 rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(0,0,0,0.05)';" required />
+                <input type="text" id="contact_name" name="Contact_Name" class="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(255,255,255,0.5)';" required />
               </div>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label for="email" class="block text-sm font-bold text-black mb-1">Email Address</label>
-                <input type="email" id="email" name="Email" class="w-full px-4 py-3 bg-black/5 rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(0,0,0,0.05)';" required />
+                <input type="email" id="email" name="Email" class="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(255,255,255,0.5)';" required />
               </div>
               <div>
                 <label for="telephone" class="block text-sm font-bold text-black mb-1">Telephone Number</label>
-                <input type="tel" id="telephone" name="Telephone" class="w-full px-4 py-3 bg-black/5 rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(0,0,0,0.05)';" />
+                <input type="tel" id="telephone" name="Telephone" class="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(255,255,255,0.5)';" />
               </div>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label for="event_type" class="block text-sm font-bold text-black mb-1">Event Type</label>
-                <input type="text" id="event_type" name="Event_Type" class="w-full px-4 py-3 bg-black/5 rounded-lg outline-none transition text-black placeholder:text-black/40" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(0,0,0,0.05)';" placeholder="e.g. Conference, Workshop" />
+                <input type="text" id="event_type" name="Event_Type" class="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-lg outline-none transition text-black placeholder:text-black/40" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(255,255,255,0.5)';" placeholder="e.g. Conference, Workshop" />
               </div>
               <div>
                 <label for="proposed_date" class="block text-sm font-bold text-black mb-1">Proposed Date</label>
-                <input type="text" id="proposed_date" name="Proposed_Date" class="w-full px-4 py-3 bg-black/5 rounded-lg outline-none transition text-black placeholder:text-black/40" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(0,0,0,0.05)';" placeholder="DD/MM/YYYY or TBC" />
+                <input type="text" id="proposed_date" name="Proposed_Date" class="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-lg outline-none transition text-black placeholder:text-black/40" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(255,255,255,0.5)';" placeholder="DD/MM/YYYY or TBC" />
               </div>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label for="location" class="block text-sm font-bold text-black mb-1">Location (or Online)</label>
-                <input type="text" id="location" name="Location" class="w-full px-4 py-3 bg-black/5 rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(0,0,0,0.05)';" />
+                <input type="text" id="location" name="Location" class="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(255,255,255,0.5)';" />
               </div>
               <div>
                 <label for="audience_size" class="block text-sm font-bold text-black mb-1">Expected Audience Size</label>
-                <input type="text" id="audience_size" name="Audience_Size" class="w-full px-4 py-3 bg-black/5 rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(0,0,0,0.05)';" />
+                <input type="text" id="audience_size" name="Audience_Size" class="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-lg outline-none transition text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(255,255,255,0.5)';" />
               </div>
             </div>
 
             <div>
               <label for="topics" class="block text-sm font-bold text-black mb-1">Topic(s) Requested</label>
-              <input type="text" id="topics" name="Requested_Topics" class="w-full px-4 py-3 bg-black/5 rounded-lg outline-none transition text-black placeholder:text-black/40" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(0,0,0,0.05)';" placeholder="e.g. No More Bondage, Trauma & Healing" />
+              <input type="text" id="topics" name="Requested_Topics" class="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-lg outline-none transition text-black placeholder:text-black/40" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(255,255,255,0.5)';" placeholder="e.g. No More Bondage, Trauma & Healing" />
             </div>
 
             <div>
               <label for="additional_info" class="block text-sm font-bold text-black mb-1">Additional Information</label>
-              <textarea id="additional_info" name="Additional_Information" rows="3" class="w-full px-4 py-3 bg-black/5 rounded-lg outline-none transition resize-none text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(0,0,0,0.05)';"></textarea>
+              <textarea id="additional_info" name="Additional_Information" rows="3" class="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-lg outline-none transition resize-none text-black" style="border: 1px solid rgba(0,0,0,0.1);" onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';" onblur="this.style.borderColor='rgba(0,0,0,0.1)'; this.style.boxShadow='none'; this.style.backgroundColor='rgba(255,255,255,0.5)';"></textarea>
             </div>
 
             <!-- Legal Policy Agreement -->
             <div class="pt-2 pb-2">
               <label class="flex items-start gap-3 cursor-pointer group">
                 <input type="checkbox" name="Policy_Agreement" value="Accepted" required class="mt-1 w-5 h-5 border-black/20 rounded cursor-pointer" style="accent-color: #FFB703;">
-                <span class="text-sm text-black font-medium">I acknowledge that all booking requests are subject to availability and the <a href="/terms.html" class="underline hover:opacity-80 font-bold" style="color: #FFB703;" target="_blank">Booking & Cancellation Policy</a>.</span>
+                <span class="text-sm text-black font-medium">I acknowledge that all booking requests are subject to availability and the <a href="/terms.html" class="underline hover:opacity-80 font-bold" style="color: #997300;" target="_blank">Booking & Cancellation Policy</a>.</span>
               </label>
             </div>
 
@@ -234,9 +248,13 @@ description: "Get in touch with Beloved Berachah CIC. We are here to support wom
 
   <!-- Section 3: Partnerships and Collaboration -->
   <section class="container mx-auto max-w-6xl">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
       
-      <div class="text-center mb-12 max-w-3xl mx-auto">
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="relative z-10 text-center mb-12 max-w-3xl mx-auto">
         <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">
           Partnerships and <span style="color: #FFB703;">Collaboration</span>
         </h2>
@@ -246,7 +264,7 @@ description: "Get in touch with Beloved Berachah CIC. We are here to support wom
         </p>
       </div>
 
-      <div class="bg-white rounded-3xl p-8 md:p-12 border border-black/10 shadow-xl max-w-5xl mx-auto">
+      <div class="relative z-10 bg-white/80 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/50 shadow-sm max-w-5xl mx-auto">
         <div class="grid md:grid-cols-2 gap-x-12 gap-y-6 text-black text-sm md:text-base font-medium mb-10">
           <div class="flex items-start">
             <span class="font-bold mr-3 mt-0.5" style="color: #FFB703;">•</span> Churches and faith-based organisations

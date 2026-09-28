@@ -5,38 +5,43 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
 ---
 
 <!-- Premium Hero Header -->
-<header class="relative overflow-hidden border-b-4 border-amber-500">
+<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#2a1738]">
   <!-- Layer 1: Background Image -->
   <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="absolute inset-0 w-full h-full object-cover" />
   
-  <!-- Layer 2: Semi-Transparent Slate Overlay -->
-  <div class="absolute inset-0" style="background-color: rgba(15, 23, 42, 0.75);"></div>
+  <!-- Layer 2: Warm Cinematic Vignette Overlay -->
+  <div class="absolute inset-0 mix-blend-multiply" style="background: linear-gradient(to top, #2a1738, rgba(123, 83, 155, 0.5), rgba(120, 53, 15, 0.3));"></div>
+  
+  <!-- Layer 3: Soft Purple Edge Fade -->
+  <div class="absolute bottom-0 inset-x-0 h-32 opacity-90" style="background: linear-gradient(to top, #2a1738, transparent);"></div>
 
-  <!-- Layer 3: Page Text Content -->
+  <!-- Layer 4: Page Text Content -->
   <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
-    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm text-black" style="background-color: rgba(255, 183, 3, 0.8);">
+    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-md text-black backdrop-blur-sm" style="background-color: rgba(255, 183, 3, 0.9);">
       Our Offerings
     </span>
-    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-md">
+    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
       Services & <span class="font-medium italic" style="color: #FFB703;">Workshops</span>
     </h1>
-    <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-sm">
+    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
       Inspiring Hope, Healing, and Transformation
     </p>
   </div>
 </header>
 
-<div class="py-16 md:py-24 space-y-16 md:space-y-24 px-4" style="background-color: #7B539B;">
+<!-- Main Content Area (Solid background removed so Aurora shines through) -->
+<div class="py-16 md:py-24 space-y-16 md:space-y-24 px-4 relative z-10">
 
   <!-- Intro & Who We Support Section -->
   <section class="container mx-auto max-w-6xl">
-    <!-- Tactile Sand Card with High-Contrast Diagonal Lighting -->
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden bg-linear-to-br from-[#D1BC95] to-[#947D57] shadow-[0_20px_50px_-12px_rgba(42,23,56,0.6)]" style="border: 1px solid rgba(255, 255, 255, 0.3);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
       
-      <!-- Enhanced Inner Deboss Effect -->
-      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.08)] pointer-events-none rounded-3xl"></div>
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
       <!-- Top Half: Text & Image Side-by-Side -->
-      <div class="lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-12 lg:mb-16">
+      <div class="relative z-10 lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-12 lg:mb-16">
         
         <!-- Text Content -->
         <div class="text-black font-medium leading-relaxed mb-10 lg:mb-0 space-y-6">
@@ -48,7 +53,6 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
         </div>
 
         <!-- Image Container -->
-        <!-- Preserving the tight, flexible border structure we built -->
         <div class="rounded-3xl overflow-hidden shadow-2xl relative group w-full h-fit flex border-4" style="border-color: #7B539B;">
           <div class="absolute inset-0 bg-amber-600/10 mix-blend-multiply z-10 transition duration-500 group-hover:bg-transparent pointer-events-none"></div>
           <img src="/assets/images/image-2.avif" alt="Women running with eagle wings" class="w-full h-auto block transform transition duration-700 group-hover:scale-[1.02]" loading="lazy" decoding="async" />
@@ -56,14 +60,12 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
       </div>
 
       <!-- Bottom Half: Full-Width Who We Support List -->
-      <!-- ADDED: Clean top border and generous padding for proper visual flow, matching your other pages. -->
-      <div class="border-t border-black/10 pt-10 md:pt-12">
+      <div class="relative z-10 border-t border-black/10 pt-10 md:pt-12">
         <h2 class="text-2xl font-serif text-black mb-6 tracking-tight font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">
           Who We <span style="color: #FFB703;">Support</span>
         </h2>
         <p class="text-black font-medium mb-8">Our talks, workshops, and training are suitable for a wide range of organisations and audiences, including:</p>
         
-        <!-- list grid is efficient, kept it. -->
         <ul class="grid md:grid-cols-2 gap-x-8 gap-y-4 text-black font-medium text-sm md:text-base">
           <li class="flex items-start">
             <svg class="w-5 h-5 mr-3 shrink-0 mt-0.5" style="color: #FFB703;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 
@@ -114,63 +116,76 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
   <!-- Core Services Breakdown Section -->
   <section class="container mx-auto max-w-6xl">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-4xl md:text-5xl font-serif text-white mb-6 tracking-tight font-bold">Our Core <span style="color: #FFB703;">Services</span></h2>
-      <p class="text-white text-lg leading-relaxed font-medium">
+      <h2 class="text-4xl md:text-5xl font-serif text-white drop-shadow-xl mb-6 tracking-tight font-bold">Our Core <span style="color: #FFB703;">Services</span></h2>
+      <p class="text-slate-100 drop-shadow-md text-lg leading-relaxed font-medium">
         We offer a range of supportive services designed to foster healing, personal growth, and connection.
       </p>
     </div>
 
+    <!-- Core Services Grid (Illuminated Sand Cards) -->
     <div class="grid md:grid-cols-2 gap-8">
       
       <!-- Training Sessions -->
-      <div class="p-8 md:p-10 rounded-3xl shadow-xl border" style="background-color: #B8A280; border-color: rgba(255, 255, 255, 0.2);">
-        <h3 class="text-2xl font-serif text-black mb-3 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Training <span style="color: #FFB703;">Sessions</span></h3>
-        <p class="text-black font-medium mb-4 leading-relaxed">
-          Our interactive sessions are designed to educate, challenge, and equip participants with practical knowledge and tools for personal growth.
-        </p>
-        <p class="text-sm font-bold text-black mb-2">Sample topics include:</p>
-        <ul class="space-y-1 text-sm text-black font-medium list-disc list-inside">
-          <li>Addictions</li>
-          <li>Healthy and Unhealthy Relationships</li>
-          <li>Identity</li>
-          <li>Negative Labelling</li>
-          <li>Understanding Domestic Abuse</li>
-        </ul>
+      <div class="p-8 md:p-10 rounded-3xl relative overflow-hidden border border-white/30 hover:-translate-y-1 transition duration-300" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 10px 30px -5px rgba(26,14,35,0.6), 0 0 20px rgba(255,183,3,0.1);">
+        <div class="absolute inset-0 shadow-[inset_0_4px_15px_rgba(0,0,0,0.1)] pointer-events-none rounded-3xl"></div>
+        <div class="relative z-10">
+          <h3 class="text-2xl font-serif text-black mb-3 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Training <span style="color: #FFB703;">Sessions</span></h3>
+          <p class="text-black font-medium mb-4 leading-relaxed">
+            Our interactive sessions are designed to educate, challenge, and equip participants with practical knowledge and tools for personal growth.
+          </p>
+          <p class="text-sm font-bold text-black mb-2">Sample topics include:</p>
+          <ul class="space-y-1 text-sm text-black font-medium list-disc list-inside">
+            <li>Addictions</li>
+            <li>Healthy and Unhealthy Relationships</li>
+            <li>Identity</li>
+            <li>Negative Labelling</li>
+            <li>Understanding Domestic Abuse</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Group Discussions -->
-      <div class="p-8 md:p-10 rounded-3xl shadow-xl border" style="background-color: #B8A280; border-color: rgba(255, 255, 255, 0.2);">
-        <h3 class="text-2xl font-serif text-black mb-3 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Group <span style="color: #FFB703;">Discussions</span></h3>
-        <p class="text-black font-medium mb-4 leading-relaxed">
-          We offer safe, guided conversations that encourage reflection, connection, and peer support on real-life issues.
-        </p>
-        <p class="text-sm font-bold text-black mb-2">Sample discussion topics include:</p>
-        <ul class="space-y-1 text-sm text-black font-medium list-disc list-inside">
-          <li>Building Confidence</li>
-          <li>Overcoming Loneliness</li>
-          <li>Navigating Relationships</li>
-        </ul>
+      <div class="p-8 md:p-10 rounded-3xl relative overflow-hidden border border-white/30 hover:-translate-y-1 transition duration-300" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 10px 30px -5px rgba(26,14,35,0.6), 0 0 20px rgba(255,183,3,0.1);">
+        <div class="absolute inset-0 shadow-[inset_0_4px_15px_rgba(0,0,0,0.1)] pointer-events-none rounded-3xl"></div>
+        <div class="relative z-10">
+          <h3 class="text-2xl font-serif text-black mb-3 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Group <span style="color: #FFB703;">Discussions</span></h3>
+          <p class="text-black font-medium mb-4 leading-relaxed">
+            We offer safe, guided conversations that encourage reflection, connection, and peer support on real-life issues.
+          </p>
+          <p class="text-sm font-bold text-black mb-2">Sample discussion topics include:</p>
+          <ul class="space-y-1 text-sm text-black font-medium list-disc list-inside">
+            <li>Building Confidence</li>
+            <li>Overcoming Loneliness</li>
+            <li>Navigating Relationships</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Creative Workshops -->
-      <div class="p-8 md:p-10 rounded-3xl shadow-xl border" style="background-color: #B8A280; border-color: rgba(255, 255, 255, 0.2);">
-        <h3 class="text-2xl font-serif text-black mb-3 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Creative <span style="color: #FFB703;">Workshops</span></h3>
-        <p class="text-black font-medium mb-4 leading-relaxed">
-          We believe creativity is a powerful tool for healing. It supports self-expression, reduces stress, and fosters joy. Our workshops feature hands-on activities such as creative writing, visual art, and various crafts that encourage emotional wellbeing and personal growth.
-        </p>
+      <div class="p-8 md:p-10 rounded-3xl relative overflow-hidden border border-white/30 hover:-translate-y-1 transition duration-300" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 10px 30px -5px rgba(26,14,35,0.6), 0 0 20px rgba(255,183,3,0.1);">
+        <div class="absolute inset-0 shadow-[inset_0_4px_15px_rgba(0,0,0,0.1)] pointer-events-none rounded-3xl"></div>
+        <div class="relative z-10">
+          <h3 class="text-2xl font-serif text-black mb-3 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Creative <span style="color: #FFB703;">Workshops</span></h3>
+          <p class="text-black font-medium mb-4 leading-relaxed">
+            We believe creativity is a powerful tool for healing. It supports self-expression, reduces stress, and fosters joy. Our workshops feature hands-on activities such as creative writing, visual art, and various crafts that encourage emotional wellbeing and personal growth.
+          </p>
+        </div>
       </div>
 
       <!-- Drop-In Sessions -->
-      <div class="p-8 md:p-10 rounded-3xl shadow-xl border" style="background-color: #B8A280; border-color: rgba(255, 255, 255, 0.2);">
-        <h3 class="text-2xl font-serif text-black mb-3 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Drop-In <span style="color: #FFB703;">Sessions</span></h3>
-        <p class="text-black font-medium mb-4 leading-relaxed">
-          Our drop-in sessions provide a safe, welcoming space where individuals can relax, connect with others, and receive light-touch support in a friendly, low-pressure environment.
-        </p>
-        <ul class="space-y-2 text-sm text-black font-medium">
-          <li><strong style="color: #FFB703;">Tea & Coffee Mornings:</strong> A friendly space to unwind, chat, and connect with others.</li>
-          <li><strong style="color: #FFB703;">Over 60s Gatherings:</strong> Social meetups designed to reduce isolation and promote wellbeing among older adults.</li>
-          <li><strong style="color: #FFB703;">Women's Drop-Ins:</strong> Safe, supportive spaces for women to share, reflect, and access relevant resources.</li>
-        </ul>
+      <div class="p-8 md:p-10 rounded-3xl relative overflow-hidden border border-white/30 hover:-translate-y-1 transition duration-300" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 10px 30px -5px rgba(26,14,35,0.6), 0 0 20px rgba(255,183,3,0.1);">
+        <div class="absolute inset-0 shadow-[inset_0_4px_15px_rgba(0,0,0,0.1)] pointer-events-none rounded-3xl"></div>
+        <div class="relative z-10">
+          <h3 class="text-2xl font-serif text-black mb-3 font-bold border-l-4 pl-4" style="border-left-color: #FFB703;">Drop-In <span style="color: #FFB703;">Sessions</span></h3>
+          <p class="text-black font-medium mb-4 leading-relaxed">
+            Our drop-in sessions provide a safe, welcoming space where individuals can relax, connect with others, and receive light-touch support in a friendly, low-pressure environment.
+          </p>
+          <ul class="space-y-2 text-sm text-black font-medium">
+            <li><strong style="color: #FFB703;">Tea & Coffee Mornings:</strong> A friendly space to unwind, chat, and connect with others.</li>
+            <li><strong style="color: #FFB703;">Over 60s Gatherings:</strong> Social meetups designed to reduce isolation and promote wellbeing among older adults.</li>
+            <li><strong style="color: #FFB703;">Women's Drop-Ins:</strong> Safe, supportive spaces for women to share, reflect, and access relevant resources.</li>
+          </ul>
+        </div>
       </div>
       
     </div>
@@ -178,9 +193,13 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
 
   <!-- Topics Available Section -->
   <section class="container mx-auto max-w-7xl">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="relative z-10 text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-4xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">Detailed Workshop <span style="color: #FFB703;">Topics</span></h2>
         <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
         <p class="text-black text-lg leading-relaxed font-medium">
@@ -188,103 +207,103 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
         </p>
       </div>
 
-      <!-- Topics Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Topics Grid (Frosted Glass Nested Cards) -->
+      <div class="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Addiction</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Understanding the root causes of addiction, the recovery journey, relapse prevention, and the hope of long-term healing and restoration.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Addiction Recovery</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Exploring the practical, emotional, and psychological aspects of recovery, together with strategies for sustaining long-term wellbeing.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Healthy Relationships</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Understanding the foundations of healthy relationships, including trust, respect, communication, healthy boundaries, and mutual support.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Unhealthy Relationships</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Recognising unhealthy relationship patterns, manipulation, coercive control, and behaviours that can negatively affect emotional and psychological wellbeing.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Domestic Abuse Awareness</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Recognising the different forms of domestic abuse, understanding its impact, responding appropriately, and knowing how to access support.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Dysfunctional Family</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Exploring how dysfunctional family dynamics can influence identity, relationships, emotional wellbeing, and future life choices.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Emotional Wellbeing</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Developing emotional resilience, self-awareness, healthy coping strategies, and practical approaches to improving mental and emotional wellbeing.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Faith and Restoration</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Discovering hope, healing, identity, and purpose through faith, restoration, and personal transformation.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Freedom from Shame</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Understanding the impact of shame, guilt, rejection, and past experiences, and discovering practical steps towards healing and freedom.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Discovering Your True Worth</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Exploring identity, self-worth, belonging, purpose, and overcoming negative beliefs about yourself.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Lived Experience</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Brenda Fraser shares her personal journey of trauma, addiction, recovery, healing, and restoration, alongside the lessons she has learned.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Negative Labels</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Examining the impact of societal, cultural, family, and self-imposed labels, and how they can influence confidence, identity, and emotional wellbeing.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">No More Bondage</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Recognising emotional, spiritual, and behavioural strongholds, and exploring practical pathways towards lasting freedom, healing, and personal growth.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Overcoming Adversity at Work</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Exploring how individuals can navigate workplace challenges, discrimination, and personal setbacks while developing resilience and confidence.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Peer Pressure</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Understanding the influence of peer pressure, developing confidence, making healthy choices, and resisting negative influences.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Spiritual Abuse</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Recognising spiritual abuse within faith settings, understanding its impact, and supporting healing, recovery, and restoration.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full lg:col-span-2">
+        <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col h-full lg:col-span-2">
           <h3 class="text-xl font-serif font-bold mb-3" style="color: #FFB703;">Trauma and Healing</h3>
           <p class="text-black text-sm font-medium leading-relaxed grow">Understanding the effects of trauma on the brain, body, emotions, relationships, and behaviour, while exploring trauma-informed approaches to healing and recovery.</p>
         </div>
       </div>
 
-      <!-- More Topics Coming Soon Banner -->
-      <div class="mt-12 rounded-2xl p-8 md:p-10 border border-black/10 text-center max-w-4xl mx-auto shadow-sm" style="background-color: rgba(255, 183, 3, 0.15);">
+      <!-- More Topics Coming Soon Banner (Frosted Glass) -->
+      <div class="relative z-10 mt-12 rounded-2xl p-8 md:p-10 border border-white/50 text-center max-w-4xl mx-auto shadow-sm bg-white/60 backdrop-blur-md hover:bg-white/80 transition duration-300">
         <h3 class="text-2xl font-serif text-black mb-4 font-bold">More Topics <span style="color: #FFB703;">Coming Soon</span></h3>
         <p class="text-black font-medium leading-relaxed mb-6">
           We are continually developing new talks, workshops, and training programmes in response to the needs of individuals, churches, charities, community organisations, educational settings, and organisations across the public and private sectors.
         </p>
         <p class="text-black font-bold text-sm">
-          If there is a topic you would like us to deliver that is not listed above, please <a href="/contact.html" class="underline hover:opacity-80" style="color: #FFB703;">get in touch</a>. We would be pleased to discuss developing a session tailored to your organisation's needs.
+          If there is a topic you would like us to deliver that is not listed above, please <a href="/contact.html" class="underline hover:opacity-80" style="color: #997300;">get in touch</a>. We would be pleased to discuss developing a session tailored to your organisation's needs.
         </p>
       </div>
 
@@ -295,8 +314,8 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
   <section class="container mx-auto max-w-6xl">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       
-      <!-- Format Text -->
-      <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-black/10">
+      <!-- Format Text (Frosted Glass over Aurora Background) -->
+      <div class="bg-white/80 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-white/50 hover:bg-white/95 transition duration-300">
         <h2 class="text-4xl md:text-5xl font-serif mb-6 tracking-tight font-bold text-black">Speaking <span style="color: #FFB703;">Formats</span></h2>
         <div class="w-12 h-1 mb-8 rounded-full" style="background-color: #FFB703;"></div>
         <p class="text-black font-medium leading-relaxed mb-8">
@@ -322,8 +341,8 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
 
       <!-- Image Container -->
       <div class="rounded-3xl overflow-hidden shadow-2xl relative w-full min-h-75 md:min-h-100 lg:min-h-125 border-4 mt-8 lg:mt-0" style="border-color: #B8A280;">
-        <div class="absolute inset-0 bg-slate-900/20 z-10 mix-blend-overlay"></div>
-        <img src="/assets/images/freedom-from-shame.avif" alt="Quote about Freedom from Shame" class="w-full h-full object-cover absolute inset-0 transform transition duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+        <div class="absolute inset-0 bg-slate-900/20 z-10 mix-blend-overlay pointer-events-none"></div>
+        <img src="/assets/images/freedom-from-shame.avif" alt="Quote about Freedom from Shame" class="w-full h-full object-cover absolute inset-0 transform transition duration-700 hover:scale-105" loading="lazy" decoding="async" />
       </div>
 
     </div>
@@ -331,10 +350,10 @@ description: "Explore the services offered by Beloved Berachah CIC, including ed
 
   <!-- Tailored To Your Organisation / CTA -->
   <section class="container mx-auto px-4 max-w-4xl text-center">
-    <h2 class="text-3xl md:text-4xl font-serif text-white mb-6 tracking-tight font-bold">Tailored to Your <span style="color: #FFB703;">Organisation</span></h2>
+    <h2 class="text-3xl md:text-4xl font-serif text-white drop-shadow-xl mb-6 tracking-tight font-bold">Tailored to Your <span style="color: #FFB703;">Organisation</span></h2>
     <div class="w-12 h-1 mx-auto mb-8 rounded-full" style="background-color: #FFB703;"></div>
     
-    <div class="text-white text-lg font-medium leading-relaxed space-y-6 mb-12">
+    <div class="text-slate-100 drop-shadow-md text-lg font-medium leading-relaxed space-y-6 mb-12">
       <p>
         Whether you are a church, charity, school, local authority, NHS service, community organisation, or business, we will work with you to develop a session that is relevant, engaging, and practical.
       </p>

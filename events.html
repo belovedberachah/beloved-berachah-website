@@ -23,35 +23,42 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
 {% endblock %}
 
 <!-- Premium Hero Header -->
-<header class="relative overflow-hidden border-b-4 border-amber-500">
+<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#2a1738]">
   <!-- Layer 1: Background Image -->
   <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="absolute inset-0 w-full h-full object-cover" />
   
-  <!-- Layer 2: Semi-Transparent Slate Overlay -->
-  <div class="absolute inset-0" style="background-color: rgba(15, 23, 42, 0.75);"></div>
+  <!-- Layer 2: Warm Cinematic Vignette Overlay -->
+  <div class="absolute inset-0 mix-blend-multiply" style="background: linear-gradient(to top, #2a1738, rgba(123, 83, 155, 0.5), rgba(120, 53, 15, 0.3));"></div>
+  
+  <!-- Layer 3: Soft Purple Edge Fade -->
+  <div class="absolute bottom-0 inset-x-0 h-32 opacity-90" style="background: linear-gradient(to top, #2a1738, transparent);"></div>
 
-  <!-- Layer 3: Page Text Content -->
+  <!-- Layer 4: Page Text Content -->
   <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
-    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-sm text-black" style="background-color: rgba(255, 183, 3, 0.8);">
+    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-md text-black backdrop-blur-sm" style="background-color: rgba(255, 183, 3, 0.9);">
       Gatherings & Workshops
     </span>
-    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-md">
+    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
       Upcoming <span class="font-medium italic" style="color: #FFB703;">Events</span>
     </h1>
-    <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-sm">
+    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
       Join us for talks, training sessions, and community gatherings.
     </p>
   </div>
 </header>
 
-<!-- Main Content Area (Purple Background) -->
-<div class="py-16 md:py-24 px-4 space-y-16 md:space-y-24" style="background-color: #7B539B;">
+<!-- Main Content Area (Solid background removed so Aurora shines through) -->
+<div class="py-16 md:py-24 px-4 space-y-16 md:space-y-24 relative z-10">
 
   <!-- ========================================= -->
   <!-- PORTRAIT VIDEO SHOWCASE (3-ACROSS)        -->
   <!-- ========================================= -->
   <section class="container mx-auto max-w-6xl">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
+      
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
       
       <!-- Section Header -->
       <div class="relative z-10 text-center mb-12">
@@ -94,57 +101,63 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
   <!-- DYNAMIC CMS EVENTS GRID                   -->
   <!-- ========================================= -->
   <main role="main" class="container mx-auto max-w-6xl">
-    <div class="rounded-3xl p-8 md:p-12 lg:p-16 shadow-xl relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+    <!-- Illuminated Sand Card -->
+    <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
       
-      <!-- Section Title & Intro -->
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-serif text-black mb-4 tracking-tight font-bold">Scheduled <span style="color: #FFB703;">Events</span></h2>
-        <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
-        <p class="text-black text-lg md:text-xl leading-relaxed font-medium">
-          We regularly host talks, workshops, and community events designed to educate, encourage, and inspire. Check below for our scheduled sessions or <a href="/contact.html" class="underline font-bold hover:opacity-80" style="color: #000;">get in touch</a> to book a bespoke workshop for your organisation.
-        </p>
-      </div>
-
-      <!-- CMS Events Grid -->
-      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        
-        {% for event in collections.events | reverse %}
-        <div class="bg-white text-black rounded-3xl p-8 md:p-10 border border-black/10 flex flex-col h-full shadow-xl relative overflow-hidden group hover:-translate-y-1 transition duration-300">
-          
-          <span class="text-black text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-6 shadow-sm" style="background-color: #FFB703;">
-            Upcoming Event
-          </span>
-          
-          <h3 class="font-serif text-3xl mb-4 font-bold">{{ event.data.title }}</h3>
-          
-          <div class="cms-event-content text-sm font-medium mb-8 text-black leading-relaxed">
-            {{ event.templateContent }}
-          </div>
-          
-          <div class="mt-auto space-y-3 text-sm border-t border-black/10 pt-6 text-black font-bold">
-            {% if event.data.event_date %}
-              <p class="flex items-center gap-3">📅 {{ event.data.event_date }}</p>
-            {% endif %}
-            {% if event.data.location %}
-              <p class="flex items-center gap-3">📍 {{ event.data.location }}</p>
-            {% endif %}
-          </div>
-          
-          {% if event.data.booking_link %}
-            <a href="{{ event.data.booking_link }}" target="_blank" rel="noopener noreferrer" class="mt-8 block text-center btn-vivid-amber font-bold py-4 px-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-lg transition-all duration-200 text-lg">
-              Book Event
-            </a>
-          {% endif %}
+      <!-- Inner Tactile Deboss Effect -->
+      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+      
+      <div class="relative z-10">
+        <!-- Section Title & Intro -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-4xl font-serif text-black mb-4 tracking-tight font-bold">Scheduled <span style="color: #FFB703;">Events</span></h2>
+          <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
+          <p class="text-black text-lg md:text-xl leading-relaxed font-medium">
+            We regularly host talks, workshops, and community events designed to educate, encourage, and inspire. Check below for our scheduled sessions or <a href="/contact.html" class="underline font-bold hover:opacity-80" style="color: #000;">get in touch</a> to book a bespoke workshop for your organisation.
+          </p>
         </div>
 
-        {% else %}
-        <!-- Guaranteed Full-Width Span Empty State -->
-        <div style="grid-column: 1 / -1;" class="flex flex-col justify-center items-center text-center py-24 px-4 bg-white/50 rounded-3xl border border-white/40 w-full min-h-75 shadow-inner">
-          <h3 class="text-3xl font-serif text-black mb-4 font-bold">No Scheduled Events</h3>
-          <p class="text-lg text-black/70 font-medium">Events published from your dashboard will automatically appear here!</p>
+        <!-- CMS Events Grid -->
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          
+          {% for event in collections.events | reverse %}
+          <div class="bg-white/80 backdrop-blur-md text-black rounded-3xl p-8 md:p-10 border border-white/50 flex flex-col h-full shadow-sm hover:shadow-lg hover:bg-white/95 relative overflow-hidden group hover:-translate-y-1 transition duration-300">
+            
+            <span class="text-black text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-6 shadow-sm" style="background-color: #FFB703;">
+              Upcoming Event
+            </span>
+            
+            <h3 class="font-serif text-3xl mb-4 font-bold">{{ event.data.title }}</h3>
+            
+            <div class="cms-event-content text-sm font-medium mb-8 text-black leading-relaxed">
+              {{ event.templateContent | safe }}
+            </div>
+            
+            <div class="mt-auto space-y-3 text-sm border-t border-black/10 pt-6 text-black font-bold">
+              {% if event.data.event_date %}
+                <p class="flex items-center gap-3">📅 {{ event.data.event_date }}</p>
+              {% endif %}
+              {% if event.data.location %}
+                <p class="flex items-center gap-3">📍 {{ event.data.location }}</p>
+              {% endif %}
+            </div>
+            
+            {% if event.data.booking_link %}
+              <a href="{{ event.data.booking_link }}" target="_blank" rel="noopener noreferrer" class="mt-8 block text-center btn-vivid-amber font-bold py-4 px-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-lg transition-all duration-200 text-lg">
+                Book Event
+              </a>
+            {% endif %}
+          </div>
+
+          {% else %}
+          <!-- Guaranteed Full-Width Span Empty State -->
+          <div style="grid-column: 1 / -1;" class="flex flex-col justify-center items-center text-center py-24 px-4 bg-white/50 backdrop-blur-sm rounded-3xl border border-white/40 w-full min-h-75 shadow-inner">
+            <h3 class="text-3xl font-serif text-black mb-4 font-bold">No Scheduled Events</h3>
+            <p class="text-lg text-black/70 font-medium">Events published from your dashboard will automatically appear here!</p>
+          </div>
+          {% endfor %}
+          
         </div>
-        {% endfor %}
-        
       </div>
     </div>
   </main>

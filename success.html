@@ -9,29 +9,37 @@ description: "Thank you for contacting Beloved Berachah CIC. Your message has be
 <meta name="robots" content="noindex, nofollow" />
 {% endblock %}
 
-<div class="py-20 md:py-32 px-4 flex flex-col items-center justify-center h-full grow" style="background-color: #7B539B;">
+<!-- Main Content Area (Solid background removed so Aurora shines through) -->
+<div class="py-20 md:py-32 px-4 flex flex-col items-center justify-center h-full grow relative z-10">
   
-  <div class="rounded-3xl p-8 md:p-12 shadow-2xl max-w-lg w-full text-center relative overflow-hidden" style="background-color: #B8A280; border: 2px solid rgba(255, 255, 255, 0.2);">
+  <!-- Illuminated Sand Card -->
+  <div class="rounded-3xl p-8 md:p-12 shadow-2xl max-w-lg w-full text-center relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
     
-    <!-- Success Icon (White nested circle for contrast) -->
-    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner border border-black/10">
-      <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-      </svg>
+    <!-- Inner Tactile Deboss Effect -->
+    <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+    
+    <div class="relative z-10">
+      <!-- Success Icon (Frosted Glass) -->
+      <div class="w-24 h-24 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm border border-white/50">
+        <!-- Slightly darkened the green to ensure perfect contrast on the frosted glass -->
+        <svg class="w-12 h-12 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-serif text-black mb-4 font-bold tracking-tight">
+        Message <span style="color: #FFB703;">Sent!</span>
+      </h1>
+      <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
+      
+      <p class="text-black font-medium leading-relaxed mb-10 text-lg">
+        Thank you for reaching out to Beloved Berachah CIC. We have received your enquiry and will be in touch with you shortly.
+      </p>
+
+      <a href="/index.html" class="btn-vivid-amber font-bold py-4 px-8 rounded-xl shadow-md hover:-translate-y-1 transition-transform duration-300 w-full block text-lg">
+        Return to Home
+      </a>
     </div>
-
-    <h1 class="text-4xl md:text-5xl font-serif text-black mb-4 font-bold tracking-tight">
-      Message <span style="color: #FFB703;">Sent!</span>
-    </h1>
-    <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
-    
-    <p class="text-black font-medium leading-relaxed mb-10 text-lg">
-      Thank you for reaching out to Beloved Berachah CIC. We have received your enquiry and will be in touch with you shortly.
-    </p>
-
-    <a href="/index.html" class="btn-vivid-amber font-bold py-4 px-8 rounded-xl shadow-md hover:-translate-y-1 transition-transform duration-300 w-full block text-lg">
-      Return to Home
-    </a>
     
   </div>
 
