@@ -38,10 +38,15 @@
 
     <!-- BOTTOM ROW: Centered Navigation Links (Desktop) -->
     <div class="hidden md:flex flex-wrap justify-center items-center gap-8 lg:gap-12">
+
+      <a href="/index/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/about' in page.url %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
+        Home
+        <!-- The Glowing Amber Dot -->
+        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if '/about' in page.url %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
+      </a>
       
       <a href="/about/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/about' in page.url %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
         About
-        <!-- The Glowing Amber Dot -->
         <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if '/about' in page.url %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
       </a>
 
