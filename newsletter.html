@@ -1,0 +1,42 @@
+<!-- ========================================= -->
+<!-- PREMIUM NEWSLETTER SUBSCRIBE COMPONENT    -->
+<!-- ========================================= -->
+<section class="py-20 relative z-10">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden text-center">
+      
+      <!-- Subtle inner glow -->
+      <div class="absolute inset-0 bg-linear-to-br from-brand-amber/10 to-transparent pointer-events-none"></div>
+      
+      <h2 class="text-3xl md:text-4xl font-serif text-white font-bold mb-4 drop-shadow-md relative z-10">
+        Join Our <span class="italic text-brand-amber">Community</span>
+      </h2>
+      <p class="text-slate-200 text-lg mb-8 max-w-2xl mx-auto relative z-10 font-medium">
+        Subscribe to receive resources, event updates, and encouragement directly to your inbox. You are not alone on this journey.
+      </p>
+
+      <!-- MAILCHIMP INTEGRATION FORM -->
+      <!-- Replace the ACTION URL below with your specific Mailchimp URL -->
+      <form action="YOUR_MAILCHIMP_FORM_ACTION_URL_HERE" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="relative z-10 max-w-lg mx-auto flex flex-col sm:flex-row gap-4">
+        
+        <div class="grow">
+          <label for="mce-EMAIL" class="sr-only">Email Address</label>
+          <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Enter your email address" required class="w-full px-6 py-4 rounded-xl bg-white/5 border border-white/30 text-white placeholder-slate-300 focus:outline-none focus:border-brand-amber focus:ring-1 focus:ring-brand-amber transition-all shadow-inner backdrop-blur-sm" />
+        </div>
+        
+        <!-- Anti-Bot Hidden Input (Required by Mailchimp) -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_YOUR_MAILCHIMP_ID_HERE" tabindex="-1" value="">
+        </div>
+
+        <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn-vivid-amber font-bold py-4 px-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300 whitespace-nowrap">
+          Subscribe
+        </button>
+      </form>
+      
+      <p class="text-slate-400 text-xs mt-6 relative z-10">
+        We respect your privacy. Unsubscribe at any time.
+      </p>
+    </div>
+  </div>
+</section>

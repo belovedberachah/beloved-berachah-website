@@ -156,56 +156,8 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
   </main>
 
   <!-- ========================================= -->
-  <!-- NEWSLETTER SUBSCRIBE                      -->
+  <!-- NEWSLETTER SUBSCRIBE (Global Component)   -->
   <!-- ========================================= -->
-  <section class="container mx-auto px-4 max-w-4xl">
-    <!-- Illuminated Sand Card -->
-    <div class="rounded-3xl p-10 md:p-16 relative overflow-hidden text-center border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
-      
-      <!-- Inner Tactile Deboss Effect -->
-      <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
-      
-      <div class="relative z-10">
-        <h3 class="text-3xl md:text-4xl font-serif text-black mb-4 font-bold">Join Our <span style="color: #FFB703;">Journey</span></h3>
-        <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
-        
-        <p class="text-black text-lg mb-10 max-w-xl mx-auto font-medium leading-relaxed">
-          Subscribe to our newsletter for updates on our community impact, upcoming events, and ways you can help us build the Beloved Berachah Centre.
-        </p>
-        
-        <!-- Fully Wired Mailchimp Form -->
-        <form action="https://us3.list-manage.com/subscribe/post?u=dfcd1d98e8&id=e6ffd41e3a" method="POST" target="_blank" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
-          
-          <label for="newsletter-email" class="sr-only">Email Address</label>
-          <input 
-            type="email" 
-            id="newsletter-email"
-            name="EMAIL" 
-            placeholder="Enter your email address" 
-            required 
-            class="grow px-6 py-4 rounded-xl bg-white/80 backdrop-blur-sm text-black border border-white/50 shadow-inner focus:outline-none transition font-bold placeholder:text-black/60 text-lg"
-            onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';"
-            onblur="this.style.borderColor='rgba(255,255,255,0.5)'; this.style.boxShadow='inset 0 2px 4px rgba(0,0,0,0.05)'; this.style.backgroundColor='rgba(255,255,255,0.8)';"
-          >
-          
-          <!-- Hidden Anti-Bot Shield -->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input type="text" name="b_dfcd1d98e8_e6ffd41e3a" tabindex="-1" value="">
-          </div>
-          
-          <button type="submit" class="btn-vivid-amber font-bold py-4 px-10 rounded-xl transition-transform hover:-translate-y-1 shadow-md whitespace-nowrap text-lg">
-            Subscribe
-          </button>
-        </form>
-        
-        <!-- GDPR Compliance Micro-copy -->
-        <p class="text-sm text-black/70 mt-6 font-bold">
-          We respect your privacy and will never share your details. You can unsubscribe at any time. <br class="hidden sm:block"/>
-          By subscribing, you agree to our <a href="/privacy.html" class="underline hover:opacity-80" style="color: #997300;">Privacy Policy</a>.
-        </p>
-      </div>
-
-    </div>
-  </section>
+  {% include "components/newsletter.html" %}
 
 </div>
