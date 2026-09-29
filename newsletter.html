@@ -1,42 +1,72 @@
 <!-- ========================================= -->
-<!-- PREMIUM NEWSLETTER SUBSCRIBE COMPONENT    -->
+<!-- GLOBAL NEWSLETTER SUBSCRIBE COMPONENT     -->
 <!-- ========================================= -->
-<section class="py-20 relative z-10">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden text-center">
+<section class="container mx-auto px-4 max-w-5xl py-12 relative z-10">
+  <!-- Illuminated Sand Card -->
+  <div class="rounded-3xl p-10 md:p-16 relative overflow-hidden text-center border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
+    
+    <!-- Inner Tactile Deboss Effect -->
+    <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
+    
+    <div class="relative z-10">
+      <h3 class="text-3xl md:text-4xl font-serif text-black mb-4 font-bold">Join Our <span style="color: #FFB703;">Journey</span></h3>
+      <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
       
-      <!-- Subtle inner glow -->
-      <div class="absolute inset-0 bg-linear-to-br from-brand-amber/10 to-transparent pointer-events-none"></div>
-      
-      <h2 class="text-3xl md:text-4xl font-serif text-white font-bold mb-4 drop-shadow-md relative z-10">
-        Join Our <span class="italic text-brand-amber">Community</span>
-      </h2>
-      <p class="text-slate-200 text-lg mb-8 max-w-2xl mx-auto relative z-10 font-medium">
-        Subscribe to receive resources, event updates, and encouragement directly to your inbox. You are not alone on this journey.
+      <p class="text-black text-lg mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+        Subscribe to our newsletter for updates on our community impact, upcoming events, and ways you can help us build the Beloved Berachah Centre.
       </p>
-
-      <!-- MAILCHIMP INTEGRATION FORM -->
-      <!-- Replace the ACTION URL below with your specific Mailchimp URL -->
-      <form action="YOUR_MAILCHIMP_FORM_ACTION_URL_HERE" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="relative z-10 max-w-lg mx-auto flex flex-col sm:flex-row gap-4">
+      
+      <!-- Fully Wired Mailchimp Form -->
+      <form action="https://app.us3.list-manage.com/subscribe/post?u=d45a2d06c8cad877c93474f47&amp;id=e6ffd41e3a&amp;f_id=00b7afe2f0" method="POST" target="_blank" class="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto">
         
-        <div class="grow">
-          <label for="mce-EMAIL" class="sr-only">Email Address</label>
-          <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Enter your email address" required class="w-full px-6 py-4 rounded-xl bg-white/5 border border-white/30 text-white placeholder-slate-300 focus:outline-none focus:border-brand-amber focus:ring-1 focus:ring-brand-amber transition-all shadow-inner backdrop-blur-sm" />
+        <!-- First Name Field -->
+        <div class="w-full md:w-1/3">
+          <label for="mce-FNAME" class="sr-only">First Name</label>
+          <input 
+            type="text" 
+            id="mce-FNAME"
+            name="FNAME" 
+            placeholder="First Name" 
+            class="w-full px-6 py-4 rounded-xl bg-white/80 backdrop-blur-sm text-black border border-white/50 shadow-inner focus:outline-none transition font-bold placeholder:text-black/60 text-lg"
+            onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';"
+            onblur="this.style.borderColor='rgba(255,255,255,0.5)'; this.style.boxShadow='inset 0 2px 4px rgba(0,0,0,0.05)'; this.style.backgroundColor='rgba(255,255,255,0.8)';"
+          >
+        </div>
+
+        <!-- Email Field -->
+        <div class="w-full md:w-1/3">
+          <label for="newsletter-email" class="sr-only">Email Address</label>
+          <input 
+            type="email" 
+            id="newsletter-email"
+            name="EMAIL" 
+            placeholder="Email Address *" 
+            required 
+            class="w-full px-6 py-4 rounded-xl bg-white/80 backdrop-blur-sm text-black border border-white/50 shadow-inner focus:outline-none transition font-bold placeholder:text-black/60 text-lg"
+            onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';"
+            onblur="this.style.borderColor='rgba(255,255,255,0.5)'; this.style.boxShadow='inset 0 2px 4px rgba(0,0,0,0.05)'; this.style.backgroundColor='rgba(255,255,255,0.8)';"
+          >
         </div>
         
-        <!-- Anti-Bot Hidden Input (Required by Mailchimp) -->
+        <!-- Hidden Anti-Bot Shield (From your real account) -->
         <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="text" name="b_YOUR_MAILCHIMP_ID_HERE" tabindex="-1" value="">
+          <input type="text" name="b_d45a2d06c8cad877c93474f47_e6ffd41e3a" tabindex="-1" value="">
         </div>
-
-        <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn-vivid-amber font-bold py-4 px-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300 whitespace-nowrap">
-          Subscribe
-        </button>
+        
+        <!-- Submit Button -->
+        <div class="w-full md:w-1/3">
+          <button type="submit" class="w-full btn-vivid-amber font-bold py-4 px-8 rounded-xl transition-transform hover:-translate-y-1 shadow-md whitespace-nowrap text-lg h-full">
+            Subscribe
+          </button>
+        </div>
       </form>
       
-      <p class="text-slate-400 text-xs mt-6 relative z-10">
-        We respect your privacy. Unsubscribe at any time.
+      <!-- GDPR Compliance Micro-copy -->
+      <p class="text-sm text-black/70 mt-8 font-bold">
+        We respect your privacy and will never share your details. You can unsubscribe at any time. <br class="hidden sm:block"/>
+        By subscribing, you agree to our <a href="/privacy/" class="underline hover:opacity-80" style="color: #997300;">Privacy Policy</a>.
       </p>
     </div>
+
   </div>
 </section>
