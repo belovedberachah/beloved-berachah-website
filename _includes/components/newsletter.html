@@ -16,11 +16,11 @@
         Subscribe to our newsletter for updates on our community impact, upcoming events, and ways you can help us build the Beloved Berachah Centre.
       </p>
       
-      <!-- Fully Wired Mailchimp Form -->
-      <form action="https://app.us3.list-manage.com/subscribe/post?u=d45a2d06c8cad877c93474f47&amp;id=e6ffd41e3a&amp;f_id=00b7afe2f0" method="POST" target="_blank" class="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto">
+      <!-- Fully Wired Mailchimp Form (2x2 Grid Layout) -->
+      <form action="https://app.us3.list-manage.com/subscribe/post?u=d45a2d06c8cad877c93474f47&amp;id=e6ffd41e3a&amp;f_id=00b7afe2f0" method="POST" target="_blank" class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
         
         <!-- First Name Field -->
-        <div class="w-full md:w-1/3">
+        <div class="w-full">
           <label for="mce-FNAME" class="sr-only">First Name</label>
           <input 
             type="text" 
@@ -33,8 +33,22 @@
           >
         </div>
 
+        <!-- Company / Organization Field -->
+        <div class="w-full">
+          <label for="mce-COMPANY" class="sr-only">Company / Organization</label>
+          <input 
+            type="text" 
+            id="mce-COMPANY"
+            name="COMPANY" 
+            placeholder="Company / Organization" 
+            class="w-full px-6 py-4 rounded-xl bg-white/80 backdrop-blur-sm text-black border border-white/50 shadow-inner focus:outline-none transition font-bold placeholder:text-black/60 text-lg"
+            onfocus="this.style.borderColor='#FFB703'; this.style.boxShadow='0 0 0 2px #FFB703'; this.style.backgroundColor='#fff';"
+            onblur="this.style.borderColor='rgba(255,255,255,0.5)'; this.style.boxShadow='inset 0 2px 4px rgba(0,0,0,0.05)'; this.style.backgroundColor='rgba(255,255,255,0.8)';"
+          >
+        </div>
+
         <!-- Email Field -->
-        <div class="w-full md:w-1/3">
+        <div class="w-full">
           <label for="newsletter-email" class="sr-only">Email Address</label>
           <input 
             type="email" 
@@ -48,13 +62,13 @@
           >
         </div>
         
-        <!-- Hidden Anti-Bot Shield (From your real account) -->
+        <!-- Hidden Anti-Bot Shield -->
         <div style="position: absolute; left: -5000px;" aria-hidden="true">
           <input type="text" name="b_d45a2d06c8cad877c93474f47_e6ffd41e3a" tabindex="-1" value="">
         </div>
         
         <!-- Submit Button -->
-        <div class="w-full md:w-1/3">
+        <div class="w-full">
           <button type="submit" class="w-full btn-vivid-amber font-bold py-4 px-8 rounded-xl transition-transform hover:-translate-y-1 shadow-md whitespace-nowrap text-lg h-full">
             Subscribe
           </button>
