@@ -6,8 +6,8 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#7B539B",
-  "theme_color": "#FFB703",
+  "background_color": "#2a1738",
+  "theme_color": "#2a1738",
   "icons": [
     {
       "src": "/assets/images/bb-icon-512.png",

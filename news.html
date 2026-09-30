@@ -124,24 +124,31 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
       <div class="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         {% for article in collections.news | reverse %}
-        <!-- Premium Frosted Glass Card Styling -->
-        <div class="bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-sm hover:bg-white/95 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col border border-white/50 border-t-4" style="border-top-color: #FFB703;">
+        <!-- Premium Frosted Glass Card Styling (Upgraded) -->
+        <article class="bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-sm hover:bg-white/95 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col border border-white/50 border-t-4" style="border-top-color: #FFB703;">
+          
           {% if article.data.thumbnail %}
           <!-- Perfect-Cut Image Locking (16:9 Ratio) -->
           <div class="w-full aspect-video overflow-hidden bg-black/5 border-b border-black/10 shrink-0">
             <img src="{{ article.data.thumbnail }}" alt="{{ article.data.title }}" class="w-full h-full object-cover" loading="lazy" />
           </div>
           {% endif %}
+          
           <div class="p-8 md:p-10 flex flex-col grow">
-            <h3 class="text-2xl font-serif font-bold text-black mb-4 leading-tight">{{ article.data.title }}</h3>
+            <h3 class="text-2xl font-serif font-bold text-black mb-2 leading-tight">{{ article.data.title }}</h3>
+            
+            <!-- Modern Subtitle (replaces the yellow pipe) -->
             {% if article.data.summary %}
-            <p class="text-black font-medium mb-6 italic border-l-4 pl-4" style="border-color: #FFB703;">{{ article.data.summary }}</p>
+            <p class="text-amber-600 font-bold text-xs tracking-widest uppercase mb-6">
+              {{ article.data.summary }}
+            </p>
             {% endif %}
-            <div class="mt-auto cms-content text-black font-medium border-t border-black/10 pt-6">
+            
+            <div class="mt-auto cms-content text-black/90 font-medium leading-relaxed border-t border-black/10 pt-6">
               {{ article.templateContent }}
             </div>
           </div>
-        </div>
+        </article>
         
         {% else %}
         <!-- Perfectly Centered Fallback -->

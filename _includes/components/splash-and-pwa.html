@@ -3,22 +3,25 @@
 <!-- ULTRA-PREMIUM WEB SPLASH SCREEN           -->
 <!-- ========================================= -->
 <style>
-  @keyframes premium-reveal {
-    0% { transform: scale(0.9) translateY(20px); opacity: 0; filter: blur(12px); }
-    100% { transform: scale(1) translateY(0); opacity: 1; filter: blur(0); }
+  /* Subtle breathing animation to replace the initial reveal, ensuring a seamless handoff from the OS splash screen */
+  @keyframes pulseLogo {
+    0% { transform: scale(0.97); filter: drop-shadow(0 0 10px rgba(255, 183, 3, 0.2)); }
+    100% { transform: scale(1.03); filter: drop-shadow(0 0 30px rgba(255, 183, 3, 0.5)); }
   }
-  .animate-premium-reveal { animation: premium-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+  .splash-logo { animation: pulseLogo 2.5s infinite alternate ease-in-out; }
+
   #splash-screen { transition: opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1), transform 0.8s cubic-bezier(0.65, 0, 0.35, 1); }
   .splash-exit { opacity: 0 !important; transform: scale(1.15) !important; pointer-events: none; }
 </style>
 
-<div id="splash-screen" class="fixed inset-0 z-9999 flex flex-col items-center justify-center overflow-hidden bg-[#2a1738]/40 backdrop-blur-3xl transition-all duration-800">
+<!-- Background uses exact HEX from manifest.json to prevent flashing, plus the cinematic radial gradient -->
+<div id="splash-screen" class="fixed inset-0 z-9999 flex flex-col items-center justify-center overflow-hidden transition-all duration-800" style="background-color: #2a1738; background-image: radial-gradient(circle at center, rgba(255, 183, 3, 0.15) 0%, #2a1738 65%);">
   
   <!-- Subtle glowing pulse behind the logo -->
   <div class="absolute w-[80vw] h-[80vw] md:w-[40vw] md:h-[40vw] rounded-full blur-[100px] animate-pulse" style="background-color: rgba(255, 183, 3, 0.4); animation-duration: 4s;"></div>
   
-  <!-- The Logo Reveal -->
-  <img src="/assets/images/bb-icon-512.png" alt="Beloved Berachah Icon" class="relative z-10 w-1/2 max-w-50 object-contain animate-premium-reveal drop-shadow-[0_10px_30px_rgba(255,183,3,0.5)]">
+  <!-- The Logo (Now with the seamless pulse) -->
+  <img src="/assets/images/bb-icon-512.png" alt="Beloved Berachah Icon" class="relative z-10 w-1/2 max-w-50 object-contain splash-logo">
 
 </div>
 {% endif %}
