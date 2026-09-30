@@ -28,6 +28,7 @@
           <span class="font-serif italic text-4xl md:text-5xl lg:text-6xl bg-linear-to-br from-[#FFE58F] via-brand-amber to-[#A36A00] bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(255,183,3,0.4)] leading-none pr-2">
             Berachah
           </span>
+
         </div>
         
       </a>
@@ -39,10 +40,10 @@
     <!-- BOTTOM ROW: Centered Navigation Links (Desktop) -->
     <div class="hidden md:flex flex-wrap justify-center items-center gap-8 lg:gap-12">
 
-      <a href="/index/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/about' in page.url %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
+      <a href="/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if page.url == '/' or page.url == '/index/' %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
         Home
         <!-- The Glowing Amber Dot -->
-        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if '/about' in page.url %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
+        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if page.url == '/' or page.url == '/index/' %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
       </a>
       
       <a href="/about/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/about' in page.url %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
@@ -96,7 +97,7 @@
   <!-- Mobile Dropdown Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-[#2a1738]/95 backdrop-blur-2xl border-t border-b border-white/10 shadow-2xl">
     <div class="flex flex-col items-center py-8 space-y-8">
-      <a href="/" class="text-sm font-bold tracking-widest uppercase {% if page.url == '/' %}text-brand-amber{% else %}text-slate-200{% endif %}">Home</a>
+      <a href="/" class="text-sm font-bold tracking-widest uppercase {% if page.url == '/' or page.url == '/index/' %}text-brand-amber{% else %}text-slate-200{% endif %}">Home</a>
       <a href="/about/" class="text-sm font-bold tracking-widest uppercase {% if '/about' in page.url %}text-brand-amber{% else %}text-slate-200{% endif %}">About</a>
       <a href="/services/" class="text-sm font-bold tracking-widest uppercase {% if '/services' in page.url %}text-brand-amber{% else %}text-slate-200{% endif %}">Services</a>
       <a href="/events/" class="text-sm font-bold tracking-widest uppercase {% if '/events' in page.url %}text-brand-amber{% else %}text-slate-200{% endif %}">Events</a>
