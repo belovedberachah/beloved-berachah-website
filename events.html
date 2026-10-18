@@ -120,7 +120,7 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
         <!-- CMS Events Grid -->
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           
-          {% for event in collections.events | reverse %}
+          {% for event in collections.upcomingEvents %}
           <div class="bg-white/80 backdrop-blur-md text-black rounded-3xl p-8 md:p-10 border border-white/50 flex flex-col h-full shadow-sm hover:shadow-lg hover:bg-white/95 relative overflow-hidden group hover:-translate-y-1 transition duration-300">
             
             <span class="text-black text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-6 shadow-sm" style="background-color: #FFB703;">

@@ -7,17 +7,17 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
 {% block customHead %}
 <style>
   /* Styling specifically for the content injected by Decap CMS */
-  .cms-content p { 
-    margin-bottom: 1rem; 
+  .cms-content p {
+    margin-bottom: 1rem;
   }
-  .cms-content a { 
-    color: #FFB703; 
-    font-weight: 800; 
-    text-decoration: underline; 
+  .cms-content a {
+    color: #FFB703;
+    font-weight: 800;
+    text-decoration: underline;
     transition: opacity 0.2s;
   }
-  .cms-content a:hover { 
-    opacity: 0.8; 
+  .cms-content a:hover {
+    opacity: 0.8;
   }
 </style>
 {% endblock %}
@@ -26,10 +26,10 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
 <header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#2a1738]">
   <!-- Layer 1: Background Image -->
   <img src="/assets/images/hero.jpg" alt="Beloved Berachah Hero Image" class="absolute inset-0 w-full h-full object-cover" />
-  
+
   <!-- Layer 2: Warm Cinematic Vignette Overlay -->
   <div class="absolute inset-0 mix-blend-multiply" style="background: linear-gradient(to top, #2a1738, rgba(123, 83, 155, 0.5), rgba(120, 53, 15, 0.3));"></div>
-  
+
   <!-- Layer 3: Soft Purple Edge Fade -->
   <div class="absolute bottom-0 inset-x-0 h-32 opacity-90" style="background: linear-gradient(to top, #2a1738, transparent);"></div>
 
@@ -48,17 +48,17 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
 </header>
 
 <div class="py-16 md:py-24 relative z-10">
-  
+
   <!-- ========================================= -->
   <!-- BLOG & NEWS INTRODUCTION SECTION          -->
   <!-- ========================================= -->
   <section class="container mx-auto px-4 max-w-6xl mb-16 md:mb-24">
     <!-- Illuminated Sand Card -->
     <div class="rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
-      
+
       <!-- Inner Tactile Deboss Effect -->
       <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
-      
+
       <div class="relative z-10">
         <!-- Main Header -->
         <div class="text-center mb-16">
@@ -73,7 +73,7 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
 
         <!-- Information Cards -->
         <div class="grid md:grid-cols-2 gap-8 mb-8">
-          
+
           <!-- What You'll Find Here Card (Frosted Glass) -->
           <div class="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white/50 shadow-sm hover:bg-white/95 hover:shadow-md transition duration-300">
             <h3 class="text-2xl font-serif font-bold text-black mb-6 border-l-4 pl-4" style="border-left-color: #FFB703;">What You'll <span style="color: #FFB703;">Find Here</span></h3>
@@ -92,17 +92,11 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
             <p class="text-black mb-8 leading-relaxed font-medium">
               Follow us on social media and subscribe to receive updates about new blog posts, upcoming events, and resources designed to support healing, recovery, and wellbeing. Together, we can help women move from surviving to thriving.
             </p>
-            
+
             <div class="flex flex-col space-y-4 mt-auto">
-               <a href="https://www.instagram.com/beloved_berachah?igsh=dmRzd2ZtOTduemll&utm_source=qr" target="_blank" rel="noopener noreferrer" class="inline-block btn-vivid-amber font-bold py-4 px-6 rounded-xl shadow-md hover:-translate-y-1 transition-all duration-200 text-center text-lg">
-                 Follow on Instagram
-               </a>
-               <a href="#" class="inline-block bg-white/80 backdrop-blur-sm text-black font-bold py-4 px-6 rounded-xl shadow-sm border border-white/50 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-200 text-center">
-                 Follow on Facebook (Coming Soon)
-               </a>
-               <a href="#" class="inline-block bg-white/80 backdrop-blur-sm text-black font-bold py-4 px-6 rounded-xl shadow-sm border border-white/50 hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-200 text-center">
-                 Eventbrite (Coming Soon)
-               </a>
+              <a href="https://www.instagram.com/beloved_berachah?igsh=dmRzd2ZtOTduemll&utm_source=qr" target="_blank" rel="noopener noreferrer" class="inline-block btn-vivid-amber font-bold py-4 px-6 rounded-xl shadow-md hover:-translate-y-1 transition-all duration-200 text-center text-lg">
+                Follow on Instagram
+              </a>
             </div>
           </div>
 
@@ -117,47 +111,47 @@ description: "Welcome to the Beloved Berachah Blog and News Hub. Discover storie
   <main role="main" class="container mx-auto px-4 max-w-6xl mb-16 md:mb-24">
     <!-- Illuminated Sand Card wrapper for the grid -->
     <div class="rounded-3xl p-8 md:p-12 relative overflow-hidden border border-white/30" style="background: linear-gradient(135deg, #C1A882 0%, #A38A62 100%); box-shadow: 0 20px 50px -10px rgba(26,14,35,0.7), 0 0 40px rgba(255,183,3,0.2);">
-      
+
       <!-- Inner Tactile Deboss Effect -->
       <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
-      
+
       <div class="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
+
         {% for article in collections.news | reverse %}
         <!-- Premium Frosted Glass Card Styling (Upgraded) -->
         <article class="bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-sm hover:bg-white/95 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col border border-white/50 border-t-4" style="border-top-color: #FFB703;">
-          
+
           {% if article.data.thumbnail %}
           <!-- Perfect-Cut Image Locking (16:9 Ratio) -->
           <div class="w-full aspect-video overflow-hidden bg-black/5 border-b border-black/10 shrink-0">
-            <img src="{{ article.data.thumbnail }}" alt="{{ article.data.title }}" class="w-full h-full object-cover" loading="lazy" />
+            <img src="{{ article.data.thumbnail }}" alt="{{ article.data.thumbnail_alt | default: article.data.title }}" class="w-full h-full object-cover" loading="lazy" />
           </div>
           {% endif %}
-          
+
           <div class="p-8 md:p-10 flex flex-col grow">
             <h3 class="text-2xl font-serif font-bold text-black mb-2 leading-tight">{{ article.data.title }}</h3>
-            
+
             <!-- Modern Subtitle (replaces the yellow pipe) -->
             {% if article.data.summary %}
             <p class="text-amber-600 font-bold text-xs tracking-widest uppercase mb-6">
               {{ article.data.summary }}
             </p>
             {% endif %}
-            
+
             <div class="mt-auto cms-content text-black/90 font-medium leading-relaxed border-t border-black/10 pt-6">
               {{ article.templateContent }}
             </div>
           </div>
         </article>
-        
+
         {% else %}
         <!-- Perfectly Centered Fallback -->
         <div style="grid-column: 1 / -1;" class="flex flex-col justify-center items-center text-center py-24 px-4 bg-white/50 backdrop-blur-sm rounded-3xl border border-white/50 w-full min-h-75 shadow-inner">
           <h3 class="text-3xl font-serif text-black font-bold mb-4">No News Yet</h3>
-         <p class="text-lg text-black/70 font-medium">Our first posts will appear here soon. In the meantime, <a href="https://www.instagram.com/beloved_berachah" class="underline font-bold">follow us on Instagram</a>.</p> 
+          <p class="text-lg text-black/70 font-medium">Our first posts will appear here soon. In the meantime, <a href="https://www.instagram.com/beloved_berachah" class="underline font-bold">follow us on Instagram</a>.</p>
         </div>
         {% endfor %}
-        
+
       </div>
     </div>
   </main>
