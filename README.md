@@ -44,8 +44,8 @@ The website and Progressive Web App (PWA) for Beloved Berachah CIC, a Community 
 You need Node.js (LTS) and Git.
 
 ```bash
-git clone https://github.com/theprice1/<repo-name>.git   # [confirm repo name]
-cd <repo-name>
+git clone https://github.com/belovedberachah/beloved-berachah-website.git
+cd beloved-berachah-website
 npm install
 npm start
 ```
