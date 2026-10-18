@@ -1,46 +1,185 @@
-# Beloved Berachah CIC
+# Beloved Berachah CIC website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-badge-id/deploy-status)](https://app.netlify.com/sites/belovedberachah/deploys)
-[![11ty](https://img.shields.io/badge/11ty-Static%20Site%20Generator-black)](https://www.11ty.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-Framework-38B2AC)](https://tailwindcss.com/)
-[![PWA](https://img.shields.io/badge/PWA-Ready-5A0FC8)](https://web.dev/progressive-web-apps/)
+The website and Progressive Web App (PWA) for Beloved Berachah CIC, a Community Interest Company supporting women affected by trauma, addiction, domestic abuse and mental health challenges.
 
-The official web platform and Progressive Web App (PWA) for **Beloved Berachah CIC**, a Community Interest Company dedicated to supporting women affected by trauma, addiction, domestic abuse, and mental health challenges.
+> **Internal documentation.** This file is for the people who maintain the site. It is excluded from the published site by `.eleventyignore`. Never put passwords, keys or personal data in this file or anywhere in the repository.
 
-This project is engineered for speed, accessibility, and offline resilience, ensuring that vital resources and emergency contacts are available to vulnerable users even without an internet connection.
+## Contents
 
----
+- [What the site includes](#what-the-site-includes)
+- [Tech stack](#tech-stack)
+- [Getting started](#getting-started)
+- [Project structure](#project-structure)
+- [Editing content](#editing-content)
+- [Content rules](#content-rules)
+- [Crisis information](#crisis-information)
+- [Deployment](#deployment)
+- [Admin dashboard](#admin-dashboard)
+- [Third-party services](#third-party-services)
+- [Troubleshooting](#troubleshooting)
+- [Maintainers](#maintainers)
 
-## ✨ Key Features
+## What the site includes
 
-* **Progressive Web App (PWA):** Fully installable on iOS and Android devices directly from the browser. Features a seamless native-style launch with a custom splash screen and `sessionStorage` logic to prevent animation looping.
-* **Offline Emergency Mode:** A custom Service Worker (`sw.js`) intercepts network failures to serve a hardcoded, highly-styled offline page providing 24/7 UK crisis helpline numbers if a user loses connection.
-* **Static Site Generation:** Built with Eleventy (11ty) for lightning-fast page loads, strict SEO compliance, and excellent Lighthouse scores.
-* **Modern Styling:** UI designed using Tailwind CSS with a custom color palette (Slate and Amber) and premium typography (Playfair Display and Inter).
-* **Serverless Bookings & Contact:** Integrated with Web3Forms to handle event booking and general enquiries securely without requiring a backend database. Forms include strict legal acknowledgment checkboxes.
-* **Content Management (CMS):** Configured for Decap CMS, allowing organization leaders to publish news, blog posts, and events dynamically via a user-friendly dashboard.
-* **Compliance & Legal:** Includes comprehensive, dynamically linked policies (Terms, Privacy, Cookies, Safeguarding) and a custom Javascript Cookie Consent manager.
+- **Public pages:** Home, About, Services, Events, News, Resources, Contact, Donate, Safeguarding, Privacy, Cookies and Terms.
+- **Crisis help:** a help block on the homepage, in the footer of every page, and on `/help/`. Every number comes from one file (see [Crisis information](#crisis-information)).
+- **Offline page:** if a visitor loses their connection, the service worker shows `offline.html`, which includes the same helpline numbers.
+- **Installable app:** visitors can add the site to their home screen using `manifest.json`.
+- **Enquiries and bookings:** the contact and booking forms are handled by Web3Forms.
+- **Donations:** Stripe, PayPal and Ko-fi. Not yet live. Don't publish donation details until they've been checked.
+- **Cookie consent:** a custom banner with essential, analytics and marketing categories.
+- **News and events:** managed through the admin dashboard at `/admin/`.
 
----
+## Tech stack
 
-## 🏗️ Tech Stack
+- Eleventy (11ty) 3.1.6, a static site generator
+- Tailwind CSS 4, built from `src/input.css`
+- Decap CMS, for news and events
+- Netlify, for hosting and deployment
+- Web3Forms, for forms
+- Service worker and web app manifest, for offline and install support
 
-* **Core:** HTML5, Vanilla JavaScript
-* **CSS Framework:** Tailwind CSS
-* **Static Site Generator:** Eleventy (11ty)
-* **Hosting & CI/CD:** Netlify
-* **Form Handling:** Web3Forms
-* **Content Management:** Decap CMS
+## Getting started
 
----
+You need Node.js (LTS) and Git.
 
-## 🚀 Local Development Setup
-
-To run this project locally, ensure you have **Node.js** and **Git** installed on your machine.
-
-### 1. Clone the repository
-
-<!-- markdownlint-disable MD034 -->
 ```bash
-git clone [https://github.com/your-username/beloved-berachah.git](https://github.com/your-username/beloved-berachah.git)
-cd beloved-berachah
+git clone https://github.com/theprice1/<repo-name>.git   # [confirm repo name]
+cd <repo-name>
+npm install
+npm start
+```
+
+Then open <http://localhost:8080>. Stop the server with Ctrl+C.
+
+### Commands
+
+| Command | What it does |
+| --- | --- |
+| `npm start` | Watches the CSS and page files, and serves the site at <http://localhost:8080> |
+| `npm run build` | Builds the CSS, then the full site into `_site/` |
+| `npm run build:css` | Builds the CSS only |
+
+Don't commit `node_modules/` or `_site/`. Both are listed in `.gitignore`. [confirm]
+
+## Project structure
+
+```text
+_includes/
+  layouts/base.njk            Shared page layout and <head> (meta tags, scripts)
+  components/footer.html      Site footer
+  components/help-block.html  Crisis helplines (the only place these numbers are edited)
+admin/                        Decap CMS dashboard (index.html, config.yml)
+assets/                       Images, videos, PDFs and downloadable resources
+css/style.css                 Generated by Tailwind. Don't edit by hand.
+src/input.css                 Tailwind source file
+sw.js                         Service worker (offline support) [confirm path]
+manifest.json                 Web app manifest
+offline.html                  Offline page
+*.html                        Page source files (home, about, services, events, news, ...)
+.eleventyignore               Files that must not appear on the published site
+_site/                        Built site (generated, not committed)
+```
+
+## Editing content
+
+### Pages
+
+Edit the page's `.html` file in the project root. Each page starts with front matter, the block between `---` lines, which sets its title and address. Keep it when you edit the page.
+
+### News and events
+
+Use the admin dashboard. See [Admin dashboard](#admin-dashboard).
+
+### Images
+
+Put images in `assets/images/` or `assets/images/uploads/`. Use WebP or AVIF where you can, and give every image descriptive alt text. Decorative images use `alt=""`.
+
+## Content rules
+
+Read these before publishing anything.
+
+- **Nothing private goes in the repository or the dashboard.** Git keeps its history permanently, so deleting a file doesn't remove it from the history. Never commit passwords, API keys, tokens, personal details, or participants' names and stories.
+- **Get written consent.** Before publishing a testimonial, photo or story, get written consent and keep a record of it.
+- **Protect attendees.** For women's groups and drop-ins, publish the area and time rather than the exact venue, unless the trustees agree otherwise.
+- **No advice.** Don't give medical, legal or financial advice on the site. Point visitors to the services in the help block and on the Resources page.
+- **Stay accurate.** Check dates, times and links on the day you publish. Remove events once they have passed.
+
+## Crisis information
+
+Helpline numbers appear in three places: the help block (`_includes/components/help-block.html`), the help page, and the offline page (`offline.html`). When you change a number, change it in the help block and make `offline.html` match. Where possible, include the same file in both places so there is only one source.
+
+- The site is not a crisis service. Keep that statement on the site, and keep the help block on every page.
+- Check each number on the provider's own website before publishing. Don't rely on memory or old copies.
+- **Last checked:** [date], by [name]. Recheck every six months.
+
+## Deployment
+
+- **Host:** Netlify. Changes pushed to `main` are deployed to the live site.
+- **Build command:** `npm run build` [confirm in Netlify]
+- **Publish directory:** `_site` [confirm in Netlify]
+- Test locally with `npm start` before you push.
+- **Service worker:** when you change pages, bump the cache version in `sw.js`. Otherwise returning visitors may keep seeing old content, including old offline text.
+
+After each deploy, check:
+
+1. The homepage loads and the help block is visible.
+2. `/help/` loads.
+3. The events and news pages show the right content.
+4. The offline page works with the network switched off.
+5. `/admin/` still asks for a login.
+
+## Admin dashboard
+
+The dashboard at `/admin/` publishes **news and events only**. The site administrator is the only person with access.
+
+- **Login:** [confirm from `admin/config.yml`: Netlify Identity or GitHub]
+- **Registration:** invite only. Nobody can create their own account.
+- **Two-factor authentication:** required on the GitHub and Netlify accounts.
+- **Credentials:** kept in a password manager, never in this file or the repository.
+- **Changing administrator:** remove the outgoing person's access first, add the new person, then tell the trustees.
+
+### Publishing an event
+
+1. Log in at `/admin/` and choose Events.
+2. Fill in the title, date, time, location (or "Online") and description. Add a booking link if there is one.
+3. Preview, then publish. The change goes live once the Netlify deploy finishes, usually within a few minutes.
+4. Check the event on a phone.
+
+### Publishing news
+
+1. Log in and choose News.
+2. Add a title, date, summary and body. Add an image only if you have permission to use it, and give it alt text.
+3. Preview, publish, and check the post on a phone.
+
+Each publish creates a commit in the repository. This is expected, and it's how the site's history is kept.
+
+## Third-party services
+
+| Service | Used for | Where it's set up |
+| --- | --- | --- |
+| Netlify | Hosting, deploys and Identity login | Netlify dashboard |
+| GitHub | Source code, and dashboard login if using the GitHub backend | Repository settings |
+| Web3Forms | Booking and enquiry forms | Access key in the form markup. Inbox set in the Web3Forms dashboard |
+| Newsletter provider | Newsletter sign-up | [confirm and add] |
+| Stripe, PayPal, Ko-fi | Donations (not yet live) | `donate.html` |
+| Instagram | Social link | Footer, Contact and News pages |
+
+Every third-party service must be named in the privacy policy. Check that the Web3Forms inbox is monitored.
+
+## Troubleshooting
+
+- **"Output conflict" or "DuplicatePermalinkOutputError" during the build:** a second copy of the site is inside the project folder. Keep backups outside it.
+- **Changes don't appear on the live site:** check the Netlify deploy has finished. Then bump the service worker cache version and hard-refresh the page (Ctrl+F5).
+- **Styles look wrong:** run `npm run build:css`. Don't edit `css/style.css` by hand.
+- **Old content still shows for returning visitors:** bump the service worker cache version.
+
+## Maintainers
+
+- **Technical administrator:** Anthony Price (volunteer)
+- **Safeguarding lead:** [name, once confirmed]
+- **Organisation contact:** [beloved@berachah.org.uk](mailto:beloved@berachah.org.uk)
+
+## Licence
+
+All rights reserved. Content © Beloved Berachah CIC.
