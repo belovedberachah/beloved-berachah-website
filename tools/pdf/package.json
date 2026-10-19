@@ -1,0 +1,12 @@
+{
+  "name": "bb-pdf-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local tool to generate PDFs from the resource pages. Not part of the website build.",
+  "scripts": {
+    "generate": "node generate-pdfs.js"
+  },
+  "dependencies": {
+    "puppeteer": "^25.10.0"
+  }
+}

@@ -5,3 +5,4 @@
 # Build output and dependencies
 _site/
 node_modules/
+tools/pdf/out/
