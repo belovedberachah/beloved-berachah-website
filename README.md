@@ -11,6 +11,7 @@ The website and Progressive Web App (PWA) for Beloved Berachah CIC, a Community 
 - [Getting started](#getting-started)
 - [Project structure](#project-structure)
 - [Editing content](#editing-content)
+- [Resource PDFs](#resource-pdfs)
 - [Content rules](#content-rules)
 - [Crisis information](#crisis-information)
 - [Deployment](#deployment)
@@ -76,6 +77,7 @@ src/input.css                 Tailwind source file
 sw.js                         Service worker (offline support) [confirm path]
 manifest.json                 Web app manifest
 offline.html                  Offline page
+tools/pdf/                    PDF generator, run locally only (not part of the build)
 *.html                        Page source files (home, about, services, events, news, ...)
 .eleventyignore               Files that must not appear on the published site
 _site/                        Built site (generated, not committed)
@@ -94,6 +96,27 @@ Use the admin dashboard. See [Admin dashboard](#admin-dashboard).
 ### Images
 
 Put images in `assets/images/` or `assets/images/uploads/`. Use WebP or AVIF where you can, and give every image descriptive alt text. Decorative images use `alt=""`.
+
+## Resource PDFs
+
+The four downloadable PDFs in `assets/resources/` are generated from the HTML pages in the same folder.
+
+1. Edit the HTML page and check it on the local site (`npm start`).
+2. Generate the PDFs:
+
+```bash
+   cd tools/pdf
+   npm run generate
+   cd ../..
+```
+
+3. Open each PDF in `tools/pdf/out/` and check the layout, images, text and page breaks.
+4. Check the PDF properties (title, author) contain nothing private.
+5. Copy the checked PDFs into `assets/resources/`, overwriting the old ones, and commit them.
+
+Puppeteer is only used by the PDF tool in `tools/pdf/`. The Netlify build never runs it.
+
+`mentoring-framework.pdf` is already public. Don't replace it until the trustees have approved the content.
 
 ## Content rules
 
@@ -161,7 +184,7 @@ Each publish creates a commit in the repository. This is expected, and it's how 
 | Netlify | Hosting, deploys and Identity login | Netlify dashboard |
 | GitHub | Source code, and dashboard login if using the GitHub backend | Repository settings |
 | Web3Forms | Booking and enquiry forms | Access key in the form markup. Inbox set in the Web3Forms dashboard |
-| Newsletter provider | Newsletter sign-up | [confirm and add] |
+| Mailchimp | Newsletter sign-up | Form action in `_includes/components/newsletter.html` |
 | Stripe, PayPal, Ko-fi | Donations (not yet live) | `donate.html` |
 | Instagram | Social link | Footer, Contact and News pages |
 
