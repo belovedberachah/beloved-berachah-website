@@ -29,6 +29,36 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
   input[type="number"] {
     -moz-appearance: textfield;
   }
+
+  /* Trauma-Informed Typography & Surface Upgrades */
+  .text-ink-warm {
+    color: #1E1424 !important;
+    font-weight: 400 !important;
+    line-height: 1.75 !important;
+  }
+  .heading-editorial {
+    color: #1E1424 !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em;
+  }
+  .heading-accent {
+    color: #8A5600 !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+  }
+  .text-gold-deep {
+    color: #8A5600 !important;
+  }
+  .surface-ivory {
+    background-color: rgba(250, 247, 242, 0.92) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.65) !important;
+    box-shadow: 0 10px 25px -5px rgba(26, 14, 35, 0.08) !important;
+  }
+  .frame-royal {
+    border-color: #4A2B5F !important;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.35), 0 20px 25px -5px rgba(0, 0, 0, 0.35) !important;
+  }
 </style>
 {% endblock %}
 
@@ -51,7 +81,7 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
     <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
       Empower a Woman's <span class="font-medium italic" style="color: #FFB703;">Journey</span>
     </h1>
-    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-normal max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
       Your generosity provides safe spaces, trauma-informed training, and vital community support for women rebuilding their lives.
     </p>
   </div>
@@ -71,64 +101,64 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
         
         <!-- TOP LEFT: The Impact Script -->
         <div class="flex flex-col justify-center lg:pr-8 w-full">
-          <h2 class="text-3xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">Make a Lasting <span style="color: #FFB703;">Impact</span></h2>
+          <h2 class="text-3xl md:text-5xl font-serif heading-editorial mb-6">Make a Lasting <span class="heading-accent">Impact</span></h2>
           <div class="w-12 h-1 mb-8 rounded-full" style="background-color: #FFB703;"></div>
-          <p class="text-black text-base md:text-xl leading-relaxed font-medium mb-6">
+          <p class="text-ink-warm text-base md:text-xl mb-6">
             Beloved Berachah CIC relies on the kindness and financial partnership of people like you to continue our mission. Every contribution, no matter the size, is an investment in a woman's future. 
           </p>
-          <p class="text-black text-base md:text-xl leading-relaxed font-medium">
+          <p class="text-ink-warm text-base md:text-xl">
             When you choose to support us, you are directly funding educational talks, mentoring programmes, and community events that break the chains of isolation, shame, and trauma.
           </p>
         </div>
 
-       <!-- TOP RIGHT: Visual Break (Image) -->
-        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 relative group w-full h-fit flex" style="border-color: #7B539B;">
+        <!-- TOP RIGHT: Visual Break (Image) -->
+        <div class="rounded-3xl overflow-hidden border-4 relative group w-full h-fit flex frame-royal">
           <img src="/assets/images/kinsugi-heart.avif" alt="A broken heart mended with gold" class="w-full h-auto block transform transition duration-700 group-hover:scale-[1.02]" />
         </div>
 
         <!-- BOTTOM LEFT: How Your Gift Helps -->
-        <div class="bg-white/80 backdrop-blur-md p-6 md:p-10 rounded-3xl shadow-sm border border-white/50 h-full flex flex-col w-full">
-          <h3 class="text-2xl md:text-3xl font-serif font-bold mb-6 md:mb-8 text-black shrink-0">How Your Gift <span style="color: #FFB703;">Helps</span></h3>
+        <div class="surface-ivory p-6 md:p-10 rounded-3xl h-full flex flex-col w-full">
+          <h3 class="text-2xl md:text-3xl font-serif heading-editorial mb-6 md:mb-8 shrink-0">How Your Gift <span class="heading-accent">Helps</span></h3>
           
           <ul class="flex flex-col justify-between grow space-y-6 md:space-y-0 pb-1">
             
             <li class="flex items-start gap-4 md:gap-5">
-              <div class="border text-black p-3 md:p-4 rounded-2xl shrink-0 mt-1 shadow-sm" style="background-color: rgba(255, 183, 3, 0.2); border-color: #FFB703;">
+              <div class="border text-gold-deep p-3 md:p-4 rounded-2xl shrink-0 mt-1 shadow-sm" style="background-color: rgba(255, 183, 3, 0.2); border-color: #FFB703;">
                 <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
               </div>
               <div>
-                <strong class="block text-black text-lg md:text-xl font-serif mb-1 md:mb-2 font-bold">Education & Awareness</strong>
-                <span class="text-black font-medium text-sm md:text-base leading-relaxed">Funding vital training resources and workshops for community groups and organisations.</span>
+                <strong class="block text-lg md:text-xl font-serif heading-editorial mb-1 md:mb-2">Education & Awareness</strong>
+                <span class="text-ink-warm text-sm md:text-base block">Funding vital training resources and workshops for community groups and organisations.</span>
               </div>
             </li>
             
             <li class="flex items-start gap-4 md:gap-5">
-              <div class="border text-black p-3 md:p-4 rounded-2xl shrink-0 mt-1 shadow-sm" style="background-color: rgba(255, 183, 3, 0.2); border-color: #FFB703;">
+              <div class="border text-gold-deep p-3 md:p-4 rounded-2xl shrink-0 mt-1 shadow-sm" style="background-color: rgba(255, 183, 3, 0.2); border-color: #FFB703;">
                 <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
               </div>
               <div>
-                <strong class="block text-black text-lg md:text-xl font-serif mb-1 md:mb-2 font-bold">Community Support Events</strong>
-                <span class="text-black font-medium text-sm md:text-base leading-relaxed">Providing safe venues, refreshments, and materials for our awareness and recovery events.</span>
+                <strong class="block text-lg md:text-xl font-serif heading-editorial mb-1 md:mb-2">Community Support Events</strong>
+                <span class="text-ink-warm text-sm md:text-base block">Providing safe venues, refreshments, and materials for our awareness and recovery events.</span>
               </div>
             </li>
             
             <li class="flex items-start gap-4 md:gap-5">
-              <div class="border text-black p-3 md:p-4 rounded-2xl shrink-0 mt-1 shadow-sm" style="background-color: rgba(255, 183, 3, 0.2); border-color: #FFB703;">
+              <div class="border text-gold-deep p-3 md:p-4 rounded-2xl shrink-0 mt-1 shadow-sm" style="background-color: rgba(255, 183, 3, 0.2); border-color: #FFB703;">
                 <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
               </div>
               <div>
-                <strong class="block text-black text-lg md:text-xl font-serif mb-1 md:mb-2 font-bold">Mentoring & Empowerment</strong>
-                <span class="text-black font-medium text-sm md:text-base leading-relaxed">Allowing us to expand our capacity to encourage and mentor women stepping into their new beginnings.</span>
+                <strong class="block text-lg md:text-xl font-serif heading-editorial mb-1 md:mb-2">Mentoring & Empowerment</strong>
+                <span class="text-ink-warm text-sm md:text-base block">Allowing us to expand our capacity to encourage and mentor women stepping into their new beginnings.</span>
               </div>
             </li>
 
             <li class="flex items-start gap-4 md:gap-5">
-              <div class="border text-black p-3 md:p-4 rounded-2xl shrink-0 mt-1 shadow-sm" style="background-color: rgba(255, 183, 3, 0.2); border-color: #FFB703;">
+              <div class="border text-gold-deep p-3 md:p-4 rounded-2xl shrink-0 mt-1 shadow-sm" style="background-color: rgba(255, 183, 3, 0.2); border-color: #FFB703;">
                 <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
               </div>
               <div>
-                <strong class="block text-black text-lg md:text-xl font-serif mb-1 md:mb-2 font-bold">Safe Spaces & Crisis Care</strong>
-                <span class="text-black font-medium text-sm md:text-base leading-relaxed">Supplying essential therapeutic literature and maintaining safe, welcoming environments for vulnerable women.</span>
+                <strong class="block text-lg md:text-xl font-serif heading-editorial mb-1 md:mb-2">Safe Spaces & Crisis Care</strong>
+                <span class="text-ink-warm text-sm md:text-base block">Supplying essential therapeutic literature and maintaining safe, welcoming environments for vulnerable women.</span>
               </div>
             </li>
 
@@ -137,9 +167,9 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
 
         <!-- BOTTOM RIGHT: The Donation Interface -->
         <div class="relative h-full w-full">
-          <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-sm border border-white/50 p-6 md:p-10 relative z-10 h-full flex flex-col justify-center w-full">
-            <h3 class="text-2xl md:text-3xl font-serif text-black mb-2 text-center font-bold">Choose Your <span style="color: #FFB703;">Gift</span></h3>
-            <p class="text-black/60 text-xs md:text-sm text-center mb-6 md:mb-8 font-bold">Secure processing via Stripe, PayPal, or Ko-fi</p>
+          <div class="surface-ivory rounded-3xl p-6 md:p-10 relative z-10 h-full flex flex-col justify-center w-full">
+            <h3 class="text-2xl md:text-3xl font-serif heading-editorial mb-2 text-center">Choose Your <span class="heading-accent">Gift</span></h3>
+            <p class="text-black/60 text-xs md:text-sm text-center mb-6 md:mb-8 font-semibold">Secure processing via Stripe, PayPal, or Ko-fi</p>
             
             <!-- Frequency Toggle -->
             <div class="flex w-full bg-white/50 border border-white/30 backdrop-blur-sm p-1.5 rounded-2xl mb-6 md:mb-8 shadow-inner">
@@ -219,19 +249,19 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
       <div class="absolute inset-0 shadow-[inset_0_4px_20px_rgba(0,0,0,0.15)] pointer-events-none rounded-3xl"></div>
       
       <div class="text-center relative z-10 w-full">
-        <h2 class="text-3xl md:text-5xl font-serif text-black mb-6 tracking-tight font-bold">Other Ways to <span style="color: #FFB703;">Give</span></h2>
+        <h2 class="text-3xl md:text-5xl font-serif heading-editorial mb-6">Other Ways to <span class="heading-accent">Give</span></h2>
         <div class="w-12 h-1 mx-auto mb-10 md:mb-12 rounded-full" style="background-color: #FFB703;"></div>
         
         <div class="grid md:grid-cols-2 gap-6 md:gap-8 text-left w-full">
           
           <!-- Bank Transfer -->
-          <div class="bg-white/80 backdrop-blur-md p-6 md:p-10 rounded-3xl shadow-sm border border-white/50 flex flex-col group hover:-translate-y-1 hover:bg-white/95 hover:shadow-md transition duration-300 w-full">
-            <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-5 md:mb-6 shadow-sm border border-white/50 group-hover:scale-110 transition-transform duration-300" style="background-color: rgba(255, 183, 3, 0.2); color: #FFB703;">
+          <div class="surface-ivory p-6 md:p-10 rounded-3xl flex flex-col group hover:-translate-y-1 transition duration-300 w-full">
+            <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-5 md:mb-6 shadow-sm border group-hover:scale-110 transition-transform duration-300 text-gold-deep" style="background-color: rgba(255, 183, 3, 0.2); border-color: #FFB703;">
               <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
             </div>
-            <h3 class="text-xl md:text-2xl font-serif text-black font-bold mb-3 md:mb-4">Direct Bank Transfer</h3>
-            <p class="text-black font-medium text-sm md:text-base mb-6 md:mb-8">Set up a standing order or make a one-off transfer directly from your bank account to ours.</p>
-            <div class="bg-white/50 backdrop-blur-sm p-4 md:p-5 rounded-2xl border border-white/30 text-xs md:text-sm font-medium text-black mt-auto shadow-inner w-full">
+            <h3 class="text-xl md:text-2xl font-serif heading-editorial mb-3 md:mb-4">Direct Bank Transfer</h3>
+            <p class="text-ink-warm text-sm md:text-base mb-6 md:mb-8">Set up a standing order or make a one-off transfer directly from your bank account to ours.</p>
+            <div class="bg-white/60 backdrop-blur-sm p-4 md:p-5 rounded-2xl border border-white/50 text-xs md:text-sm font-medium text-ink-warm mt-auto shadow-inner w-full">
               <p class="mb-2 flex justify-between"><span>Name:</span> <span class="font-bold">Beloved Berachah CIC</span></p>
               <p class="mb-2 flex justify-between"><span>Sort Code:</span> <span class="font-bold">XX-XX-XX</span></p>
               <p class="flex justify-between"><span>Account No:</span> <span class="font-bold">XXXXXXXX</span></p>
@@ -239,12 +269,12 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
           </div>
 
           <!-- Corporate / Cheque -->
-          <div class="bg-white/80 backdrop-blur-md p-6 md:p-10 rounded-3xl shadow-sm border border-white/50 flex flex-col group hover:-translate-y-1 hover:bg-white/95 hover:shadow-md transition duration-300 w-full">
-            <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-5 md:mb-6 shadow-sm border border-white/50 group-hover:scale-110 transition-transform duration-300" style="background-color: rgba(255, 183, 3, 0.2); color: #FFB703;">
+          <div class="surface-ivory p-6 md:p-10 rounded-3xl flex flex-col group hover:-translate-y-1 transition duration-300 w-full">
+            <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-5 md:mb-6 shadow-sm border group-hover:scale-110 transition-transform duration-300 text-gold-deep" style="background-color: rgba(255, 183, 3, 0.2); border-color: #FFB703;">
               <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
             </div>
-            <h3 class="text-xl md:text-2xl font-serif text-black font-bold mb-3 md:mb-4">Corporate Sponsorships</h3>
-            <p class="text-black font-medium text-sm md:text-base mb-6 md:mb-8 grow">If your business would like to partner with us, sponsor an event, or arrange a corporate donation, we would love to hear from you.</p>
+            <h3 class="text-xl md:text-2xl font-serif heading-editorial mb-3 md:mb-4">Corporate Sponsorships</h3>
+            <p class="text-ink-warm text-sm md:text-base mb-6 md:mb-8 grow">If your business would like to partner with us, sponsor an event, or arrange a corporate donation, we would love to hear from you.</p>
             <a href="/contact/" class="block w-full text-center btn-vivid-amber font-bold py-3 md:py-4 px-4 md:px-6 rounded-2xl shadow-md hover:-translate-y-1 transition-transform duration-300 text-sm md:text-lg">Get in Touch</a>
           </div>
         </div>

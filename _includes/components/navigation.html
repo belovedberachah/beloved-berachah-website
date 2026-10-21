@@ -42,44 +42,43 @@
 
       <a href="/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if page.url == '/' or page.url == '/index/' %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
         Home
-        <!-- The Glowing Amber Dot -->
-        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if page.url == '/' or page.url == '/index/' %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
+        <span aria-hidden="true" class="nav-dot absolute -bottom-3.5 left-1/2 -translate-x-1/2 transition-all duration-300 {% if page.url == '/' or page.url == '/index/' %}opacity-100 scale-100{% else %}opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}"></span>
       </a>
       
       <a href="/about/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/about' in page.url %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
         About
-        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if '/about' in page.url %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
+        <span aria-hidden="true" class="nav-dot absolute -bottom-3.5 left-1/2 -translate-x-1/2 transition-all duration-300 {% if '/about' in page.url %}opacity-100 scale-100{% else %}opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}"></span>
       </a>
 
       <a href="/services/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/services' in page.url %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
         Services
-        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if '/services' in page.url %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
+        <span aria-hidden="true" class="nav-dot absolute -bottom-3.5 left-1/2 -translate-x-1/2 transition-all duration-300 {% if '/services' in page.url %}opacity-100 scale-100{% else %}opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}"></span>
       </a>
 
       <a href="/events/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/events' in page.url %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
         Events
-        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if '/events' in page.url %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
+        <span aria-hidden="true" class="nav-dot absolute -bottom-3.5 left-1/2 -translate-x-1/2 transition-all duration-300 {% if '/events' in page.url %}opacity-100 scale-100{% else %}opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}"></span>
       </a>
 
       <a href="/news/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/news' in page.url %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
         News
-        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if '/news' in page.url %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
+        <span aria-hidden="true" class="nav-dot absolute -bottom-3.5 left-1/2 -translate-x-1/2 transition-all duration-300 {% if '/news' in page.url %}opacity-100 scale-100{% else %}opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}"></span>
       </a>
 
       <a href="/resources/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/resources' in page.url %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
         Resources
-        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if '/resources' in page.url %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
+        <span aria-hidden="true" class="nav-dot absolute -bottom-3.5 left-1/2 -translate-x-1/2 transition-all duration-300 {% if '/resources' in page.url %}opacity-100 scale-100{% else %}opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}"></span>
       </a>
 
       <a href="/contact/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/contact' in page.url %}text-brand-amber{% else %}text-slate-200 hover:text-brand-amber{% endif %}">
         Contact
-        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if '/contact' in page.url %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
+        <span aria-hidden="true" class="nav-dot absolute -bottom-3.5 left-1/2 -translate-x-1/2 transition-all duration-300 {% if '/contact' in page.url %}opacity-100 scale-100{% else %}opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}"></span>
       </a>
 
       <!-- Donate is slightly highlighted to draw the eye, but retains editorial elegance -->
       <a href="/donate/" class="relative group text-xs lg:text-sm font-bold tracking-widest uppercase transition-colors duration-300 {% if '/donate' in page.url %}text-white{% else %}text-brand-amber hover:text-white{% endif %}">
         Donate
-        <span class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-brand-amber text-2xl transition-all duration-300 {% if '/donate' in page.url %}opacity-100 transform scale-100{% else %}opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}" style="text-shadow: 0 0 10px rgba(255,183,3,0.8);">&bull;</span>
+        <span aria-hidden="true" class="nav-dot absolute -bottom-3.5 left-1/2 -translate-x-1/2 transition-all duration-300 {% if '/donate' in page.url %}opacity-100 scale-100{% else %}opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100{% endif %}"></span>
       </a>
     </div>
 

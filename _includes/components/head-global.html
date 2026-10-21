@@ -24,6 +24,8 @@
     font-family: "Inter", sans-serif;
     background-color: #4A2B5F !important;
     color: #f1f5f9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   .font-serif {
     font-family: "Playfair Display", serif;
@@ -32,6 +34,65 @@
   /* Global Brand Purple Override */
   .bg-brand-purple {
     background-color: #4A2B5F !important;
+  }
+
+  /* =================================================== */
+  /* TRAUMA-INFORMED TYPOGRAPHY & SURFACE UPGRADES       */
+  /* =================================================== */
+
+  /* 1. Soft Espresso-Plum Body Copy (Replaces harsh pure #000000 black) */
+  .text-ink-warm {
+    color: #1E1424 !important;
+    font-weight: 400 !important;
+    line-height: 1.75 !important;
+  }
+
+  /* 2. Editorial Serif Headings on Light/Sand Cards */
+  .heading-editorial {
+    color: #1E1424 !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em;
+  }
+
+  /* 3. High-Contrast Burnished Gold Accent Words on Light/Sand Cards */
+  .heading-accent {
+    color: #8A5600 !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+  }
+  .text-gold-deep {
+    color: #8A5600 !important;
+  }
+
+  /* 4. Warm Alabaster Ivory Sub-Cards (Replaces chalky bg-white/80) */
+  .surface-ivory {
+    background-color: rgba(250, 247, 242, 0.92) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.65) !important;
+    box-shadow: 0 10px 25px -5px rgba(26, 14, 35, 0.08) !important;
+  }
+
+  /* 5. Comfortable Reading Width (Measure) for Centered Text */
+  .prose-measure {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 6. Layered Royal Amethyst & Glass Frame for Images */
+  .frame-royal {
+    border-color: #4A2B5F !important;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.35), 0 20px 25px -5px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  /* 7. Pure CSS Glowing Navigation Indicator Dot */
+  .nav-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background-color: #FFB703;
+    box-shadow: 0 0 10px rgba(255, 183, 3, 0.9);
+    display: block;
   }
 
   /* Professional Navigation Styling */
