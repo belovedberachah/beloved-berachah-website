@@ -11,8 +11,8 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
     margin-bottom: 1rem; 
   }
   .cms-event-content a { 
-    color: #FFB703; 
-    font-weight: 800; 
+    color: #8A5600; 
+    font-weight: 700; 
     text-decoration: underline; 
     transition: opacity 0.2s;
   }
@@ -41,7 +41,7 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
     <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
       Upcoming <span class="font-medium italic" style="color: #FFB703;">Events</span>
     </h1>
-    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-normal max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
       Join us for talks, training sessions, and community gatherings.
     </p>
   </div>
@@ -62,7 +62,7 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
       
       <!-- Section Header -->
       <div class="relative z-10 text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-serif text-black mb-4 tracking-tight font-bold">Insights & <span style="color: #FFB703;">Inspiration</span></h2>
+        <h2 class="text-3xl md:text-4xl font-serif heading-editorial mb-4">Insights & <span class="heading-accent">Inspiration</span></h2>
         <div class="w-12 h-1 mx-auto rounded-full" style="background-color: #FFB703;"></div>
       </div>
 
@@ -70,7 +70,7 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
       <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
         
         <!-- Video 1 -->
-        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 bg-black relative group transform hover:-translate-y-1 transition-transform duration-300" style="border-color: #FFB703;">
+        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 bg-black relative group transform hover:-translate-y-1 transition-transform duration-300 frame-royal">
           <video controls playsinline preload="metadata" class="w-full aspect-9/16 object-contain bg-black">
             <source src="/assets/videos/roots-of-shame.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -78,7 +78,7 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
         </div>
 
         <!-- Video 2 -->
-        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 bg-black relative group transform hover:-translate-y-1 transition-transform duration-300" style="border-color: #FFB703;">
+        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 bg-black relative group transform hover:-translate-y-1 transition-transform duration-300 frame-royal">
           <video controls playsinline preload="metadata" class="w-full aspect-9/16 object-contain bg-black">
             <source src="/assets/videos/freedom-from-shame.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -86,7 +86,7 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
         </div>
 
         <!-- Video 3 -->
-        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 bg-black relative group transform hover:-translate-y-1 transition-transform duration-300" style="border-color: #FFB703;">
+        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 bg-black relative group transform hover:-translate-y-1 transition-transform duration-300 frame-royal">
           <video controls playsinline preload="metadata" class="w-full aspect-9/16 object-contain bg-black">
             <source src="/assets/videos/definition-of-shame.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -110,10 +110,10 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
       <div class="relative z-10">
         <!-- Section Title & Intro -->
         <div class="text-center max-w-3xl mx-auto mb-12">
-          <h2 class="text-3xl md:text-4xl font-serif text-black mb-4 tracking-tight font-bold">Scheduled <span style="color: #FFB703;">Events</span></h2>
+          <h2 class="text-3xl md:text-4xl font-serif heading-editorial mb-4">Scheduled <span class="heading-accent">Events</span></h2>
           <div class="w-12 h-1 mx-auto mb-6 rounded-full" style="background-color: #FFB703;"></div>
-          <p class="text-black text-lg md:text-xl leading-relaxed font-medium">
-            We regularly host talks, workshops, and community events designed to educate, encourage, and inspire. Check below for our scheduled sessions or <a href="/contact.html" class="underline font-bold hover:opacity-80" style="color: #000;">get in touch</a> to book a bespoke workshop for your organisation.
+          <p class="text-ink-warm text-lg md:text-xl prose-measure">
+            We regularly host talks, workshops, and community events designed to educate, encourage, and inspire. Check below for our scheduled sessions or <a href="/contact.html" class="underline font-bold text-gold-deep hover:opacity-80">get in touch</a> to book a bespoke workshop for your organisation.
           </p>
         </div>
 
@@ -121,28 +121,28 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           
           {% for event in collections.upcomingEvents %}
-          <div class="bg-white/80 backdrop-blur-md text-black rounded-3xl p-8 md:p-10 border border-white/50 flex flex-col h-full shadow-sm hover:shadow-lg hover:bg-white/95 relative overflow-hidden group hover:-translate-y-1 transition duration-300">
+          <div class="surface-ivory rounded-3xl p-8 md:p-10 border border-white/50 flex flex-col h-full shadow-sm hover:shadow-lg hover:bg-white/95 relative overflow-hidden group hover:-translate-y-1 transition duration-300">
             
             <span class="text-black text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-6 shadow-sm" style="background-color: #FFB703;">
               Upcoming Event
             </span>
             
-            <h3 class="font-serif text-3xl mb-4 font-bold">{{ event.data.title }}</h3>
+            <h3 class="font-serif text-3xl mb-4 heading-editorial">{{ event.data.title }}</h3>
             
-            <div class="cms-event-content text-sm font-medium mb-8 text-black leading-relaxed">
+            <div class="cms-event-content text-sm text-ink-warm mb-8 leading-relaxed">
               {{ event.templateContent }}
             </div>
             
-            <div class="mt-auto space-y-3 text-sm border-t border-black/10 pt-6 text-black font-bold">
+            <div class="mt-auto space-y-3 text-sm border-t border-black/10 pt-6 text-ink-warm font-semibold">
               {% if event.data.event_date %}
                 <div class="flex items-center gap-3">
-                  <svg class="w-5 h-5 shrink-0" style="color: #997300;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                  <svg class="w-5 h-5 shrink-0 text-gold-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                   {{ event.data.event_date | formatDate }}
                 </div>
               {% endif %}
               {% if event.data.location %}
                 <div class="flex items-center gap-3">
-                  <svg class="w-5 h-5 shrink-0" style="color: #997300;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                  <svg class="w-5 h-5 shrink-0 text-gold-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                   {{ event.data.location }}
                 </div>
               {% endif %}
@@ -157,9 +157,9 @@ description: "Discover upcoming talks, workshops, training sessions, and communi
 
           {% else %}
           <!-- Guaranteed Full-Width Span Empty State -->
-          <div style="grid-column: 1 / -1;" class="flex flex-col justify-center items-center text-center py-24 px-4 bg-white/50 backdrop-blur-sm rounded-3xl border border-white/40 w-full min-h-75 shadow-inner">
-            <h3 class="text-3xl font-serif text-black mb-4 font-bold">No Scheduled Events</h3>
-            <p class="text-lg text-black/70 font-medium">We don't have any talks or workshops listed at the moment. If you'd like Brenda to speak at your church, school, charity or organisation, <a href="/contact/" class="underline font-bold">get in touch</a> and we'll arrange something.</p>
+          <div style="grid-column: 1 / -1;" class="flex flex-col justify-center items-center text-center py-24 px-4 surface-ivory rounded-3xl border border-white/40 w-full min-h-75 shadow-inner">
+            <h3 class="text-3xl font-serif heading-editorial mb-4">No Scheduled Events</h3>
+            <p class="text-lg text-ink-warm prose-measure">We don't have any talks or workshops listed at the moment. If you'd like Brenda to speak at your church, school, charity or organisation, <a href="/contact/" class="underline font-bold text-gold-deep">get in touch</a> and we'll arrange something.</p>
           </div>
           {% endfor %}
           
