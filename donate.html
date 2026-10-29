@@ -2,6 +2,10 @@
 layout: layouts/base.njk
 title: "Support Us | Beloved Berachah CIC"
 description: "Partner with Beloved Berachah CIC. Your generous donations empower women affected by trauma and addiction to heal, recover, and thrive."
+hero_badge: "Partner With Us"
+hero_title: "Empower a Woman's"
+hero_highlight: "Journey"
+hero_subtitle: "Your generosity provides safe spaces, trauma-informed training, and vital community support for women rebuilding their lives."
 ---
 
 {% block customHead %}
@@ -62,30 +66,7 @@ description: "Partner with Beloved Berachah CIC. Your generous donations empower
 </style>
 {% endblock %}
 
-<!-- Premium Hero Header -->
-<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#4A2B5F]">
-  <!-- Layer 1: Background Image -->
-  <img src="/assets/images/hero.avif" alt="Women supporting each other" class="absolute inset-0 w-full h-full object-cover" />
-  
-  <!-- Layer 2: Warm Cinematic Vignette Overlay -->
-  <div class="absolute inset-0 mix-blend-multiply" style="background: linear-gradient(to top, #4A2B5F, rgba(123, 83, 155, 0.5), rgba(120, 53, 15, 0.3));"></div>
-  
-  <!-- Layer 3: Soft Purple Edge Fade -->
-  <div class="absolute bottom-0 inset-x-0 h-32 opacity-90" style="background: linear-gradient(to top, #4A2B5F, transparent);"></div>
-
-  <!-- Layer 4: Page Text Content -->
-  <div class="container mx-auto px-4 py-24 md:py-32 relative z-10 max-w-4xl text-center flex flex-col items-center">
-    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-md text-black backdrop-blur-sm" style="background-color: rgba(255, 183, 3, 0.9);">
-      Partner With Us
-    </span>
-    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
-      Empower a Woman's <span class="font-medium italic" style="color: #FFB703;">Journey</span>
-    </h1>
-    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-normal max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
-      Your generosity provides safe spaces, trauma-informed training, and vital community support for women rebuilding their lives.
-    </p>
-  </div>
-</header>
+{% include "components/page-hero.html" %}
 
 <div class="py-12 md:py-24 relative z-10 overflow-hidden w-full max-w-full">
   
