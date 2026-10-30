@@ -1,102 +1,89 @@
 // =========================================================================
 // BELOVED BERACHAH CIC - SERVICE WORKER (PWA)
 // =========================================================================
-const CACHE_NAME = 'bb-cache-v19'; 
-const OFFLINE_URL = '/offline.html';
+// Bump CACHE_NAME whenever this file, the precache list, or any cache-first
+// asset (CSS, PNG, JPG, SVG, WOFF2) changes. .avif images are not cached.
+const CACHE_NAME = 'bb-cache-v20';
+const OFFLINE_URL = '/offline/';
 
-// Core assets to precache for instant offline availability
+// Precache clean URLs, which match how Netlify serves the pages.
 const PRECACHE_ASSETS = [
   '/',
-  '/index.html',
-  '/about.html',
-  '/news.html',
-  '/services.html',
-  '/events.html',
-  '/resources.html',
-  '/contact.html',
-  '/donate.html',
-  '/terms.html',
-  '/privacy.html',
-  '/cookies.html',
-  '/safeguarding.html',
-  '/offline.html',
+  '/about/',
+  '/news/',
+  '/services/',
+  '/events/',
+  '/resources/',
+  '/contact/',
+  '/donate/',
+  '/terms/',
+  '/privacy/',
+  '/cookies/',
+  '/safeguarding/',
+  OFFLINE_URL,
   '/css/style.css',
   '/assets/images/BB.png',
   '/assets/images/bb-icon-512.png',
   '/manifest.json'
 ];
 
-// 1. INSTALL EVENT: Precache critical files
+// 1. INSTALL: precache each file. A missing file is skipped, not fatal.
 self.addEventListener('install', (e) => {
   self.skipWaiting();
   e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      // Cache files individually. If an optional asset is missing, 
-      // it skips it gracefully instead of failing the entire service worker installation.
-      return Promise.all(
-        PRECACHE_ASSETS.map(url => {
-          return fetch(url).then(response => {
-            if (response.ok) {
-              return cache.put(url, response);
-            }
-          }).catch(error => {
-            console.log('Skipping caching for file:', url);
-          });
-        })
-      );
-    })
+    caches.open(CACHE_NAME).then((cache) =>
+      Promise.all(
+        PRECACHE_ASSETS.map((url) =>
+          fetch(url)
+            .then((response) => {
+              if (response.ok) return cache.put(url, response);
+            })
+            .catch(() => console.log('Skipping caching for file:', url))
+        )
+      )
+    )
   );
 });
 
-// 2. ACTIVATE EVENT: Clean up outdated cache versions
+// 2. ACTIVATE: delete caches from older versions, then take control of open pages.
 self.addEventListener('activate', (e) => {
   e.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
-      );
-    })
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))))
+      .then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
-// 3. FETCH EVENT: Intelligent routing strategies for assets vs. pages
+// 3. FETCH
 self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
 
   const url = new URL(e.request.url);
 
-  // Strategy A - ASSETS: Cache-First for instant loading performance
-  if (url.pathname.match(/\.(png|jpg|jpeg|svg|css|woff2)$/)) {
+  // Strategy A - ASSETS: cache-first
+  if (/\.(png|jpg|jpeg|svg|css|woff2)$/.test(url.pathname)) {
     e.respondWith(
       caches.match(e.request, { ignoreSearch: true }).then((cached) => cached || fetch(e.request))
     );
     return;
   }
 
-  // Strategy B - HTML PAGES: Network-First with offline fallback routing
-  if (e.request.mode === 'navigate' || (e.request.headers.get('accept') && e.request.headers.get('accept').includes('text/html'))) {
+  // Strategy B - PAGES: network-first, then the cached copy, then the offline page
+  const wantsHtml = e.request.mode === 'navigate' ||
+    (e.request.headers.get('accept') || '').includes('text/html');
+
+  if (wantsHtml) {
     e.respondWith(
       fetch(e.request)
         .then((networkResponse) => {
-           const cacheCopy = networkResponse.clone();
-           caches.open(CACHE_NAME).then((cache) => cache.put(e.request, cacheCopy));
-           return networkResponse;
+          const copy = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(e.request, copy));
+          return networkResponse;
         })
-        .catch(() => {
-           // Offline fallback logic
-           return caches.match(e.request, { ignoreSearch: true }).then((cached) => {
-              if (cached) return cached;
-              
-              // Netlify Pretty URL check
-              return caches.match(url.pathname + '.html', { ignoreSearch: true }).then((pretty) => {
-                 if (pretty) return pretty;
-                 
-                 // Fallback to the emergency offline page
-                 return caches.match(OFFLINE_URL, { ignoreSearch: true });
-              });
-           });
-        })
+        .catch(() =>
+          caches.match(e.request, { ignoreSearch: true })
+            .then((cached) => cached || caches.match(OFFLINE_URL, { ignoreSearch: true }))
+        )
     );
   }
 });
