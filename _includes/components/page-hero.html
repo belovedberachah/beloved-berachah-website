@@ -1,10 +1,10 @@
 <!-- ========================================= -->
 <!-- GLOBAL SUBPAGE HERO COMPONENT             -->
 <!-- ========================================= -->
-<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#4A2B5F] h-90 md:h-110 flex items-center justify-center">
-  <!-- Layer 1: Background Image (Locked dimensions & focal point) -->
+<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#4A2B5F] flex items-center justify-center w-full" style="height: clamp(380px, 40vw, 460px);">
+  <!-- Layer 1: Background Image (Locked dimensions, focal point & cache-busted) -->
   <img 
-    src="/assets/images/hero.avif?v=2" 
+    src="/assets/images/hero.avif?v=3" 
     alt="Beloved Berachah Hero Image" 
     width="1920" 
     height="800" 
@@ -13,21 +13,21 @@
     class="absolute inset-0 w-full h-full object-cover object-center" 
   />
   
-  <!-- Layer 2: Warm Cinematic Vignette Overlay -->
-  <div class="absolute inset-0 mix-blend-multiply" style="background: linear-gradient(to top, #4A2B5F, rgba(123, 83, 155, 0.5), rgba(120, 53, 15, 0.3));"></div>
+  <!-- Layer 2: Softened Vignette Overlay (Keeps text readable while letting image quality shine) -->
+  <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(74, 43, 95, 0.75) 0%, rgba(45, 25, 60, 0.35) 50%, rgba(45, 25, 60, 0.25) 100%);"></div>
   
-  <!-- Layer 3: Soft Purple Edge Fade -->
-  <div class="absolute bottom-0 inset-x-0 h-32 opacity-90" style="background: linear-gradient(to top, #4A2B5F, transparent);"></div>
+  <!-- Layer 3: Subtle Bottom Purple Edge Fade -->
+  <div class="absolute bottom-0 inset-x-0 h-20 opacity-85" style="background: linear-gradient(to top, #4A2B5F, transparent);"></div>
 
   <!-- Layer 4: Page Text Content -->
-  <div class="container mx-auto px-4 relative z-10 max-w-4xl text-center flex flex-col items-center">
-    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-6 inline-block shadow-md text-black backdrop-blur-sm" style="background-color: rgba(255, 183, 3, 0.9);">
+  <div class="container mx-auto px-4 relative z-10 max-w-4xl text-center flex flex-col items-center justify-center">
+    <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-4 inline-block shadow-md text-black backdrop-blur-sm" style="background-color: rgba(255, 183, 3, 0.9);">
       {{ hero_badge }}
     </span>
-    <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-4 leading-tight tracking-tight drop-shadow-xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.65);">
       {{ hero_title | safe }} <span class="font-medium italic" style="color: #FFB703;">{{ hero_highlight }}</span>
     </h1>
-    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-normal max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+    <p class="text-base md:text-xl text-slate-100 leading-relaxed font-normal max-w-2xl mx-auto drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.65);">
       {{ hero_subtitle }}
     </p>
   </div>
