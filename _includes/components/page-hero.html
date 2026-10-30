@@ -2,7 +2,7 @@
 <!-- GLOBAL SUBPAGE HERO COMPONENT             -->
 <!-- ========================================= -->
 <header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#4A2B5F] flex items-center justify-center w-full" style="height: clamp(380px, 40vw, 460px);">
-  <!-- Layer 1: Background Image (Locked dimensions, focal point & cache-busted) -->
+  <!-- Layer 1: Background Image (Anchored so the bottom-right logo isn't cropped) -->
   <img 
     src="/assets/images/hero.avif?v=3" 
     alt="Beloved Berachah Hero Image" 
@@ -10,7 +10,7 @@
     height="800" 
     fetchpriority="high" 
     decoding="async" 
-    class="absolute inset-0 w-full h-full object-cover object-center" 
+    class="absolute inset-0 w-full h-full object-cover object-[85%_center]" 
   />
   
   <!-- Layer 2: Softened Vignette Overlay -->
