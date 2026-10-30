@@ -1,7 +1,7 @@
 // =========================================================================
 // BELOVED BERACHAH CIC - SERVICE WORKER (PWA)
 // =========================================================================
-const CACHE_NAME = 'bb-cache-v18'; 
+const CACHE_NAME = 'bb-cache-v19'; 
 const OFFLINE_URL = '/offline.html';
 
 // Core assets to precache for instant offline availability
