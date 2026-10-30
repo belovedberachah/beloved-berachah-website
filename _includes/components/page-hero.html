@@ -1,25 +1,23 @@
 <!-- ========================================= -->
 <!-- GLOBAL SUBPAGE HERO COMPONENT             -->
 <!-- ========================================= -->
-<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#4A2B5F] flex items-center justify-center w-full" style="height: clamp(380px, 40vw, 460px);">
-  <!-- Layer 1: Background Image (object-right completely exposes the bottom-right logo and name) -->
-  <img 
-    src="/assets/images/hero.avif?v=6" 
-    alt="Beloved Berachah Hero Image" 
-    width="1920" 
-    height="800" 
-    fetchpriority="high" 
-    decoding="async" 
-    class="absolute inset-0 w-full h-full object-cover object-right" 
+<header class="relative overflow-hidden border-b-4 border-amber-500 bg-[#4A2B5F] flex items-center justify-center w-full h-95 md:h-110 lg:h-auto lg:aspect-1920/800">
+  <!-- Layer 1: Background image. Anchored bottom right so the logo and name stay visible when the top is trimmed. -->
+  <img
+    src="/assets/images/hero.avif?v=7"
+    alt=""
+    width="1920"
+    height="800"
+    fetchpriority="high"
+    decoding="async"
+    class="absolute inset-0 w-full h-full object-cover"
+    style="object-position: right bottom;"
   />
-  
-  <!-- Layer 2: Softened Vignette Overlay -->
-  <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(74, 43, 95, 0.75) 0%, rgba(45, 25, 60, 0.35) 50%, rgba(45, 25, 60, 0.25) 100%);"></div>
-  
-  <!-- Layer 3: Subtle Bottom Purple Edge Fade -->
-  <div class="absolute bottom-0 inset-x-0 h-20 opacity-85" style="background: linear-gradient(to top, #4A2B5F, transparent);"></div>
 
-  <!-- Layer 4: Page Text Content -->
+  <!-- Layer 2: Darkening behind the text only, so the corners where the logo sits stay clear. -->
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse 55% 65% at 50% 50%, rgba(45, 25, 60, 0.6) 0%, rgba(45, 25, 60, 0.3) 60%, rgba(45, 25, 60, 0) 100%);"></div>
+
+  <!-- Layer 3: Page text content -->
   <div class="container mx-auto px-4 relative z-10 max-w-4xl text-center flex flex-col items-center justify-center">
     <span class="px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-4 inline-block shadow-md text-black backdrop-blur-sm" style="background-color: rgba(255, 183, 3, 0.9);">
       {{ hero_badge }}
