@@ -90,5 +90,14 @@
     {% include "components/cookies.html" %}
     {% block customScripts %}{% endblock %}
 
+
+    <!-- Service worker registration (offline support) -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
   </body>
 </html>
