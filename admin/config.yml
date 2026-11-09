@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-site_url: https://belovedberachah.netlify.app
-display_url: https://belovedberachah.netlify.app
+site_url: https://berachah.org.uk
+display_url: https://berachah.org.uk
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
